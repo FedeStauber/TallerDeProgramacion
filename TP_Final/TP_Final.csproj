@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FEDC207-3F2E-46A2-A62C-6101BDB31238}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TP_Final</RootNamespace>
+    <AssemblyName>TP_Final</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\BookApiManager.cs" />
+    <Compile Include="API\IBookApi.cs" />
+    <Compile Include="API\OpenLibrary\OpenLibraryApi.cs" />
+    <Compile Include="DAL\EntityFramework\BookRepository.cs" />
+    <Compile Include="DAL\EntityFramework\CopyRepository.cs" />
+    <Compile Include="DAL\EntityFramework\LibraryManagerDbContext.cs" />
+    <Compile Include="DAL\EntityFramework\LoanRepository.cs" />
+    <Compile Include="DAL\EntityFramework\Repository.cs" />
+    <Compile Include="DAL\EntityFramework\UnitOfWork.cs" />
+    <Compile Include="DAL\EntityFramework\UserRepository.cs" />
+    <Compile Include="DAL\IBookRepository.cs" />
+    <Compile Include="DAL\ICopyRepository.cs" />
+    <Compile Include="DAL\ILoanRepository.cs" />
+    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\IUnitOfWork.cs" />
+    <Compile Include="DAL\IUserRepository.cs" />
+    <Compile Include="Domain\Book.cs" />
+    <Compile Include="Domain\Copy.cs" />
+    <Compile Include="Domain\EmailEstrategy.cs" />
+    <Compile Include="Domain\Encrypter.cs" />
+    <Compile Include="Domain\INotificatorEstrategy.cs" />
+    <Compile Include="Domain\Loan.cs" />
+    <Compile Include="Domain\Notificator.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Exceptions\BookNotFoundException.cs" />
+    <Compile Include="Exceptions\NoAvailableCopyException.cs" />
+    <Compile Include="Exceptions\UserNotFoundException.cs" />
+    <Compile Include="IO\BookDTO.cs" />
+    <Compile Include="IO\CopyDTO.cs" />
+    <Compile Include="IO\LoanDTO.cs" />
+    <Compile Include="IO\LoginDTO.cs" />
+    <Compile Include="IO\UsefulMapper.cs" />
+    <Compile Include="IO\UserDTO.cs" />
+    <Compile Include="UI\AddLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddLoan.Designer.cs">
+      <DependentUpon>AddLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BookCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BookCard.Designer.cs">
+      <DependentUpon>BookCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\bookListLayout16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\bookListLayout16.Designer.cs">
+      <DependentUpon>bookListLayout16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\bookListLayout4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\bookListLayout4.Designer.cs">
+      <DependentUpon>bookListLayout4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomForms\ButtonPerso.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Catalogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Catalogue.Designer.cs">
+      <DependentUpon>Catalogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomForms\ComboBoxPerso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\EditCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EditCopies.Designer.cs">
+      <DependentUpon>EditCopies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoanReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoanReturn.Designer.cs">
+      <DependentUpon>LoanReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ModifyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModifyProfile.Designer.cs">
+      <DependentUpon>ModifyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NoRestultsFound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NoRestultsFound.Designer.cs">
+      <DependentUpon>NoRestultsFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ObteniendoDatosApi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ObteniendoDatosApi.Designer.cs">
+      <DependentUpon>ObteniendoDatosApi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManager.cs" />
+    <Compile Include="Notificate.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\SingUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SingUp.Designer.cs">
+      <DependentUpon>SingUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomForms\TextBoxPerso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomForms\TextBoxPerso.Designer.cs">
+      <DependentUpon>TextBoxPerso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserABM.Designer.cs">
+      <DependentUpon>UserABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserLoans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserLoans.Designer.cs">
+      <DependentUpon>UserLoans.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\AddLoan.resx">
+      <DependentUpon>AddLoan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BookCard.resx">
+      <DependentUpon>BookCard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\bookListLayout16.resx">
+      <DependentUpon>bookListLayout16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\bookListLayout4.resx">
+      <DependentUpon>bookListLayout4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Catalogue.resx">
+      <DependentUpon>Catalogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EditCopies.resx">
+      <DependentUpon>EditCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoanReturn.resx">
+      <DependentUpon>LoanReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModifyProfile.resx">
+      <DependentUpon>ModifyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NoRestultsFound.resx">
+      <DependentUpon>NoRestultsFound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ObteniendoDatosApi.resx">
+      <DependentUpon>ObteniendoDatosApi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\SingUp.resx">
+      <DependentUpon>SingUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomForms\TextBoxPerso.resx">
+      <DependentUpon>TextBoxPerso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserABM.resx">
+      <DependentUpon>UserABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserLoans.resx">
+      <DependentUpon>UserLoans.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\TP_Final.IO.CopyDTO+ConditionEnum.datasource" />
+    <None Include="Properties\DataSources\TP_Final.IO.CopyDTO.datasource" />
+    <None Include="Properties\DataSources\TP_Final.IO.LoanDTO.datasource" />
+    <None Include="Properties\DataSources\TP_Final.IO.UserDTO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>10.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="FontAwesome.Sharp">
+      <Version>5.15.4</Version>
+    </PackageReference>
+    <PackageReference Include="ImageProcessor">
+      <Version>2.9.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore">
+      <Version>3.1.24</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions">
+      <Version>3.1.24</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <Version>3.1.24</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL">
+      <Version>3.1.18</Version>
+    </PackageReference>
+    <PackageReference Include="Quartz">
+      <Version>3.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog">
+      <Version>2.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.File">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.RollingFile">
+      <Version>3.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defAvatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\illustration-file-not-found-or-404-error-page-free-vector.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
