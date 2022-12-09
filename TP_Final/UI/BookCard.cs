@@ -25,7 +25,7 @@ namespace TP_Final.UI
         private string iTemp;
         private long iOriginalISBN;
         
-
+        //lalalalalalal
         public enum ComeFrom {AddBook,Catalogue,AddLoan}
         
         public BookCard(BookDTO pBook, bool pAdmin,ComeFrom pComeFrom)
