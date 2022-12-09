@@ -25,8 +25,6 @@ namespace TP_Final.UI
             
             this.iBook = pBook;
             this.AssignElements();
-            
-
         }
 
         private void AssignElements()
