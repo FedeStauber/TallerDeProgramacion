@@ -25,8 +25,6 @@ namespace TP_Final.UI
             
             this.iBook = pBook;
             this.AssignElements();
-            
-
         }
 
         private void AssignElements()
@@ -63,13 +61,13 @@ namespace TP_Final.UI
             iPreviousState = (CopyDTO.ConditionEnum)dataGridCopies.Rows[e.RowIndex].Cells[1].Value;
         }
 
-        private void iconPictureBox1_Click_1(object sender, EventArgs e)
+        private void IconPictureBox1_Click_1(object sender, EventArgs e)
         {
             LibraryManager.AddCopy(iBook.ISBN);
             this.AssignElements();
         }
 
-        private void iconPictureBox2_Click(object sender, EventArgs e)
+        private void IconPictureBox2_Click(object sender, EventArgs e)
         {
             MainWindow vMainWindow = Owner as MainWindow;
             vMainWindow.OpenChildForm(new BookCard(this.iBook,true,BookCard.ComeFrom.Catalogue));

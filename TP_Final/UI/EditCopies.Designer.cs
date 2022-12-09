@@ -37,7 +37,7 @@ namespace TP_Final.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.AddBottom = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridCopies = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conditionDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -45,13 +45,13 @@ namespace TP_Final.UI
             this.lastModifyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.copyDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.ReturnBottom = new FontAwesome.Sharp.IconPictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCopies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conditionEnumBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.copyDTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBottom)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,8 +60,8 @@ namespace TP_Final.UI
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel1.Controls.Add(this.iconPictureBox2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.iconPictureBox1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ReturnBottom, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.AddBottom, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.dataGridCopies, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -74,22 +74,22 @@ namespace TP_Final.UI
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1280, 721);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // iconPictureBox1
+            // AddBottom
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.LimeGreen;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 35;
-            this.iconPictureBox1.Location = new System.Drawing.Point(1176, 80);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 7;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
+            this.AddBottom.BackColor = System.Drawing.Color.White;
+            this.AddBottom.ForeColor = System.Drawing.Color.LimeGreen;
+            this.AddBottom.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.AddBottom.IconColor = System.Drawing.Color.LimeGreen;
+            this.AddBottom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.AddBottom.IconSize = 35;
+            this.AddBottom.Location = new System.Drawing.Point(1176, 80);
+            this.AddBottom.Margin = new System.Windows.Forms.Padding(0);
+            this.AddBottom.Name = "AddBottom";
+            this.AddBottom.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.AddBottom.Size = new System.Drawing.Size(32, 32);
+            this.AddBottom.TabIndex = 7;
+            this.AddBottom.TabStop = false;
+            this.AddBottom.Click += new System.EventHandler(this.IconPictureBox1_Click_1);
             // 
             // dataGridCopies
             // 
@@ -202,22 +202,22 @@ namespace TP_Final.UI
             // 
             this.copyDTOBindingSource.DataSource = typeof(TP_Final.IO.CopyDTO);
             // 
-            // iconPictureBox2
+            // ReturnBottom
             // 
-            this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 50;
-            this.iconPictureBox2.Location = new System.Drawing.Point(1179, 27);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBox2.TabIndex = 8;
-            this.iconPictureBox2.TabStop = false;
-            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
+            this.ReturnBottom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ReturnBottom.BackColor = System.Drawing.Color.White;
+            this.ReturnBottom.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ReturnBottom.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.ReturnBottom.IconColor = System.Drawing.SystemColors.ControlText;
+            this.ReturnBottom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ReturnBottom.IconSize = 50;
+            this.ReturnBottom.Location = new System.Drawing.Point(1179, 27);
+            this.ReturnBottom.Name = "ReturnBottom";
+            this.ReturnBottom.Size = new System.Drawing.Size(50, 50);
+            this.ReturnBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ReturnBottom.TabIndex = 8;
+            this.ReturnBottom.TabStop = false;
+            this.ReturnBottom.Click += new System.EventHandler(this.IconPictureBox2_Click);
             // 
             // EditCopies
             // 
@@ -230,11 +230,11 @@ namespace TP_Final.UI
             this.Name = "EditCopies";
             this.Text = "Editar Copias";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCopies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conditionEnumBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.copyDTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBottom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,12 +243,12 @@ namespace TP_Final.UI
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.BindingSource copyDTOBindingSource;
         private System.Windows.Forms.DataGridView dataGridCopies;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox AddBottom;
         private System.Windows.Forms.BindingSource conditionEnumBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn conditionDataGridViewComboBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastModifyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox ReturnBottom;
     }
 }
