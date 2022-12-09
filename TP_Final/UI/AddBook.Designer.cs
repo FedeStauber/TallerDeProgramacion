@@ -145,7 +145,7 @@ namespace TP_Final.UI
             this.leftBtn.TabIndex = 13;
             this.leftBtn.TabStop = false;
             this.leftBtn.Visible = false;
-            this.leftBtn.Click += new System.EventHandler(this.leftBtn_Click_1);
+            this.leftBtn.Click += new System.EventHandler(this.LeftBtn_Click_1);
             // 
             // rightPanel
             // 
@@ -171,7 +171,7 @@ namespace TP_Final.UI
             this.rightBtn.TabIndex = 14;
             this.rightBtn.TabStop = false;
             this.rightBtn.Visible = false;
-            this.rightBtn.Click += new System.EventHandler(this.rightBtn_Click_1);
+            this.rightBtn.Click += new System.EventHandler(this.RightBtn_Click_1);
             // 
             // panel1
             // 

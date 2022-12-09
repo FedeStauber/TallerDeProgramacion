@@ -25,7 +25,7 @@ namespace TP_Final.UI
         private int iResultsPerPage = 4;
         private int iSearchFilterIndex = -1;
 
-
+        //Un comentario de prueba
         public AddBook()
         {
             InitializeComponent();
@@ -150,7 +150,7 @@ namespace TP_Final.UI
                 //Abrir ventana logo
             }
         }
-        private void leftBtn_Click_1(object sender, EventArgs e)
+        private void LeftBtn_Click_1(object sender, EventArgs e)
         {
             if (!(iPageIndex - this.iResultsPerPage < 0))
             {
@@ -165,7 +165,7 @@ namespace TP_Final.UI
             iCurrentPage--;
             this.PageCounterUpdate();
         }
-        private void rightBtn_Click_1(object sender, EventArgs e)
+        private void RightBtn_Click_1(object sender, EventArgs e)
         {
             if (!(iPageIndex + this.iResultsPerPage >= iBookList.Count()))
             {
