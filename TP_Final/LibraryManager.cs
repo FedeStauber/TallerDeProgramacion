@@ -52,7 +52,7 @@ namespace TP_Final
         }
 
 
-        //Para usarlo, antes eliminar dependencia de la clase de dominio User
+   
         public static void RemoveUser(UserDTO form)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -145,7 +145,7 @@ namespace TP_Final
                 unit.Complete();
             }
         }
-
+        // Este procedimiento está correcto, falta documentar V
         public static void LoanReturnRegister(int pLoanId, int pCondition)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -166,7 +166,7 @@ namespace TP_Final
                 unit.Complete();
             }
         }
-
+        // Este procedimiento está correcto, falta documentar V
         public static LoginDTO LogIn(string pUserEmail, string pPassword)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -207,6 +207,7 @@ namespace TP_Final
                 }
             });
         }
+        // Este procedimiento está correcto, falta documentar V
         public static void AddBook(BookDTO pBookDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -223,6 +224,7 @@ namespace TP_Final
                 }
             }
         }
+        // Este procedimiento está correcto, falta documentar V
         public static List<LoanDTO> UserLoansHistory(UserDTO pUserDTO)
         {
             User vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
@@ -237,7 +239,6 @@ namespace TP_Final
                   vLoanDTO.BookTitle = vLoan.Copy.Book.Title;
                   vLoanDTOs.Add(vLoanDTO);
                 }
-
                 return vLoanDTOs;
             }
         }
@@ -254,6 +255,7 @@ namespace TP_Final
                 return vLoanDTOs;
             }
         }
+        // Este procedimiento está correcto, falta documentar V
         public static UserDTO SearchUserByDNI(long pDni)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -263,6 +265,7 @@ namespace TP_Final
                 return vUserDTO;
             }
         }
+        // Este procedimiento está correcto, falta documentar V
         public static List<UserDTO> UsersList()
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -271,6 +274,7 @@ namespace TP_Final
                 return vListUserDTO;
             }
         }
+        // Este procedimiento está correcto, falta documentar V
         public static List<CopyDTO> BookCopyList(long pBookISBN)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -287,6 +291,7 @@ namespace TP_Final
                 return vListCopyDTO;
             }
         }
+        // Este procedimiento está correcto, falta documentar V
         public static void ModifyBook(long pISBN, BookDTO pBookDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -306,15 +311,16 @@ namespace TP_Final
                 }
             }
         }
-        public static bool HasAvailableCopy(BookDTO pBookDTO)
-        {
-            using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
-            {                
-                Copy vCopy = unit.CopyRepository.GetAvailableCopy(pBookDTO.ISBN);
-                return vCopy != null;
-            }
-        }
+        /*public static bool HasAvailableCopy(BookDTO pBookDTO)
+         {
+             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
+             {                
+                 Copy vCopy = unit.CopyRepository.GetAvailableCopy(pBookDTO.ISBN);
+                 return vCopy != null;
+             }
+         }*/
 
+        // Este procedimiento está correcto, falta documentar V
         public static List<LoanDTO> ActiveLoans()
         {      
          // User vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
