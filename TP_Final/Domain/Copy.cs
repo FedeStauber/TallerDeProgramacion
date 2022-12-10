@@ -27,6 +27,10 @@ namespace TP_Final.Domain
             Available, Borrowed, Broken, Unavailable
         }
 
+        /// <summary>
+        /// Realiza la modificación de la condición de la copia del libro. 
+        /// </summary>
+        /// <param conditionEnum="pCondition">Nueva condición para la copia</param>
         public void ChangeCondition(ConditionEnum pCondition)
         {
             if (this.Condition != ConditionEnum.Borrowed)
@@ -38,6 +42,10 @@ namespace TP_Final.Domain
                 throw new Exception("Debe esperar a que acabe un préstamo para modificar el estado del libro");
         }
 
+        /// <summary>
+        /// Realiza la modificación de la condición de la copia del libro solo si el libro se encuentra prestado  
+        /// </summary>
+        /// <param conditionEnum="pCondition">Nueva condición para la copia</param>
         public void ReturnRegister(ConditionEnum pCondition)
         {
             if (this.Condition == ConditionEnum.Borrowed)
