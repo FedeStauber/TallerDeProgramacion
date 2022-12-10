@@ -19,8 +19,11 @@ namespace TP_Final.Domain
         public int LoanScore { get; set; }
 
 
-
-
+        //NO LO ENTIENDO
+        /// <summary>
+        /// Verifica si un préstamo 
+        /// </summary>
+        /// <returns>Verdadero o falso</returns>
         public bool Late()
         {
             if ((ReturnDate == null) && (EndDate < DateTime.Now))
@@ -29,7 +32,11 @@ namespace TP_Final.Domain
             }
             return false;
         }
-
+        /// <summary>
+        /// Realiza la devolución de una copia, modifica la modificación de la condición y registra el score
+        /// del usuario y del préstamo
+        /// </summary>
+        /// <param name="pUserId">Nueva condición para la copia</param>
         public void ReturnRegister(Copy.ConditionEnum pCondition)
         {
             if (pCondition == Copy.ConditionEnum.Available && this.Late())
