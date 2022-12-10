@@ -63,7 +63,9 @@ namespace TP_Final.UI
 
         private void IconPictureBox1_Click_1(object sender, EventArgs e)
         {
-            LibraryManager.AddCopy(iBook.ISBN);
+            string amount = Microsoft.VisualBasic.Interaction.InputBox("Ingrese cantidad de copias: ", "Cantidad de copias");
+            int amount2 = Int32.Parse(amount);
+            LibraryManager.AddCopy(iBook.ISBN, amount2);
             this.AssignElements();
         }
 

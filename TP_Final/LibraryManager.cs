@@ -87,15 +87,18 @@ namespace TP_Final
             }
         }
 
-        public static void AddCopy(long pISBN)
+        public static void AddCopy(long pISBN, int amount)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {                             
                 Book vBook = unit.BookRepository.SearchByISBN(pISBN);
                 if (vBook != null)
                 {
-                    Copy copy = new Copy() { Book = vBook, Condition = Copy.ConditionEnum.Avaible};
-                    unit.CopyRepository.Add(copy);
+                    for (int i = 0; i < amount; i++)
+                    {
+                        Copy copy = new Copy() { Book = vBook, Condition = Copy.ConditionEnum.Avaible };
+                        unit.CopyRepository.Add(copy);
+                    }
                 }
                 else
                 {
