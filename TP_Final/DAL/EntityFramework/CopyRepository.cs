@@ -19,7 +19,7 @@ namespace TP_Final.DAL.EntityFramework
 
         public Copy GetAvailableCopy(double pISBN)
         {
-            Copy vCopy = this.iDbContext.Set<Copy>().Include(copy => copy.Book).FirstOrDefault(copy => copy.Book.ISBN == pISBN && copy.Condition == Copy.ConditionEnum.Avaible);           
+            Copy vCopy = this.iDbContext.Set<Copy>().Include(copy => copy.Book).FirstOrDefault(copy => copy.Book.ISBN == pISBN && copy.Condition == Copy.ConditionEnum.Available);           
             return vCopy;
         }
 

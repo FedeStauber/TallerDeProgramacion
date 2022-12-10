@@ -96,7 +96,7 @@ namespace TP_Final
                 {
                     for (int i = 0; i < amount; i++)
                     {
-                        Copy copy = new Copy() { Book = vBook, Condition = Copy.ConditionEnum.Avaible };
+                        Copy copy = new Copy() { Book = vBook, Condition = Copy.ConditionEnum.Available };
                         unit.CopyRepository.Add(copy);
                     }
                 }
@@ -112,7 +112,7 @@ namespace TP_Final
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
-                Copy.ConditionEnum conditionEnum = Copy.ConditionEnum.Avaible;
+                Copy.ConditionEnum conditionEnum = Copy.ConditionEnum.Available;
                 if (pCopyDTO.Condition == CopyDTO.ConditionEnum.Prestado)
                 {
                     conditionEnum = Copy.ConditionEnum.Borrowed;
@@ -123,7 +123,7 @@ namespace TP_Final
                 }
                 else if (pCopyDTO.Condition == CopyDTO.ConditionEnum.Suspendido)
                 {
-                    conditionEnum = Copy.ConditionEnum.Unavailale;
+                    conditionEnum = Copy.ConditionEnum.Unavailable;
                 }               
                 Copy copy = unit.CopyRepository.Get(pCopyDTO.Id);
                 copy.ChangeCondition(conditionEnum);
@@ -160,7 +160,7 @@ namespace TP_Final
                 }
                 if (pCondition == 0)
                 {
-                    vLoan.ReturnRegister(Copy.ConditionEnum.Avaible);
+                    vLoan.ReturnRegister(Copy.ConditionEnum.Available);
                 }
                 else
                 {

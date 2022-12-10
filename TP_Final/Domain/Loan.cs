@@ -32,12 +32,12 @@ namespace TP_Final.Domain
 
         public void ReturnRegister(Copy.ConditionEnum pCondition)
         {
-            if (pCondition == Copy.ConditionEnum.Avaible && this.Late())
+            if (pCondition == Copy.ConditionEnum.Available && this.Late())
             {              
                 User.Score -= 2 * ((DateTime.Now - EndDate).Value.Days + 1);
                 LoanScore = 2 * ((DateTime.Now - EndDate).Value.Days + 1);
             }
-            else if (pCondition == Copy.ConditionEnum.Avaible)
+            else if (pCondition == Copy.ConditionEnum.Available)
             {                
                 User.Score += 5;
                 LoanScore = 5;

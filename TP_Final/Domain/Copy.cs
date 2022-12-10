@@ -24,7 +24,7 @@ namespace TP_Final.Domain
 
         public enum ConditionEnum
         {
-            Avaible, Borrowed, Broken, Unavailale
+            Available, Borrowed, Broken, Unavailable
         }
 
         public void ChangeCondition(ConditionEnum pCondition)
@@ -40,9 +40,17 @@ namespace TP_Final.Domain
 
         public void ReturnRegister(ConditionEnum pCondition)
         {
-            this.Condition = pCondition;
-            this.LastModify = DateTime.Today;         
+            if (this.Condition == ConditionEnum.Borrowed)
+            {
+                this.Condition = pCondition;
+                this.LastModify = DateTime.Today;
+            }
+            else
+            {
+                throw new Exception("El libro no se encuentra prestado.");
+            }
+                    
         }
-
+        
     }
 }
