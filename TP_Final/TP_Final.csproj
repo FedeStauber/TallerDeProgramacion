@@ -74,6 +74,7 @@
     <Compile Include="Domain\Notificator.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Exceptions\BookNotFoundException.cs" />
+    <Compile Include="Exceptions\DownloadingCoverErrorException.cs" />
     <Compile Include="Exceptions\NoAvailableCopyException.cs" />
     <Compile Include="Exceptions\UserNotFoundException.cs" />
     <Compile Include="IO\BookDTO.cs" />

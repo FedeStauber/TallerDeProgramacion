@@ -9,13 +9,12 @@ using TP_Final.IO;
 using TP_Final.API.OpenLibrary;
 using TP_Final.API;
 using TP_Final.Exceptions;
+using System.Configuration;
 
 namespace TP_Final
 {
     public static class LibraryManager
     {
-        
-        private const int DIAS_PRESTAMO = 5;
         public static void Notificate()
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -28,8 +27,7 @@ namespace TP_Final
                     loan.Notificated = true;                    
                 }
                 unit.Complete();
-            }         
-
+            }  
         }
         public static void AddUser(UserDTO form)
         {
@@ -51,23 +49,6 @@ namespace TP_Final
             }           
         }
 
-
-   
-        public static void RemoveUser(UserDTO form)
-        {
-            using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
-            {
-                if (form.DNI > -1)
-                {
-                    unit.UserRepository.SearchByDNI(form.DNI).Active = false;
-                }
-                if (form.Email != null)
-                {
-                    unit.UserRepository.SearchByEmail(form.Email).Active = false;
-                }
-                unit.Complete();
-            }           
-        }
 
         public static void ModifyUser(int pDni, UserDTO form)
         {
@@ -143,7 +124,7 @@ namespace TP_Final
                 }
                 vCopy.Condition = Copy.ConditionEnum.Borrowed;
                 vCopy.LastModify = DateTime.Now;
-                Loan vLoan = new Loan() { Copy = vCopy, StartDate = DateTime.Now, Notificated = false, User = vUser, EndDate = DateTime.Now.AddDays(DIAS_PRESTAMO) };               
+                Loan vLoan = new Loan() { Copy = vCopy, StartDate = DateTime.Now, Notificated = false, User = vUser, EndDate = DateTime.Now.AddDays(Convert.ToDouble(ConfigurationManager.AppSettings.Get("DIAS_PRESTAMO")))};               
                 unit.LoanRepository.Add(vLoan);
                 unit.Complete();
             }
@@ -314,19 +295,10 @@ namespace TP_Final
                 }
             }
         }
-        /*public static bool HasAvailableCopy(BookDTO pBookDTO)
-         {
-             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
-             {                
-                 Copy vCopy = unit.CopyRepository.GetAvailableCopy(pBookDTO.ISBN);
-                 return vCopy != null;
-             }
-         }*/
 
         // Este procedimiento está correcto, falta documentar V
         public static List<LoanDTO> ActiveLoans()
         {      
-         // User vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
                 var vLoans = unit.LoanRepository.GetActiveLoans();
