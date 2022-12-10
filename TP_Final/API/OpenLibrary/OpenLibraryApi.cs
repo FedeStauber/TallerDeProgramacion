@@ -12,6 +12,7 @@ using Serilog;
 using System.Drawing;
 using static TP_Final.API.BookApiManager;
 using System.Windows;
+using TP_Final.Exceptions;
 
 namespace TP_Final.API.OpenLibrary
 {
@@ -38,9 +39,8 @@ namespace TP_Final.API.OpenLibrary
             }
             catch (Exception ex)
             {
-                Log.Error("Error al obtener las imagenes de la API",ex.Message);
-                MessageBox.Show(ex.Message);
-                throw new Exception("Error al obtener las imagenes desde la API");
+                Log.Error("Error al obtener las imagenes de la API",ex.Message);               
+                throw new ErrorDownloadingCoverException();
             }
 
         }

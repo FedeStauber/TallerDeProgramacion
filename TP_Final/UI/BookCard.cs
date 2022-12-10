@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_Final.API;
+using TP_Final.Exceptions;
 using TP_Final.IO;
 using TP_Final.Properties;
 
@@ -44,19 +45,9 @@ namespace TP_Final.UI
 
         private async void DownloadHqCover()
         {
-           await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.L);          
-           if (iBook.Cover.Length > 900)
-           {            
-                MemoryStream ms = new MemoryStream(iBook.Cover);
-                Bitmap bmp = new Bitmap(ms);
-                ImageFactory imgFact = new ImageFactory();
-                imgFact.Load(bmp);
-                imgFact.Resize(new ImageProcessor.Imaging.ResizeLayer(pictureBox1.Size, ImageProcessor.Imaging.ResizeMode.Stretch));
-                pictureBox1.Image = imgFact.Image;                
-           }
-            else
+            try
             {
-                await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.M);
+                await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.L);
                 if (iBook.Cover.Length > 900)
                 {
                     MemoryStream ms = new MemoryStream(iBook.Cover);
@@ -68,7 +59,7 @@ namespace TP_Final.UI
                 }
                 else
                 {
-                    await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.S);
+                    await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.M);
                     if (iBook.Cover.Length > 900)
                     {
                         MemoryStream ms = new MemoryStream(iBook.Cover);
@@ -80,11 +71,30 @@ namespace TP_Final.UI
                     }
                     else
                     {
-                        pictureBox1.Image = Resources.CoverNotFoundImage;
-                        //Imagen que diga "Error al obtener cover en alta resolución"
+                        await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.S);
+                        if (iBook.Cover.Length > 900)
+                        {
+                            MemoryStream ms = new MemoryStream(iBook.Cover);
+                            Bitmap bmp = new Bitmap(ms);
+                            ImageFactory imgFact = new ImageFactory();
+                            imgFact.Load(bmp);
+                            imgFact.Resize(new ImageProcessor.Imaging.ResizeLayer(pictureBox1.Size, ImageProcessor.Imaging.ResizeMode.Stretch));
+                            pictureBox1.Image = imgFact.Image;
+                        }
+                        else
+                        {
+                            pictureBox1.Image = Resources.CoverNotFoundImage;
+                            //Imagen que diga "Error al obtener cover en alta resolución"
+                        }
                     }
-                }                
+                }
             }
+            catch (ErrorDownloadingCoverException ex)
+            {
+                MessageBox.Show(ex.Message);
+                pictureBox1.Image = Resources.CoverNotFoundImage;
+            }
+          
         }
 
         public void AssignElements()
@@ -132,16 +142,8 @@ namespace TP_Final.UI
             }
         }
         private void iconPictureBox2_Click(object sender, EventArgs e)
-        {
-           MainWindow vMainWindow = Owner as MainWindow;            
-           if (iComeFrom == ComeFrom.AddBook)
-           {
-                vMainWindow.OpenChildForm(new AddBook());
-           }
-           else
-           {
-                vMainWindow.OpenChildForm(new Catalogue());
-           }           
+        {         
+          this.Close();
         }
 
         #region Editar Libro
@@ -222,9 +224,8 @@ namespace TP_Final.UI
             iEditing.Text = richTextBox1.Text;
             btnDiscardEdit.Visible = false;
             btnAcceptEdit.Visible = false;
-            richTextBox1.Visible = false;
-            btnSaveChanges.Visible = true;
-            btnAddLoan.Visible = true;
+            richTextBox1.Visible = false;          
+            this.AssignElements();
         }
         private void btnDiscardEdit_Click_1(object sender, EventArgs e)
         {
@@ -315,7 +316,6 @@ namespace TP_Final.UI
                     }
                     catch (Exception ex)
                     {
-
                         MessageBox.Show(ex.Message);
                     }
                 }      
