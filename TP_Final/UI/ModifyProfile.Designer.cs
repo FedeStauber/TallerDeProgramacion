@@ -69,7 +69,7 @@
             this.btnCancel.BorderSize = 2;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(654, 420);
             this.btnCancel.Name = "btnCancel";
@@ -88,7 +88,7 @@
             this.btnAccept.BorderSize = 2;
             this.btnAccept.FlatAppearance.BorderSize = 0;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.ForeColor = System.Drawing.Color.Black;
             this.btnAccept.Location = new System.Drawing.Point(474, 420);
             this.btnAccept.Name = "btnAccept";
@@ -101,11 +101,11 @@
             // PassRepeatTxtBox
             // 
             this.PassRepeatTxtBox.BackColor = System.Drawing.Color.White;
-            this.PassRepeatTxtBox.BorderColor = System.Drawing.Color.Indigo;
+            this.PassRepeatTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.PassRepeatTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.PassRepeatTxtBox.BorderRadius = 0;
             this.PassRepeatTxtBox.BorderSize = 3;
-            this.PassRepeatTxtBox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassRepeatTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassRepeatTxtBox.Location = new System.Drawing.Point(302, 251);
             this.PassRepeatTxtBox.Multiline = false;
             this.PassRepeatTxtBox.Name = "PassRepeatTxtBox";
@@ -120,11 +120,11 @@
             // PassTxtBox
             // 
             this.PassTxtBox.BackColor = System.Drawing.Color.White;
-            this.PassTxtBox.BorderColor = System.Drawing.Color.Indigo;
+            this.PassTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.PassTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.PassTxtBox.BorderRadius = 0;
             this.PassTxtBox.BorderSize = 3;
-            this.PassTxtBox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassTxtBox.Location = new System.Drawing.Point(302, 215);
             this.PassTxtBox.Multiline = false;
             this.PassTxtBox.Name = "PassTxtBox";
@@ -140,7 +140,7 @@
             // 
             this.btnUploadAvatar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnUploadAvatar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUploadAvatar.BorderColor = System.Drawing.Color.Indigo;
+            this.btnUploadAvatar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnUploadAvatar.BorderRadius = 0;
             this.btnUploadAvatar.BorderSize = 0;
             this.btnUploadAvatar.FlatAppearance.BorderSize = 0;
@@ -157,11 +157,11 @@
             // DniTxtBox
             // 
             this.DniTxtBox.BackColor = System.Drawing.Color.White;
-            this.DniTxtBox.BorderColor = System.Drawing.Color.Indigo;
+            this.DniTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.DniTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.DniTxtBox.BorderRadius = 0;
             this.DniTxtBox.BorderSize = 3;
-            this.DniTxtBox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DniTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DniTxtBox.Location = new System.Drawing.Point(302, 143);
             this.DniTxtBox.Multiline = false;
             this.DniTxtBox.Name = "DniTxtBox";
@@ -185,11 +185,11 @@
             // LastNameTxtBox
             // 
             this.LastNameTxtBox.BackColor = System.Drawing.Color.White;
-            this.LastNameTxtBox.BorderColor = System.Drawing.Color.Indigo;
+            this.LastNameTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.LastNameTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.LastNameTxtBox.BorderRadius = 0;
             this.LastNameTxtBox.BorderSize = 3;
-            this.LastNameTxtBox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameTxtBox.Location = new System.Drawing.Point(302, 107);
             this.LastNameTxtBox.Multiline = false;
             this.LastNameTxtBox.Name = "LastNameTxtBox";
@@ -204,11 +204,11 @@
             // EmailTxtBox
             // 
             this.EmailTxtBox.BackColor = System.Drawing.Color.White;
-            this.EmailTxtBox.BorderColor = System.Drawing.Color.Indigo;
+            this.EmailTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.EmailTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.EmailTxtBox.BorderRadius = 0;
             this.EmailTxtBox.BorderSize = 3;
-            this.EmailTxtBox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTxtBox.Location = new System.Drawing.Point(302, 179);
             this.EmailTxtBox.Multiline = false;
             this.EmailTxtBox.Name = "EmailTxtBox";
@@ -223,11 +223,11 @@
             // NameTxtBox
             // 
             this.NameTxtBox.BackColor = System.Drawing.Color.White;
-            this.NameTxtBox.BorderColor = System.Drawing.Color.Indigo;
+            this.NameTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.NameTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.NameTxtBox.BorderRadius = 0;
             this.NameTxtBox.BorderSize = 3;
-            this.NameTxtBox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTxtBox.Location = new System.Drawing.Point(302, 71);
             this.NameTxtBox.Multiline = false;
             this.NameTxtBox.Name = "NameTxtBox";

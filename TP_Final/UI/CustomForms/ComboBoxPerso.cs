@@ -15,10 +15,10 @@ namespace TP_Final.UI
     class ComboBoxPerso : UserControl
     {
         private Color iBackColor = Color.White;
-        private Color iIconColor = Color.Indigo;
-        private Color iListBackColor = Color.Indigo;
+        private Color iIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+        private Color iListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
         private Color iListTextColor = Color.White;
-        private Color iBorderColor = Color.Indigo;
+        private Color iBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
         private int iBorderSize = 2;
 
         private ComboBox cbList;
@@ -64,7 +64,7 @@ namespace TP_Final.UI
             //Dropdwn List
             cbList.BackColor = iBackColor;
             cbList.Font = new Font(this.Font.Name, 10F);
-            cbList.ForeColor = iListTextColor;
+            cbList.ForeColor = iListTextColor;            
             cbList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged);
             cbList.TextChanged += new EventHandler(ComboBox_TextChanged);
             //Icon

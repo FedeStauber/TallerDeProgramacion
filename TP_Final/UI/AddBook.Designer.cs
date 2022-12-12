@@ -65,17 +65,18 @@ namespace TP_Final.UI
             // cbFiltro
             // 
             this.cbFiltro.BackColor = System.Drawing.Color.White;
-            this.cbFiltro.BorderColor = System.Drawing.Color.Indigo;
-            this.cbFiltro.BorderSize = 3;
-            this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFiltro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.cbFiltro.BorderSize = 2;
+            this.cbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbFiltro.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltro.ForeColor = System.Drawing.Color.DimGray;
-            this.cbFiltro.IconColor = System.Drawing.Color.Indigo;
+            this.cbFiltro.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.cbFiltro.Items.AddRange(new object[] {
             "Autor",
             "Título",
             "Género"});
-            this.cbFiltro.ListBackColor = System.Drawing.Color.Indigo;
-            this.cbFiltro.ListTextColor = System.Drawing.Color.White;
+            this.cbFiltro.ListBackColor = System.Drawing.Color.White;
+            this.cbFiltro.ListTextColor = System.Drawing.Color.Black;
             this.cbFiltro.Location = new System.Drawing.Point(215, 28);
             this.cbFiltro.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFiltro.Name = "cbFiltro";
@@ -90,9 +91,9 @@ namespace TP_Final.UI
             // searchBtn
             // 
             this.searchBtn.BackColor = System.Drawing.Color.White;
-            this.searchBtn.ForeColor = System.Drawing.Color.Indigo;
+            this.searchBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.searchBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchBtn.IconColor = System.Drawing.Color.Indigo;
+            this.searchBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.searchBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.searchBtn.Location = new System.Drawing.Point(812, 26);
             this.searchBtn.Name = "searchBtn";
@@ -104,11 +105,11 @@ namespace TP_Final.UI
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.BorderColor = System.Drawing.Color.Indigo;
+            this.textBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.textBox1.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.textBox1.BorderRadius = 0;
             this.textBox1.BorderSize = 2;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(421, 28);
             this.textBox1.Multiline = false;
             this.textBox1.Name = "textBox1";
@@ -116,7 +117,7 @@ namespace TP_Final.UI
             this.textBox1.PasswordChar = false;
             this.textBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBox1.PlaceholderText = "Ingrese el texto a buscar";
-            this.textBox1.Size = new System.Drawing.Size(385, 30);
+            this.textBox1.Size = new System.Drawing.Size(385, 29);
             this.textBox1.TabIndex = 10;
             this.textBox1.UnderlinedStyle = false;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchTextBoxKeyPress);
@@ -134,9 +135,9 @@ namespace TP_Final.UI
             // leftBtn
             // 
             this.leftBtn.BackColor = System.Drawing.Color.White;
-            this.leftBtn.ForeColor = System.Drawing.Color.Indigo;
+            this.leftBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.leftBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.leftBtn.IconColor = System.Drawing.Color.Indigo;
+            this.leftBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.leftBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.leftBtn.IconSize = 40;
             this.leftBtn.Location = new System.Drawing.Point(55, 215);
@@ -160,9 +161,9 @@ namespace TP_Final.UI
             // rightBtn
             // 
             this.rightBtn.BackColor = System.Drawing.Color.White;
-            this.rightBtn.ForeColor = System.Drawing.Color.Indigo;
+            this.rightBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.rightBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.rightBtn.IconColor = System.Drawing.Color.Indigo;
+            this.rightBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.rightBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.rightBtn.IconSize = 40;
             this.rightBtn.Location = new System.Drawing.Point(5, 215);
@@ -186,15 +187,15 @@ namespace TP_Final.UI
             // comboBoxPerso1
             // 
             this.comboBoxPerso1.BackColor = System.Drawing.Color.White;
-            this.comboBoxPerso1.BorderColor = System.Drawing.Color.Indigo;
+            this.comboBoxPerso1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.comboBoxPerso1.BorderSize = 2;
             this.comboBoxPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPerso1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxPerso1.IconColor = System.Drawing.Color.Indigo;
+            this.comboBoxPerso1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.comboBoxPerso1.Items.AddRange(new object[] {
             "4",
             "16"});
-            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.Indigo;
+            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.comboBoxPerso1.ListTextColor = System.Drawing.Color.White;
             this.comboBoxPerso1.Location = new System.Drawing.Point(857, 26);
             this.comboBoxPerso1.MinimumSize = new System.Drawing.Size(200, 30);
@@ -210,7 +211,7 @@ namespace TP_Final.UI
             // pagesLabel
             // 
             this.pagesLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pagesLabel.Font = new System.Drawing.Font("Nirmala UI", 10F);
+            this.pagesLabel.Font = new System.Drawing.Font("Roboto Condensed", 10F);
             this.pagesLabel.Location = new System.Drawing.Point(0, 0);
             this.pagesLabel.Margin = new System.Windows.Forms.Padding(0);
             this.pagesLabel.Name = "pagesLabel";

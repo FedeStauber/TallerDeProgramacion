@@ -74,7 +74,7 @@
     <Compile Include="Domain\Notificator.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Exceptions\BookNotFoundException.cs" />
-    <Compile Include="Exceptions\DownloadingCoverErrorException.cs" />
+    <Compile Include="Exceptions\ErrorDownloadingCoverException2.cs" />
     <Compile Include="Exceptions\NoAvailableCopyException.cs" />
     <Compile Include="Exceptions\UserNotFoundException.cs" />
     <Compile Include="IO\BookDTO.cs" />
@@ -329,10 +329,10 @@
     <None Include="Resources\defAvatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\loader2.gif" />
+    <None Include="Resources\illustration-file-not-found-or-404-error-page-free-vector.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\illustration-file-not-found-or-404-error-page-free-vector.jpg" />
+    <None Include="Resources\image_processing20210903-11241-1netgf1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

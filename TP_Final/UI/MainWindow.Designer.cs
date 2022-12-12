@@ -80,7 +80,7 @@ namespace TP_Final.UI
             // 
             // lateralPanel
             // 
-            this.lateralPanel.BackColor = System.Drawing.Color.Indigo;
+            this.lateralPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.lateralPanel.Controls.Add(this.panel1);
             this.lateralPanel.Controls.Add(this.panelUsers);
             this.lateralPanel.Controls.Add(this.panelLoans);
@@ -108,7 +108,7 @@ namespace TP_Final.UI
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
             this.btnHelp.IconColor = System.Drawing.Color.White;
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -148,11 +148,11 @@ namespace TP_Final.UI
             // 
             // btnUserList
             // 
-            this.btnUserList.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnUserList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
             this.btnUserList.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUserList.FlatAppearance.BorderSize = 0;
             this.btnUserList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserList.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserList.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserList.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUserList.IconColor = System.Drawing.Color.Black;
             this.btnUserList.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -167,10 +167,11 @@ namespace TP_Final.UI
             // 
             // btnUsers
             // 
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.IconChar = FontAwesome.Sharp.IconChar.User;
             this.btnUsers.IconColor = System.Drawing.Color.White;
             this.btnUsers.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -183,7 +184,7 @@ namespace TP_Final.UI
             this.btnUsers.Size = new System.Drawing.Size(220, 40);
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "Usuarios";
-            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.UseVisualStyleBackColor = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // panelLoans
@@ -213,11 +214,11 @@ namespace TP_Final.UI
             // 
             // btnUserLoans
             // 
-            this.btnUserLoans.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnUserLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
             this.btnUserLoans.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUserLoans.FlatAppearance.BorderSize = 0;
             this.btnUserLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserLoans.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserLoans.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserLoans.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUserLoans.IconColor = System.Drawing.Color.Black;
             this.btnUserLoans.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -232,11 +233,11 @@ namespace TP_Final.UI
             // 
             // btnLoanReturn
             // 
-            this.btnLoanReturn.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnLoanReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
             this.btnLoanReturn.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLoanReturn.FlatAppearance.BorderSize = 0;
             this.btnLoanReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoanReturn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoanReturn.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoanReturn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLoanReturn.IconColor = System.Drawing.Color.Black;
             this.btnLoanReturn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -251,10 +252,11 @@ namespace TP_Final.UI
             // 
             // btnLoans
             // 
+            this.btnLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnLoans.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLoans.FlatAppearance.BorderSize = 0;
             this.btnLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoans.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoans.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoans.IconChar = FontAwesome.Sharp.IconChar.Handshake;
             this.btnLoans.IconColor = System.Drawing.Color.White;
             this.btnLoans.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -266,7 +268,7 @@ namespace TP_Final.UI
             this.btnLoans.Size = new System.Drawing.Size(220, 40);
             this.btnLoans.TabIndex = 1;
             this.btnLoans.Text = "Prestamos";
-            this.btnLoans.UseVisualStyleBackColor = true;
+            this.btnLoans.UseVisualStyleBackColor = false;
             this.btnLoans.Click += new System.EventHandler(this.btnLoans_Click);
             // 
             // panelBooks
@@ -296,11 +298,11 @@ namespace TP_Final.UI
             // 
             // btnCatalogue
             // 
-            this.btnCatalogue.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnCatalogue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
             this.btnCatalogue.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCatalogue.FlatAppearance.BorderSize = 0;
             this.btnCatalogue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCatalogue.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCatalogue.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCatalogue.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCatalogue.IconColor = System.Drawing.Color.Black;
             this.btnCatalogue.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -315,11 +317,11 @@ namespace TP_Final.UI
             // 
             // btnAddBook
             // 
-            this.btnAddBook.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnAddBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
             this.btnAddBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddBook.FlatAppearance.BorderSize = 0;
             this.btnAddBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBook.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBook.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBook.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddBook.IconColor = System.Drawing.Color.Black;
             this.btnAddBook.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -334,10 +336,11 @@ namespace TP_Final.UI
             // 
             // btnBooks
             // 
+            this.btnBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnBooks.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBooks.FlatAppearance.BorderSize = 0;
             this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBooks.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooks.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooks.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.btnBooks.IconColor = System.Drawing.Color.White;
             this.btnBooks.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -350,12 +353,12 @@ namespace TP_Final.UI
             this.btnBooks.Size = new System.Drawing.Size(220, 40);
             this.btnBooks.TabIndex = 0;
             this.btnBooks.Text = "Libros";
-            this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.UseVisualStyleBackColor = false;
             this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // panelCurrentUser
             // 
-            this.panelCurrentUser.BackColor = System.Drawing.Color.Indigo;
+            this.panelCurrentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.panelCurrentUser.Controls.Add(this.tableLayoutPanel1);
             this.panelCurrentUser.Controls.Add(this.userNameLabel);
             this.panelCurrentUser.Controls.Add(this.pictureBox1);
@@ -385,12 +388,10 @@ namespace TP_Final.UI
             // 
             // iconScore
             // 
-            this.iconScore.BackColor = System.Drawing.Color.Indigo;
+            this.iconScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.iconScore.FlatAppearance.BorderSize = 0;
-            this.iconScore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
-            this.iconScore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
             this.iconScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconScore.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconScore.Font = new System.Drawing.Font("Roboto Condensed", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconScore.ForeColor = System.Drawing.Color.White;
             this.iconScore.IconChar = FontAwesome.Sharp.IconChar.Star;
             this.iconScore.IconColor = System.Drawing.Color.White;
@@ -420,11 +421,11 @@ namespace TP_Final.UI
             // 
             // btnModifyProfile
             // 
-            this.btnModifyProfile.BackColor = System.Drawing.Color.Indigo;
+            this.btnModifyProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnModifyProfile.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnModifyProfile.FlatAppearance.BorderSize = 0;
             this.btnModifyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyProfile.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyProfile.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifyProfile.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnModifyProfile.IconColor = System.Drawing.Color.Black;
             this.btnModifyProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -439,11 +440,11 @@ namespace TP_Final.UI
             // 
             // btnLogOut
             // 
-            this.btnLogOut.BackColor = System.Drawing.Color.Indigo;
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogOut.FlatAppearance.BorderSize = 0;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLogOut.IconColor = System.Drawing.Color.Black;
             this.btnLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -461,7 +462,7 @@ namespace TP_Final.UI
             this.userNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userNameLabel.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.Location = new System.Drawing.Point(50, 35);
             this.userNameLabel.Margin = new System.Windows.Forms.Padding(0);
             this.userNameLabel.Name = "userNameLabel";
@@ -504,7 +505,7 @@ namespace TP_Final.UI
             // pbMinimize
             // 
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMinimize.BackColor = System.Drawing.Color.Indigo;
+            this.pbMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.pbMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.pbMinimize.IconColor = System.Drawing.Color.White;
             this.pbMinimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
@@ -520,7 +521,7 @@ namespace TP_Final.UI
             // pbMaximize
             // 
             this.pbMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMaximize.BackColor = System.Drawing.Color.Indigo;
+            this.pbMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.pbMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.pbMaximize.IconColor = System.Drawing.Color.White;
             this.pbMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -536,7 +537,7 @@ namespace TP_Final.UI
             // pbClose
             // 
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbClose.BackColor = System.Drawing.Color.Indigo;
+            this.pbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.pbClose.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.pbClose.IconColor = System.Drawing.Color.White;
             this.pbClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
@@ -554,8 +555,8 @@ namespace TP_Final.UI
             this.labelChildTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelChildTitle.BackColor = System.Drawing.Color.Indigo;
-            this.labelChildTitle.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChildTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.labelChildTitle.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelChildTitle.ForeColor = System.Drawing.Color.White;
             this.labelChildTitle.Location = new System.Drawing.Point(0, 0);
             this.labelChildTitle.Margin = new System.Windows.Forms.Padding(0);
