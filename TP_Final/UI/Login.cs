@@ -69,5 +69,24 @@ namespace TP_Final
                 this.btnAccept_Click(sender, e);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+                    }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxEmail__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
