@@ -78,7 +78,7 @@
             // password2Label
             // 
             this.password2Label.AutoSize = true;
-            this.password2Label.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password2Label.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password2Label.Location = new System.Drawing.Point(345, 282);
             this.password2Label.Name = "password2Label";
             this.password2Label.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
@@ -89,7 +89,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(346, 246);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
@@ -100,7 +100,7 @@
             // mailLabel
             // 
             this.mailLabel.AutoSize = true;
-            this.mailLabel.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailLabel.Location = new System.Drawing.Point(366, 210);
             this.mailLabel.Name = "mailLabel";
             this.mailLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
@@ -111,7 +111,7 @@
             // dniLabel
             // 
             this.dniLabel.AutoSize = true;
-            this.dniLabel.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dniLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dniLabel.Location = new System.Drawing.Point(381, 174);
             this.dniLabel.Name = "dniLabel";
             this.dniLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
@@ -122,7 +122,7 @@
             // lastnameLabel
             // 
             this.lastnameLabel.AutoSize = true;
-            this.lastnameLabel.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastnameLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastnameLabel.Location = new System.Drawing.Point(363, 138);
             this.lastnameLabel.Name = "lastnameLabel";
             this.lastnameLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
@@ -133,7 +133,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(363, 102);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
@@ -150,7 +150,7 @@
             this.btnCancel.BorderSize = 2;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(654, 420);
             this.btnCancel.Name = "btnCancel";
@@ -170,7 +170,7 @@
             this.btnAccept.BorderSize = 2;
             this.btnAccept.FlatAppearance.BorderSize = 0;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.ForeColor = System.Drawing.Color.Black;
             this.btnAccept.Location = new System.Drawing.Point(474, 420);
             this.btnAccept.Name = "btnAccept";
@@ -188,7 +188,7 @@
             this.PassRepeatTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.PassRepeatTxtBox.BorderRadius = 0;
             this.PassRepeatTxtBox.BorderSize = 3;
-            this.PassRepeatTxtBox.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassRepeatTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassRepeatTxtBox.Location = new System.Drawing.Point(423, 269);
             this.PassRepeatTxtBox.Multiline = false;
             this.PassRepeatTxtBox.Name = "PassRepeatTxtBox";
@@ -207,7 +207,7 @@
             this.PassTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.PassTxtBox.BorderRadius = 0;
             this.PassTxtBox.BorderSize = 3;
-            this.PassTxtBox.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassTxtBox.Location = new System.Drawing.Point(423, 233);
             this.PassTxtBox.Multiline = false;
             this.PassTxtBox.Name = "PassTxtBox";
@@ -228,7 +228,7 @@
             this.btnUploadAvatar.BorderSize = 0;
             this.btnUploadAvatar.FlatAppearance.BorderSize = 0;
             this.btnUploadAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadAvatar.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUploadAvatar.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUploadAvatar.ForeColor = System.Drawing.Color.White;
             this.btnUploadAvatar.Location = new System.Drawing.Point(113, 305);
             this.btnUploadAvatar.Name = "btnUploadAvatar";
@@ -246,7 +246,7 @@
             this.DniTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.DniTxtBox.BorderRadius = 0;
             this.DniTxtBox.BorderSize = 3;
-            this.DniTxtBox.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DniTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DniTxtBox.Location = new System.Drawing.Point(423, 161);
             this.DniTxtBox.Multiline = false;
             this.DniTxtBox.Name = "DniTxtBox";
@@ -275,7 +275,7 @@
             this.LastNameTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.LastNameTxtBox.BorderRadius = 0;
             this.LastNameTxtBox.BorderSize = 3;
-            this.LastNameTxtBox.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameTxtBox.Location = new System.Drawing.Point(423, 125);
             this.LastNameTxtBox.Multiline = false;
             this.LastNameTxtBox.Name = "LastNameTxtBox";
@@ -294,7 +294,7 @@
             this.EmailTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.EmailTxtBox.BorderRadius = 0;
             this.EmailTxtBox.BorderSize = 3;
-            this.EmailTxtBox.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTxtBox.Location = new System.Drawing.Point(423, 197);
             this.EmailTxtBox.Multiline = false;
             this.EmailTxtBox.Name = "EmailTxtBox";
@@ -313,7 +313,7 @@
             this.NameTxtBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.NameTxtBox.BorderRadius = 0;
             this.NameTxtBox.BorderSize = 3;
-            this.NameTxtBox.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTxtBox.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTxtBox.Location = new System.Drawing.Point(423, 89);
             this.NameTxtBox.Multiline = false;
             this.NameTxtBox.Name = "NameTxtBox";

@@ -162,7 +162,7 @@
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(0, 180);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
@@ -174,7 +174,7 @@
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(0, 140);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
@@ -186,7 +186,7 @@
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
@@ -198,7 +198,7 @@
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 60);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
@@ -210,7 +210,7 @@
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
@@ -236,7 +236,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCancel.IconColor = System.Drawing.Color.Black;
@@ -256,7 +256,7 @@
             this.btnSaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnSaveChanges.FlatAppearance.BorderSize = 0;
             this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveChanges.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveChanges.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveChanges.ForeColor = System.Drawing.Color.White;
             this.btnSaveChanges.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSaveChanges.IconColor = System.Drawing.Color.Black;
@@ -346,7 +346,7 @@
             // labeLLoanReturn
             // 
             this.labeLLoanReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labeLLoanReturn.Font = new System.Drawing.Font("Roboto Condensed"., 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeLLoanReturn.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeLLoanReturn.Location = new System.Drawing.Point(0, 0);
             this.labeLLoanReturn.Name = "labeLLoanReturn";
             this.labeLLoanReturn.Size = new System.Drawing.Size(418, 28);
@@ -412,7 +412,7 @@
             this.textBoxFilter.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.textBoxFilter.BorderRadius = 0;
             this.textBoxFilter.BorderSize = 2;
-            this.textBoxFilter.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFilter.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFilter.Location = new System.Drawing.Point(3, 0);
             this.textBoxFilter.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.textBoxFilter.Multiline = false;
@@ -460,7 +460,7 @@
             this.dataGridUsers.AllowUserToDeleteRows = false;
             this.dataGridUsers.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.NullValue = "-";
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.BlueViolet;
@@ -471,7 +471,7 @@
             this.dataGridUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Condensed"., 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -489,7 +489,7 @@
             this.dataGridUsers.DataSource = this.loanDTOBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.NullValue = "-";
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.BlueViolet;

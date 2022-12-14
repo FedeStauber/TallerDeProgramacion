@@ -53,7 +53,7 @@ namespace TP_Final.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.textBox1);
-            this.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TextBoxPerso";
             this.Padding = new System.Windows.Forms.Padding(7);
             this.Size = new System.Drawing.Size(250, 30);
