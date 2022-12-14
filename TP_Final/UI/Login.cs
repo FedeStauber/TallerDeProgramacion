@@ -47,11 +47,18 @@ namespace TP_Final
             }
         }
 
+        private void txtBoxEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                this.btnAccept_Click(sender, e);
+            }
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             MainWindow vMainMenu = Owner as MainWindow;
-            vMainMenu.OpenChildForm(new SingUp());
-
+            vMainMenu.OpenChildForm(new SingUp());    
         }
 
         private void txtBoxPass_KeyPress(object sender, KeyPressEventArgs e)
@@ -62,31 +69,5 @@ namespace TP_Final
             }
         }
 
-        private void txtBoxEmail_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                this.btnAccept_Click(sender, e);
-            }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-                    }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxEmail__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRegister_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

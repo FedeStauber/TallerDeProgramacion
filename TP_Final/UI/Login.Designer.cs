@@ -44,9 +44,9 @@ namespace TP_Final
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(100, 121);
+            this.pictureBox2.Location = new System.Drawing.Point(181, 99);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(526, 516);
+            this.pictureBox2.Size = new System.Drawing.Size(528, 526);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
@@ -59,7 +59,6 @@ namespace TP_Final
             this.label1.Size = new System.Drawing.Size(89, 33);
             this.label1.TabIndex = 12;
             this.label1.Text = "LOGIN";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -101,15 +100,16 @@ namespace TP_Final
             this.btnRegister.Text = "Registrarse";
             this.btnRegister.TextColor = System.Drawing.Color.Black;
             this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtBoxPass
             // 
-            this.txtBoxPass.BackColor = System.Drawing.Color.Gray;
+            this.txtBoxPass.BackColor = System.Drawing.Color.DarkGray;
             this.txtBoxPass.BorderColor = System.Drawing.Color.Gray;
             this.txtBoxPass.BorderFocusColor = System.Drawing.Color.Gray;
             this.txtBoxPass.BorderRadius = 5;
             this.txtBoxPass.BorderSize = 3;
+            this.txtBoxPass.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtBoxPass.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPass.Location = new System.Drawing.Point(862, 346);
             this.txtBoxPass.Multiline = false;
@@ -118,9 +118,10 @@ namespace TP_Final
             this.txtBoxPass.PasswordChar = true;
             this.txtBoxPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxPass.PlaceholderText = "";
-            this.txtBoxPass.Size = new System.Drawing.Size(478, 50);
+            this.txtBoxPass.Size = new System.Drawing.Size(478, 51);
             this.txtBoxPass.TabIndex = 8;
-            this.txtBoxPass.UnderlinedStyle = true;
+            this.txtBoxPass.UnderlinedStyle = false;
+            this.txtBoxPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxPass_KeyPress);
             // 
             // btnAccept
             // 
@@ -144,11 +145,12 @@ namespace TP_Final
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.BackColor = System.Drawing.Color.Gray;
+            this.txtBoxEmail.BackColor = System.Drawing.Color.DarkGray;
             this.txtBoxEmail.BorderColor = System.Drawing.Color.Gray;
             this.txtBoxEmail.BorderFocusColor = System.Drawing.Color.Gray;
             this.txtBoxEmail.BorderRadius = 5;
             this.txtBoxEmail.BorderSize = 3;
+            this.txtBoxEmail.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtBoxEmail.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(862, 252);
             this.txtBoxEmail.Multiline = false;
@@ -157,10 +159,9 @@ namespace TP_Final
             this.txtBoxEmail.PasswordChar = false;
             this.txtBoxEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxEmail.PlaceholderText = "";
-            this.txtBoxEmail.Size = new System.Drawing.Size(478, 50);
+            this.txtBoxEmail.Size = new System.Drawing.Size(478, 51);
             this.txtBoxEmail.TabIndex = 7;
-            this.txtBoxEmail.UnderlinedStyle = true;
-            this.txtBoxEmail._TextChanged += new System.EventHandler(this.txtBoxEmail__TextChanged);
+            this.txtBoxEmail.UnderlinedStyle = false;
             this.txtBoxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxEmail_KeyPress);
             // 
             // Login
