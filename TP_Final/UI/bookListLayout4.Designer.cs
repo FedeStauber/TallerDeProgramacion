@@ -138,6 +138,7 @@ namespace TP_Final.UI
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Location = new System.Drawing.Point(15, 69);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(15);
@@ -204,6 +205,7 @@ namespace TP_Final.UI
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(15, 68);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(15);
@@ -270,6 +272,7 @@ namespace TP_Final.UI
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(15, 69);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(15);
@@ -336,6 +339,7 @@ namespace TP_Final.UI
             // 
             // pictureBox0
             // 
+            this.pictureBox0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox0.Location = new System.Drawing.Point(15, 69);
             this.pictureBox0.Margin = new System.Windows.Forms.Padding(15);
@@ -346,7 +350,7 @@ namespace TP_Final.UI
             this.pictureBox0.TabStop = false;
             this.pictureBox0.Click += new System.EventHandler(this.pictureBox0_Click);
             // 
-            // bookListLayout4
+            // BookListLayout4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -354,7 +358,7 @@ namespace TP_Final.UI
             this.ClientSize = new System.Drawing.Size(1064, 542);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "bookListLayout4";
+            this.Name = "BookListLayout4";
             this.Text = "bookListLayout4";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.bookPanel3.ResumeLayout(false);

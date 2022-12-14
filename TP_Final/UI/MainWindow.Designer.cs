@@ -60,6 +60,8 @@ namespace TP_Final.UI
             this.pbClose = new FontAwesome.Sharp.IconPictureBox();
             this.labelChildTitle = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lateralPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelUsers.SuspendLayout();
@@ -81,10 +83,12 @@ namespace TP_Final.UI
             // lateralPanel
             // 
             this.lateralPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.lateralPanel.Controls.Add(this.panel1);
             this.lateralPanel.Controls.Add(this.panelUsers);
+            this.lateralPanel.Controls.Add(this.panel3);
             this.lateralPanel.Controls.Add(this.panelLoans);
             this.lateralPanel.Controls.Add(this.panelBooks);
+            this.lateralPanel.Controls.Add(this.panel2);
+            this.lateralPanel.Controls.Add(this.panel1);
             this.lateralPanel.Controls.Add(this.panelCurrentUser);
             this.lateralPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.lateralPanel.Location = new System.Drawing.Point(0, 0);
@@ -128,7 +132,7 @@ namespace TP_Final.UI
             this.panelUsers.Controls.Add(this.submenuUsers);
             this.panelUsers.Controls.Add(this.btnUsers);
             this.panelUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUsers.Location = new System.Drawing.Point(0, 460);
+            this.panelUsers.Location = new System.Drawing.Point(0, 494);
             this.panelUsers.Margin = new System.Windows.Forms.Padding(0);
             this.panelUsers.Name = "panelUsers";
             this.panelUsers.Size = new System.Drawing.Size(220, 80);
@@ -193,7 +197,7 @@ namespace TP_Final.UI
             this.panelLoans.Controls.Add(this.submenuLoans);
             this.panelLoans.Controls.Add(this.btnLoans);
             this.panelLoans.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLoans.Location = new System.Drawing.Point(0, 340);
+            this.panelLoans.Location = new System.Drawing.Point(0, 374);
             this.panelLoans.Margin = new System.Windows.Forms.Padding(0);
             this.panelLoans.Name = "panelLoans";
             this.panelLoans.Size = new System.Drawing.Size(220, 120);
@@ -277,7 +281,7 @@ namespace TP_Final.UI
             this.panelBooks.Controls.Add(this.submenuBooks);
             this.panelBooks.Controls.Add(this.btnBooks);
             this.panelBooks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBooks.Location = new System.Drawing.Point(0, 220);
+            this.panelBooks.Location = new System.Drawing.Point(0, 254);
             this.panelBooks.Margin = new System.Windows.Forms.Padding(0);
             this.panelBooks.Name = "panelBooks";
             this.panelBooks.Size = new System.Drawing.Size(220, 120);
@@ -366,7 +370,7 @@ namespace TP_Final.UI
             this.panelCurrentUser.Location = new System.Drawing.Point(0, 0);
             this.panelCurrentUser.Margin = new System.Windows.Forms.Padding(0);
             this.panelCurrentUser.Name = "panelCurrentUser";
-            this.panelCurrentUser.Size = new System.Drawing.Size(220, 220);
+            this.panelCurrentUser.Size = new System.Drawing.Size(220, 232);
             this.panelCurrentUser.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -378,7 +382,7 @@ namespace TP_Final.UI
             this.tableLayoutPanel1.Controls.Add(this.iconScore, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelUserOptions, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 170);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 182);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -463,10 +467,10 @@ namespace TP_Final.UI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userNameLabel.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLabel.Location = new System.Drawing.Point(50, 35);
+            this.userNameLabel.Location = new System.Drawing.Point(50, 32);
             this.userNameLabel.Margin = new System.Windows.Forms.Padding(0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(120, 15);
+            this.userNameLabel.Size = new System.Drawing.Size(120, 24);
             this.userNameLabel.TabIndex = 2;
             this.userNameLabel.Text = "Name";
             this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -481,7 +485,7 @@ namespace TP_Final.UI
             this.pictureBox1.Location = new System.Drawing.Point(50, 50);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(120, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -579,6 +583,22 @@ namespace TP_Final.UI
             this.panelChildForm.Size = new System.Drawing.Size(1280, 721);
             this.panelChildForm.TabIndex = 2;
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 232);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 22);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 592);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(220, 139);
+            this.panel3.TabIndex = 6;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -650,5 +670,7 @@ namespace TP_Final.UI
         private FontAwesome.Sharp.IconButton btnHelp;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private FontAwesome.Sharp.IconButton iconScore;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
