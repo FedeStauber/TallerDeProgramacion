@@ -106,7 +106,7 @@ namespace TP_Final.UI
             // titleLabel3
             // 
             this.titleLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.titleLabel3.Font = new System.Drawing.Font("Roboto Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel3.Font = new System.Drawing.Font("Roboto Condensed"., 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel3.Location = new System.Drawing.Point(3, 0);
             this.titleLabel3.Name = "titleLabel3";
             this.titleLabel3.Size = new System.Drawing.Size(260, 54);
@@ -117,7 +117,7 @@ namespace TP_Final.UI
             // authorLabel3
             // 
             this.authorLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.authorLabel3.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authorLabel3.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authorLabel3.Location = new System.Drawing.Point(3, 465);
             this.authorLabel3.Name = "authorLabel3";
             this.authorLabel3.Size = new System.Drawing.Size(260, 37);
@@ -128,7 +128,7 @@ namespace TP_Final.UI
             // ISBNLabel3
             // 
             this.ISBNLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ISBNLabel3.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNLabel3.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ISBNLabel3.Location = new System.Drawing.Point(3, 502);
             this.ISBNLabel3.Name = "ISBNLabel3";
             this.ISBNLabel3.Size = new System.Drawing.Size(260, 40);
@@ -172,7 +172,7 @@ namespace TP_Final.UI
             // titleLabel2
             // 
             this.titleLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.titleLabel2.Font = new System.Drawing.Font("Roboto Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel2.Font = new System.Drawing.Font("Roboto Condensed"., 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel2.Location = new System.Drawing.Point(3, 0);
             this.titleLabel2.Name = "titleLabel2";
             this.titleLabel2.Size = new System.Drawing.Size(260, 53);
@@ -183,7 +183,7 @@ namespace TP_Final.UI
             // authorLabel2
             // 
             this.authorLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.authorLabel2.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authorLabel2.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authorLabel2.Location = new System.Drawing.Point(3, 466);
             this.authorLabel2.Name = "authorLabel2";
             this.authorLabel2.Size = new System.Drawing.Size(260, 37);
@@ -194,7 +194,7 @@ namespace TP_Final.UI
             // ISBNLabel2
             // 
             this.ISBNLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ISBNLabel2.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNLabel2.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ISBNLabel2.Location = new System.Drawing.Point(3, 503);
             this.ISBNLabel2.Name = "ISBNLabel2";
             this.ISBNLabel2.Size = new System.Drawing.Size(260, 39);
@@ -238,7 +238,7 @@ namespace TP_Final.UI
             // titleLabel1
             // 
             this.titleLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.titleLabel1.Font = new System.Drawing.Font("Roboto Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel1.Font = new System.Drawing.Font("Roboto Condensed"., 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel1.Location = new System.Drawing.Point(3, 0);
             this.titleLabel1.Name = "titleLabel1";
             this.titleLabel1.Size = new System.Drawing.Size(260, 54);
@@ -249,7 +249,7 @@ namespace TP_Final.UI
             // authorLabel1
             // 
             this.authorLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.authorLabel1.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authorLabel1.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authorLabel1.Location = new System.Drawing.Point(3, 465);
             this.authorLabel1.Name = "authorLabel1";
             this.authorLabel1.Size = new System.Drawing.Size(260, 37);
@@ -260,7 +260,7 @@ namespace TP_Final.UI
             // ISBNLabel1
             // 
             this.ISBNLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ISBNLabel1.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNLabel1.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ISBNLabel1.Location = new System.Drawing.Point(3, 502);
             this.ISBNLabel1.Name = "ISBNLabel1";
             this.ISBNLabel1.Size = new System.Drawing.Size(260, 40);
@@ -304,7 +304,7 @@ namespace TP_Final.UI
             // titleLabel0
             // 
             this.titleLabel0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.titleLabel0.Font = new System.Drawing.Font("Roboto Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel0.Font = new System.Drawing.Font("Roboto Condensed"., 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel0.Location = new System.Drawing.Point(3, 0);
             this.titleLabel0.Name = "titleLabel0";
             this.titleLabel0.Size = new System.Drawing.Size(260, 54);
@@ -315,7 +315,7 @@ namespace TP_Final.UI
             // authorLabel0
             // 
             this.authorLabel0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.authorLabel0.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authorLabel0.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authorLabel0.Location = new System.Drawing.Point(3, 465);
             this.authorLabel0.Name = "authorLabel0";
             this.authorLabel0.Size = new System.Drawing.Size(260, 37);
@@ -326,7 +326,7 @@ namespace TP_Final.UI
             // ISBNLabel0
             // 
             this.ISBNLabel0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ISBNLabel0.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNLabel0.Font = new System.Drawing.Font("Roboto Condensed"., 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ISBNLabel0.Location = new System.Drawing.Point(3, 502);
             this.ISBNLabel0.Name = "ISBNLabel0";
             this.ISBNLabel0.Size = new System.Drawing.Size(260, 40);
