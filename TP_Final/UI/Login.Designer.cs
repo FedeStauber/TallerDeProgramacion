@@ -44,7 +44,7 @@ namespace TP_Final
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(77, 86);
+            this.pictureBox2.Location = new System.Drawing.Point(100, 121);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(526, 516);
             this.pictureBox2.TabIndex = 11;
@@ -112,14 +112,14 @@ namespace TP_Final
             this.txtBoxPass.BorderSize = 3;
             this.txtBoxPass.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPass.Location = new System.Drawing.Point(862, 346);
-            this.txtBoxPass.Multiline = true;
+            this.txtBoxPass.Multiline = false;
             this.txtBoxPass.Name = "txtBoxPass";
             this.txtBoxPass.Padding = new System.Windows.Forms.Padding(16);
-            this.txtBoxPass.PasswordChar = false;
+            this.txtBoxPass.PasswordChar = true;
             this.txtBoxPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxPass.PlaceholderText = "";
             this.txtBoxPass.Size = new System.Drawing.Size(478, 50);
-            this.txtBoxPass.TabIndex = 15;
+            this.txtBoxPass.TabIndex = 8;
             this.txtBoxPass.UnderlinedStyle = true;
             // 
             // btnAccept
@@ -151,7 +151,7 @@ namespace TP_Final
             this.txtBoxEmail.BorderSize = 3;
             this.txtBoxEmail.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(862, 252);
-            this.txtBoxEmail.Multiline = true;
+            this.txtBoxEmail.Multiline = false;
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Padding = new System.Windows.Forms.Padding(16);
             this.txtBoxEmail.PasswordChar = false;
