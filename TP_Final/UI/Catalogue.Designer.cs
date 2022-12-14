@@ -83,7 +83,7 @@ namespace TP_Final.UI
             this.textBoxPerso1.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.textBoxPerso1.BorderRadius = 0;
             this.textBoxPerso1.BorderSize = 2;
-            this.textBoxPerso1.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPerso1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPerso1.Location = new System.Drawing.Point(376, 31);
             this.textBoxPerso1.Multiline = false;
             this.textBoxPerso1.Name = "textBoxPerso1";
@@ -94,6 +94,7 @@ namespace TP_Final.UI
             this.textBoxPerso1.Size = new System.Drawing.Size(347, 30);
             this.textBoxPerso1.TabIndex = 4;
             this.textBoxPerso1.UnderlinedStyle = false;
+            this.textBoxPerso1._TextChanged += new System.EventHandler(this.textBoxPerso1__TextChanged);
             this.textBoxPerso1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPerso1_KeyPress);
             // 
             // cbFiltro
@@ -209,7 +210,7 @@ namespace TP_Final.UI
             // pagesLabel
             // 
             this.pagesLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pagesLabel.Font = new System.Drawing.Font("Roboto Condensed", 10F);
+            this.pagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.pagesLabel.Location = new System.Drawing.Point(0, 0);
             this.pagesLabel.Name = "pagesLabel";
             this.pagesLabel.Size = new System.Drawing.Size(1064, 80);

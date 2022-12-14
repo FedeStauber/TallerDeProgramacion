@@ -83,6 +83,11 @@
     <Compile Include="IO\LoginDTO.cs" />
     <Compile Include="IO\UsefulMapper.cs" />
     <Compile Include="IO\UserDTO.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\AddLoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,14 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UI\SingUp.resx">
       <DependentUpon>SingUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +281,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Roboto-Condensed.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -333,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image_processing20210903-11241-1netgf1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Font\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

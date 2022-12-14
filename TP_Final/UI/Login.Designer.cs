@@ -44,7 +44,7 @@ namespace TP_Final
             this.btnAccept.BorderSize = 2;
             this.btnAccept.FlatAppearance.BorderSize = 0;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.ForeColor = System.Drawing.Color.Black;
             this.btnAccept.Location = new System.Drawing.Point(602, 330);
             this.btnAccept.Name = "btnAccept";
@@ -62,7 +62,7 @@ namespace TP_Final
             this.txtBoxPass.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.txtBoxPass.BorderRadius = 0;
             this.txtBoxPass.BorderSize = 3;
-            this.txtBoxPass.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxPass.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPass.Location = new System.Drawing.Point(602, 277);
             this.txtBoxPass.Multiline = false;
             this.txtBoxPass.Name = "txtBoxPass";
@@ -82,7 +82,7 @@ namespace TP_Final
             this.txtBoxEmail.BorderFocusColor = System.Drawing.Color.BlueViolet;
             this.txtBoxEmail.BorderRadius = 0;
             this.txtBoxEmail.BorderSize = 3;
-            this.txtBoxEmail.Font = new System.Drawing.Font("Roboto Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmail.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(602, 231);
             this.txtBoxEmail.Multiline = false;
             this.txtBoxEmail.Name = "txtBoxEmail";
@@ -104,7 +104,7 @@ namespace TP_Final
             this.btnRegister.BorderSize = 2;
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
             this.btnRegister.Location = new System.Drawing.Point(602, 385);
             this.btnRegister.Name = "btnRegister";

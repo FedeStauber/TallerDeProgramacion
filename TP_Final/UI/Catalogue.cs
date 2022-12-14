@@ -234,5 +234,10 @@ namespace TP_Final.UI
             currentPage--;
             this.PageCounterUpdate();
         }
+
+        private void textBoxPerso1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

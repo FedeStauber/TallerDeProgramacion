@@ -240,6 +240,10 @@ namespace TP_Final.UI
             this.OpenChildForm(new ModifyProfile(this.User));
         }
 
+        private void labelChildTitle_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {

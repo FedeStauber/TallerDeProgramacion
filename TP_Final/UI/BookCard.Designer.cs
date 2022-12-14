@@ -133,7 +133,7 @@ namespace TP_Final.UI
             // labelTitle
             // 
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTitle.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Roboto Cn", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
             this.labelTitle.Name = "labelTitle";
@@ -185,7 +185,7 @@ namespace TP_Final.UI
             this.tableLayoutPanel3.Controls.Add(this.btnEditDescription, 2, 5);
             this.tableLayoutPanel3.Controls.Add(this.panelEditBox, 1, 7);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel3.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel3.Location = new System.Drawing.Point(391, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -206,7 +206,7 @@ namespace TP_Final.UI
             this.labelISBN.AutoSize = true;
             this.labelISBN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelISBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelISBN.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelISBN.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelISBN.Location = new System.Drawing.Point(116, 138);
             this.labelISBN.Margin = new System.Windows.Forms.Padding(3, 6, 3, 10);
             this.labelISBN.Name = "labelISBN";
@@ -220,7 +220,7 @@ namespace TP_Final.UI
             this.labelPages.AutoSize = true;
             this.labelPages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelPages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelPages.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPages.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPages.Location = new System.Drawing.Point(116, 105);
             this.labelPages.Margin = new System.Windows.Forms.Padding(3, 6, 3, 10);
             this.labelPages.Name = "labelPages";
@@ -234,7 +234,7 @@ namespace TP_Final.UI
             this.labelLanguage.AutoSize = true;
             this.labelLanguage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelLanguage.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLanguage.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.Location = new System.Drawing.Point(116, 39);
             this.labelLanguage.Margin = new System.Windows.Forms.Padding(3, 6, 3, 10);
             this.labelLanguage.Name = "labelLanguage";
@@ -248,7 +248,7 @@ namespace TP_Final.UI
             this.labelAuthor.AutoSize = true;
             this.labelAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelAuthor.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAuthor.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAuthor.Location = new System.Drawing.Point(116, 6);
             this.labelAuthor.Margin = new System.Windows.Forms.Padding(3, 6, 3, 10);
             this.labelAuthor.Name = "labelAuthor";
@@ -261,7 +261,7 @@ namespace TP_Final.UI
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
@@ -274,7 +274,7 @@ namespace TP_Final.UI
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
@@ -287,7 +287,7 @@ namespace TP_Final.UI
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 69);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
@@ -300,7 +300,7 @@ namespace TP_Final.UI
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 102);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
@@ -313,7 +313,7 @@ namespace TP_Final.UI
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 135);
             this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
@@ -407,7 +407,7 @@ namespace TP_Final.UI
             this.labelGender.AutoSize = true;
             this.labelGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelGender.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGender.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.Location = new System.Drawing.Point(116, 72);
             this.labelGender.Margin = new System.Windows.Forms.Padding(3, 6, 3, 10);
             this.labelGender.Name = "labelGender";
@@ -469,7 +469,7 @@ namespace TP_Final.UI
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 168);
             this.label6.Margin = new System.Windows.Forms.Padding(3);
             this.label6.Name = "label6";
@@ -483,7 +483,7 @@ namespace TP_Final.UI
             this.labelDescription.AutoSize = true;
             this.labelDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelDescription.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescription.Location = new System.Drawing.Point(116, 171);
             this.labelDescription.Margin = new System.Windows.Forms.Padding(3, 6, 3, 10);
             this.labelDescription.Name = "labelDescription";
@@ -527,7 +527,7 @@ namespace TP_Final.UI
             this.btnAddLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnAddLoan.FlatAppearance.BorderSize = 0;
             this.btnAddLoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddLoan.Font = new System.Drawing.Font("Roboto Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddLoan.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLoan.ForeColor = System.Drawing.Color.White;
             this.btnAddLoan.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddLoan.IconColor = System.Drawing.Color.Black;
@@ -547,7 +547,7 @@ namespace TP_Final.UI
             this.btnSaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.btnSaveChanges.FlatAppearance.BorderSize = 0;
             this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveChanges.Font = new System.Drawing.Font("Roboto Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveChanges.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveChanges.ForeColor = System.Drawing.Color.White;
             this.btnSaveChanges.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSaveChanges.IconColor = System.Drawing.Color.Black;
@@ -615,7 +615,7 @@ namespace TP_Final.UI
             this.btnManageCopies.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnManageCopies.FlatAppearance.BorderSize = 0;
             this.btnManageCopies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageCopies.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCopies.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCopies.ForeColor = System.Drawing.Color.White;
             this.btnManageCopies.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnManageCopies.IconColor = System.Drawing.Color.Black;
@@ -649,7 +649,7 @@ namespace TP_Final.UI
             this.btnSelectNewCover.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSelectNewCover.FlatAppearance.BorderSize = 0;
             this.btnSelectNewCover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectNewCover.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectNewCover.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectNewCover.ForeColor = System.Drawing.Color.White;
             this.btnSelectNewCover.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSelectNewCover.IconColor = System.Drawing.Color.Black;
