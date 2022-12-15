@@ -135,5 +135,10 @@ namespace TP_Final.UI
                 e.Handled = true;
             }
         }
+
+        private void PassTxtBox__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
