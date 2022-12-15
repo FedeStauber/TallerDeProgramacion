@@ -165,7 +165,7 @@
             this.txtBoxConfirmPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxConfirmPass.PlaceholderText = "";
             this.txtBoxConfirmPass.Size = new System.Drawing.Size(350, 41);
-            this.txtBoxConfirmPass.TabIndex = 33;
+            this.txtBoxConfirmPass.TabIndex = 6;
             this.txtBoxConfirmPass.UnderlinedStyle = false;
             // 
             // txtBoxPass
@@ -184,7 +184,7 @@
             this.txtBoxPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxPass.PlaceholderText = "";
             this.txtBoxPass.Size = new System.Drawing.Size(350, 41);
-            this.txtBoxPass.TabIndex = 32;
+            this.txtBoxPass.TabIndex = 5;
             this.txtBoxPass.UnderlinedStyle = false;
             // 
             // btnCancel
@@ -201,7 +201,7 @@
             this.btnCancel.Location = new System.Drawing.Point(537, 484);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(350, 38);
-            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.TextColor = System.Drawing.Color.White;
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -222,7 +222,7 @@
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAccept.Size = new System.Drawing.Size(350, 38);
-            this.btnAccept.TabIndex = 18;
+            this.btnAccept.TabIndex = 8;
             this.btnAccept.Text = "Aceptar";
             this.btnAccept.TextColor = System.Drawing.Color.Transparent;
             this.btnAccept.UseVisualStyleBackColor = false;
