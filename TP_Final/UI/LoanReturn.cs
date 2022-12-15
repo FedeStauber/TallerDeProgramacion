@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,17 +86,28 @@ namespace TP_Final.UI
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            if (comboBoxPerso1.SelectedIndex == -1)
+            try
             {
-                MessageBox.Show("Debe seleccionar el estado del libro");
+                if (comboBoxPerso1.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe seleccionar el estado del libro");
+                }
+                else
+                {
+                    LibraryManager.LoanReturnRegister(iLoan.Id, comboBoxPerso1.SelectedIndex);
+                    List<LoanDTO> auxListToRemove = new List<LoanDTO>();
+                    auxListToRemove.Add(iLoan);
+                    iFilteredList = iLoanList.Except(auxListToRemove).ToList();
+                    dataGridUsers.DataSource = iFilteredList;
+                }
+                OpenTlpFilter();
             }
-            else
-            {               
-                LibraryManager.LoanReturnRegister(iLoan.Id, comboBoxPerso1.SelectedIndex);
-                iLoanList.Remove(iLoan);
-            }            
-            OpenTlpFilter();
-           //dataGridUsers.DataSource = iLoanList;
+            catch (Exception ex)
+            {
+                Log.Error(ex, ex.Message);
+                MessageBox.Show(ex.Message);
+            }          
+          
         }
 
       

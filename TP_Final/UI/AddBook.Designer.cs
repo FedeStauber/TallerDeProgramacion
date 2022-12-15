@@ -195,8 +195,8 @@ namespace TP_Final.UI
             this.comboBoxPerso1.Items.AddRange(new object[] {
             "4",
             "16"});
-            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.comboBoxPerso1.ListTextColor = System.Drawing.Color.White;
+            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.White;
+            this.comboBoxPerso1.ListTextColor = System.Drawing.Color.Black;
             this.comboBoxPerso1.Location = new System.Drawing.Point(857, 26);
             this.comboBoxPerso1.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboBoxPerso1.Name = "comboBoxPerso1";

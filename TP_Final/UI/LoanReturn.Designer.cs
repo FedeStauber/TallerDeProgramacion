@@ -421,7 +421,7 @@
             this.textBoxFilter.PasswordChar = false;
             this.textBoxFilter.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxFilter.PlaceholderText = "Ingrese el DNI o Email del usuario a filtrar";
-            this.textBoxFilter.Size = new System.Drawing.Size(378, 30);
+            this.textBoxFilter.Size = new System.Drawing.Size(378, 29);
             this.textBoxFilter.TabIndex = 11;
             this.textBoxFilter.UnderlinedStyle = true;
             this.textBoxFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFilter_KeyPress);
