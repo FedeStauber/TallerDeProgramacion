@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PassRepeatTxtBox = new TP_Final.UI.TextBoxPerso();
+            this.PassTxtBox = new TP_Final.UI.TextBoxPerso();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.PassRepeatTxtBox = new TP_Final.UI.TextBoxPerso();
-            this.PassTxtBox = new TP_Final.UI.TextBoxPerso();
             this.btnCancel = new TP_Final.UI.ButtonPerso();
             this.btnAccept = new TP_Final.UI.ButtonPerso();
             this.btnUploadAvatar = new TP_Final.UI.ButtonPerso();
             this.DniTxtBox = new TP_Final.UI.TextBoxPerso();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LastNameTxtBox = new TP_Final.UI.TextBoxPerso();
             this.EmailTxtBox = new TP_Final.UI.TextBoxPerso();
             this.NameTxtBox = new TP_Final.UI.TextBoxPerso();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,12 +75,50 @@
             this.panel1.TabIndex = 17;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // PassRepeatTxtBox
+            // 
+            this.PassRepeatTxtBox.BackColor = System.Drawing.Color.DarkGray;
+            this.PassRepeatTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.PassRepeatTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
+            this.PassRepeatTxtBox.BorderRadius = 5;
+            this.PassRepeatTxtBox.BorderSize = 3;
+            this.PassRepeatTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.PassRepeatTxtBox.Location = new System.Drawing.Point(538, 383);
+            this.PassRepeatTxtBox.Multiline = false;
+            this.PassRepeatTxtBox.Name = "PassRepeatTxtBox";
+            this.PassRepeatTxtBox.Padding = new System.Windows.Forms.Padding(11);
+            this.PassRepeatTxtBox.PasswordChar = true;
+            this.PassRepeatTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.PassRepeatTxtBox.PlaceholderText = "";
+            this.PassRepeatTxtBox.Size = new System.Drawing.Size(350, 41);
+            this.PassRepeatTxtBox.TabIndex = 33;
+            this.PassRepeatTxtBox.UnderlinedStyle = false;
+            // 
+            // PassTxtBox
+            // 
+            this.PassTxtBox.BackColor = System.Drawing.Color.DarkGray;
+            this.PassTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.PassTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
+            this.PassTxtBox.BorderRadius = 5;
+            this.PassTxtBox.BorderSize = 3;
+            this.PassTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.PassTxtBox.Location = new System.Drawing.Point(538, 319);
+            this.PassTxtBox.Multiline = false;
+            this.PassTxtBox.Name = "PassTxtBox";
+            this.PassTxtBox.Padding = new System.Windows.Forms.Padding(11);
+            this.PassTxtBox.PasswordChar = true;
+            this.PassTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.PassTxtBox.PlaceholderText = "";
+            this.PassTxtBox.Size = new System.Drawing.Size(350, 41);
+            this.PassTxtBox.TabIndex = 32;
+            this.PassTxtBox.UnderlinedStyle = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(533, 36);
+            this.label6.Location = new System.Drawing.Point(533, 42);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 19);
             this.label6.TabIndex = 31;
@@ -91,7 +129,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(533, 105);
+            this.label5.Location = new System.Drawing.Point(533, 106);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 19);
             this.label5.TabIndex = 30;
@@ -102,7 +140,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(533, 169);
+            this.label4.Location = new System.Drawing.Point(534, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 19);
             this.label4.TabIndex = 29;
@@ -135,63 +173,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(534, 361);
+            this.label3.Location = new System.Drawing.Point(534, 363);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 19);
             this.label3.TabIndex = 26;
             this.label3.Text = "Confirmar Contraseña";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(290, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 203);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // PassRepeatTxtBox
-            // 
-            this.PassRepeatTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.PassRepeatTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.PassRepeatTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.PassRepeatTxtBox.BorderRadius = 5;
-            this.PassRepeatTxtBox.BorderSize = 3;
-            this.PassRepeatTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.PassRepeatTxtBox.Location = new System.Drawing.Point(538, 383);
-            this.PassRepeatTxtBox.Multiline = false;
-            this.PassRepeatTxtBox.Name = "PassRepeatTxtBox";
-            this.PassRepeatTxtBox.Padding = new System.Windows.Forms.Padding(11);
-            this.PassRepeatTxtBox.PasswordChar = true;
-            this.PassRepeatTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.PassRepeatTxtBox.PlaceholderText = "";
-            this.PassRepeatTxtBox.Size = new System.Drawing.Size(350, 39);
-            this.PassRepeatTxtBox.TabIndex = 33;
-            this.PassRepeatTxtBox.UnderlinedStyle = false;
-            // 
-            // PassTxtBox
-            // 
-            this.PassTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.PassTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.PassTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.PassTxtBox.BorderRadius = 5;
-            this.PassTxtBox.BorderSize = 3;
-            this.PassTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.PassTxtBox.Location = new System.Drawing.Point(538, 319);
-            this.PassTxtBox.Multiline = false;
-            this.PassTxtBox.Name = "PassTxtBox";
-            this.PassTxtBox.Padding = new System.Windows.Forms.Padding(11);
-            this.PassTxtBox.PasswordChar = true;
-            this.PassTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.PassTxtBox.PlaceholderText = "";
-            this.PassTxtBox.Size = new System.Drawing.Size(350, 39);
-            this.PassTxtBox.TabIndex = 32;
-            this.PassTxtBox.UnderlinedStyle = false;
             // 
             // btnCancel
             // 
@@ -274,6 +260,16 @@
             this.DniTxtBox.UnderlinedStyle = false;
             this.DniTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxtBox_KeyPress);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(290, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 203);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // LastNameTxtBox
             // 
             this.LastNameTxtBox.BackColor = System.Drawing.Color.DarkGray;
@@ -330,6 +326,10 @@
             this.NameTxtBox.Size = new System.Drawing.Size(350, 39);
             this.NameTxtBox.TabIndex = 1;
             this.NameTxtBox.UnderlinedStyle = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // SingUp
             // 

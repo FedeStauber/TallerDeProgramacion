@@ -35,22 +35,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBoxConfirmPass = new TP_Final.UI.TextBoxPerso();
+            this.txtBoxPass = new TP_Final.UI.TextBoxPerso();
             this.btnCancel = new TP_Final.UI.ButtonPerso();
             this.btnAccept = new TP_Final.UI.ButtonPerso();
-            this.PassRepeatTxtBox = new TP_Final.UI.TextBoxPerso();
-            this.PassTxtBox = new TP_Final.UI.TextBoxPerso();
             this.btnUploadAvatar = new TP_Final.UI.ButtonPerso();
-            this.DniTxtBox = new TP_Final.UI.TextBoxPerso();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LastNameTxtBox = new TP_Final.UI.TextBoxPerso();
-            this.EmailTxtBox = new TP_Final.UI.TextBoxPerso();
-            this.NameTxtBox = new TP_Final.UI.TextBoxPerso();
+            this.txtBoxDni = new TP_Final.UI.TextBoxPerso();
+            this.txtBoxLastName = new TP_Final.UI.TextBoxPerso();
+            this.txtBoxEmail = new TP_Final.UI.TextBoxPerso();
+            this.txtBoxName = new TP_Final.UI.TextBoxPerso();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtBoxConfirmPass);
+            this.panel1.Controls.Add(this.txtBoxPass);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -59,199 +61,83 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAccept);
-            this.panel1.Controls.Add(this.PassRepeatTxtBox);
-            this.panel1.Controls.Add(this.PassTxtBox);
             this.panel1.Controls.Add(this.btnUploadAvatar);
-            this.panel1.Controls.Add(this.DniTxtBox);
+            this.panel1.Controls.Add(this.txtBoxDni);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.LastNameTxtBox);
-            this.panel1.Controls.Add(this.EmailTxtBox);
-            this.panel1.Controls.Add(this.NameTxtBox);
-            this.panel1.Location = new System.Drawing.Point(67, 12);
+            this.panel1.Controls.Add(this.txtBoxLastName);
+            this.panel1.Controls.Add(this.txtBoxEmail);
+            this.panel1.Controls.Add(this.txtBoxName);
+            this.panel1.Location = new System.Drawing.Point(67, 78);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1356, 714);
+            this.panel1.Size = new System.Drawing.Size(1356, 570);
             this.panel1.TabIndex = 18;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(533, 36);
+            this.label6.Location = new System.Drawing.Point(533, 42);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 25);
+            this.label6.Size = new System.Drawing.Size(65, 19);
             this.label6.TabIndex = 31;
             this.label6.Text = "Nombre";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(533, 118);
+            this.label5.Location = new System.Drawing.Point(533, 106);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 25);
+            this.label5.Size = new System.Drawing.Size(69, 19);
             this.label5.TabIndex = 30;
             this.label5.Text = "Apellido";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(533, 200);
+            this.label4.Location = new System.Drawing.Point(534, 169);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 25);
+            this.label4.Size = new System.Drawing.Size(35, 19);
             this.label4.TabIndex = 29;
             this.label4.Text = "DNI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(533, 282);
+            this.label2.Location = new System.Drawing.Point(533, 233);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.Size = new System.Drawing.Size(57, 19);
             this.label2.TabIndex = 28;
             this.label2.Text = "Correo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(533, 364);
+            this.label1.Location = new System.Drawing.Point(533, 297);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.Size = new System.Drawing.Size(92, 19);
             this.label1.TabIndex = 27;
             this.label1.Text = "Contraseña";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(533, 447);
+            this.label3.Location = new System.Drawing.Point(534, 363);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 25);
+            this.label3.Size = new System.Drawing.Size(170, 19);
             this.label3.TabIndex = 26;
             this.label3.Text = "Confirmar Contraseña";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Silver;
-            this.btnCancel.BackgroundColor = System.Drawing.Color.Silver;
-            this.btnCancel.BorderColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BorderRadius = 5;
-            this.btnCancel.BorderSize = 0;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Roboto Cn", 15.75F);
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(538, 611);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(478, 50);
-            this.btnCancel.TabIndex = 19;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.TextColor = System.Drawing.Color.Black;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnAccept
-            // 
-            this.btnAccept.BackColor = System.Drawing.Color.Silver;
-            this.btnAccept.BackgroundColor = System.Drawing.Color.Silver;
-            this.btnAccept.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAccept.BorderRadius = 5;
-            this.btnAccept.BorderSize = 0;
-            this.btnAccept.FlatAppearance.BorderSize = 0;
-            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Font = new System.Drawing.Font("Roboto Cn", 15.75F);
-            this.btnAccept.ForeColor = System.Drawing.Color.Black;
-            this.btnAccept.Location = new System.Drawing.Point(538, 555);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(478, 50);
-            this.btnAccept.TabIndex = 18;
-            this.btnAccept.Text = "Aceptar";
-            this.btnAccept.TextColor = System.Drawing.Color.Black;
-            this.btnAccept.UseVisualStyleBackColor = false;
-            // 
-            // PassRepeatTxtBox
-            // 
-            this.PassRepeatTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.PassRepeatTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.PassRepeatTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.PassRepeatTxtBox.BorderRadius = 5;
-            this.PassRepeatTxtBox.BorderSize = 3;
-            this.PassRepeatTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.PassRepeatTxtBox.Location = new System.Drawing.Point(538, 475);
-            this.PassRepeatTxtBox.Multiline = false;
-            this.PassRepeatTxtBox.Name = "PassRepeatTxtBox";
-            this.PassRepeatTxtBox.Padding = new System.Windows.Forms.Padding(16);
-            this.PassRepeatTxtBox.PasswordChar = true;
-            this.PassRepeatTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.PassRepeatTxtBox.PlaceholderText = "";
-            this.PassRepeatTxtBox.Size = new System.Drawing.Size(478, 51);
-            this.PassRepeatTxtBox.TabIndex = 6;
-            this.PassRepeatTxtBox.UnderlinedStyle = false;
-            // 
-            // PassTxtBox
-            // 
-            this.PassTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.PassTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.PassTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.PassTxtBox.BorderRadius = 5;
-            this.PassTxtBox.BorderSize = 3;
-            this.PassTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.PassTxtBox.Location = new System.Drawing.Point(538, 393);
-            this.PassTxtBox.Multiline = false;
-            this.PassTxtBox.Name = "PassTxtBox";
-            this.PassTxtBox.Padding = new System.Windows.Forms.Padding(16);
-            this.PassTxtBox.PasswordChar = true;
-            this.PassTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.PassTxtBox.PlaceholderText = "";
-            this.PassTxtBox.Size = new System.Drawing.Size(478, 51);
-            this.PassTxtBox.TabIndex = 5;
-            this.PassTxtBox.UnderlinedStyle = false;
-            // 
-            // btnUploadAvatar
-            // 
-            this.btnUploadAvatar.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnUploadAvatar.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.btnUploadAvatar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.btnUploadAvatar.BorderRadius = 0;
-            this.btnUploadAvatar.BorderSize = 0;
-            this.btnUploadAvatar.FlatAppearance.BorderSize = 0;
-            this.btnUploadAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadAvatar.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUploadAvatar.ForeColor = System.Drawing.Color.White;
-            this.btnUploadAvatar.Location = new System.Drawing.Point(290, 284);
-            this.btnUploadAvatar.Name = "btnUploadAvatar";
-            this.btnUploadAvatar.Size = new System.Drawing.Size(208, 40);
-            this.btnUploadAvatar.TabIndex = 7;
-            this.btnUploadAvatar.Text = "Subir nuevo avatar";
-            this.btnUploadAvatar.TextColor = System.Drawing.Color.White;
-            this.btnUploadAvatar.UseVisualStyleBackColor = false;
-            // 
-            // DniTxtBox
-            // 
-            this.DniTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.DniTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.DniTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.DniTxtBox.BorderRadius = 5;
-            this.DniTxtBox.BorderSize = 3;
-            this.DniTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.DniTxtBox.Location = new System.Drawing.Point(538, 228);
-            this.DniTxtBox.Multiline = false;
-            this.DniTxtBox.Name = "DniTxtBox";
-            this.DniTxtBox.Padding = new System.Windows.Forms.Padding(16);
-            this.DniTxtBox.PasswordChar = false;
-            this.DniTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.DniTxtBox.PlaceholderText = "";
-            this.DniTxtBox.Size = new System.Drawing.Size(478, 51);
-            this.DniTxtBox.TabIndex = 3;
-            this.DniTxtBox.UnderlinedStyle = false;
             // 
             // pictureBox1
             // 
@@ -263,62 +149,179 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // LastNameTxtBox
+            // txtBoxConfirmPass
             // 
-            this.LastNameTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.LastNameTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.LastNameTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.LastNameTxtBox.BorderRadius = 5;
-            this.LastNameTxtBox.BorderSize = 3;
-            this.LastNameTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.LastNameTxtBox.Location = new System.Drawing.Point(538, 146);
-            this.LastNameTxtBox.Multiline = false;
-            this.LastNameTxtBox.Name = "LastNameTxtBox";
-            this.LastNameTxtBox.Padding = new System.Windows.Forms.Padding(16);
-            this.LastNameTxtBox.PasswordChar = false;
-            this.LastNameTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.LastNameTxtBox.PlaceholderText = "";
-            this.LastNameTxtBox.Size = new System.Drawing.Size(478, 51);
-            this.LastNameTxtBox.TabIndex = 2;
-            this.LastNameTxtBox.UnderlinedStyle = false;
+            this.txtBoxConfirmPass.BackColor = System.Drawing.Color.DarkGray;
+            this.txtBoxConfirmPass.BorderColor = System.Drawing.Color.Gray;
+            this.txtBoxConfirmPass.BorderFocusColor = System.Drawing.Color.Gray;
+            this.txtBoxConfirmPass.BorderRadius = 5;
+            this.txtBoxConfirmPass.BorderSize = 3;
+            this.txtBoxConfirmPass.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.txtBoxConfirmPass.Location = new System.Drawing.Point(538, 383);
+            this.txtBoxConfirmPass.Multiline = false;
+            this.txtBoxConfirmPass.Name = "txtBoxConfirmPass";
+            this.txtBoxConfirmPass.Padding = new System.Windows.Forms.Padding(11);
+            this.txtBoxConfirmPass.PasswordChar = false;
+            this.txtBoxConfirmPass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBoxConfirmPass.PlaceholderText = "";
+            this.txtBoxConfirmPass.Size = new System.Drawing.Size(350, 41);
+            this.txtBoxConfirmPass.TabIndex = 33;
+            this.txtBoxConfirmPass.UnderlinedStyle = false;
             // 
-            // EmailTxtBox
+            // txtBoxPass
             // 
-            this.EmailTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.EmailTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.EmailTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.EmailTxtBox.BorderRadius = 5;
-            this.EmailTxtBox.BorderSize = 3;
-            this.EmailTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.EmailTxtBox.Location = new System.Drawing.Point(538, 310);
-            this.EmailTxtBox.Multiline = false;
-            this.EmailTxtBox.Name = "EmailTxtBox";
-            this.EmailTxtBox.Padding = new System.Windows.Forms.Padding(16);
-            this.EmailTxtBox.PasswordChar = false;
-            this.EmailTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.EmailTxtBox.PlaceholderText = "";
-            this.EmailTxtBox.Size = new System.Drawing.Size(478, 51);
-            this.EmailTxtBox.TabIndex = 4;
-            this.EmailTxtBox.UnderlinedStyle = false;
+            this.txtBoxPass.BackColor = System.Drawing.Color.DarkGray;
+            this.txtBoxPass.BorderColor = System.Drawing.Color.Gray;
+            this.txtBoxPass.BorderFocusColor = System.Drawing.Color.Gray;
+            this.txtBoxPass.BorderRadius = 5;
+            this.txtBoxPass.BorderSize = 3;
+            this.txtBoxPass.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.txtBoxPass.Location = new System.Drawing.Point(538, 319);
+            this.txtBoxPass.Multiline = false;
+            this.txtBoxPass.Name = "txtBoxPass";
+            this.txtBoxPass.Padding = new System.Windows.Forms.Padding(11);
+            this.txtBoxPass.PasswordChar = false;
+            this.txtBoxPass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBoxPass.PlaceholderText = "";
+            this.txtBoxPass.Size = new System.Drawing.Size(350, 41);
+            this.txtBoxPass.TabIndex = 32;
+            this.txtBoxPass.UnderlinedStyle = false;
             // 
-            // NameTxtBox
+            // btnCancel
             // 
-            this.NameTxtBox.BackColor = System.Drawing.Color.DarkGray;
-            this.NameTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.NameTxtBox.BorderFocusColor = System.Drawing.Color.Gray;
-            this.NameTxtBox.BorderRadius = 5;
-            this.NameTxtBox.BorderSize = 3;
-            this.NameTxtBox.Font = new System.Drawing.Font("Roboto Cn", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTxtBox.Location = new System.Drawing.Point(538, 64);
-            this.NameTxtBox.Multiline = true;
-            this.NameTxtBox.Name = "NameTxtBox";
-            this.NameTxtBox.Padding = new System.Windows.Forms.Padding(5);
-            this.NameTxtBox.PasswordChar = false;
-            this.NameTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.NameTxtBox.PlaceholderText = "";
-            this.NameTxtBox.Size = new System.Drawing.Size(430, 38);
-            this.NameTxtBox.TabIndex = 1;
-            this.NameTxtBox.UnderlinedStyle = false;
+            this.btnCancel.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnCancel.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 5;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(537, 484);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(350, 38);
+            this.btnCancel.TabIndex = 19;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnAccept.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnAccept.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAccept.BorderRadius = 5;
+            this.btnAccept.BorderSize = 0;
+            this.btnAccept.FlatAppearance.BorderSize = 0;
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccept.Font = new System.Drawing.Font("Roboto Cn", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAccept.Location = new System.Drawing.Point(537, 440);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAccept.Size = new System.Drawing.Size(350, 38);
+            this.btnAccept.TabIndex = 18;
+            this.btnAccept.Text = "Aceptar";
+            this.btnAccept.TextColor = System.Drawing.Color.Transparent;
+            this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
+            // btnUploadAvatar
+            // 
+            this.btnUploadAvatar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnUploadAvatar.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnUploadAvatar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.btnUploadAvatar.BorderRadius = 0;
+            this.btnUploadAvatar.BorderSize = 0;
+            this.btnUploadAvatar.FlatAppearance.BorderSize = 0;
+            this.btnUploadAvatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadAvatar.Font = new System.Drawing.Font("Roboto Cn", 14.25F);
+            this.btnUploadAvatar.ForeColor = System.Drawing.Color.White;
+            this.btnUploadAvatar.Location = new System.Drawing.Point(290, 284);
+            this.btnUploadAvatar.Name = "btnUploadAvatar";
+            this.btnUploadAvatar.Size = new System.Drawing.Size(208, 40);
+            this.btnUploadAvatar.TabIndex = 7;
+            this.btnUploadAvatar.Text = "Subir nuevo avatar";
+            this.btnUploadAvatar.TextColor = System.Drawing.Color.White;
+            this.btnUploadAvatar.UseVisualStyleBackColor = false;
+            // 
+            // txtBoxDni
+            // 
+            this.txtBoxDni.BackColor = System.Drawing.Color.DarkGray;
+            this.txtBoxDni.BorderColor = System.Drawing.Color.Gray;
+            this.txtBoxDni.BorderFocusColor = System.Drawing.Color.Gray;
+            this.txtBoxDni.BorderRadius = 5;
+            this.txtBoxDni.BorderSize = 3;
+            this.txtBoxDni.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.txtBoxDni.Location = new System.Drawing.Point(537, 191);
+            this.txtBoxDni.Multiline = true;
+            this.txtBoxDni.Name = "txtBoxDni";
+            this.txtBoxDni.Padding = new System.Windows.Forms.Padding(11);
+            this.txtBoxDni.PasswordChar = false;
+            this.txtBoxDni.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBoxDni.PlaceholderText = "";
+            this.txtBoxDni.Size = new System.Drawing.Size(350, 39);
+            this.txtBoxDni.TabIndex = 3;
+            this.txtBoxDni.UnderlinedStyle = false;
+            // 
+            // txtBoxLastName
+            // 
+            this.txtBoxLastName.BackColor = System.Drawing.Color.DarkGray;
+            this.txtBoxLastName.BorderColor = System.Drawing.Color.Gray;
+            this.txtBoxLastName.BorderFocusColor = System.Drawing.Color.Gray;
+            this.txtBoxLastName.BorderRadius = 5;
+            this.txtBoxLastName.BorderSize = 3;
+            this.txtBoxLastName.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.txtBoxLastName.Location = new System.Drawing.Point(538, 127);
+            this.txtBoxLastName.Multiline = true;
+            this.txtBoxLastName.Name = "txtBoxLastName";
+            this.txtBoxLastName.Padding = new System.Windows.Forms.Padding(11);
+            this.txtBoxLastName.PasswordChar = false;
+            this.txtBoxLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBoxLastName.PlaceholderText = "";
+            this.txtBoxLastName.Size = new System.Drawing.Size(350, 39);
+            this.txtBoxLastName.TabIndex = 2;
+            this.txtBoxLastName.UnderlinedStyle = false;
+            // 
+            // txtBoxEmail
+            // 
+            this.txtBoxEmail.BackColor = System.Drawing.Color.DarkGray;
+            this.txtBoxEmail.BorderColor = System.Drawing.Color.Gray;
+            this.txtBoxEmail.BorderFocusColor = System.Drawing.Color.Gray;
+            this.txtBoxEmail.BorderRadius = 5;
+            this.txtBoxEmail.BorderSize = 3;
+            this.txtBoxEmail.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.txtBoxEmail.Location = new System.Drawing.Point(538, 255);
+            this.txtBoxEmail.Multiline = true;
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Padding = new System.Windows.Forms.Padding(11);
+            this.txtBoxEmail.PasswordChar = false;
+            this.txtBoxEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBoxEmail.PlaceholderText = "";
+            this.txtBoxEmail.Size = new System.Drawing.Size(350, 39);
+            this.txtBoxEmail.TabIndex = 4;
+            this.txtBoxEmail.UnderlinedStyle = false;
+            // 
+            // txtBoxName
+            // 
+            this.txtBoxName.BackColor = System.Drawing.Color.DarkGray;
+            this.txtBoxName.BorderColor = System.Drawing.Color.Gray;
+            this.txtBoxName.BorderFocusColor = System.Drawing.Color.Gray;
+            this.txtBoxName.BorderRadius = 5;
+            this.txtBoxName.BorderSize = 3;
+            this.txtBoxName.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxName.Location = new System.Drawing.Point(538, 64);
+            this.txtBoxName.Multiline = true;
+            this.txtBoxName.Name = "txtBoxName";
+            this.txtBoxName.Padding = new System.Windows.Forms.Padding(11);
+            this.txtBoxName.PasswordChar = false;
+            this.txtBoxName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBoxName.PlaceholderText = "";
+            this.txtBoxName.Size = new System.Drawing.Size(350, 39);
+            this.txtBoxName.TabIndex = 1;
+            this.txtBoxName.UnderlinedStyle = false;
             // 
             // ModifyProfile
             // 
@@ -341,6 +344,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private TextBoxPerso txtBoxConfirmPass;
+        private TextBoxPerso txtBoxPass;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -349,13 +354,11 @@
         private System.Windows.Forms.Label label3;
         private ButtonPerso btnCancel;
         private ButtonPerso btnAccept;
-        private TextBoxPerso PassRepeatTxtBox;
-        private TextBoxPerso PassTxtBox;
         private ButtonPerso btnUploadAvatar;
-        private TextBoxPerso DniTxtBox;
+        private TextBoxPerso txtBoxDni;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private TextBoxPerso LastNameTxtBox;
-        private TextBoxPerso EmailTxtBox;
-        private TextBoxPerso NameTxtBox;
+        private TextBoxPerso txtBoxLastName;
+        private TextBoxPerso txtBoxEmail;
+        private TextBoxPerso txtBoxName;
     }
 }
