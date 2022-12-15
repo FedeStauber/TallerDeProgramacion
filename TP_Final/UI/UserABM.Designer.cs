@@ -36,22 +36,6 @@ namespace TP_Final.UI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelModifyBook = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbAdmin = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbActive = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new FontAwesome.Sharp.IconButton();
-            this.btnSaveChanges = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,19 +44,35 @@ namespace TP_Final.UI
             this.activeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.userDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelModifyBook = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbAdmin = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tbScore = new TP_Final.UI.TextBoxPerso();
             this.tbDNI = new TP_Final.UI.TextBoxPerso();
             this.tbEmail = new TP_Final.UI.TextBoxPerso();
             this.tbLastName = new TP_Final.UI.TextBoxPerso();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbName = new TP_Final.UI.TextBoxPerso();
+            this.cbActive = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancel = new FontAwesome.Sharp.IconButton();
+            this.btnSaveChanges = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelModifyBook.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -164,6 +164,86 @@ namespace TP_Final.UI
             this.dataGridUsers.Size = new System.Drawing.Size(812, 612);
             this.dataGridUsers.TabIndex = 1;
             this.dataGridUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsers_CellClick);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 461.9289F;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 130;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 130;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // dNIDataGridViewTextBoxColumn
+            // 
+            this.dNIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dNIDataGridViewTextBoxColumn.DataPropertyName = "DNI";
+            this.dNIDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.dNIDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dNIDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.dNIDataGridViewTextBoxColumn.Name = "dNIDataGridViewTextBoxColumn";
+            this.dNIDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // scoreDataGridViewTextBoxColumn
+            // 
+            this.scoreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
+            this.scoreDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.scoreDataGridViewTextBoxColumn.HeaderText = "Puntaje";
+            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 60;
+            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
+            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.scoreDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // activeDataGridViewCheckBoxColumn
+            // 
+            this.activeDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.activeDataGridViewCheckBoxColumn.DataPropertyName = "Active";
+            this.activeDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
+            this.activeDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activeDataGridViewCheckBoxColumn.MinimumWidth = 60;
+            this.activeDataGridViewCheckBoxColumn.Name = "activeDataGridViewCheckBoxColumn";
+            this.activeDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.activeDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // adminDataGridViewCheckBoxColumn
+            // 
+            this.adminDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
+            this.adminDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
+            this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
+            this.adminDataGridViewCheckBoxColumn.MinimumWidth = 60;
+            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
+            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.adminDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // userDTOBindingSource
+            // 
+            this.userDTOBindingSource.DataSource = typeof(TP_Final.IO.UserDTO);
             // 
             // tableLayoutPanel3
             // 
@@ -272,6 +352,90 @@ namespace TP_Final.UI
             this.label7.Text = "Active:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
+            // tbScore
+            // 
+            this.tbScore.BackColor = System.Drawing.SystemColors.Window;
+            this.tbScore.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.tbScore.BorderFocusColor = System.Drawing.Color.BlueViolet;
+            this.tbScore.BorderRadius = 0;
+            this.tbScore.BorderSize = 2;
+            this.tbScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbScore.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbScore.Location = new System.Drawing.Point(92, 180);
+            this.tbScore.Margin = new System.Windows.Forms.Padding(0);
+            this.tbScore.Multiline = false;
+            this.tbScore.Name = "tbScore";
+            this.tbScore.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
+            this.tbScore.PasswordChar = false;
+            this.tbScore.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbScore.PlaceholderText = "";
+            this.tbScore.Size = new System.Drawing.Size(326, 29);
+            this.tbScore.TabIndex = 10;
+            this.tbScore.UnderlinedStyle = true;
+            // 
+            // tbDNI
+            // 
+            this.tbDNI.BackColor = System.Drawing.SystemColors.Window;
+            this.tbDNI.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.tbDNI.BorderFocusColor = System.Drawing.Color.BlueViolet;
+            this.tbDNI.BorderRadius = 0;
+            this.tbDNI.BorderSize = 2;
+            this.tbDNI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbDNI.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDNI.Location = new System.Drawing.Point(92, 140);
+            this.tbDNI.Margin = new System.Windows.Forms.Padding(0);
+            this.tbDNI.Multiline = false;
+            this.tbDNI.Name = "tbDNI";
+            this.tbDNI.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
+            this.tbDNI.PasswordChar = false;
+            this.tbDNI.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbDNI.PlaceholderText = "";
+            this.tbDNI.Size = new System.Drawing.Size(326, 29);
+            this.tbDNI.TabIndex = 9;
+            this.tbDNI.UnderlinedStyle = true;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.tbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.tbEmail.BorderFocusColor = System.Drawing.Color.BlueViolet;
+            this.tbEmail.BorderRadius = 0;
+            this.tbEmail.BorderSize = 2;
+            this.tbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbEmail.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Location = new System.Drawing.Point(92, 100);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.tbEmail.Multiline = false;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
+            this.tbEmail.PasswordChar = false;
+            this.tbEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbEmail.PlaceholderText = "";
+            this.tbEmail.Size = new System.Drawing.Size(326, 29);
+            this.tbEmail.TabIndex = 8;
+            this.tbEmail.UnderlinedStyle = true;
+            // 
+            // tbLastName
+            // 
+            this.tbLastName.BackColor = System.Drawing.SystemColors.Window;
+            this.tbLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.tbLastName.BorderFocusColor = System.Drawing.Color.BlueViolet;
+            this.tbLastName.BorderRadius = 0;
+            this.tbLastName.BorderSize = 2;
+            this.tbLastName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbLastName.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLastName.Location = new System.Drawing.Point(92, 60);
+            this.tbLastName.Margin = new System.Windows.Forms.Padding(0);
+            this.tbLastName.Multiline = false;
+            this.tbLastName.Name = "tbLastName";
+            this.tbLastName.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
+            this.tbLastName.PasswordChar = false;
+            this.tbLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbLastName.PlaceholderText = "";
+            this.tbLastName.Size = new System.Drawing.Size(326, 29);
+            this.tbLastName.TabIndex = 7;
+            this.tbLastName.UnderlinedStyle = true;
+            // 
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -331,6 +495,27 @@ namespace TP_Final.UI
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // tbName
+            // 
+            this.tbName.BackColor = System.Drawing.SystemColors.Window;
+            this.tbName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.tbName.BorderFocusColor = System.Drawing.Color.BlueViolet;
+            this.tbName.BorderRadius = 0;
+            this.tbName.BorderSize = 2;
+            this.tbName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbName.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Location = new System.Drawing.Point(92, 20);
+            this.tbName.Margin = new System.Windows.Forms.Padding(0);
+            this.tbName.Multiline = false;
+            this.tbName.Name = "tbName";
+            this.tbName.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
+            this.tbName.PasswordChar = false;
+            this.tbName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbName.PlaceholderText = "";
+            this.tbName.Size = new System.Drawing.Size(326, 29);
+            this.tbName.TabIndex = 6;
+            this.tbName.UnderlinedStyle = true;
             // 
             // cbActive
             // 
@@ -406,191 +591,6 @@ namespace TP_Final.UI
             this.label1.Text = "Modificar un Usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 461.9289F;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 130;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 130;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastNameDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // dNIDataGridViewTextBoxColumn
-            // 
-            this.dNIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dNIDataGridViewTextBoxColumn.DataPropertyName = "DNI";
-            this.dNIDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.dNIDataGridViewTextBoxColumn.HeaderText = "DNI";
-            this.dNIDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.dNIDataGridViewTextBoxColumn.Name = "dNIDataGridViewTextBoxColumn";
-            this.dNIDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // scoreDataGridViewTextBoxColumn
-            // 
-            this.scoreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
-            this.scoreDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "Puntaje";
-            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 60;
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
-            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.scoreDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // activeDataGridViewCheckBoxColumn
-            // 
-            this.activeDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.activeDataGridViewCheckBoxColumn.DataPropertyName = "Active";
-            this.activeDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
-            this.activeDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activeDataGridViewCheckBoxColumn.MinimumWidth = 60;
-            this.activeDataGridViewCheckBoxColumn.Name = "activeDataGridViewCheckBoxColumn";
-            this.activeDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.activeDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // adminDataGridViewCheckBoxColumn
-            // 
-            this.adminDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
-            this.adminDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
-            this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
-            this.adminDataGridViewCheckBoxColumn.MinimumWidth = 60;
-            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
-            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.adminDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // userDTOBindingSource
-            // 
-            this.userDTOBindingSource.DataSource = typeof(TP_Final.IO.UserDTO);
-            // 
-            // tbScore
-            // 
-            this.tbScore.BackColor = System.Drawing.SystemColors.Window;
-            this.tbScore.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.tbScore.BorderFocusColor = System.Drawing.Color.BlueViolet;
-            this.tbScore.BorderRadius = 0;
-            this.tbScore.BorderSize = 2;
-            this.tbScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbScore.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbScore.Location = new System.Drawing.Point(92, 180);
-            this.tbScore.Margin = new System.Windows.Forms.Padding(0);
-            this.tbScore.Multiline = false;
-            this.tbScore.Name = "tbScore";
-            this.tbScore.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
-            this.tbScore.PasswordChar = false;
-            this.tbScore.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbScore.PlaceholderText = "";
-            this.tbScore.Size = new System.Drawing.Size(326, 30);
-            this.tbScore.TabIndex = 10;
-            this.tbScore.UnderlinedStyle = true;
-            // 
-            // tbDNI
-            // 
-            this.tbDNI.BackColor = System.Drawing.SystemColors.Window;
-            this.tbDNI.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.tbDNI.BorderFocusColor = System.Drawing.Color.BlueViolet;
-            this.tbDNI.BorderRadius = 0;
-            this.tbDNI.BorderSize = 2;
-            this.tbDNI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbDNI.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDNI.Location = new System.Drawing.Point(92, 140);
-            this.tbDNI.Margin = new System.Windows.Forms.Padding(0);
-            this.tbDNI.Multiline = false;
-            this.tbDNI.Name = "tbDNI";
-            this.tbDNI.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
-            this.tbDNI.PasswordChar = false;
-            this.tbDNI.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbDNI.PlaceholderText = "";
-            this.tbDNI.Size = new System.Drawing.Size(326, 30);
-            this.tbDNI.TabIndex = 9;
-            this.tbDNI.UnderlinedStyle = true;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.tbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.tbEmail.BorderFocusColor = System.Drawing.Color.BlueViolet;
-            this.tbEmail.BorderRadius = 0;
-            this.tbEmail.BorderSize = 2;
-            this.tbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbEmail.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(92, 100);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(0);
-            this.tbEmail.Multiline = false;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
-            this.tbEmail.PasswordChar = false;
-            this.tbEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbEmail.PlaceholderText = "";
-            this.tbEmail.Size = new System.Drawing.Size(326, 30);
-            this.tbEmail.TabIndex = 8;
-            this.tbEmail.UnderlinedStyle = true;
-            // 
-            // tbLastName
-            // 
-            this.tbLastName.BackColor = System.Drawing.SystemColors.Window;
-            this.tbLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.tbLastName.BorderFocusColor = System.Drawing.Color.BlueViolet;
-            this.tbLastName.BorderRadius = 0;
-            this.tbLastName.BorderSize = 2;
-            this.tbLastName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbLastName.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLastName.Location = new System.Drawing.Point(92, 60);
-            this.tbLastName.Margin = new System.Windows.Forms.Padding(0);
-            this.tbLastName.Multiline = false;
-            this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
-            this.tbLastName.PasswordChar = false;
-            this.tbLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbLastName.PlaceholderText = "";
-            this.tbLastName.Size = new System.Drawing.Size(326, 30);
-            this.tbLastName.TabIndex = 7;
-            this.tbLastName.UnderlinedStyle = true;
-            // 
-            // tbName
-            // 
-            this.tbName.BackColor = System.Drawing.SystemColors.Window;
-            this.tbName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.tbName.BorderFocusColor = System.Drawing.Color.BlueViolet;
-            this.tbName.BorderRadius = 0;
-            this.tbName.BorderSize = 2;
-            this.tbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbName.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.Location = new System.Drawing.Point(92, 20);
-            this.tbName.Margin = new System.Windows.Forms.Padding(0);
-            this.tbName.Multiline = false;
-            this.tbName.Name = "tbName";
-            this.tbName.Padding = new System.Windows.Forms.Padding(7, 12, 7, 2);
-            this.tbName.PasswordChar = false;
-            this.tbName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.tbName.PlaceholderText = "";
-            this.tbName.Size = new System.Drawing.Size(326, 30);
-            this.tbName.TabIndex = 6;
-            this.tbName.UnderlinedStyle = true;
-            // 
             // UserABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,11 +603,11 @@ namespace TP_Final.UI
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panelModifyBook.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

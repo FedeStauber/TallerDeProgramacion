@@ -23,7 +23,7 @@ namespace TP_Final.DAL.EntityFramework
             if (vUser == null)
             {
                 throw new UserNotFoundException("No se encontro ningun usuario para el DNI ingresado");
-            }
+            }        
             return vUser;
 
         }                
@@ -34,7 +34,7 @@ namespace TP_Final.DAL.EntityFramework
             if (vUser == null)
             {
                 throw new UserNotFoundException("No se encontro ningun usuario para el Email ingresado");
-            }
+            }            
             return vUser;
         }
 

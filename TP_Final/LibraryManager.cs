@@ -160,7 +160,8 @@ namespace TP_Final
                 if (vUser.Password == vEncrpyptedPassword && vUser.Active)
                 {                   
                     var vUserDTO = UsefulMapper.Mapper.Map<User,UserDTO>(vUser);
-                    vUserDTO.Avatar = vUser.Avatar;        
+                    vUserDTO.Avatar = vUser.Avatar;  
+                    vUser.Password = Encrypter.Decrypt(vUser.Password);
                     LoginDTO loginDTO = new LoginDTO() { IsValid = true, User = vUserDTO };
                     return loginDTO;
                 }
