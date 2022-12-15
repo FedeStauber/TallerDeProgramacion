@@ -330,13 +330,12 @@
     <None Include="Resources\defAvatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\illustration-file-not-found-or-404-error-page-free-vector.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\image_processing20210903-11241-1netgf1.gif" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\FileNotFound.jpg" />
+    <Content Include="Resources\leyendo a derecha.png" />
+    <Content Include="Resources\leyendo a izquierda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

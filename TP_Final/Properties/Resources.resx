@@ -124,6 +124,12 @@
   <data name="defAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defAvatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="leyendo_a_derecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\leyendo a derecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leyendo_a_izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\leyendo a izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_processing20210903-11241-1netgf1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
