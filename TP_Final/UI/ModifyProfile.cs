@@ -1,9 +1,12 @@
-﻿using Serilog;
+﻿using ImageProcessor;
+using Microsoft.Win32;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +20,7 @@ namespace TP_Final.UI
 
         private UserDTO iUser;
         private int iOriginalDni;
+        private byte[] iAvatar = null;
     
         public ModifyProfile(UserDTO user)
         {
@@ -27,7 +31,8 @@ namespace TP_Final.UI
             txtBoxLastName.Text = user.LastName;
             txtBoxDni.Text = user.DNI.ToString();
             txtBoxEmail.Text = user.Email;
-            }
+            this.LoadImage(); 
+        }
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
@@ -60,6 +65,10 @@ namespace TP_Final.UI
             this.iUser.DNI = Convert.ToInt32(txtBoxDni.Text);
             this.iUser.Email = txtBoxEmail.Text;
             this.iUser.Password = txtBoxNewPass.Text;
+            if (iAvatar != null)
+            {
+                this.iUser.Avatar = iAvatar;
+            }           
         }
         private bool ComprobarCampos()
         {
@@ -99,9 +108,7 @@ namespace TP_Final.UI
                             else
                             {
                                 return true;
-                            }
-                            
-
+                            }  
                         }
                     }
                 }
@@ -113,6 +120,45 @@ namespace TP_Final.UI
         {
             this.Close();
         }
+        private void LoadImage()
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream(iUser.Avatar);
+                Bitmap bmp = new Bitmap(ms);
+                ImageFactory imgFact = new ImageFactory();
+                imgFact.Load(bmp);
+                imgFact.Resize(new ImageProcessor.Imaging.ResizeLayer(pictureBox1.Size, ImageProcessor.Imaging.ResizeMode.Stretch));
+                pictureBox1.Image = imgFact.Image;
+            }
+            catch (Exception)
+            {
+                pictureBox1.Image = Properties.Resources.defAvatar;
 
+            }
+        }
+        private void btnUploadAvatar_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = "C:\\";
+            openFileDialog1.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos png(*.png)|*.png";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                byte[] file = null;
+                Stream vStream = openFileDialog1.OpenFile();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    vStream.CopyTo(ms);
+                    file = ms.ToArray();
+                    iAvatar = file;
+                    Bitmap bmp = new Bitmap(ms);
+                    ImageFactory imgFact = new ImageFactory();
+                    imgFact.Load(bmp);
+                    imgFact.Resize(new ImageProcessor.Imaging.ResizeLayer(pictureBox1.Size, ImageProcessor.Imaging.ResizeMode.Stretch));
+                    pictureBox1.Image = imgFact.Image;
+                }
+            }
+        }
     }
 }

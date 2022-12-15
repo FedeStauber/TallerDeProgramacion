@@ -30,12 +30,11 @@ namespace TP_Final.UI
         private void InitializeComponent()
         {
             this.lateralPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.panelUsers = new System.Windows.Forms.Panel();
             this.submenuUsers = new System.Windows.Forms.Panel();
             this.btnUserList = new FontAwesome.Sharp.IconButton();
             this.btnUsers = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelLoans = new System.Windows.Forms.Panel();
             this.submenuLoans = new System.Windows.Forms.Panel();
             this.btnUserLoans = new FontAwesome.Sharp.IconButton();
@@ -46,6 +45,9 @@ namespace TP_Final.UI
             this.btnCatalogue = new FontAwesome.Sharp.IconButton();
             this.btnAddBook = new FontAwesome.Sharp.IconButton();
             this.btnBooks = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.panelCurrentUser = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.iconScore = new FontAwesome.Sharp.IconButton();
@@ -60,16 +62,14 @@ namespace TP_Final.UI
             this.pbClose = new FontAwesome.Sharp.IconPictureBox();
             this.labelChildTitle = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.lateralPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panelUsers.SuspendLayout();
             this.submenuUsers.SuspendLayout();
             this.panelLoans.SuspendLayout();
             this.submenuLoans.SuspendLayout();
             this.panelBooks.SuspendLayout();
             this.submenuBooks.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelCurrentUser.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUserOptions.SuspendLayout();
@@ -96,35 +96,6 @@ namespace TP_Final.UI
             this.lateralPanel.Name = "lateralPanel";
             this.lateralPanel.Size = new System.Drawing.Size(220, 771);
             this.lateralPanel.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.btnHelp);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 731);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 40);
-            this.panel1.TabIndex = 4;
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
-            this.btnHelp.IconColor = System.Drawing.Color.White;
-            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHelp.IconSize = 36;
-            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 0);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnHelp.Size = new System.Drawing.Size(220, 40);
-            this.btnHelp.TabIndex = 0;
-            this.btnHelp.Text = "Ayuda";
-            this.btnHelp.UseVisualStyleBackColor = true;
             // 
             // panelUsers
             // 
@@ -190,6 +161,14 @@ namespace TP_Final.UI
             this.btnUsers.Text = "Usuarios";
             this.btnUsers.UseVisualStyleBackColor = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 592);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(220, 139);
+            this.panel3.TabIndex = 6;
             // 
             // panelLoans
             // 
@@ -360,6 +339,43 @@ namespace TP_Final.UI
             this.btnBooks.UseVisualStyleBackColor = false;
             this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 232);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 22);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.btnHelp);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 731);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 40);
+            this.panel1.TabIndex = 4;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.btnHelp.IconColor = System.Drawing.Color.White;
+            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHelp.IconSize = 36;
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.Location = new System.Drawing.Point(0, 0);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnHelp.Size = new System.Drawing.Size(220, 40);
+            this.btnHelp.TabIndex = 0;
+            this.btnHelp.Text = "Ayuda";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            // 
             // panelCurrentUser
             // 
             this.panelCurrentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
@@ -408,6 +424,7 @@ namespace TP_Final.UI
             this.iconScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.iconScore.Size = new System.Drawing.Size(220, 50);
             this.iconScore.TabIndex = 1;
+            this.iconScore.TabStop = false;
             this.iconScore.Text = "Puntaje";
             this.iconScore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconScore.UseVisualStyleBackColor = false;
@@ -583,22 +600,6 @@ namespace TP_Final.UI
             this.panelChildForm.Size = new System.Drawing.Size(1280, 721);
             this.panelChildForm.TabIndex = 2;
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 232);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 22);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 592);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(220, 139);
-            this.panel3.TabIndex = 6;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,7 +615,6 @@ namespace TP_Final.UI
             this.Text = "MainWindow";
             this.lateralPanel.ResumeLayout(false);
             this.lateralPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panelUsers.ResumeLayout(false);
             this.panelUsers.PerformLayout();
             this.submenuUsers.ResumeLayout(false);
@@ -624,6 +624,7 @@ namespace TP_Final.UI
             this.panelBooks.ResumeLayout(false);
             this.panelBooks.PerformLayout();
             this.submenuBooks.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelCurrentUser.ResumeLayout(false);
             this.panelCurrentUser.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
