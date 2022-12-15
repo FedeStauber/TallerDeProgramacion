@@ -159,10 +159,10 @@ namespace TP_Final
             this.tableLayoutPanel2.Controls.Add(this.btnRegister, 0, 9);
             this.tableLayoutPanel2.Controls.Add(this.btnAccept, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.txtBoxPass, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txtBoxEmail, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtBoxEmail, 0, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(764, 75);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
