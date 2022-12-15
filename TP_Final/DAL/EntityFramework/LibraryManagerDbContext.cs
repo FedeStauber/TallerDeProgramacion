@@ -16,14 +16,21 @@ namespace TP_Final.DAL.EntityFramework
         /// </summary>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
             optionsBuilder.UseNpgsql(
                 $"Server={ConfigurationManager.AppSettings.Get("db_server")};" +
+               
                 $"Port={ConfigurationManager.AppSettings.Get("db_port")};" +
+               
                 $"User Id={ConfigurationManager.AppSettings.Get("db_user")};" +
+               
                 $"Password={ConfigurationManager.AppSettings.Get("db_password")};" +
+              
                 $"Database={ConfigurationManager.AppSettings.Get("db_name")}"
+               
                 );
             base.OnConfiguring(optionsBuilder);
+          
         }
         /// <summary>
         /// Por limitaciones de los data annotation que posee la version de EF core,

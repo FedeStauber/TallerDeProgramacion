@@ -48,8 +48,9 @@ namespace TP_Final
            
             // Se configura la clase estatica BookApiManager para seleccionar la API de la cual se obtienen los datos para agregar nuevos libros.           
             BookApiManager.CurrentApi = new OpenLibraryApi();
-            
-           
+
+
+
             // Se asegura de que existe el modelo en la base de datos, si no existe lo crea y agrega el usuario administrador por defecto.            
             using (LibraryManagerDbContext dbContext = new LibraryManagerDbContext())
             {

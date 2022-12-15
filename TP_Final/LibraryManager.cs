@@ -34,8 +34,7 @@ namespace TP_Final
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {                
                 var vUser = UsefulMapper.Mapper.Map<UserDTO, User>(form);
-                vUser.Active = true;
-                //vUser.Password = Encrypter.Encrypt(form.Password);
+                vUser.Active = true;                
                 if (unit.UserRepository.EmailExists(vUser.Email))
                 {
                     throw new Exception("El Correo que ingreso ya está siendo utilizado");
@@ -63,7 +62,7 @@ namespace TP_Final
                 vUser.LastName = form.LastName;
                 vUser.Name = form.Name;
                 vUser.Score = form.Score;
-                vUser.Password = Encrypter.Encrypt(form.Password);                
+                vUser.Password = form.Password;                
                 unit.Complete();
             }
         }
@@ -154,15 +153,12 @@ namespace TP_Final
         public static LoginDTO LogIn(string pUserEmail, string pPassword)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
-            {               
-                //string vEncrpyptedPassword = Encrypter.Encrypt(pPassword);
-                var vUser =  unit.UserRepository.SearchByEmail(pUserEmail);
-                Console.WriteLine(vUser.Password);
-                if (vUser.Password == pPassword && vUser.Active)
+            {                              
+                var vUser =  unit.UserRepository.SearchByEmail(pUserEmail);                
+                if (vUser.PasswordMatch(pPassword) && vUser.Active)
                 {                   
                     var vUserDTO = UsefulMapper.Mapper.Map<User,UserDTO>(vUser);
-                    vUserDTO.Avatar = vUser.Avatar;  
-                    //vUser.Password = Encrypter.Decrypt(vUser.Password);
+                    vUserDTO.Avatar = vUser.Avatar;                      
                     LoginDTO loginDTO = new LoginDTO() { IsValid = true, User = vUserDTO };
                     return loginDTO;
                 }
