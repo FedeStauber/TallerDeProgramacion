@@ -20,7 +20,7 @@ namespace TP_Final.Domain
         [StringLength(150)]
         public string Email { get; set; }
         public int Score { get; set; }
-        public string Password { get; set ; }
+        public string Password { get { return Encrypter.Decrypt(this.iPassword); } set { this.iPassword = Encrypter.Encrypt(value); } }
         public string Name { get; set; }
         public string LastName  { get; set; }
        

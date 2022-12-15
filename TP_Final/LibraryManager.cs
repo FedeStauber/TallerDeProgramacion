@@ -35,7 +35,7 @@ namespace TP_Final
             {                
                 var vUser = UsefulMapper.Mapper.Map<UserDTO, User>(form);
                 vUser.Active = true;
-                vUser.Password = Encrypter.Encrypt(form.Password);
+                //vUser.Password = Encrypter.Encrypt(form.Password);
                 if (unit.UserRepository.EmailExists(vUser.Email))
                 {
                     throw new Exception("El Correo que ingreso ya está siendo utilizado");
@@ -155,13 +155,14 @@ namespace TP_Final
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {               
-                string vEncrpyptedPassword = Encrypter.Encrypt(pPassword);
-                var vUser =  unit.UserRepository.SearchByEmail(pUserEmail);                  
-                if (vUser.Password == vEncrpyptedPassword && vUser.Active)
+                //string vEncrpyptedPassword = Encrypter.Encrypt(pPassword);
+                var vUser =  unit.UserRepository.SearchByEmail(pUserEmail);
+                Console.WriteLine(vUser.Password);
+                if (vUser.Password == pPassword && vUser.Active)
                 {                   
                     var vUserDTO = UsefulMapper.Mapper.Map<User,UserDTO>(vUser);
                     vUserDTO.Avatar = vUser.Avatar;  
-                    vUser.Password = Encrypter.Decrypt(vUser.Password);
+                    //vUser.Password = Encrypter.Decrypt(vUser.Password);
                     LoginDTO loginDTO = new LoginDTO() { IsValid = true, User = vUserDTO };
                     return loginDTO;
                 }
