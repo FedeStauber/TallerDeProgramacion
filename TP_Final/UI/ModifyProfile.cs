@@ -38,12 +38,9 @@ namespace TP_Final.UI
                     modifyAttributes();
                     if (txtBoxNewPass.Text != "")
                     {
-                        LibraryManager.ModifyUser(iOriginalDni, iUser, txtBoxActualPass.Text);
+                        iUser.Password = "";                    
                     }
-                    else
-                    {
-                        LibraryManager.ModifyUser(iOriginalDni, iUser, "");
-                    }
+                    LibraryManager.ModifyUser(iOriginalDni, iUser);                    
                     MessageBox.Show("Usuario modificado con éxito!!");
                     MainWindow vMainWindow = Owner as MainWindow;
                     vMainWindow.OpenChildForm(new Home());
@@ -62,7 +59,7 @@ namespace TP_Final.UI
             this.iUser.LastName = txtBoxLastName.Text;
             this.iUser.DNI = Convert.ToInt32(txtBoxDni.Text);
             this.iUser.Email = txtBoxEmail.Text;
-            this.iUser.Password = txtBoxActualPass.Text;
+            this.iUser.Password = txtBoxNewPass.Text;
         }
         private bool ComprobarCampos()
         {
@@ -93,24 +90,17 @@ namespace TP_Final.UI
                             return false;
                         }
                         else
-                        {
-                            if (txtBoxActualPass.Text == null)
+                        {                        
+                            if (txtBoxConfirmPass.Text != txtBoxNewPass.Text)
                             {
-                                MessageBox.Show("No ha ingresado la contraseña.");
+                                MessageBox.Show("Las contraseñas no coinciden.");
                                 return false;
                             }
                             else
                             {
-                                if (txtBoxConfirmPass.Text != txtBoxNewPass.Text)
-                                {
-                                    MessageBox.Show("No ha ingresado la confirmación de la contraseña.");
-                                    return false;
-                                }
-                                else
-                                {
-                                    return true;
-                                }
+                                return true;
                             }
+                            
 
                         }
                     }
@@ -124,19 +114,5 @@ namespace TP_Final.UI
             this.Close();
         }
 
-        private void ModifyProfile_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBoxConfirmPass__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

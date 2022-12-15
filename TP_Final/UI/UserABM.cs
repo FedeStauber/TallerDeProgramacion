@@ -67,8 +67,9 @@ namespace TP_Final.UI
                 iUser.LastName = tbLastName.Text;
                 iUser.Email = tbEmail.Text;
                 iUser.DNI = Convert.ToInt32(tbDNI.Text);
-                iUser.Score = Convert.ToInt32(tbScore.Text);              
-                LibraryManager.ModifyUser(vDni, iUser,"");
+                iUser.Score = Convert.ToInt32(tbScore.Text);
+                iUser.Password = "";
+                LibraryManager.ModifyUser(vDni, iUser);
                 this.AssignElements();
                 panelModifyBook.Visible = false;
             }

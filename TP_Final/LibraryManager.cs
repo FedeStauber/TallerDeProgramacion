@@ -49,7 +49,7 @@ namespace TP_Final
         }
 
 
-        public static void ModifyUser(int pDni, UserDTO pForm, string pNewPassword)
+        public static void ModifyUser(int pDni, UserDTO pForm)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
@@ -62,7 +62,7 @@ namespace TP_Final
                 vUser.LastName = pForm.LastName;
                 vUser.Name = pForm.Name;
                 vUser.Score = pForm.Score;
-                if (pNewPassword != "")
+                if (pForm.Password != "")
                 {
                     vUser.Password = pForm.Password;
                 }                               
