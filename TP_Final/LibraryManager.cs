@@ -49,20 +49,23 @@ namespace TP_Final
         }
 
 
-        public static void ModifyUser(int pDni, UserDTO form)
+        public static void ModifyUser(int pDni, UserDTO pForm, string pNewPassword)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
                 User vUser = unit.UserRepository.SearchByDNI(pDni);
-                vUser.Active = form.Active;
-                vUser.Admin = form.Admin;
-                vUser.DNI = form.DNI;
-                vUser.Email = form.Email;
-                vUser.Avatar = form.Avatar;
-                vUser.LastName = form.LastName;
-                vUser.Name = form.Name;
-                vUser.Score = form.Score;
-                vUser.Password = form.Password;                
+                vUser.Active = pForm.Active;
+                vUser.Admin = pForm.Admin;
+                vUser.DNI = pForm.DNI;
+                vUser.Email = pForm.Email;
+                vUser.Avatar = pForm.Avatar;
+                vUser.LastName = pForm.LastName;
+                vUser.Name = pForm.Name;
+                vUser.Score = pForm.Score;
+                if (pNewPassword != "")
+                {
+                    vUser.Password = pForm.Password;
+                }                               
                 unit.Complete();
             }
         }

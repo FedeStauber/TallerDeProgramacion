@@ -17,8 +17,7 @@ namespace TP_Final.Test
             string stringToEncrypt = "Hola";
             string result;
             //Act
-            result = Encrypter.Encrypt(stringToEncrypt);
-            result = Encrypter.Decrypt(result);
+            result = Encrypter.Encrypt(stringToEncrypt);            
             //Assert         
             Assert.Equal(stringToEncrypt, result);
         }

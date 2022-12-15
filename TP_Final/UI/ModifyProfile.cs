@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,13 +31,28 @@ namespace TP_Final.UI
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            if (ComprobarCampos())
+            try
             {
-                modifyAttributes();
-                LibraryManager.ModifyUser(iOriginalDni, iUser);
-                MessageBox.Show("Usuario modificado con éxito!!");
-                MainWindow vMainWindow = Owner as MainWindow;
-                vMainWindow.OpenChildForm(new Home());
+                if (ComprobarCampos())
+                {
+                    modifyAttributes();
+                    if (txtBoxNewPass.Text != "")
+                    {
+                        LibraryManager.ModifyUser(iOriginalDni, iUser, txtBoxActualPass.Text);
+                    }
+                    else
+                    {
+                        LibraryManager.ModifyUser(iOriginalDni, iUser, "");
+                    }
+                    MessageBox.Show("Usuario modificado con éxito!!");
+                    MainWindow vMainWindow = Owner as MainWindow;
+                    vMainWindow.OpenChildForm(new Home());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Log.Error(ex, ex.Message);
             }
         }
 
@@ -46,7 +62,7 @@ namespace TP_Final.UI
             this.iUser.LastName = txtBoxLastName.Text;
             this.iUser.DNI = Convert.ToInt32(txtBoxDni.Text);
             this.iUser.Email = txtBoxEmail.Text;
-            this.iUser.Password = txtBoxPass.Text;
+            this.iUser.Password = txtBoxActualPass.Text;
         }
         private bool ComprobarCampos()
         {
@@ -78,14 +94,14 @@ namespace TP_Final.UI
                         }
                         else
                         {
-                            if (txtBoxPass.Text == null)
+                            if (txtBoxActualPass.Text == null)
                             {
                                 MessageBox.Show("No ha ingresado la contraseña.");
                                 return false;
                             }
                             else
                             {
-                                if (txtBoxConfirmPass.Text != txtBoxPass.Text)
+                                if (txtBoxConfirmPass.Text != txtBoxNewPass.Text)
                                 {
                                     MessageBox.Show("No ha ingresado la confirmación de la contraseña.");
                                     return false;
@@ -106,6 +122,21 @@ namespace TP_Final.UI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ModifyProfile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxConfirmPass__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
