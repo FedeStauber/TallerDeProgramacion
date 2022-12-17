@@ -56,8 +56,17 @@ namespace TP_Final.UI
 
      
 
-        private void btnSaveChanges_Click(object sender, EventArgs e)
-        {            
+
+
+        
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSaveChanges_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 int vDni = Convert.ToInt32(dataGridUsers.SelectedRows[0].Cells[3].Value.ToString());
@@ -75,22 +84,16 @@ namespace TP_Final.UI
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
-               Log.Error(ex,ex.Message);
-               panelModifyBook.Visible = false;
-               this.AssignElements();
-            }  
+                MessageBox.Show(ex.Message);
+                Log.Error(ex, ex.Message);
+                panelModifyBook.Visible = false;
+                this.AssignElements();
+            }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(iUser.Password);
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {           
             panelModifyBook.Visible = false;
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
