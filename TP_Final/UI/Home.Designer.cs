@@ -41,12 +41,8 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-<<<<<<< HEAD
-            this.pictureBox1.Location = new System.Drawing.Point(924, 329);
-=======
             this.pictureBox1.Location = new System.Drawing.Point(895, 278);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> e4b22b261b1f74a51cbc30ca33c72423bb12f7cd
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(344, 336);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -57,12 +53,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(989, 687);
-=======
             this.label1.Location = new System.Drawing.Point(1238, 723);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> e4b22b261b1f74a51cbc30ca33c72423bb12f7cd
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(228, 20);
             this.label1.TabIndex = 1;
@@ -71,12 +63,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::TP_Final.Properties.Resources.leyendo_a_derecha;
-<<<<<<< HEAD
-            this.pictureBox2.Location = new System.Drawing.Point(41, 59);
-=======
             this.pictureBox2.Location = new System.Drawing.Point(43, 102);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> e4b22b261b1f74a51cbc30ca33c72423bb12f7cd
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(512, 512);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -86,12 +74,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-<<<<<<< HEAD
-            this.label2.Location = new System.Drawing.Point(407, 141);
-=======
             this.label2.Location = new System.Drawing.Point(595, 182);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> e4b22b261b1f74a51cbc30ca33c72423bb12f7cd
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(604, 13);
             this.label2.TabIndex = 3;
