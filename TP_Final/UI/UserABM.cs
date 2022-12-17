@@ -54,16 +54,6 @@ namespace TP_Final.UI
             
         }
 
-     
-
-
-
-        
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnSaveChanges_Click_1(object sender, EventArgs e)
         {
