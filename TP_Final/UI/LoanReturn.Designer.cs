@@ -31,7 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backTLP = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelLoanReturnData = new System.Windows.Forms.Panel();
@@ -57,13 +63,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
+            this.loanDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userDNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookISBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loanDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backTLP.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelLoanReturnData.SuspendLayout();
@@ -460,10 +466,10 @@
             this.dataGridUsers.AllowUserToDeleteRows = false;
             this.dataGridUsers.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.NullValue = "-";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.BlueViolet;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
             this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridUsers.AutoGenerateColumns = false;
             this.dataGridUsers.BackgroundColor = System.Drawing.Color.White;
@@ -471,7 +477,7 @@
             this.dataGridUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -487,15 +493,15 @@
             this.bookISBNDataGridViewTextBoxColumn,
             this.startDateDataGridViewTextBoxColumn});
             this.dataGridUsers.DataSource = this.loanDTOBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.NullValue = "-";
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.BlueViolet;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.NullValue = "-";
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridUsers.EnableHeadersVisualStyles = false;
             this.dataGridUsers.GridColor = System.Drawing.Color.White;
@@ -510,62 +516,80 @@
             this.dataGridUsers.TabIndex = 1;
             this.dataGridUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsers_CellClick);
             // 
+            // loanDTOBindingSource
+            // 
+            this.loanDTOBindingSource.DataSource = typeof(TP_Final.IO.LoanDTO);
+            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
             this.Id.FillWeight = 50F;
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Width = 50;
             // 
             // userEmailDataGridViewTextBoxColumn
             // 
             this.userEmailDataGridViewTextBoxColumn.DataPropertyName = "UserEmail";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.userEmailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.userEmailDataGridViewTextBoxColumn.FillWeight = 150F;
             this.userEmailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.userEmailDataGridViewTextBoxColumn.MinimumWidth = 200;
             this.userEmailDataGridViewTextBoxColumn.Name = "userEmailDataGridViewTextBoxColumn";
             this.userEmailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userEmailDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.userEmailDataGridViewTextBoxColumn.Width = 200;
             // 
             // userDNIDataGridViewTextBoxColumn
             // 
             this.userDNIDataGridViewTextBoxColumn.DataPropertyName = "UserDNI";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.userDNIDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.userDNIDataGridViewTextBoxColumn.HeaderText = "DNI";
             this.userDNIDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.userDNIDataGridViewTextBoxColumn.Name = "userDNIDataGridViewTextBoxColumn";
             this.userDNIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userDNIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // bookTitleDataGridViewTextBoxColumn
             // 
             this.bookTitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.bookTitleDataGridViewTextBoxColumn.DataPropertyName = "BookTitle";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.bookTitleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.bookTitleDataGridViewTextBoxColumn.HeaderText = "Titulo";
             this.bookTitleDataGridViewTextBoxColumn.Name = "bookTitleDataGridViewTextBoxColumn";
             this.bookTitleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookTitleDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // bookISBNDataGridViewTextBoxColumn
             // 
             this.bookISBNDataGridViewTextBoxColumn.DataPropertyName = "BookISBN";
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.bookISBNDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.bookISBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
             this.bookISBNDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.bookISBNDataGridViewTextBoxColumn.Name = "bookISBNDataGridViewTextBoxColumn";
             this.bookISBNDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookISBNDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // startDateDataGridViewTextBoxColumn
             // 
             this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.startDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.startDateDataGridViewTextBoxColumn.FillWeight = 120F;
             this.startDateDataGridViewTextBoxColumn.HeaderText = "Inicio";
             this.startDateDataGridViewTextBoxColumn.MinimumWidth = 120;
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
             this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.startDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.startDateDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // loanDTOBindingSource
-            // 
-            this.loanDTOBindingSource.DataSource = typeof(TP_Final.IO.LoanDTO);
             // 
             // LoanReturn
             // 
@@ -618,15 +642,15 @@
         private FontAwesome.Sharp.IconPictureBox searchBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource loanDTOBindingSource;
+        private System.Windows.Forms.Label bookLabel;
+        private System.Windows.Forms.Label ExpiresLabel;
+        private System.Windows.Forms.Label userLabel;
+        private System.Windows.Forms.Label dniLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn userEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userDNIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookTitleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookISBNDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label bookLabel;
-        private System.Windows.Forms.Label ExpiresLabel;
-        private System.Windows.Forms.Label userLabel;
-        private System.Windows.Forms.Label dniLabel;
     }
 }

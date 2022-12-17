@@ -41,11 +41,11 @@ namespace TP_Final.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.loanDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.loanDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookISBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,6 +128,10 @@ namespace TP_Final.UI
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
             // 
+            // loanDTOBindingSource
+            // 
+            this.loanDTOBindingSource.DataSource = typeof(TP_Final.IO.LoanDTO);
+            // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
@@ -164,10 +168,6 @@ namespace TP_Final.UI
             this.panel2.Size = new System.Drawing.Size(1280, 83);
             this.panel2.TabIndex = 0;
             // 
-            // loanDTOBindingSource
-            // 
-            this.loanDTOBindingSource.DataSource = typeof(TP_Final.IO.LoanDTO);
-            // 
             // bookTitleDataGridViewTextBoxColumn
             // 
             this.bookTitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -189,6 +189,7 @@ namespace TP_Final.UI
             this.bookISBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
             this.bookISBNDataGridViewTextBoxColumn.Name = "bookISBNDataGridViewTextBoxColumn";
             this.bookISBNDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookISBNDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.bookISBNDataGridViewTextBoxColumn.Width = 150;
             // 
             // startDateDataGridViewTextBoxColumn
@@ -199,6 +200,7 @@ namespace TP_Final.UI
             this.startDateDataGridViewTextBoxColumn.HeaderText = "Inicio";
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
             this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.startDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.startDateDataGridViewTextBoxColumn.Width = 150;
             // 
             // endDateDataGridViewTextBoxColumn
@@ -209,6 +211,7 @@ namespace TP_Final.UI
             this.endDateDataGridViewTextBoxColumn.HeaderText = "Fin";
             this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
             this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.endDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.endDateDataGridViewTextBoxColumn.Width = 150;
             // 
             // returnedDataGridViewCheckBoxColumn
@@ -227,6 +230,7 @@ namespace TP_Final.UI
             this.Puntaje.HeaderText = "Puntaje";
             this.Puntaje.Name = "Puntaje";
             this.Puntaje.ReadOnly = true;
+            this.Puntaje.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Puntaje.Width = 65;
             // 
             // Extender

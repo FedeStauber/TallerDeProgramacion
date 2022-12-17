@@ -23,7 +23,7 @@ namespace TP_Final.UI
             iFilteredList = iLoanList;
             InitializeComponent();
             dataGridUsers.DataSource = iFilteredList;
-            pictureBox1.Image = Properties.Resources.CoverNotFoundImage; //Cambiar por imagen del logo
+            pictureBox1.Image = Properties.Resources.leyendo_a_izquierda; //Cambiar por imagen del logo
             OpenTlpFilter();          
         }
 
