@@ -63,13 +63,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
-            this.loanDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userDNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookISBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loanDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backTLP.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelLoanReturnData.SuspendLayout();
@@ -415,7 +415,7 @@
             // 
             this.textBoxFilter.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.textBoxFilter.BorderFocusColor = System.Drawing.Color.BlueViolet;
+            this.textBoxFilter.BorderFocusColor = System.Drawing.Color.RosyBrown;
             this.textBoxFilter.BorderRadius = 0;
             this.textBoxFilter.BorderSize = 2;
             this.textBoxFilter.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -516,10 +516,6 @@
             this.dataGridUsers.TabIndex = 1;
             this.dataGridUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsers_CellClick);
             // 
-            // loanDTOBindingSource
-            // 
-            this.loanDTOBindingSource.DataSource = typeof(TP_Final.IO.LoanDTO);
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -590,6 +586,10 @@
             this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
             this.startDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.startDateDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // loanDTOBindingSource
+            // 
+            this.loanDTOBindingSource.DataSource = typeof(TP_Final.IO.LoanDTO);
             // 
             // LoanReturn
             // 
