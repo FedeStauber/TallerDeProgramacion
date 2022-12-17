@@ -95,5 +95,10 @@ namespace TP_Final.UI
         {           
             panelModifyBook.Visible = false;
         }
+
+        private void tbScore__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

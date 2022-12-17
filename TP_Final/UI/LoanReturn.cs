@@ -110,7 +110,27 @@ namespace TP_Final.UI
           
         }
 
-      
+        
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bookLabel__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dniLabel__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxPerso1_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void dataGridUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {

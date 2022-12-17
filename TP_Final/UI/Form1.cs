@@ -17,7 +17,7 @@ namespace TP_Final.UI
             InitializeComponent();
         }
 
-        private void cbActive_CheckedChanged(object sender, EventArgs e)
+        private void bookLabel_Click(object sender, EventArgs e)
         {
 
         }
