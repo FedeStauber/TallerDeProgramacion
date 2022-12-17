@@ -17,7 +17,7 @@ namespace TP_Final.Domain
     {
         public void Notify(Loan pLoan)
         {
-            TimeSpan pTiempoRestante = (pLoan.EndDate - DateTime.Now).Value;
+            TimeSpan pTiempoRestante = (pLoan.EndDate - DateTime.Now);
             MailMessage correo = new MailMessage();
             correo.From = new MailAddress("unabiblioprueba1@gmail.com", "BiblioSan", System.Text.Encoding.UTF8);//Correo de salida
             correo.To.Add(pLoan.User.Email); //Correo destino?

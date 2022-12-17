@@ -11,7 +11,7 @@ namespace TP_Final.IO
         public string UserEmail { get; set; }
         public double BookISBN { get; set; }
         public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime EndDate { get; set; }
         public DateTime? ReturnDate { get; set; }
         public bool Returned { get { return ReturnDate != null; } set{; } }
         public int LoanScore { get; set; }

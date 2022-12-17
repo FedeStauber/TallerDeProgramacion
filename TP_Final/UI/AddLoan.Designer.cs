@@ -168,9 +168,9 @@ namespace TP_Final.UI
             this.textBoxPerso8.PasswordChar = false;
             this.textBoxPerso8.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxPerso8.PlaceholderText = "Ingrese el DNI del usuario";
-            this.textBoxPerso8.Size = new System.Drawing.Size(594, 35);
+            this.textBoxPerso8.Size = new System.Drawing.Size(594, 33);
             this.textBoxPerso8.TabIndex = 15;
-            this.textBoxPerso8.UnderlinedStyle = false;            
+            this.textBoxPerso8.UnderlinedStyle = false;
             this.textBoxPerso8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPerso8_KeyPress);
             // 
             // btnSearchUser

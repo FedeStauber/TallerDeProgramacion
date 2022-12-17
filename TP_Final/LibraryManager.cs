@@ -10,6 +10,8 @@ using TP_Final.API.OpenLibrary;
 using TP_Final.API;
 using TP_Final.Exceptions;
 using System.Configuration;
+using System.Windows;
+using System.Runtime.CompilerServices;
 
 namespace TP_Final
 {
@@ -314,6 +316,15 @@ namespace TP_Final
                 return vLoanDTOs;
             }            
         }
-
+        public static void LoanExtend(LoanDTO pLoan, int pDaysToExtend)
+        {
+            using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
+            {
+                var vLoan = unit.LoanRepository.Get(pLoan.Id);
+                vLoan.Extend(pDaysToExtend);
+                unit.Complete();
+                          
+            }
+        }
     }
 }

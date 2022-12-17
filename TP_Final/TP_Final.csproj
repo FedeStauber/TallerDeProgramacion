@@ -331,6 +331,8 @@
     <None Include="Resources\image_processing20210903-11241-1netgf1.gif" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\calendario.ico" />
+    <None Include="Resources\calendario32x32.ico" />
     <Content Include="Resources\FileNotFound.jpg" />
     <Content Include="Resources\leyendo a derecha.png" />
     <Content Include="Resources\leyendo a izquierda.png" />
