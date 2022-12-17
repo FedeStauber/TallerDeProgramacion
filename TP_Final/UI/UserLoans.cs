@@ -1,4 +1,5 @@
 ﻿using ImageProcessor;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_Final.Domain;
 using TP_Final.IO;
 
 namespace TP_Final.UI
@@ -26,7 +28,7 @@ namespace TP_Final.UI
 
         private void AssignElements()
         {           
-            dataGridView1.DataSource = iLoanList;
+            dataGridView1.DataSource = iLoanList;           
         }
 
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -47,11 +49,29 @@ namespace TP_Final.UI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-          if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Extender")
-            { 
-                LibraryManager.LoanExtend(iLoanList[e.RowIndex]);
-            }
+            try
+            {
+               
+               
+                    if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Extender")
+                    {
+                        string amount = Microsoft.VisualBasic.Interaction.InputBox("Ingrese cantidad días: ", "Cantidad días");
+                        if (amount != "")
+                        {
+                            LibraryManager.LoanExtend(iLoanList[e.RowIndex], Int32.Parse(amount));                            
+                            dataGridView1[e.ColumnIndex-3,e.RowIndex].Value = iLoanList[e.RowIndex].EndDate.AddDays(Int32.Parse(amount));                            
+                            MessageBox.Show("Préstamo extendido con éxito!!");
+                        }
 
+                    }
+                
+              
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                MessageBox.Show(ex.Message);
+            }          
         }
 
     }
