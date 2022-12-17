@@ -10,6 +10,7 @@ using TP_Final.API.OpenLibrary;
 using TP_Final.API;
 using TP_Final.Exceptions;
 using System.Configuration;
+using System.Windows;
 
 namespace TP_Final
 {
@@ -314,6 +315,9 @@ namespace TP_Final
                 return vLoanDTOs;
             }            
         }
-
+        public static void LoanExtend(LoanDTO pLoan)
+        {
+            MessageBox.Show("A implementar");
+        }
     }
 }
