@@ -87,5 +87,10 @@ namespace TP_Final.UI
             Console.WriteLine(iUser.Password);
             panelModifyBook.Visible = false;
         }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

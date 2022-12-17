@@ -49,11 +49,11 @@ namespace TP_Final
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Roboto Cn", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 116);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 50);
+            this.label1.Size = new System.Drawing.Size(128, 50);
             this.label1.TabIndex = 12;
             this.label1.Text = "LOGIN";
             // 
@@ -61,12 +61,12 @@ namespace TP_Final
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label2.Location = new System.Drawing.Point(0, 171);
             this.label2.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.Size = new System.Drawing.Size(103, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "Correo";
             // 
@@ -74,12 +74,12 @@ namespace TP_Final
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label3.Location = new System.Drawing.Point(0, 261);
             this.label3.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 25);
+            this.label3.Size = new System.Drawing.Size(165, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "Contraseña";
             // 
@@ -92,7 +92,7 @@ namespace TP_Final
             this.txtBoxPass.BorderSize = 3;
             this.txtBoxPass.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtBoxPass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoxPass.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPass.Location = new System.Drawing.Point(0, 286);
             this.txtBoxPass.Margin = new System.Windows.Forms.Padding(0, 0, 0, 9);
             this.txtBoxPass.Multiline = false;
@@ -101,7 +101,7 @@ namespace TP_Final
             this.txtBoxPass.PasswordChar = true;
             this.txtBoxPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxPass.PlaceholderText = "";
-            this.txtBoxPass.Size = new System.Drawing.Size(581, 51);
+            this.txtBoxPass.Size = new System.Drawing.Size(581, 57);
             this.txtBoxPass.TabIndex = 8;
             this.txtBoxPass.UnderlinedStyle = false;
             this.txtBoxPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxPass_KeyPress);
@@ -115,7 +115,7 @@ namespace TP_Final
             this.txtBoxEmail.BorderSize = 3;
             this.txtBoxEmail.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtBoxEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoxEmail.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(0, 196);
             this.txtBoxEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 9);
             this.txtBoxEmail.Multiline = false;
@@ -124,7 +124,7 @@ namespace TP_Final
             this.txtBoxEmail.PasswordChar = false;
             this.txtBoxEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxEmail.PlaceholderText = "";
-            this.txtBoxEmail.Size = new System.Drawing.Size(581, 51);
+            this.txtBoxEmail.Size = new System.Drawing.Size(581, 57);
             this.txtBoxEmail.TabIndex = 7;
             this.txtBoxEmail.UnderlinedStyle = false;
             this.txtBoxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxEmail_KeyPress);
@@ -192,7 +192,7 @@ namespace TP_Final
             this.btnRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
             this.btnRegister.Location = new System.Drawing.Point(0, 430);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
@@ -214,7 +214,7 @@ namespace TP_Final
             this.btnAccept.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAccept.FlatAppearance.BorderSize = 0;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.ForeColor = System.Drawing.Color.Black;
             this.btnAccept.Location = new System.Drawing.Point(0, 369);
             this.btnAccept.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
