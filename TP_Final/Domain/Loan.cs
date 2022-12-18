@@ -54,11 +54,20 @@ namespace TP_Final.Domain
                 User.Score += 5;
                 LoanScore = 5;
             }
-            else if (pCondition == Copy.ConditionEnum.Broken)
+            else if (pCondition == Copy.ConditionEnum.Broken && !this.Late())
             {               
                 User.Score -= 10;
                 LoanScore = -10;
-            }           
+            }   
+            else if (pCondition == Copy.ConditionEnum.Broken)
+            {
+                User.Score -= 10 + 2 * ((DateTime.Now - EndDate).Days + 1);
+                LoanScore -= 10 + 2 * ((DateTime.Now - EndDate).Days + 1);
+            }
+            else
+            {
+                throw new Exception("Error al contabilizar el puntaje correspondiente");
+            }
             ReturnDate = DateTime.Now;
             Copy.ReturnRegister(pCondition);
         }

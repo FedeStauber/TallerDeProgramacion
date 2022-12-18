@@ -14,19 +14,21 @@ namespace TP_Final.UI
 {
     public partial class UserABM : Form
     {
-        List<UserDTO> iUserList;
-        UserDTO iUser = new UserDTO();
+        private List<UserDTO> iUserList,iFilteredList;
+        private UserDTO iUser = new UserDTO();
+        
         public UserABM()
         {
             InitializeComponent();
-            
             this.AssignElements();
+            pictureBox1.Image = Properties.Resources.leyendo_a_izquierda;
         }
 
         private void AssignElements()
         {
             this.iUserList = LibraryManager.UsersList();
             dataGridUsers.DataSource = iUserList;
+            this.OpenTlpFilter();
         }
 
 
@@ -50,6 +52,7 @@ namespace TP_Final.UI
             {               
                 iUser = iUserList.Find(userDto => userDto.DNI == Convert.ToInt32(dataGridUsers.Rows[e.RowIndex].Cells[3].Value.ToString()));
                 this.UpdatePanelModifiy();
+                this.OPenDataPanel();
             }
             
         }
@@ -83,12 +86,51 @@ namespace TP_Final.UI
 
         private void btnCancel_Click_1(object sender, EventArgs e)
         {           
-            panelModifyBook.Visible = false;
+            OpenTlpFilter();
         }
 
-        private void tbScore__TextChanged(object sender, EventArgs e)
+        private void OpenTlpFilter()
         {
+            panelModifyBook.Visible = false;
+            tableLayoutPanel3.SetCellPosition(tlpFilter, new TableLayoutPanelCellPosition(0, 1));
+            tableLayoutPanel3.SetCellPosition(panelModifyBook, new TableLayoutPanelCellPosition(0, 0));
+            tlpFilter.Visible = true;
+        }
 
+        private void textBoxFilter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                searchBtn_Click(sender, e);
+            }
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        { 
+            if (textBoxFilter.Text.Trim() == "")
+            {
+                    iFilteredList = iUserList;
+            }
+            else
+            {
+                try
+                {
+                    iFilteredList = iUserList.FindAll(user => user.DNI == Convert.ToInt64(textBoxFilter.Text.Trim()) || user.Email == textBoxFilter.Text.Trim());
+                }
+                catch (Exception)
+                {
+                    iFilteredList = iUserList.FindAll(user => user.Email == textBoxFilter.Text.Trim());
+                }
+                }
+                dataGridUsers.DataSource = iFilteredList;
+        }
+
+        private void OPenDataPanel()
+        {
+            tlpFilter.Visible = false;
+            tableLayoutPanel3.SetCellPosition(tlpFilter, new TableLayoutPanelCellPosition(0, 0));
+            tableLayoutPanel3.SetCellPosition(panelModifyBook, new TableLayoutPanelCellPosition(0, 1));
+            panelModifyBook.Visible = true;
         }
     }
 }
