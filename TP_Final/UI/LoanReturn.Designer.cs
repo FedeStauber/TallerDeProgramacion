@@ -275,6 +275,7 @@
             this.userLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.userLabel.BorderRadius = 5;
             this.userLabel.BorderSize = 3;
+            this.userLabel.Enabled = false;
             this.userLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.userLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.userLabel.Location = new System.Drawing.Point(30, 223);
@@ -295,6 +296,7 @@
             this.ExpiresLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.ExpiresLabel.BorderRadius = 5;
             this.ExpiresLabel.BorderSize = 3;
+            this.ExpiresLabel.Enabled = false;
             this.ExpiresLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.ExpiresLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ExpiresLabel.Location = new System.Drawing.Point(32, 158);
@@ -315,6 +317,7 @@
             this.dniLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.dniLabel.BorderRadius = 5;
             this.dniLabel.BorderSize = 3;
+            this.dniLabel.Enabled = false;
             this.dniLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.dniLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dniLabel.Location = new System.Drawing.Point(32, 289);
@@ -335,6 +338,7 @@
             this.bookLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.bookLabel.BorderRadius = 5;
             this.bookLabel.BorderSize = 3;
+            this.bookLabel.Enabled = false;
             this.bookLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bookLabel.Location = new System.Drawing.Point(32, 92);

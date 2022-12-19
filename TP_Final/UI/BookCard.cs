@@ -20,12 +20,12 @@ namespace TP_Final.UI
     public partial class BookCard : Form
     {
         private BookDTO iBook;
-        private bool iAdmin;
-        private ComeFrom iComeFrom;
-        private Control iEditing;
+        private bool iAdmin, iCoverModified;
+        private ComeFrom iComeFrom;       
         private string iTemp;
         private long iOriginalISBN;
-        private byte[] iTempCover;
+        private byte[] iTempCover = null;
+        
         
         
         
@@ -112,13 +112,7 @@ namespace TP_Final.UI
                     btnSaveChanges.Text = "Guardar Cambios";
                     btnAddLoan.Visible = true;
                     btnManageCopies.Visible = true;
-                }                    
-                btnEditAuthor.Visible = true;
-                btnEditDescription.Visible = true;
-                btnEditGender.Visible = true;
-                btnEditISBN.Visible = true;
-                btnEditLanguage.Visible = true;
-                btnEditPages.Visible = true;
+                }                  
                 btnEditTitle.Visible = true;
 
             }
@@ -168,80 +162,51 @@ namespace TP_Final.UI
             btnSaveChanges.Visible = true;
             btnAddLoan.Visible = true;
         }
-        private void BeginEdit(int pMaxLength, Control pControlToEdit)
+        private void BeginEdit()
         {
-            richTextBox1.MaxLength = pMaxLength;
-            this.iEditing = pControlToEdit;
-            this.iTemp = pControlToEdit.Text;
-            richTextBox1.Text = pControlToEdit.Text;
+            this.iTemp = labelTitle.Text;
+            richTextBox1.Text = labelTitle.Text;
             richTextBox1.Visible = true;
             btnDiscardEdit.Visible = true;
             btnAcceptEdit.Visible = true;
             btnSaveChanges.Visible = false;
             btnAddLoan.Visible = false;
         }
-        private void btnEditAuthor_Click(object sender, EventArgs e)
-        {
-            this.BeginEdit(250, labelAuthor);
-        }
-        private void btnEditLanguage_Click(object sender, EventArgs e)
-        {
-            this.BeginEdit(250,labelLanguage);
-         
-        }
-        private void btnEditGender_Click(object sender, EventArgs e)
-        {
-            this.BeginEdit(500,labelGender);        
-        }
-        private void btnEditPages_Click(object sender, EventArgs e)
-        {
-            this.BeginEdit(10,labelPages);
-        }
-        private void btnEditISBN_Click(object sender, EventArgs e)
-        {
-            this.BeginEdit(25,labelISBN);
-        }
-        private void btnEditDescription_Click_1(object sender, EventArgs e)
-        {
-            this.BeginEdit(1000,labelDescription);
-        }
+       
+       
         private void btnAcceptEdit_Click_1(object sender, EventArgs e)
         {
-            iEditing.Text = richTextBox1.Text;
+            labelTitle.Text = richTextBox1.Text;
             this.EndEdit();            
         }
         private void btnDiscardEdit_Click_1(object sender, EventArgs e)
         {
-            this.iEditing.Text = iTemp;
+            labelTitle.Text = iTemp;
             this.EndEdit();
         }
         private void iconPictureBox1_Click_1(object sender, EventArgs e)
         {
-            this.BeginEdit(150, labelTitle);
+            this.BeginEdit();
         }
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            iEditing.Text = richTextBox1.Text;
-        }
-        private void richTextBox1_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if (iEditing == labelISBN || iEditing == labelPages)
+      
+        private void labelISBN_KeyPress(object sender, KeyPressEventArgs e)
+        {           
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
             {
-                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                   (e.KeyChar != '.'))
-                {
-                    e.Handled = true;
-                }
-            }
+                e.Handled = true;
+            }            
         }
         private void btnSelectNewCover_Click_1(object sender, EventArgs e)
         {
+            iCoverModified = false;
             openFileDialog1.InitialDirectory = "C:\\";
             openFileDialog1.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos png(*.png)|*.png";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                iCoverModified = true;
                 byte[] file = null;
                 Stream vStream = openFileDialog1.OpenFile();
                 using (MemoryStream ms = new MemoryStream())
@@ -304,15 +269,19 @@ namespace TP_Final.UI
                         iBook.ISBN = Convert.ToInt64(labelISBN.Text);
                         iBook.Pages = Convert.ToInt32(labelPages.Text);
                         iBook.Language = labelLanguage.Text;
-                        iBook.Cover = iTempCover;
+                        if (iCoverModified)
+                        {
+                            iBook.Cover = iTempCover;
+                        }                        
                         LibraryManager.ModifyBook(iOriginalISBN, iBook);
                         iOriginalISBN = iBook.ISBN;
                         MainWindow vOwner = Owner as MainWindow;
                         Catalogue vCatalogue = vOwner.ActiveForm as Catalogue;
                         vCatalogue.RefreshLayout();
+                        MessageBox.Show("Cambios guardados con éxito!");
+                        this.ReturnButton_Click(sender, e);
                     }
-                    MessageBox.Show("Cambios guardados con éxito!");
-                    this.ReturnButton_Click(sender, e);
+                  
                 }
                
             }
@@ -335,6 +304,11 @@ namespace TP_Final.UI
         {
             MainWindow vMainWindow = Owner as MainWindow;
             vMainWindow.OpenTempChild(new EditCopies(iBook));
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            labelTitle.Text = richTextBox1.Text;
         }
     }
 }
