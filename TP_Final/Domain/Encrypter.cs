@@ -8,6 +8,10 @@ namespace TP_Final.Domain
 {
     public static class Encrypter
     {
+
+        /// <summary> Encripta la contraseña </summary>
+        /// <param string="pPassword"> Contraseña ingresada </param>
+        /// <returns> String de la contraseña encriptada </returns>
         public static string Encrypt(string pPassword) 
         {
             byte[] data = System.Text.Encoding.ASCII.GetBytes(pPassword);

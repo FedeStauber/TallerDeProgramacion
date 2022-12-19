@@ -72,7 +72,10 @@ namespace TP_Final.Domain
             }
         }
 
-       public bool PasswordMatch(string pPassword)
+        /// <summary> Encripta la contraseña ingresada por el usuario en pantalla y la compara con la que posee. </summary>
+        /// <param string="pPassword"> Contraseña ingresada </param>
+        /// <returns> True si la contraseña es la misma, false si no lo es </returns>
+        public bool PasswordMatch(string pPassword)
        {           
             if (this.Password == Encrypter.Encrypt(Encrypter.Encrypt(pPassword)))
             {

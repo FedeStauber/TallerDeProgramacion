@@ -15,6 +15,9 @@ namespace TP_Final.Domain
 {
     public class EmailEstrategy : INotificatorEstrategy
     {
+
+        /// <summary> Notifica al usuario sobre el tiempo restante de su préstamo </summary>
+        /// <param Loan="pLoan"> Contraseña ingresada </param>
         public void Notify(Loan pLoan)
         {
             TimeSpan pTiempoRestante = (pLoan.EndDate - DateTime.Now);

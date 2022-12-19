@@ -24,11 +24,8 @@ namespace TP_Final.Domain
         }
 
 
-        //NO LO ENTIENDO
-        /// <summary>
-        /// Verifica si un préstamo 
-        /// </summary>
-        /// <returns>Verdadero o falso</returns>
+        /// <summary> Verifica si un préstamo está atrasado </summary>
+        /// <returns>True si está atrasado, false sino lo es </returns>
         public bool Late()
         {
             if ((ReturnDate == null) && (EndDate < DateTime.Now))
@@ -37,11 +34,9 @@ namespace TP_Final.Domain
             }
             return false;
         }
-        /// <summary>
-        /// Realiza la devolución de una copia, modifica la modificación de la condición y registra el score
-        /// del usuario y del préstamo
-        /// </summary>
-        /// <param name="pUserId">Nueva condición para la copia</param>
+
+        /// <summary> Realiza la devolución de una copia, modifica la condición y registra el score del usuario y del préstamo </summary>
+        /// <param Copy.ConditionEnum="pCondition">Nueva condición para la copia</param>
         public void ReturnRegister(Copy.ConditionEnum pCondition)
         {
             if (pCondition == Copy.ConditionEnum.Available && this.Late())
@@ -72,6 +67,8 @@ namespace TP_Final.Domain
             Copy.ReturnRegister(pCondition);
         }
 
+        /// <summary> Determina si un préstamo se puede extender, si se puede lo extiende, cambia la cantidad de dias a extender y resta el puntaje al usuario </summary>
+        /// <param int="pDaysToExtend"> La cantidad de días que desea extender</param>
         public void Extend(int pDaysToExtend)
         {
             if (ReturnDate != null)

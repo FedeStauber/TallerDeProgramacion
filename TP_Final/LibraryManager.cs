@@ -17,6 +17,8 @@ namespace TP_Final
 {
     public static class LibraryManager
     {
+
+        /// <summary> Notifica a todos los usuarios que tienen préstamos que están a dos días de expirar </summary>
         public static void Notificate()
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -31,39 +33,47 @@ namespace TP_Final
                 unit.Complete();
             }  
         }
-        public static void AddUser(UserDTO form)
+
+        /// <summary> Guarda un usuario en el repositorio </summary>
+        /// <param UserDTO="pUserDTO"> Nuevo usuario </param>
+        public static void AddUser(UserDTO pUserDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {                
-                var vUser = UsefulMapper.Mapper.Map<UserDTO, User>(form);
+                var vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
                 vUser.Active = true;
                 unit.UserRepository.Add(vUser);  
                 unit.Complete();  
             }           
         }
 
-
-        public static void ModifyUser(int pDni, UserDTO pForm)
+        /// <summary> Busca el usuario por el DNI y le cambia los valores</summary>
+        /// <param int="pDni"> DNI del usuario a modificar </param>
+        /// <param UserDTO="pUserDTO"> Nuevo usuario </param>
+        public static void ModifyUser(int pDni, UserDTO pUserDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
                 User vUser = unit.UserRepository.SearchByDNI(pDni);
-                vUser.Active = pForm.Active;
-                vUser.Admin = pForm.Admin;
-                vUser.DNI = pForm.DNI;
-                vUser.Email = pForm.Email;
-                vUser.Avatar = pForm.Avatar;
-                vUser.LastName = pForm.LastName;
-                vUser.Name = pForm.Name;
-                vUser.Score = pForm.Score;
-                if (pForm.Password != "")
+                vUser.Active = pUserDTO.Active;
+                vUser.Admin = pUserDTO.Admin;
+                vUser.DNI = pUserDTO.DNI;
+                vUser.Email = pUserDTO.Email;
+                vUser.Avatar = pUserDTO.Avatar;
+                vUser.LastName = pUserDTO.LastName;
+                vUser.Name = pUserDTO.Name;
+                vUser.Score = pUserDTO.Score;
+                if (pUserDTO.Password != "")
                 {
-                    vUser.Password = pForm.Password;
+                    vUser.Password = pUserDTO.Password;
                 }                               
                 unit.Complete();
             }
         }
 
+        /// <summary> Busca el libro por ISBN y le agrega la cantidad de copias ingresadas </summary>
+        /// <param long="pISBN"> ISBN del libro que se quiere agregar las copias </param>
+        /// <param int="amount"> Cantidad de copias que se quiere agregar de ese libro </param>
         public static void AddCopy(long pISBN, int amount)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -85,6 +95,8 @@ namespace TP_Final
             }
         }
 
+        /// <summary> Cambia la condición de la copia </summary>
+        /// <param CopyDTO="pCopyDTO"> Copia a modificar </param>
         public static void ModifyCopy(CopyDTO pCopyDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -108,12 +120,15 @@ namespace TP_Final
             }
         }
 
-        public static void CreateLoan(LoanDTO form)
+        /// <summary> Busca el usuario por el mail, busca una copia disponible, cambia la condicion de la copia y la ultima fecha de
+        /// modificacion, crea el préstamo y lo agrega al repositorio, si no encuentra una copia disponible lo notifica al usuario</summary>
+        /// <param LoanDTO="pLoanDTO"> Préstamo a crear  </param>
+        public static void CreateLoan(LoanDTO pLoanDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
-                User vUser = unit.UserRepository.SearchByEmail(form.UserEmail);                               
-                Copy vCopy = unit.CopyRepository.GetAvailableCopy(form.BookISBN);
+                User vUser = unit.UserRepository.SearchByEmail(pLoanDTO.UserEmail);                               
+                Copy vCopy = unit.CopyRepository.GetAvailableCopy(pLoanDTO.BookISBN);
                 if (vCopy == null)
                 {
                     throw new NoAvailableCopyException("No existen copias disponibles para el libro seleccionado");
@@ -125,7 +140,10 @@ namespace TP_Final
                 unit.Complete();
             }
         }
-        // Este procedimiento está correcto, falta documentar V
+        /// <summary> Busca el préstamo por el id ingresado y cambia la condicion por la ingresada, si no encuentra el préstamo notifica al 
+        /// usuario </summary>
+        /// <param int="pLoanId"> Id del préstamo </param>
+        /// <param int="pCondition"> Entero que representa la posición en la lista de condiciones </param>
         public static void LoanReturnRegister(int pLoanId, int pCondition)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -146,7 +164,10 @@ namespace TP_Final
                 unit.Complete();
             }
         }
-        // Este procedimiento está correcto, falta documentar V
+        /// <summary> Busca el mail ingresado en el repositorio de usuario, compara las contraseñas de ese usuario con la ingresada y
+        /// verifica que el usuario esté activo, si la contraseña no coincide o el usuario no está activo, se notifica al usuario</summary>
+        /// <param string="pUserEmail"> Email ingresada</param>
+        /// <param string="pPassword"> Contraseña ingresada </param>
         public static LoginDTO LogIn(string pUserEmail, string pPassword)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -186,7 +207,10 @@ namespace TP_Final
                 }
             });
         }
-        // Este procedimiento está correcto, falta documentar V
+
+        /// <summary> Busca si el libro ya existe en el catálogo, si existe lo notifica al usuario de esto, sino mapea y agrega
+        /// el libro al repositorio</summary>
+        /// <param BookDTO="pBookDTO"> Libro a agregar </param>
         public static void AddBook(BookDTO pBookDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -203,7 +227,11 @@ namespace TP_Final
                 }
             }
         }
-        // Este procedimiento está correcto, falta documentar V
+
+
+        /// <summary> Realiza una consulta al repositorio para obtener todos los prestamos asociados a el usuario indicado </summary>
+        /// <param UserDTO="pUserDTO"> Usuario a utilizar </param>
+        /// <returns>Una lista de objetos LoanDTO que contiene todos los prestamos del usuario</returns>
         public static List<LoanDTO> UserLoansHistory(UserDTO pUserDTO)
         {
             User vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
@@ -221,6 +249,7 @@ namespace TP_Final
                 return vLoanDTOs;
             }
         }
+
         /// <summary>
         /// Realiza una consulta al repositorio para obtener los prestamos activos asociados a el usuario indicado
         /// </summary>
@@ -234,7 +263,9 @@ namespace TP_Final
                 return vLoanDTOs;
             }
         }
-        // Este procedimiento está correcto, falta documentar V
+
+        /// <summary> Realiza una búsqueda de un Usuario en el repositorio mediante el DNI </summary>
+        /// <param name="pDni">Dni ingresado</param>
         public static UserDTO SearchUserByDNI(long pDni)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -244,7 +275,9 @@ namespace TP_Final
                 return vUserDTO;
             }
         }
-        // Este procedimiento está correcto, falta documentar V
+
+        /// <summary> Mapea una lista de todos los usuarios </summary>
+        /// <returns> Una lista de objetos UserDTO que contiene todos los usuarios</returns>
         public static List<UserDTO> UsersList()
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -253,7 +286,9 @@ namespace TP_Final
                 return vListUserDTO;
             }
         }
-        // Este procedimiento está correcto, falta documentar V
+        /// <summary> Crea una lista de copias DTO </summary>
+        /// <param name="pBookISBN">ISBN del libro</param>
+        /// <returns> Una lista de objetos CopyDTO que contiene todas las copias de un libro</returns>
         public static List<CopyDTO> BookCopyList(long pBookISBN)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -270,7 +305,11 @@ namespace TP_Final
                 return vListCopyDTO;
             }
         }
-        // Este procedimiento está correcto, falta documentar V
+
+        /// <summary> Busca el libro en el repositorio por ISBN y cambia los campos de este </summary>
+        /// <param name="pISBN">ISBN del libro</param>
+        /// <param name="pBookDTO">Libro DTO</param>
+
         public static void ModifyBook(long pISBN, BookDTO pBookDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -291,7 +330,9 @@ namespace TP_Final
             }
         }
 
-        // Este procedimiento está correcto, falta documentar V
+        /// <summary> Crea una lista de préstamos DTO </summary>
+        /// <returns> Una lista de objetos LoanDTO que contiene todas los préstamos activos</returns>
+
         public static List<LoanDTO> ActiveLoans()
         {      
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -308,6 +349,10 @@ namespace TP_Final
                 return vLoanDTOs;
             }            
         }
+
+        /// <summary> Extiende la cantidad de días de un préstamo, buscando a este por su ID </summary>
+        /// <param name="pLoan">Préstamo</param>
+        /// <param name="pDaysToExtend">Cantidad de días a extender</param>
         public static void LoanExtend(LoanDTO pLoan, int pDaysToExtend)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
