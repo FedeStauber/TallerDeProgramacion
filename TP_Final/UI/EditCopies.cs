@@ -83,8 +83,7 @@ namespace TP_Final.UI
 
         private void IconPictureBox2_Click(object sender, EventArgs e)
         {
-            MainWindow vMainWindow = Owner as MainWindow;
-            vMainWindow.OpenChildForm(new BookCard(this.iBook,true,BookCard.ComeFrom.Catalogue));
+            this.Close();
         }
     }
 }

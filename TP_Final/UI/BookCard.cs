@@ -327,13 +327,13 @@ namespace TP_Final.UI
         private void btnAddLoan_Click(object sender, EventArgs e)
         {
             MainWindow vMainWindow = Owner as MainWindow;
-            vMainWindow.OpenChildForm(new AddLoan(iBook));
+            vMainWindow.OpenTempChild(new AddLoan(iBook));
         }
 
         private void btnManageCopies_Click(object sender, EventArgs e)
         {
             MainWindow vMainWindow = Owner as MainWindow;
-            vMainWindow.OpenChildForm(new EditCopies(iBook));
+            vMainWindow.OpenTempChild(new EditCopies(iBook));
         }
     }
 }
