@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backTLP = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelLoanReturnData = new System.Windows.Forms.Panel();
@@ -275,6 +275,7 @@
             this.userLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.userLabel.BorderRadius = 5;
             this.userLabel.BorderSize = 3;
+            this.userLabel.Enabled = false;
             this.userLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.userLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.userLabel.Location = new System.Drawing.Point(30, 223);
@@ -295,6 +296,7 @@
             this.ExpiresLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.ExpiresLabel.BorderRadius = 5;
             this.ExpiresLabel.BorderSize = 3;
+            this.ExpiresLabel.Enabled = false;
             this.ExpiresLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.ExpiresLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ExpiresLabel.Location = new System.Drawing.Point(32, 158);
@@ -315,6 +317,7 @@
             this.dniLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.dniLabel.BorderRadius = 5;
             this.dniLabel.BorderSize = 3;
+            this.dniLabel.Enabled = false;
             this.dniLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.dniLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dniLabel.Location = new System.Drawing.Point(32, 289);
@@ -335,6 +338,7 @@
             this.bookLabel.BorderFocusColor = System.Drawing.Color.Gray;
             this.bookLabel.BorderRadius = 5;
             this.bookLabel.BorderSize = 3;
+            this.bookLabel.Enabled = false;
             this.bookLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bookLabel.Location = new System.Drawing.Point(32, 92);
@@ -454,24 +458,24 @@
             this.dataGridUsers.AllowUserToAddRows = false;
             this.dataGridUsers.AllowUserToDeleteRows = false;
             this.dataGridUsers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.NullValue = "-";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.NullValue = "-";
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridUsers.AutoGenerateColumns = false;
             this.dataGridUsers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridUsers.ColumnHeadersHeight = 30;
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -482,15 +486,15 @@
             this.bookISBNDataGridViewTextBoxColumn,
             this.startDateDataGridViewTextBoxColumn});
             this.dataGridUsers.DataSource = this.loanDTOBindingSource;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.NullValue = "-";
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.NullValue = "-";
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridUsers.EnableHeadersVisualStyles = false;
             this.dataGridUsers.GridColor = System.Drawing.Color.White;
@@ -509,8 +513,8 @@
             // Id
             // 
             this.Id.DataPropertyName = "Id";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 9F);
-            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.Id.DefaultCellStyle = dataGridViewCellStyle21;
             this.Id.FillWeight = 50F;
             this.Id.HeaderText = "Id";
             this.Id.MinimumWidth = 6;
@@ -522,8 +526,8 @@
             // userEmailDataGridViewTextBoxColumn
             // 
             this.userEmailDataGridViewTextBoxColumn.DataPropertyName = "UserEmail";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Cn", 9F);
-            this.userEmailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.userEmailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
             this.userEmailDataGridViewTextBoxColumn.FillWeight = 150F;
             this.userEmailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.userEmailDataGridViewTextBoxColumn.MinimumWidth = 200;
@@ -535,8 +539,8 @@
             // userDNIDataGridViewTextBoxColumn
             // 
             this.userDNIDataGridViewTextBoxColumn.DataPropertyName = "UserDNI";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Cn", 9F);
-            this.userDNIDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.userDNIDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle23;
             this.userDNIDataGridViewTextBoxColumn.HeaderText = "DNI";
             this.userDNIDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.userDNIDataGridViewTextBoxColumn.Name = "userDNIDataGridViewTextBoxColumn";
@@ -548,8 +552,8 @@
             // 
             this.bookTitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.bookTitleDataGridViewTextBoxColumn.DataPropertyName = "BookTitle";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Cn", 9F);
-            this.bookTitleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.bookTitleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle24;
             this.bookTitleDataGridViewTextBoxColumn.HeaderText = "Titulo";
             this.bookTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.bookTitleDataGridViewTextBoxColumn.Name = "bookTitleDataGridViewTextBoxColumn";
@@ -559,8 +563,8 @@
             // bookISBNDataGridViewTextBoxColumn
             // 
             this.bookISBNDataGridViewTextBoxColumn.DataPropertyName = "BookISBN";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto Cn", 9F);
-            this.bookISBNDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.bookISBNDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle25;
             this.bookISBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
             this.bookISBNDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.bookISBNDataGridViewTextBoxColumn.Name = "bookISBNDataGridViewTextBoxColumn";
@@ -571,8 +575,8 @@
             // startDateDataGridViewTextBoxColumn
             // 
             this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto Cn", 9F);
-            this.startDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Roboto Cn", 9F);
+            this.startDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
             this.startDateDataGridViewTextBoxColumn.FillWeight = 120F;
             this.startDateDataGridViewTextBoxColumn.HeaderText = "Inicio";
             this.startDateDataGridViewTextBoxColumn.MinimumWidth = 120;
