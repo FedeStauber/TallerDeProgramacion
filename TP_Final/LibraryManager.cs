@@ -36,15 +36,7 @@ namespace TP_Final
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {                
                 var vUser = UsefulMapper.Mapper.Map<UserDTO, User>(form);
-                vUser.Active = true;                
-                if (unit.UserRepository.EmailExists(vUser.Email))
-                {
-                    throw new Exception("El Correo que ingreso ya está siendo utilizado");
-                }
-                if (unit.UserRepository.DNIExists(vUser.DNI))
-                {
-                    throw new Exception("El DNI ingresado ya está siendo utilizado");
-                }
+                vUser.Active = true;
                 unit.UserRepository.Add(vUser);  
                 unit.Complete();  
             }           

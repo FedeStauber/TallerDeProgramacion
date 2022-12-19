@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TP_Final.Domain;
 using Microsoft.EntityFrameworkCore;
 using TP_Final.Exceptions;
+using TP_Final.UI;
 
 namespace TP_Final.DAL.EntityFramework
 {
@@ -55,6 +56,23 @@ namespace TP_Final.DAL.EntityFramework
                 return false;
             }
             return true;
+        }
+
+        public new void Add(User vUser)
+        {
+            if (vUser == null)
+            {
+                throw new ArgumentNullException(nameof(vUser));
+            }
+            if (iDbContext.Set<User>().FirstOrDefault(user => user.DNI == vUser.DNI) != null)
+            {
+                throw new Exception("El DNI ingresado ya está en uso");
+            }
+            else if (iDbContext.Set<User>().FirstOrDefault(user => user.Email == vUser.Email) != null)
+            {
+                throw new Exception("El email ingresado ya está en uso");
+            }
+            iDbContext.Set<User>().Add(vUser);
         }
 
    

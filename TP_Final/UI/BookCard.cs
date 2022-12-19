@@ -312,8 +312,9 @@ namespace TP_Final.UI
                         vCatalogue.RefreshLayout();
                     }
                     MessageBox.Show("Cambios guardados con éxito!");
+                    this.ReturnButton_Click(sender, e);
                 }
-                this.ReturnButton_Click(sender, e);
+               
             }
             catch (Exception ex)
             {
