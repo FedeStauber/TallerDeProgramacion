@@ -37,32 +37,36 @@ namespace TP_Final.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.AddBottom = new FontAwesome.Sharp.IconPictureBox();
-            this.dataGridCopies = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conditionDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.conditionEnumBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lastModifyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.copyDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ReturnBottom = new FontAwesome.Sharp.IconPictureBox();
+            this.AddBottom = new FontAwesome.Sharp.IconPictureBox();
+            this.conditionEnumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.copyDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastModifyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conditionDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridCopies = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddBottom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCopies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conditionEnumBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.copyDTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReturnBottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCopies)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel1.Controls.Add(this.ReturnBottom, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.AddBottom, 2, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.411765F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.58823F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridCopies, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ReturnBottom, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -70,9 +74,26 @@ namespace TP_Final.UI
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1280, 721);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // ReturnBottom
+            // 
+            this.ReturnBottom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ReturnBottom.BackColor = System.Drawing.Color.White;
+            this.ReturnBottom.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ReturnBottom.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.ReturnBottom.IconColor = System.Drawing.SystemColors.ControlText;
+            this.ReturnBottom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ReturnBottom.IconSize = 50;
+            this.ReturnBottom.Location = new System.Drawing.Point(859, 27);
+            this.ReturnBottom.Name = "ReturnBottom";
+            this.ReturnBottom.Size = new System.Drawing.Size(50, 50);
+            this.ReturnBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ReturnBottom.TabIndex = 8;
+            this.ReturnBottom.TabStop = false;
+            this.ReturnBottom.Click += new System.EventHandler(this.IconPictureBox2_Click);
             // 
             // AddBottom
             // 
@@ -82,7 +103,7 @@ namespace TP_Final.UI
             this.AddBottom.IconColor = System.Drawing.Color.LimeGreen;
             this.AddBottom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AddBottom.IconSize = 35;
-            this.AddBottom.Location = new System.Drawing.Point(1176, 80);
+            this.AddBottom.Location = new System.Drawing.Point(0, 0);
             this.AddBottom.Margin = new System.Windows.Forms.Padding(0);
             this.AddBottom.Name = "AddBottom";
             this.AddBottom.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
@@ -90,6 +111,58 @@ namespace TP_Final.UI
             this.AddBottom.TabIndex = 7;
             this.AddBottom.TabStop = false;
             this.AddBottom.Click += new System.EventHandler(this.IconPictureBox1_Click_1);
+            // 
+            // conditionEnumBindingSource
+            // 
+            this.conditionEnumBindingSource.DataSource = new TP_Final.IO.CopyDTO.ConditionEnum[] {
+        TP_Final.IO.CopyDTO.ConditionEnum.Disponible,
+        TP_Final.IO.CopyDTO.ConditionEnum.Prestado,
+        TP_Final.IO.CopyDTO.ConditionEnum.Roto,
+        TP_Final.IO.CopyDTO.ConditionEnum.Suspendido};
+            this.conditionEnumBindingSource.Position = 0;
+            // 
+            // copyDTOBindingSource
+            // 
+            this.copyDTOBindingSource.DataSource = typeof(TP_Final.IO.CopyDTO);
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "Prestado Hasta";
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastModifyDataGridViewTextBoxColumn
+            // 
+            this.lastModifyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastModifyDataGridViewTextBoxColumn.DataPropertyName = "LastModify";
+            this.lastModifyDataGridViewTextBoxColumn.HeaderText = "Ultima Modificación";
+            this.lastModifyDataGridViewTextBoxColumn.Name = "lastModifyDataGridViewTextBoxColumn";
+            this.lastModifyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conditionDataGridViewComboBoxColumn
+            // 
+            this.conditionDataGridViewComboBoxColumn.AutoComplete = false;
+            this.conditionDataGridViewComboBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.conditionDataGridViewComboBoxColumn.DataPropertyName = "Condition";
+            this.conditionDataGridViewComboBoxColumn.DataSource = this.conditionEnumBindingSource;
+            this.conditionDataGridViewComboBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.conditionDataGridViewComboBoxColumn.DisplayStyleForCurrentCellOnly = true;
+            this.conditionDataGridViewComboBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.conditionDataGridViewComboBoxColumn.HeaderText = "Condición";
+            this.conditionDataGridViewComboBoxColumn.MinimumWidth = 150;
+            this.conditionDataGridViewComboBoxColumn.Name = "conditionDataGridViewComboBoxColumn";
+            this.conditionDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.conditionDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.conditionDataGridViewComboBoxColumn.Width = 150;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataGridCopies
             // 
@@ -134,90 +207,43 @@ namespace TP_Final.UI
             this.dataGridCopies.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridCopies.EnableHeadersVisualStyles = false;
             this.dataGridCopies.GridColor = System.Drawing.Color.White;
-            this.dataGridCopies.Location = new System.Drawing.Point(76, 80);
+            this.dataGridCopies.Location = new System.Drawing.Point(44, 80);
             this.dataGridCopies.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridCopies.MultiSelect = false;
             this.dataGridCopies.Name = "dataGridCopies";
             this.dataGridCopies.RowHeadersVisible = false;
             this.dataGridCopies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridCopies.Size = new System.Drawing.Size(1100, 591);
+            this.dataGridCopies.Size = new System.Drawing.Size(812, 561);
             this.dataGridCopies.TabIndex = 6;
             this.dataGridCopies.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridCopies_CellBeginEdit);
             this.dataGridCopies.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCopies_CellEndEdit);
             // 
-            // idDataGridViewTextBoxColumn
+            // tableLayoutPanel2
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.AddBottom, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(856, 80);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(424, 561);
+            this.tableLayoutPanel2.TabIndex = 9;
             // 
-            // conditionDataGridViewComboBoxColumn
+            // pictureBox1
             // 
-            this.conditionDataGridViewComboBoxColumn.AutoComplete = false;
-            this.conditionDataGridViewComboBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.conditionDataGridViewComboBoxColumn.DataPropertyName = "Condition";
-            this.conditionDataGridViewComboBoxColumn.DataSource = this.conditionEnumBindingSource;
-            this.conditionDataGridViewComboBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.conditionDataGridViewComboBoxColumn.DisplayStyleForCurrentCellOnly = true;
-            this.conditionDataGridViewComboBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.conditionDataGridViewComboBoxColumn.HeaderText = "Condición";
-           /* this.conditionDataGridViewComboBoxColumn.Items.AddRange(new object[] {
-            TP_Final.IO.CopyDTO.ConditionEnum.Disponible,
-            TP_Final.IO.CopyDTO.ConditionEnum.Prestado,
-            TP_Final.IO.CopyDTO.ConditionEnum.Roto,
-            TP_Final.IO.CopyDTO.ConditionEnum.Suspendido});*/
-            this.conditionDataGridViewComboBoxColumn.MinimumWidth = 150;
-            this.conditionDataGridViewComboBoxColumn.Name = "conditionDataGridViewComboBoxColumn";
-            this.conditionDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.conditionDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.conditionDataGridViewComboBoxColumn.Width = 150;
-            // 
-            // conditionEnumBindingSource
-            // 
-            this.conditionEnumBindingSource.DataSource = new TP_Final.IO.CopyDTO.ConditionEnum[] {
-        TP_Final.IO.CopyDTO.ConditionEnum.Disponible,
-        TP_Final.IO.CopyDTO.ConditionEnum.Prestado,
-        TP_Final.IO.CopyDTO.ConditionEnum.Roto,
-        TP_Final.IO.CopyDTO.ConditionEnum.Suspendido};
-            this.conditionEnumBindingSource.Position = 0;
-            // 
-            // lastModifyDataGridViewTextBoxColumn
-            // 
-            this.lastModifyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastModifyDataGridViewTextBoxColumn.DataPropertyName = "LastModify";
-            this.lastModifyDataGridViewTextBoxColumn.HeaderText = "Ultima Modificación";
-            this.lastModifyDataGridViewTextBoxColumn.Name = "lastModifyDataGridViewTextBoxColumn";
-            this.lastModifyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "Prestado Hasta";
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // copyDTOBindingSource
-            // 
-            this.copyDTOBindingSource.DataSource = typeof(TP_Final.IO.CopyDTO);
-            // 
-            // ReturnBottom
-            // 
-            this.ReturnBottom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ReturnBottom.BackColor = System.Drawing.Color.White;
-            this.ReturnBottom.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ReturnBottom.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.ReturnBottom.IconColor = System.Drawing.SystemColors.ControlText;
-            this.ReturnBottom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ReturnBottom.IconSize = 50;
-            this.ReturnBottom.Location = new System.Drawing.Point(1179, 27);
-            this.ReturnBottom.Name = "ReturnBottom";
-            this.ReturnBottom.Size = new System.Drawing.Size(50, 50);
-            this.ReturnBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ReturnBottom.TabIndex = 8;
-            this.ReturnBottom.TabStop = false;
-            this.ReturnBottom.Click += new System.EventHandler(this.IconPictureBox2_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 47);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(20, 10, 30, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(374, 514);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // EditCopies
             // 
@@ -230,11 +256,13 @@ namespace TP_Final.UI
             this.Name = "EditCopies";
             this.Text = "Editar Copias";
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddBottom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCopies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conditionEnumBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.copyDTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReturnBottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCopies)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,13 +270,15 @@ namespace TP_Final.UI
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.BindingSource copyDTOBindingSource;
-        private System.Windows.Forms.DataGridView dataGridCopies;
         private FontAwesome.Sharp.IconPictureBox AddBottom;
         private System.Windows.Forms.BindingSource conditionEnumBindingSource;
+        private FontAwesome.Sharp.IconPictureBox ReturnBottom;
+        private System.Windows.Forms.DataGridView dataGridCopies;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn conditionDataGridViewComboBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastModifyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
-        private FontAwesome.Sharp.IconPictureBox ReturnBottom;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
