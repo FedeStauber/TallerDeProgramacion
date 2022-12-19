@@ -245,7 +245,7 @@ namespace TP_Final.UI
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddBook";
-            this.Text = "Alta Libro";
+            this.Text = "Agregar un libro";
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             this.leftPanel.ResumeLayout(false);

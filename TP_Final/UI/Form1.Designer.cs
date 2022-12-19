@@ -38,12 +38,12 @@ namespace TP_Final.UI
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnSaveChanges = new FontAwesome.Sharp.IconButton();
-            this.comboBoxPerso1 = new TP_Final.UI.ComboBoxPerso();
             this.bookLabel = new System.Windows.Forms.Label();
             this.ExpiresLabel = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
             this.dniLabel = new System.Windows.Forms.Label();
             this.labeLLoanReturn = new System.Windows.Forms.Label();
+            this.comboBoxPerso1 = new TP_Final.UI.ComboBoxPerso();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -193,31 +193,6 @@ namespace TP_Final.UI
             this.btnSaveChanges.Text = "Guardar";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
             // 
-            // comboBoxPerso1
-            // 
-            this.comboBoxPerso1.BackColor = System.Drawing.Color.White;
-            this.comboBoxPerso1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.comboBoxPerso1.BorderSize = 2;
-            this.comboBoxPerso1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPerso1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxPerso1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.comboBoxPerso1.Items.AddRange(new object[] {
-            "Disponible",
-            "Roto"});
-            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.comboBoxPerso1.ListTextColor = System.Drawing.Color.White;
-            this.comboBoxPerso1.Location = new System.Drawing.Point(200, 187);
-            this.comboBoxPerso1.Margin = new System.Windows.Forms.Padding(0, 7, 3, 0);
-            this.comboBoxPerso1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBoxPerso1.Name = "comboBoxPerso1";
-            this.comboBoxPerso1.Padding = new System.Windows.Forms.Padding(0, 2, 2, 2);
-            this.comboBoxPerso1.SelectedIndex = -1;
-            this.comboBoxPerso1.SelectedItem = null;
-            this.comboBoxPerso1.Size = new System.Drawing.Size(702, 30);
-            this.comboBoxPerso1.TabIndex = 16;
-            this.comboBoxPerso1.Texts = "Seleccione";
-            // 
             // bookLabel
             // 
             this.bookLabel.AutoSize = true;
@@ -277,6 +252,31 @@ namespace TP_Final.UI
             this.labeLLoanReturn.Text = "Registrar Devolución";
             this.labeLLoanReturn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // comboBoxPerso1
+            // 
+            this.comboBoxPerso1.BackColor = System.Drawing.Color.White;
+            this.comboBoxPerso1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.comboBoxPerso1.BorderSize = 2;
+            this.comboBoxPerso1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPerso1.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxPerso1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.comboBoxPerso1.Items.AddRange(new object[] {
+            "Disponible",
+            "Roto"});
+            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.comboBoxPerso1.ListTextColor = System.Drawing.Color.White;
+            this.comboBoxPerso1.Location = new System.Drawing.Point(200, 187);
+            this.comboBoxPerso1.Margin = new System.Windows.Forms.Padding(0, 7, 3, 0);
+            this.comboBoxPerso1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBoxPerso1.Name = "comboBoxPerso1";
+            this.comboBoxPerso1.Padding = new System.Windows.Forms.Padding(0, 2, 2, 2);
+            this.comboBoxPerso1.SelectedIndex = -1;
+            this.comboBoxPerso1.SelectedItem = null;
+            this.comboBoxPerso1.Size = new System.Drawing.Size(702, 30);
+            this.comboBoxPerso1.TabIndex = 16;
+            this.comboBoxPerso1.Texts = "Seleccione";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,7 +284,7 @@ namespace TP_Final.UI
             this.ClientSize = new System.Drawing.Size(905, 411);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.labeLLoanReturn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel4.ResumeLayout(false);

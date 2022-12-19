@@ -25,9 +25,11 @@ namespace TP_Final.UI
         private Control iEditing;
         private string iTemp;
         private long iOriginalISBN;
+        private byte[] iTempCover;
         
         
-        public enum ComeFrom {AddBook,Catalogue,AddLoan}
+        
+        public enum ComeFrom {AddBook,Catalogue}
         
         public BookCard(BookDTO pBook, bool pAdmin,ComeFrom pComeFrom)
         {
@@ -39,7 +41,7 @@ namespace TP_Final.UI
             AssignElements();
             if (pComeFrom == ComeFrom.AddBook)
             {
-              DownloadHqCover();
+              DownloadHqCover();              
             }            
         }
 
@@ -127,6 +129,7 @@ namespace TP_Final.UI
             labelLanguage.Text = iBook.Language;
             labelPages.Text = iBook.Pages.ToString();
             labelISBN.Text = iBook.ISBN.ToString();
+            labelDescription.Text = iBook.Description;
             if (iBook.Cover != null)
             {
                 MemoryStream ms = new MemoryStream(iBook.Cover);
@@ -141,112 +144,80 @@ namespace TP_Final.UI
                 //Agregar imagen de error y solicitar recargar
             }
         }
-        private void iconPictureBox2_Click(object sender, EventArgs e)
-        {         
-          this.Close();
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            MainWindow vMainWindow = Owner as MainWindow;
+            if (this.iComeFrom == ComeFrom.AddBook)
+            {
+                vMainWindow.labelChildTitle.Text = "Agegar un libro";
+                
+            }
+            else
+            {
+                vMainWindow.labelChildTitle.Text = "Catálogo";
+            }
+            this.Close();
         }
 
         #region Editar Libro
-        private void btnEditAuthor_Click(object sender, EventArgs e)
+        private void EndEdit()
         {
-            richTextBox1.MaxLength = 250;
-            this.iEditing = labelAuthor;
-            this.iTemp = labelAuthor.Text;
-            richTextBox1.Text = labelAuthor.Text;
-            richTextBox1.Visible = true;
-            btnDiscardEdit.Visible = true;
-            btnAcceptEdit.Visible = true;
-            btnSaveChanges.Visible = false;
-            btnAddLoan.Visible = false;
-        }
-        private void btnEditLanguage_Click(object sender, EventArgs e)
-        {
-            richTextBox1.MaxLength = 250;
-            this.iEditing = labelLanguage;
-            this.iTemp = labelLanguage.Text;
-            richTextBox1.Text = labelLanguage.Text;
-            richTextBox1.Visible = true;
-            btnDiscardEdit.Visible = true;
-            btnAcceptEdit.Visible = true;
-            btnSaveChanges.Visible = false;
-            btnAddLoan.Visible = false;
-        }
-        private void btnEditGender_Click(object sender, EventArgs e)
-        {
-            richTextBox1.MaxLength = 500;
-            this.iEditing = labelGender;
-            this.iTemp = labelGender.Text;
-            richTextBox1.Text = labelGender.Text;
-            richTextBox1.Visible = true;
-            btnDiscardEdit.Visible = true;
-            btnAcceptEdit.Visible = true;
-            btnSaveChanges.Visible = false;
-            btnAddLoan.Visible = false;
-        }
-        private void btnEditPages_Click(object sender, EventArgs e)
-        {
-            richTextBox1.MaxLength = 10;
-            this.iEditing = labelPages;
-            this.iTemp = labelPages.Text;
-            richTextBox1.Text = labelPages.Text;
-            richTextBox1.Visible = true;
-            btnDiscardEdit.Visible = true;
-            btnAcceptEdit.Visible = true;
-            btnSaveChanges.Visible = false;
-            btnAddLoan.Visible = false;
-        }
-        private void btnEditISBN_Click(object sender, EventArgs e)
-        {
-            richTextBox1.MaxLength = 25;
-            this.iEditing = labelISBN;
-            this.iTemp = labelISBN.Text;
-            richTextBox1.Text = labelISBN.Text;
-            richTextBox1.Visible = true;
-            btnDiscardEdit.Visible = true;
-            btnAcceptEdit.Visible = true;
-            btnSaveChanges.Visible = false;
-            btnAddLoan.Visible = false;
-        }
-        private void btnEditDescription_Click_1(object sender, EventArgs e)
-        {
-            richTextBox1.MaxLength = 1000;
-            this.iEditing = labelDescription;
-            this.iTemp = labelDescription.Text;
-            richTextBox1.Text = labelDescription.Text;
-            richTextBox1.Visible = true;
-            btnDiscardEdit.Visible = true;
-            btnAcceptEdit.Visible = true;
-            btnSaveChanges.Visible = false;
-            btnAddLoan.Visible = false;
-        }
-        private void btnAcceptEdit_Click_1(object sender, EventArgs e)
-        {
-            iEditing.Text = richTextBox1.Text;
-            btnDiscardEdit.Visible = false;
-            btnAcceptEdit.Visible = false;
-            richTextBox1.Visible = false;          
-            this.AssignElements();
-        }
-        private void btnDiscardEdit_Click_1(object sender, EventArgs e)
-        {
-            this.iEditing.Text = iTemp;
             btnDiscardEdit.Visible = false;
             btnAcceptEdit.Visible = false;
             richTextBox1.Visible = false;
             btnSaveChanges.Visible = true;
             btnAddLoan.Visible = true;
         }
-        private void iconPictureBox1_Click_1(object sender, EventArgs e)
+        private void BeginEdit(int pMaxLength, Control pControlToEdit)
         {
-            richTextBox1.MaxLength = 150;
-            this.iEditing = labelTitle;
-            this.iTemp = labelTitle.Text;
-            richTextBox1.Text = labelTitle.Text;
+            richTextBox1.MaxLength = pMaxLength;
+            this.iEditing = pControlToEdit;
+            this.iTemp = pControlToEdit.Text;
+            richTextBox1.Text = pControlToEdit.Text;
             richTextBox1.Visible = true;
             btnDiscardEdit.Visible = true;
             btnAcceptEdit.Visible = true;
             btnSaveChanges.Visible = false;
             btnAddLoan.Visible = false;
+        }
+        private void btnEditAuthor_Click(object sender, EventArgs e)
+        {
+            this.BeginEdit(250, labelAuthor);
+        }
+        private void btnEditLanguage_Click(object sender, EventArgs e)
+        {
+            this.BeginEdit(250,labelLanguage);
+         
+        }
+        private void btnEditGender_Click(object sender, EventArgs e)
+        {
+            this.BeginEdit(500,labelGender);        
+        }
+        private void btnEditPages_Click(object sender, EventArgs e)
+        {
+            this.BeginEdit(10,labelPages);
+        }
+        private void btnEditISBN_Click(object sender, EventArgs e)
+        {
+            this.BeginEdit(25,labelISBN);
+        }
+        private void btnEditDescription_Click_1(object sender, EventArgs e)
+        {
+            this.BeginEdit(1000,labelDescription);
+        }
+        private void btnAcceptEdit_Click_1(object sender, EventArgs e)
+        {
+            iEditing.Text = richTextBox1.Text;
+            this.EndEdit();            
+        }
+        private void btnDiscardEdit_Click_1(object sender, EventArgs e)
+        {
+            this.iEditing.Text = iTemp;
+            this.EndEdit();
+        }
+        private void iconPictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.BeginEdit(150, labelTitle);
         }
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -265,7 +236,6 @@ namespace TP_Final.UI
         }
         private void btnSelectNewCover_Click_1(object sender, EventArgs e)
         {
-
             openFileDialog1.InitialDirectory = "C:\\";
             openFileDialog1.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos png(*.png)|*.png";
             openFileDialog1.FilterIndex = 1;
@@ -278,7 +248,7 @@ namespace TP_Final.UI
                 {
                     vStream.CopyTo(ms);
                     file = ms.ToArray();
-                    iBook.Cover = file;
+                    iTempCover = file;
                     Bitmap bmp = new Bitmap(ms);
                     ImageFactory imgFact = new ImageFactory();
                     imgFact.Load(bmp);
@@ -291,56 +261,71 @@ namespace TP_Final.UI
         
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            if (iComeFrom == ComeFrom.AddBook)
+            try
             {
-                DialogResult result = MessageBox.Show($"¿Está seguro que desea agregar {iBook.Title} a la biblioteca?", "Confirmacion", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                if (iComeFrom == ComeFrom.AddBook)
                 {
-                    iBook.Title = labelTitle.Text;
-                    iBook.Gender = labelGender.Text;
-                    iBook.Description = labelDescription.Text;
-                    iBook.Author = labelAuthor.Text;
-                    iBook.ISBN = Convert.ToInt64(labelISBN.Text);
-                    iBook.Pages = Convert.ToInt32(labelPages.Text);
-                    iBook.Language = labelLanguage.Text;
-                    using (var stream = new MemoryStream())
+                    DialogResult result = MessageBox.Show($"¿Está seguro que desea agregar {iBook.Title} a la biblioteca?", "Confirmacion", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
                     {
-                        pictureBox1.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-                        iBook.Cover = stream.ToArray();
+                        iBook.Title = labelTitle.Text;
+                        iBook.Gender = labelGender.Text;
+                        iBook.Description = labelDescription.Text;
+                        iBook.Author = labelAuthor.Text;
+                        iBook.ISBN = Convert.ToInt64(labelISBN.Text);
+                        iBook.Pages = Convert.ToInt32(labelPages.Text);
+                        iBook.Language = labelLanguage.Text;
+                        using (var stream = new MemoryStream())
+                        {
+                            pictureBox1.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                            iBook.Cover = stream.ToArray();
+                        }
+                        try
+                        {
+                            LibraryManager.AddBook(iBook);
+                            MessageBox.Show("Libro agregado con éxito");
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
-                    try
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show($"¿Está seguro que desea agregar guardar los cambios?", "Confirmacion", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
                     {
-                        LibraryManager.AddBook(iBook);
-                        MessageBox.Show("Libro agregado con éxito");
-                        this.Close();
+                        iBook.Title = labelTitle.Text;
+                        iBook.Gender = labelGender.Text;
+                        iBook.Description = labelDescription.Text;
+                        iBook.Author = labelAuthor.Text;
+                        iBook.ISBN = Convert.ToInt64(labelISBN.Text);
+                        iBook.Pages = Convert.ToInt32(labelPages.Text);
+                        iBook.Language = labelLanguage.Text;
+                        iBook.Cover = iTempCover;
+                        LibraryManager.ModifyBook(iOriginalISBN, iBook);
+                        iOriginalISBN = iBook.ISBN;
+                        MainWindow vOwner = Owner as MainWindow;
+                        Catalogue vCatalogue = vOwner.ActiveForm as Catalogue;
+                        vCatalogue.RefreshLayout();
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }      
+                    MessageBox.Show("Cambios guardados con éxito!");
+                }
+                this.ReturnButton_Click(sender, e);
             }
-            else
+            catch (Exception ex)
             {
-                DialogResult result = MessageBox.Show($"¿Está seguro que desea agregar guardar los cambios?", "Confirmacion", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    iBook.Title = labelTitle.Text;
-                    iBook.Gender = labelGender.Text;
-                    iBook.Description = labelDescription.Text;
-                    iBook.Author = labelAuthor.Text;
-                    iBook.ISBN = Convert.ToInt64(labelISBN.Text);
-                    iBook.Pages = Convert.ToInt32(labelPages.Text);
-                    iBook.Language = labelLanguage.Text;
-                    LibraryManager.ModifyBook(iOriginalISBN, iBook);
-                    iOriginalISBN = iBook.ISBN;                    
-                }              
+                Log.Error("Error al agregar un libro: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
+            
         }
+       
 
         private void btnAddLoan_Click(object sender, EventArgs e)
         {
-           
             MainWindow vMainWindow = Owner as MainWindow;
             vMainWindow.OpenChildForm(new AddLoan(iBook));
         }

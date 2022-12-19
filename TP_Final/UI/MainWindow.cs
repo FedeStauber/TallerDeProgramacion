@@ -21,6 +21,7 @@ namespace TP_Final.UI
         private int lx, ly, sw, sh;
         public UserDTO User { get; set; }
         public BookDTO SelectedBook { get; set; }
+        public Form ActiveForm { get {return this.iActiveForm; } set {this.iActiveForm = value; } }
         public MainWindow()
         {
             InitializeComponent();

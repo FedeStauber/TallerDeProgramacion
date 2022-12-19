@@ -128,7 +128,7 @@ namespace TP_Final.UI
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox2.TabIndex = 1;
             this.iconPictureBox2.TabStop = false;
-            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
+            this.iconPictureBox2.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
             // labelTitle
             // 

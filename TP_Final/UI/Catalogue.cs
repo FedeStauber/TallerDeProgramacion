@@ -72,7 +72,7 @@ namespace TP_Final.UI
                 return new BookListLayout16(iCurrentList.Skip(i).Take(this.ResultsPerPage()).ToList());
             }
         }
-        private void RefreshLayout()
+        public void RefreshLayout()
         {
             BookListLayout4 layout16 = iActiveForm as BookListLayout4;
             if (layout16 != null)
