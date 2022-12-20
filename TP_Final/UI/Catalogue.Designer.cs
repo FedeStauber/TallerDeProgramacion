@@ -41,6 +41,7 @@ namespace TP_Final.UI
             this.resultPagComboBox = new TP_Final.UI.ComboBoxPerso();
             this.pagesLabel = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
+            this.pbLibraryLogo = new System.Windows.Forms.PictureBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             this.leftPanel.SuspendLayout();
@@ -48,6 +49,8 @@ namespace TP_Final.UI
             this.rightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rightBtn)).BeginInit();
             this.botPanel.SuspendLayout();
+            this.centerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLibraryLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -88,7 +91,7 @@ namespace TP_Final.UI
             this.searchTextBox.Location = new System.Drawing.Point(526, 54);
             this.searchTextBox.Multiline = false;
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.searchTextBox.Padding = new System.Windows.Forms.Padding(7);
             this.searchTextBox.PasswordChar = false;
             this.searchTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.searchTextBox.PlaceholderText = "Ingrese el texto a buscar";
@@ -116,7 +119,7 @@ namespace TP_Final.UI
             this.cbFiltro.Location = new System.Drawing.Point(320, 54);
             this.cbFiltro.MinimumSize = new System.Drawing.Size(150, 33);
             this.cbFiltro.Name = "cbFiltro";
-            this.cbFiltro.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFiltro.Padding = new System.Windows.Forms.Padding(2);
             this.cbFiltro.SelectedIndex = -1;
             this.cbFiltro.SelectedItem = null;
             this.cbFiltro.Size = new System.Drawing.Size(200, 33);
@@ -199,7 +202,7 @@ namespace TP_Final.UI
             this.resultPagComboBox.ListBackColor = System.Drawing.Color.White;
             this.resultPagComboBox.ListTextColor = System.Drawing.Color.Black;
             this.resultPagComboBox.Location = new System.Drawing.Point(857, 26);
-            this.resultPagComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resultPagComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.resultPagComboBox.MinimumSize = new System.Drawing.Size(150, 24);
             this.resultPagComboBox.Name = "resultPagComboBox";
             this.resultPagComboBox.Padding = new System.Windows.Forms.Padding(2);
@@ -224,11 +227,23 @@ namespace TP_Final.UI
             // centerPanel
             // 
             this.centerPanel.BackColor = System.Drawing.Color.White;
+            this.centerPanel.Controls.Add(this.pbLibraryLogo);
             this.centerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.centerPanel.Location = new System.Drawing.Point(100, 90);
             this.centerPanel.Name = "centerPanel";
             this.centerPanel.Size = new System.Drawing.Size(1064, 542);
             this.centerPanel.TabIndex = 4;
+            // 
+            // pbLibraryLogo
+            // 
+            this.pbLibraryLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLibraryLogo.Image = global::TP_Final.Properties.Resources._20221220_150315_0000;
+            this.pbLibraryLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLibraryLogo.Name = "pbLibraryLogo";
+            this.pbLibraryLogo.Size = new System.Drawing.Size(1064, 542);
+            this.pbLibraryLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbLibraryLogo.TabIndex = 1;
+            this.pbLibraryLogo.TabStop = false;
             // 
             // Catalogue
             // 
@@ -250,6 +265,8 @@ namespace TP_Final.UI
             this.rightPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rightBtn)).EndInit();
             this.botPanel.ResumeLayout(false);
+            this.centerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLibraryLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,5 +285,6 @@ namespace TP_Final.UI
         private ComboBoxPerso cbFiltro;
         private FontAwesome.Sharp.IconPictureBox leftBtn;
         private FontAwesome.Sharp.IconPictureBox rightBtn;
+        private System.Windows.Forms.PictureBox pbLibraryLogo;
     }
 }

@@ -187,8 +187,9 @@ namespace TP_Final
                     var vUserDTO = UsefulMapper.Mapper.Map<User,UserDTO>(vUser);
                     vUserDTO.Avatar = vUser.Avatar;                      
                     LoginDTO loginDTO = new LoginDTO() { IsValid = true, User = vUserDTO };
-                    return loginDTO;
                     Log.Information("Se inició sesión con éxito.");
+                    return loginDTO;
+                    
                 }
                 else if (!vUser.Active)
                 {
@@ -213,8 +214,9 @@ namespace TP_Final
                 {
                     List<Book> vBooks = unit.BookRepository.GetAll().ToList();                   
                     var vBooksDTO = UsefulMapper.Mapper.Map<List<Book>, List<BookDTO>>(vBooks);
-                    return vBooksDTO;
                     Log.Information("Se devuelve el catálogo actual de la biblioteca con éxito.");
+                    return vBooksDTO;
+                    
                 }
             });
         }
@@ -258,8 +260,8 @@ namespace TP_Final
                   vLoanDTO.BookTitle = vLoan.Copy.Book.Title;
                   vLoanDTOs.Add(vLoanDTO);
                 }
-                return vLoanDTOs;
                 Log.Information("Se devuelve el historial de préstamos con éxito.");
+                return vLoanDTOs;                
             }
         }
 
@@ -272,8 +274,8 @@ namespace TP_Final
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
-                return unit.LoanRepository.GetUserActiveLoans(pUserId);
                 Log.Information("Se devolvió la cantidad de préstamos activos de un usuario con éxito.");
+                return unit.LoanRepository.GetUserActiveLoans(pUserId);              
             }
         }
 
@@ -284,9 +286,10 @@ namespace TP_Final
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
                 User vUser = unit.UserRepository.SearchByDNI(pDni);                
-                UserDTO vUserDTO = UsefulMapper.Mapper.Map<User, UserDTO>(vUser);                
-                return vUserDTO;
+                UserDTO vUserDTO = UsefulMapper.Mapper.Map<User, UserDTO>(vUser);
                 Log.Information("Búsqueda por DNI realizada con éxito.");
+                return vUserDTO;
+               
             }
         }
 
@@ -296,9 +299,10 @@ namespace TP_Final
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
-                var vListUserDTO = UsefulMapper.Mapper.Map<List<User>, List<UserDTO>>(unit.UserRepository.GetAll().ToList());   
-                return vListUserDTO;
+                var vListUserDTO = UsefulMapper.Mapper.Map<List<User>, List<UserDTO>>(unit.UserRepository.GetAll().ToList());
                 Log.Information("Se devolvió la lista de usuarios con éxito.");
+                return vListUserDTO;
+               
             }
         }
         /// <summary> Crea una lista de copias DTO </summary>
@@ -309,9 +313,9 @@ namespace TP_Final
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {             
                 var vListCopy = unit.CopyRepository.GetBookCopies(pBookISBN).ToList();               
-                var vListCopyDTO = UsefulMapper.Mapper.Map<List<Copy>, List<CopyDTO>>(vListCopy);               
-                return vListCopyDTO;
+                var vListCopyDTO = UsefulMapper.Mapper.Map<List<Copy>, List<CopyDTO>>(vListCopy);
                 Log.Information("Se devolvió la lista de copias de un libro con éxito");
+                return vListCopyDTO;                
             }
         }
 
@@ -356,8 +360,8 @@ namespace TP_Final
                     vLoanDTO.BookTitle = vLoan.Copy.Book.Title;
                     vLoanDTOs.Add(vLoanDTO);
                 }
-                return vLoanDTOs;
                 Log.Information("Se devolvió la lista de préstamos activos con éxito");
+                return vLoanDTOs;               
             }            
         }
 
