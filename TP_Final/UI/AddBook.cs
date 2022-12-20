@@ -32,6 +32,8 @@ namespace TP_Final.UI
             comboBoxPerso1.Visible = false;
         }
 
+        /// <summary> Crea la pantalla, adapta el tamaño a donde tiene que ir y la muestra al usuario </summary>
+        /// <param name="pChildForm"> Formulario a mostrar </param>
         public void OpenChildForm(Form pChildForm)
         {
             if (iActiveForm != null)
@@ -48,6 +50,10 @@ namespace TP_Final.UI
             pChildForm.BringToFront();
             pChildForm.Show();
         }
+
+        /// <summary> Descarga las portadas de forma asincrónica a medida que se van necesitando para mostrar, y las que no
+        /// se necesitan se van cargando en el array</summary>
+
         private async void DownloadCovers()
         {
             if (iDownloadedTo < iBookList.Count && iCanDownload)
@@ -72,12 +78,16 @@ namespace TP_Final.UI
                 this.DownloadCovers();
             }
         }
+
+        /// <summary> Muestra la página en la que se encuentra actualmente sobre la cantidad de páginas totales </summary>
         private void PageCounterUpdate()
         {
             pagesLabel.Text = $"Página {iCurrentPage}/{Math.Ceiling(Convert.ToDouble(iBookList.Count) / this.iResultsPerPage)}";
             pagesLabel.Visible = true;
         }
-        private Form selectLayout()
+
+        /// <summary> Cambia la disposición en la que se encuentra la pantalla, si muestra de a 4 o 16 libros </summary>
+        private Form SelectLayout()
         {
             if (this.iResultsPerPage == 4)
             {
@@ -90,6 +100,7 @@ namespace TP_Final.UI
             }
         }
 
+        /// <summary> Actualiza la pantalla dependiendo de la disposición que se necesite </summary>
         private void RefreshLayout()
         {
             BookListLayout4 layout16 = iActiveForm as BookListLayout4;
@@ -106,12 +117,16 @@ namespace TP_Final.UI
                 layout4.AssignElements();
             }
         }
+
+        /// <summary> Evento que se encuentra esperando al cambio del valor e </summary>
+        /// <param name="sender"> Formulario a mostrar </param>
+        /// /// <param name="e"> Formulario a mostrar </param>
         private void comboBoxPerso1_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             iPageIndex = 0;
             this.iResultsPerPage = Convert.ToInt32(comboBoxPerso1.SelectedItem.ToString());
             this.ResetLayout();
-            this.OpenChildForm(this.selectLayout());
+            this.OpenChildForm(this.SelectLayout());
             this.PageCounterUpdate();
         }
         private async void searchBtn_Click_1(object sender, EventArgs e)
@@ -136,7 +151,7 @@ namespace TP_Final.UI
                     this.iDownloadedTo = 0;
                     await this.DownloadList();
                     this.ResetLayout();
-                    this.OpenChildForm(this.selectLayout());
+                    this.OpenChildForm(this.SelectLayout());
                     this.iCanDownload = true;
                     this.DownloadCovers();
                     this.PageCounterUpdate();
