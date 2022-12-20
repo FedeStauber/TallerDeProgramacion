@@ -1,8 +1,11 @@
-﻿using ImageProcessor;
+﻿using FontAwesome.Sharp;
+using ImageProcessor;
 using Newtonsoft.Json.Linq;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
@@ -256,6 +259,29 @@ namespace TP_Final.UI
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             this.OpenChildForm(new SingUp(SingUp.ComeFrom.MainWindow));
+        }
+
+        private void MainWindow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                this.OpenChildForm(new Home());
+            }
+            
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(ConfigurationManager.AppSettings.Get("link_manual_usuario"));
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"Error al intentar abrir el manual de usuario: {ex.Message}");
+                MessageBox.Show("Ha ocurrido un error al intentar abrir el manual de usuario, contacte al administrador");
+            }
+           
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)

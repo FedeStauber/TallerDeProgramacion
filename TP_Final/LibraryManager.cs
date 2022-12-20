@@ -12,6 +12,7 @@ using TP_Final.Exceptions;
 using System.Configuration;
 using System.Windows;
 using System.Runtime.CompilerServices;
+using Serilog;
 
 namespace TP_Final
 {
@@ -31,6 +32,7 @@ namespace TP_Final
                     loan.Notificated = true;                    
                 }
                 unit.Complete();
+                Log.Information("Se notificó correctamente a los usuarios que poseen préstamos atrasados");
             }  
         }
 

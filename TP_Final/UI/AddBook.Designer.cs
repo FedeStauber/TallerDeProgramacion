@@ -145,7 +145,7 @@ namespace TP_Final.UI
             // pagesLabel
             // 
             this.pagesLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.pagesLabel.Font = new System.Drawing.Font("Roboto Cn", 10F);
             this.pagesLabel.Location = new System.Drawing.Point(0, 0);
             this.pagesLabel.Margin = new System.Windows.Forms.Padding(0);
             this.pagesLabel.Name = "pagesLabel";

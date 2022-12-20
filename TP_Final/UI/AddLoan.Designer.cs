@@ -93,7 +93,7 @@ namespace TP_Final.UI
             // labelTitle
             // 
             this.labelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Roboto Cn", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
             this.labelTitle.Name = "labelTitle";
@@ -137,7 +137,7 @@ namespace TP_Final.UI
             this.tableLayoutPanel3.Controls.Add(this.labelName, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.panelEditBox, 1, 14);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel3.Font = new System.Drawing.Font("Roboto Cn", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel3.Location = new System.Drawing.Point(521, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -169,7 +169,7 @@ namespace TP_Final.UI
             this.tbScore.BorderRadius = 5;
             this.tbScore.BorderSize = 3;
             this.tbScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbScore.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tbScore.Location = new System.Drawing.Point(43, 329);
             this.tbScore.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -228,7 +228,7 @@ namespace TP_Final.UI
             this.textBoxFilter.BorderRadius = 0;
             this.textBoxFilter.BorderSize = 2;
             this.textBoxFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFilter.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFilter.Location = new System.Drawing.Point(4, 0);
             this.textBoxFilter.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.textBoxFilter.Multiline = false;
@@ -246,7 +246,7 @@ namespace TP_Final.UI
             // 
             this.labelScore.AutoSize = true;
             this.labelScore.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelScore.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.labelScore.ForeColor = System.Drawing.SystemColors.GrayText;
             this.labelScore.Location = new System.Drawing.Point(43, 298);
             this.labelScore.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
@@ -264,7 +264,7 @@ namespace TP_Final.UI
             this.tbActiveLoans.BorderRadius = 5;
             this.tbActiveLoans.BorderSize = 3;
             this.tbActiveLoans.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbActiveLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbActiveLoans.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbActiveLoans.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tbActiveLoans.Location = new System.Drawing.Point(43, 245);
             this.tbActiveLoans.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -284,7 +284,7 @@ namespace TP_Final.UI
             // 
             this.labelActiveLoans.AutoSize = true;
             this.labelActiveLoans.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelActiveLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelActiveLoans.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.labelActiveLoans.ForeColor = System.Drawing.SystemColors.GrayText;
             this.labelActiveLoans.Location = new System.Drawing.Point(43, 214);
             this.labelActiveLoans.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
@@ -302,7 +302,7 @@ namespace TP_Final.UI
             this.tbDNI.BorderRadius = 5;
             this.tbDNI.BorderSize = 3;
             this.tbDNI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDNI.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tbDNI.Location = new System.Drawing.Point(43, 161);
             this.tbDNI.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -322,7 +322,7 @@ namespace TP_Final.UI
             // 
             this.labelDNI.AutoSize = true;
             this.labelDNI.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelDNI.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.labelDNI.ForeColor = System.Drawing.SystemColors.GrayText;
             this.labelDNI.Location = new System.Drawing.Point(43, 130);
             this.labelDNI.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
@@ -340,7 +340,7 @@ namespace TP_Final.UI
             this.tbName.BorderRadius = 5;
             this.tbName.BorderSize = 3;
             this.tbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tbName.Location = new System.Drawing.Point(43, 77);
             this.tbName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -360,7 +360,7 @@ namespace TP_Final.UI
             // 
             this.labelName.AutoSize = true;
             this.labelName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelName.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.labelName.ForeColor = System.Drawing.SystemColors.GrayText;
             this.labelName.Location = new System.Drawing.Point(43, 46);
             this.labelName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
@@ -391,7 +391,7 @@ namespace TP_Final.UI
             this.btnAddLoan.BorderSize = 0;
             this.btnAddLoan.FlatAppearance.BorderSize = 0;
             this.btnAddLoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddLoan.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLoan.ForeColor = System.Drawing.Color.Black;
             this.btnAddLoan.Location = new System.Drawing.Point(522, 121);
             this.btnAddLoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -415,7 +415,7 @@ namespace TP_Final.UI
             this.btnCancel.BorderSize = 0;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(783, 121);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
