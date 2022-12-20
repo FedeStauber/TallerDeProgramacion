@@ -254,13 +254,13 @@ namespace TP_Final
         /// Realiza una consulta al repositorio para obtener los prestamos activos asociados a el usuario indicado
         /// </summary>
         /// <param name="pUserId">Id del usuario para el que se desea realizar la consulta</param>
-        /// <returns>Una lista de objetos LoanDTO que contiene los prestamos activos del usuario</returns>
-        public static List<LoanDTO> UserActiveLoans(int pUserId)
+        /// <returns>Una numero entero qeu representa la cantidad de prestamos activos del usuario</returns>
+        public static int CountUserActiveLoans(int pUserId)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
-                var vLoanDTOs = UsefulMapper.Mapper.Map<List<Loan>, List<LoanDTO>>(unit.LoanRepository.GetUserActiveLoans(pUserId).ToList());
-                return vLoanDTOs;
+                return unit.LoanRepository.GetUserActiveLoans(pUserId);
+               
             }
         }
 
