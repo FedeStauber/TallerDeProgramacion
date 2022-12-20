@@ -137,9 +137,5 @@ namespace TP_Final.UI
             }
         }
 
-        private void PassTxtBox__TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

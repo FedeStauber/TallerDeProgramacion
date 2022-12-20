@@ -36,16 +36,11 @@ namespace TP_Final.UI
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(iUser.Active.ToString());
             try
             {
                 if (ComprobarCampos())
                 {
                     modifyAttributes();
-                    if (txtBoxNewPass.Text != "")
-                    {
-                        iUser.Password = "";                    
-                    }
                     LibraryManager.ModifyUser(iOriginalDni, iUser);                    
                     MessageBox.Show("Usuario modificado con éxito!!");
                     MainWindow vMainWindow = Owner as MainWindow;
@@ -65,7 +60,10 @@ namespace TP_Final.UI
             this.iUser.LastName = txtBoxLastName.Text;
             this.iUser.DNI = Convert.ToInt32(txtBoxDni.Text);
             this.iUser.Email = txtBoxEmail.Text;
-            this.iUser.Password = txtBoxNewPass.Text;
+            if (!(txtBoxNewPass.Text.Trim() == null))
+            {
+                this.iUser.Password = txtBoxNewPass.Text;
+            }            
             if (iAvatar != null)
             {
                 this.iUser.Avatar = iAvatar;
