@@ -131,7 +131,7 @@ namespace TP_Final.UI
             this.PageCounterUpdate();
         }
 
-        /// <summary> Evento que espera un click sobre el botón para realizar una búsqueda, controla si tiene filtro puesto, 
+        /// <summary> Evento que espera un click sobre el botón para realizar una búsqueda de libro, controla si tiene filtro puesto, 
         /// sino notifica al usuario de esto</summary>
         /// <param name="sender"> Objeto que inicia el evento </param>
         /// <param name="e"> Dato de evento </param>
@@ -172,8 +172,7 @@ namespace TP_Final.UI
             }
         }
 
-        /// <summary> Evento que espera un click sobre el botón para realizar un cambio de los libros a mostrar en la pantalla,
-        /// </summary>
+        /// <summary> Evento que espera un click sobre el botón para realizar un cambio de los libros a mostrar en la pantalla </summary>
         /// <param name="sender"> Objeto que inicia el evento </param>
         /// <param name="e"> Dato de evento </param>
         private void LeftBtn_Click_1(object sender, EventArgs e)
@@ -191,6 +190,10 @@ namespace TP_Final.UI
             iCurrentPage--;
             this.PageCounterUpdate();
         }
+
+        /// <summary> Evento que espera un click sobre el botón para realizar un cambio de los libros a mostrar en la pantalla </summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void RightBtn_Click_1(object sender, EventArgs e)
         {
             if (!(iPageIndex + this.iResultsPerPage >= iBookList.Count()))
@@ -210,6 +213,9 @@ namespace TP_Final.UI
             iCurrentPage = iCurrentPage + 1;
             this.PageCounterUpdate();
         }
+
+        /// <summary> Reinicia la distribución </summary>
+
         private void ResetLayout()
         {
             this.iCurrentPage = 1;
@@ -220,6 +226,8 @@ namespace TP_Final.UI
                 rightBtn.Visible = true;
             }
         }
+
+        /// <summary> Realiza llamado a la API para poder crear una lista de libros dependiendo el filtro que se seleccione </summary>
         private async Task DownloadList()
         {
             if (iSearchFilterIndex == 0) //Autor
@@ -236,12 +244,19 @@ namespace TP_Final.UI
                 this.iBookList = await BookApiManager.CurrentApi.SearchBook(textBox1.Text.Trim(), BookApiManager.SearchBy.Gender);
             }
         }
+
+        /// <summary> Asigna el valor del filtro que se selecciona </summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void cbFiltro_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             this.iSearchFilterIndex = cbFiltro.SelectedIndex;
             
         }
 
+        /// <summary> Evento que espera de un Enter para poder realizar la misma función que un click sobre el boton buscar </summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void SearchTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))

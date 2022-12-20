@@ -40,7 +40,11 @@ namespace TP_Final.UI
         }
 
 
-
+        /// <summary> Evento que espera un click sobre el botón para realizar la busqueda de un usuario, corrobora que 
+        /// el texto ingresado no sea vacío, busca el usuario y asigna su información a los campos correspondientes,
+        /// sino lo encuentra notifica al administrador</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void btnSearchUser_Click(object sender, EventArgs e)
         {
             try
@@ -71,6 +75,10 @@ namespace TP_Final.UI
 
         }
 
+        /// <summary> Evento que espera que se presiona una tecla, controla si deja que se escriba y si es un enter
+        /// funciona como si fuese un click sobre el boton buscar</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void textBoxPerso8_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
@@ -84,6 +92,9 @@ namespace TP_Final.UI
             }
         }
 
+        /// <summary> Evento que espera que se presiona un click sobre el boton cancelar para cerrar la ventana</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             MainWindow vMainWindow = Owner as MainWindow;
@@ -91,7 +102,10 @@ namespace TP_Final.UI
             this.Close();      
             
         }
-
+        /// <summary> Evento que espera que se presiona un click sobre el boton onfirmar para registrar el prestamo
+        /// y asignar los datos correspondientes del libro y el usuario, notifica al usuario y vuelve al inicio</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             try
@@ -115,6 +129,9 @@ namespace TP_Final.UI
 
         }
 
+        /// <summary> Evento que espera que se presiona una tecla para no procesarla y escribirla en el campo de texto</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void tbName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;

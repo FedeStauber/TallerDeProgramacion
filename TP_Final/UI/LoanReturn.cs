@@ -28,7 +28,7 @@ namespace TP_Final.UI
             OpenTlpFilter();               
         }
 
-        private void OPenDataPanel()
+        private void OpenDataPanel()
         {
             tlpFilter.Visible = false;
             tableLayoutPanel3.SetCellPosition(tlpFilter, new TableLayoutPanelCellPosition(0, 0));
@@ -50,6 +50,7 @@ namespace TP_Final.UI
             tableLayoutPanel3.SetCellPosition(panelLoanReturnData, new TableLayoutPanelCellPosition(0, 0));
             tlpFilter.Visible = true;            
         }
+
 
         private void btnCancel_Click(object sender, EventArgs e)
         {            
@@ -110,6 +111,7 @@ namespace TP_Final.UI
           
         }
 
+
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -121,7 +123,7 @@ namespace TP_Final.UI
             {
                 iLoan = iLoanList.Find(loanDTO => loanDTO.Id == Convert.ToInt32(dataGridUsers.Rows[e.RowIndex].Cells[0].Value.ToString()));
                 this.UpdateDataPanel();
-                this.OPenDataPanel();
+                this.OpenDataPanel();
             }
         }
     }

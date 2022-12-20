@@ -20,7 +20,8 @@ namespace TP_Final
         {
             InitializeComponent();
         }
-
+        /// <summary> Evento que espera un click sobre el botón aceptar, que verifica que las credenciales ingresadas se encuentren
+        /// en la base de datos, sino, notifica al usuario</summary>
         private void btnAccept_Click(object sender, EventArgs e)
         {         
             try

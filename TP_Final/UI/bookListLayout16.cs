@@ -27,7 +27,7 @@ namespace TP_Final.UI
             this.AssignElements();                       
         }
 
-
+        /// <summary> Llama n veces al procedimiento de asignar para todos los elementos en la lista de libros</summary>
         public void AssignElements()
         {           
             for (int i = 0; i < iBookList.Count(); i++)
@@ -36,7 +36,8 @@ namespace TP_Final.UI
             }
         }
 
-     
+        /// <summary> Asigna todos los datos (titulo, autor isbn y portada) a ese libro en específico</summary>
+        /// <param name="i"> Posición en el lista </param>
         public void AtomicAssign(int i)
         {
             iBookPanel[i][0].Text = iBookList[i].Title;
@@ -65,6 +66,8 @@ namespace TP_Final.UI
                 }
             }
         }
+
+        /// <summary> Carga el diccionario para los 16 libros </summary>
         private void LoadDictionary()
         {
             iBookPanel.Add(0, new Control[5] { titleLabel0, authorLabel0, ISBNLabel0, pictureBox0, bookPanel0});

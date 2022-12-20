@@ -32,12 +32,17 @@ namespace TP_Final.UI
            
         }
 
+        /// <summary> Asigna las copias de ese libro que se busca por ISBN a la lista para mostrarle al usuario </summary>
         private void AssignElements()
         {
             this.iCopyList = LibraryManager.BookCopyList(iBook.ISBN);
             dataGridCopies.DataSource = iCopyList;
-        }    
+        }
 
+        /// <summary> Permite cambiar la celda de condicion de la copia, controlando que se pueda pasar de un estado a otro
+        /// correctamente</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Datos para la tabla </param>
         private void dataGridCopies_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -50,7 +55,7 @@ namespace TP_Final.UI
                         throw new Exception("El estado prestado solo puede ser adquirido a partir de la realización de un préstamo");
                     }
                     LibraryManager.ModifyCopy(vCopy);
-                    MessageBox.Show($"El estado del libro con ID {dataGridCopies.Rows[e.RowIndex].Cells[0].Value.ToString()} ha cambiado a {dataGridCopies.Rows[e.RowIndex].Cells[1].Value.ToString()}");
+                    MessageBox.Show($"El estado de la copia con ID {dataGridCopies.Rows[e.RowIndex].Cells[0].Value.ToString()} ha cambiado a {dataGridCopies.Rows[e.RowIndex].Cells[1].Value.ToString()}");
                 }
             }
             catch (Exception ex)
@@ -66,7 +71,11 @@ namespace TP_Final.UI
             iPreviousState = (CopyDTO.ConditionEnum)dataGridCopies.Rows[e.RowIndex].Cells[1].Value;
         }
 
-        private void IconPictureBox1_Click_1(object sender, EventArgs e)
+        /// <summary> Abre una nueva ventana para que el usuario pueda ingresar la cantidad de copias que desea agregar de ese libro, 
+        /// notificando al usuario si se realizó o dio error/summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Datos para la tabla </param>
+        private void addBottom_Click(object sender, EventArgs e)
         {
             try
             {
@@ -86,7 +95,10 @@ namespace TP_Final.UI
               
         }
 
-        private void IconPictureBox2_Click(object sender, EventArgs e)
+        /// <summary> Permite cerrar y volver a la pantalla anterior</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Datos para la tabla </param>
+        private void returnBottom_Click(object sender, EventArgs e)
         {
             this.Close();
         }
