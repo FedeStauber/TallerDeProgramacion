@@ -82,9 +82,9 @@ namespace TP_Final.Domain
        }
 
 
-        public bool VerifyEmail(string pEmail)
+        public bool VerifyMail(string pEmail)
         {
-            return Regex.IsMatch(pEmail, @"/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/");
+            return Regex.IsMatch(pEmail, @"^.+[@].+[.com]{ 4}$");
         }
 
     }

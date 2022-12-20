@@ -39,9 +39,9 @@ namespace TP_Final.DAL.EntityFramework
             return this.iDbContext.Set<Loan>().Include(loan => loan.Copy).ThenInclude(copy => copy.Book).FirstOrDefault(loan => loan.Copy.Id == pCopyID);
         }
 
-        public List<Loan> GetUserActiveLoans(int pUserId)
+        public int GetUserActiveLoans(int pUserId)
         {
-            return this.iDbContext.Set<Loan>().Include(loan => loan.Copy).ThenInclude(copy => copy.Book).Where(loan => loan.User.Id == pUserId && loan.ReturnDate == null).ToList();
+            return this.iDbContext.Set<Loan>().Where(loan => loan.User.Id == pUserId && loan.ReturnDate == null).Count();
         }
 
         public List<Loan> GetActiveLoans()

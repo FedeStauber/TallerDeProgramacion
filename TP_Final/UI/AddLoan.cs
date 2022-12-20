@@ -45,19 +45,18 @@ namespace TP_Final.UI
         {
             try
             {
-                if (textBoxPerso8.Text.Trim() == "")
+                if (textBoxFilter.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe ingresar un DNI para corroborar los datos del usuario");
                 }
-                iUser = LibraryManager.SearchUserByDNI(Convert.ToInt64(textBoxPerso8.Text));
+                iUser = LibraryManager.SearchUserByDNI(Convert.ToInt64(textBoxFilter.Text));
                 if (iUser != null)
                 {
-                    labelName.Text = iUser.LastName + " " + iUser.Name;
-                    labelScore.Text = iUser.Score.ToString();
-                    labelDNI.Text = iUser.DNI.ToString();
-                    labelActiveLoans.Text = LibraryManager.UserActiveLoans(iUser.Id).Count().ToString();
-                    userBtnPanel.Visible = true;
-                    panelUserData.Visible = true;
+                    tbName.Text = iUser.LastName + " " + iUser.Name;
+                    tbScore.Text = iUser.Score.ToString();
+                    tbDNI.Text = iUser.DNI.ToString();
+                    tbActiveLoans.Text = LibraryManager.CountUserActiveLoans(iUser.Id).ToString();
+                    btnAddLoan.Visible = true;
                 }
                 else
                 {
@@ -88,7 +87,9 @@ namespace TP_Final.UI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             MainWindow vMainWindow = Owner as MainWindow;
-            vMainWindow.OpenChildForm(new Catalogue());
+            vMainWindow.labelChildTitle.Text = $"Ficha del libro: {iBook.Title}";
+            this.Close();      
+            
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
