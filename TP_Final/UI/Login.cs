@@ -22,8 +22,7 @@ namespace TP_Final
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
-        {
-         
+        {         
             try
             {
                 LoginDTO vLoginDTO = LibraryManager.LogIn(txtBoxEmail.Text, txtBoxPass.Text);

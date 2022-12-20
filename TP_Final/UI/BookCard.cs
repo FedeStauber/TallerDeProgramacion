@@ -200,7 +200,7 @@ namespace TP_Final.UI
         private void btnSelectNewCover_Click_1(object sender, EventArgs e)
         {
             iCoverModified = false;
-            openFileDialog1.InitialDirectory = "C:\\";
+            openFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
             openFileDialog1.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos png(*.png)|*.png";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;

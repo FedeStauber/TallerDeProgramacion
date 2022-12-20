@@ -1,9 +1,11 @@
 ﻿using ImageProcessor;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -38,11 +40,10 @@ namespace TP_Final.UI
             pbHome.Visible = false;
             panelCurrentUser.Visible = false; 
         }
-
         public void UpdateUserData()
         {
            
-            this.userNameLabel.Text = User.Name;            
+            this.userNameLabel.Text = CultureInfo.GetCultureInfo("en-US").TextInfo.ToTitleCase(User.Name.ToLower());             
             try
             {
                 MemoryStream ms = new MemoryStream(User.Avatar);

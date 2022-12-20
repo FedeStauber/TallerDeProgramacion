@@ -237,7 +237,7 @@ namespace TP_Final
             User vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {               
-                var vLoans = unit.LoanRepository.GetUserLoansHistory(vUser.Id).ToList();
+                var vLoans = unit.LoanRepository.GetUserLoansHistory(vUser.Id);
                 List<LoanDTO> vLoanDTOs = new List<LoanDTO>();
                 foreach (var vLoan in vLoans)
                 {

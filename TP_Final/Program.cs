@@ -56,7 +56,7 @@ namespace TP_Final
             {
                 if (dbContext.Database.EnsureCreated())
                 {
-                  LibraryManager.AddUser(new UserDTO() { Admin = true, Email = "admin", Password = "123", Name = "Federico", LastName = "Stauber", DNI = 156, Active = true });
+                  LibraryManager.AddUser(new UserDTO() { Admin = true, Email = "admin@admin.com", Password = "123", Name = "Federico", LastName = "Stauber", DNI = 156, Active = true });
                 }                
             }
           

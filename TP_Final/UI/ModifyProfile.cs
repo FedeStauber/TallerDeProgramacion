@@ -1,5 +1,6 @@
 ﻿using ImageProcessor;
 using Microsoft.Win32;
+using Quartz.Util;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -118,7 +119,8 @@ namespace TP_Final.UI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MainWindow vMainWindow = Owner as MainWindow;
+            vMainWindow.OpenChildForm(new Home());
         }
         private void LoadImage()
         {
@@ -159,7 +161,7 @@ namespace TP_Final.UI
 
         private void btnUploadAvatar_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = "C:\\";
+            openFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
             openFileDialog1.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos png(*.png)|*.png";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;

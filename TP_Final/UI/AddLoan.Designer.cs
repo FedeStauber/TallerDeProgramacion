@@ -34,6 +34,8 @@ namespace TP_Final.UI
             this.labelTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelFilters = new System.Windows.Forms.TableLayoutPanel();
+            this.searchBtn = new FontAwesome.Sharp.IconPictureBox();
             this.labelScore = new System.Windows.Forms.Label();
             this.labelActiveLoans = new System.Windows.Forms.Label();
             this.labelDNI = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@ namespace TP_Final.UI
             this.panelEditBox = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanelFilters = new System.Windows.Forms.TableLayoutPanel();
-            this.searchBtn = new FontAwesome.Sharp.IconPictureBox();
             this.tbScore = new TP_Final.UI.TextBoxPerso();
             this.textBoxFilter = new TP_Final.UI.TextBoxPerso();
             this.tbActiveLoans = new TP_Final.UI.TextBoxPerso();
@@ -54,11 +54,11 @@ namespace TP_Final.UI
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanelFilters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             this.panelEditBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanelFilters.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,7 +68,7 @@ namespace TP_Final.UI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 80);
+            this.panel1.Size = new System.Drawing.Size(1280, 92);
             this.panel1.TabIndex = 1;
             // 
             // iconPictureBox2
@@ -95,7 +95,7 @@ namespace TP_Final.UI
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(1280, 80);
+            this.labelTitle.Size = new System.Drawing.Size(1280, 92);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "label1";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,11 +108,11 @@ namespace TP_Final.UI
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 80);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 92);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1280, 641);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1280, 629);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -121,7 +121,7 @@ namespace TP_Final.UI
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.00972F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.99028F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.tbScore, 1, 12);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanelFilters, 1, 1);
@@ -155,8 +155,43 @@ namespace TP_Final.UI
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 139F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(889, 641);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(889, 629);
             this.tableLayoutPanel3.TabIndex = 4;
+            // 
+            // tableLayoutPanelFilters
+            // 
+            this.tableLayoutPanelFilters.ColumnCount = 2;
+            this.tableLayoutPanelFilters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelFilters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanelFilters.Controls.Add(this.searchBtn, 0, 0);
+            this.tableLayoutPanelFilters.Controls.Add(this.textBoxFilter, 0, 0);
+            this.tableLayoutPanelFilters.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelFilters.Location = new System.Drawing.Point(32, 0);
+            this.tableLayoutPanelFilters.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanelFilters.Name = "tableLayoutPanelFilters";
+            this.tableLayoutPanelFilters.RowCount = 1;
+            this.tableLayoutPanelFilters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelFilters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanelFilters.Size = new System.Drawing.Size(777, 37);
+            this.tableLayoutPanelFilters.TabIndex = 60;
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.BackColor = System.Drawing.Color.White;
+            this.searchBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.searchBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.searchBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchBtn.IconSize = 37;
+            this.searchBtn.Location = new System.Drawing.Point(740, 0);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(37, 37);
+            this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchBtn.TabIndex = 12;
+            this.searchBtn.TabStop = false;
+            this.searchBtn.Click += new System.EventHandler(this.btnSearchUser_Click);
             // 
             // labelScore
             // 
@@ -219,10 +254,10 @@ namespace TP_Final.UI
             this.panelEditBox.Controls.Add(this.btnAddLoan);
             this.panelEditBox.Controls.Add(this.btnCancel);
             this.panelEditBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEditBox.Location = new System.Drawing.Point(32, 442);
+            this.panelEditBox.Location = new System.Drawing.Point(32, 430);
             this.panelEditBox.Margin = new System.Windows.Forms.Padding(0);
             this.panelEditBox.Name = "panelEditBox";
-            this.panelEditBox.Size = new System.Drawing.Size(779, 139);
+            this.panelEditBox.Size = new System.Drawing.Size(777, 139);
             this.panelEditBox.TabIndex = 24;
             // 
             // tableLayoutPanel2
@@ -239,7 +274,7 @@ namespace TP_Final.UI
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(391, 641);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(391, 629);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // pictureBox1
@@ -249,45 +284,10 @@ namespace TP_Final.UI
             this.pictureBox1.Location = new System.Drawing.Point(25, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(25, 0, 0, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(366, 576);
+            this.pictureBox1.Size = new System.Drawing.Size(366, 564);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // tableLayoutPanelFilters
-            // 
-            this.tableLayoutPanelFilters.ColumnCount = 2;
-            this.tableLayoutPanelFilters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelFilters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanelFilters.Controls.Add(this.searchBtn, 0, 0);
-            this.tableLayoutPanelFilters.Controls.Add(this.textBoxFilter, 0, 0);
-            this.tableLayoutPanelFilters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelFilters.Location = new System.Drawing.Point(32, 0);
-            this.tableLayoutPanelFilters.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanelFilters.Name = "tableLayoutPanelFilters";
-            this.tableLayoutPanelFilters.RowCount = 1;
-            this.tableLayoutPanelFilters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelFilters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanelFilters.Size = new System.Drawing.Size(779, 37);
-            this.tableLayoutPanelFilters.TabIndex = 60;
-            // 
-            // searchBtn
-            // 
-            this.searchBtn.BackColor = System.Drawing.Color.White;
-            this.searchBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.searchBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.searchBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchBtn.IconSize = 37;
-            this.searchBtn.Location = new System.Drawing.Point(742, 0);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(37, 37);
-            this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchBtn.TabIndex = 12;
-            this.searchBtn.TabStop = false;
-            this.searchBtn.Click += new System.EventHandler(this.btnSearchUser_Click);
             // 
             // tbScore
             // 
@@ -307,10 +307,11 @@ namespace TP_Final.UI
             this.tbScore.PasswordChar = false;
             this.tbScore.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbScore.PlaceholderText = "";
-            this.tbScore.Size = new System.Drawing.Size(779, 39);
+            this.tbScore.Size = new System.Drawing.Size(777, 39);
             this.tbScore.TabIndex = 61;
             this.tbScore.TabStop = false;
             this.tbScore.UnderlinedStyle = false;
+            this.tbScore.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
             // textBoxFilter
             // 
@@ -329,7 +330,7 @@ namespace TP_Final.UI
             this.textBoxFilter.PasswordChar = false;
             this.textBoxFilter.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxFilter.PlaceholderText = "Ingrese el DNI o Email del usuario a filtrar";
-            this.textBoxFilter.Size = new System.Drawing.Size(739, 29);
+            this.textBoxFilter.Size = new System.Drawing.Size(737, 29);
             this.textBoxFilter.TabIndex = 11;
             this.textBoxFilter.UnderlinedStyle = true;
             this.textBoxFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPerso8_KeyPress);
@@ -352,10 +353,11 @@ namespace TP_Final.UI
             this.tbActiveLoans.PasswordChar = false;
             this.tbActiveLoans.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbActiveLoans.PlaceholderText = "";
-            this.tbActiveLoans.Size = new System.Drawing.Size(779, 39);
+            this.tbActiveLoans.Size = new System.Drawing.Size(777, 39);
             this.tbActiveLoans.TabIndex = 56;
             this.tbActiveLoans.TabStop = false;
             this.tbActiveLoans.UnderlinedStyle = false;
+            this.tbActiveLoans.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
             // tbDNI
             // 
@@ -375,10 +377,11 @@ namespace TP_Final.UI
             this.tbDNI.PasswordChar = false;
             this.tbDNI.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbDNI.PlaceholderText = "";
-            this.tbDNI.Size = new System.Drawing.Size(779, 39);
+            this.tbDNI.Size = new System.Drawing.Size(777, 39);
             this.tbDNI.TabIndex = 49;
             this.tbDNI.TabStop = false;
             this.tbDNI.UnderlinedStyle = false;
+            this.tbDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
             // tbName
             // 
@@ -398,10 +401,11 @@ namespace TP_Final.UI
             this.tbName.PasswordChar = false;
             this.tbName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbName.PlaceholderText = "";
-            this.tbName.Size = new System.Drawing.Size(779, 39);
+            this.tbName.Size = new System.Drawing.Size(777, 39);
             this.tbName.TabIndex = 46;
             this.tbName.TabStop = false;
             this.tbName.UnderlinedStyle = false;
+            this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
             // btnAddLoan
             // 
@@ -415,7 +419,7 @@ namespace TP_Final.UI
             this.btnAddLoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddLoan.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLoan.ForeColor = System.Drawing.Color.Black;
-            this.btnAddLoan.Location = new System.Drawing.Point(394, 98);
+            this.btnAddLoan.Location = new System.Drawing.Point(392, 98);
             this.btnAddLoan.Name = "btnAddLoan";
             this.btnAddLoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAddLoan.Size = new System.Drawing.Size(190, 38);
@@ -438,7 +442,7 @@ namespace TP_Final.UI
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(590, 98);
+            this.btnCancel.Location = new System.Drawing.Point(588, 98);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCancel.Size = new System.Drawing.Size(190, 38);
@@ -458,18 +462,18 @@ namespace TP_Final.UI
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddLoan";
-            this.Text = "Agregar Prestamo";
+            this.Text = "Realizar un nuevo préstamo";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanelFilters.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             this.panelEditBox.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanelFilters.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             this.ResumeLayout(false);
 
         }

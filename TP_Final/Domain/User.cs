@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -12,17 +13,67 @@ namespace TP_Final.Domain
     
     public class User
     {
-        private string iPassword;        
-        public User() {}       
+        private string iPassword;
+        private string iName;
+        private string iLastName;
+        private string iEmail;
+        public User() {}
+       
         public int Id { get; set; }
         [Required]       
         public int DNI { get; set; }       
         [StringLength(150)]       
-        public string Email { get; set; }
+        public string Email 
+        { 
+            get 
+            {
+                return this.iEmail;
+            }
+            set
+            {
+                if (Regex.IsMatch(value, @"^.+[@].+[.com]{4}$"))
+                {
+                    this.iEmail = value;
+                }
+                else
+                    throw new Exception("El formato del email ingresado no es válido");
+            } 
+        }
         public int Score { get; set; }
         public string Password { get { return iPassword; } set {this.iPassword = Encrypter.Encrypt(value); } }
-        public string Name { get; set; }
-        public string LastName  { get; set; }       
+        public string Name 
+        {
+            get 
+            { 
+                return this.iName; 
+            }
+            set 
+            { 
+                if (value != null) 
+                { 
+                    iName = CultureInfo.GetCultureInfo("en-US").TextInfo.ToTitleCase(value.ToLower()); 
+                } 
+                else 
+                    iName = null; 
+            }
+        }
+        public string LastName 
+        { 
+            get 
+            { 
+                return this.iLastName; 
+            }
+            set 
+            { 
+                if (value != null)
+                { 
+                    iLastName = CultureInfo.GetCultureInfo("en-US").TextInfo.ToTitleCase(value.ToLower()); 
+                } 
+                else 
+                    iLastName = null; 
+            }
+        }
+                          
         public byte[] Avatar { get; set; }
 
         [Column("Admin")]

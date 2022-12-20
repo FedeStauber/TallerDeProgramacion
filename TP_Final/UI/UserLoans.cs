@@ -28,7 +28,7 @@ namespace TP_Final.UI
 
         private void AssignElements()
         {           
-            dataGridView1.DataSource = iLoanList;           
+            dataGridView1.DataSource = iLoanList;
         }
 
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)

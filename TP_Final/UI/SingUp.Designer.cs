@@ -117,7 +117,7 @@
             this.PassRepeatTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.PassRepeatTxtBox.PlaceholderText = "";
             this.PassRepeatTxtBox.Size = new System.Drawing.Size(350, 41);
-            this.PassRepeatTxtBox.TabIndex = 33;
+            this.PassRepeatTxtBox.TabIndex = 7;
             this.PassRepeatTxtBox.UnderlinedStyle = false;
             // 
             // PassTxtBox
@@ -137,7 +137,7 @@
             this.PassTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.PassTxtBox.PlaceholderText = "";
             this.PassTxtBox.Size = new System.Drawing.Size(350, 41);
-            this.PassTxtBox.TabIndex = 32;
+            this.PassTxtBox.TabIndex = 6;
             this.PassTxtBox.UnderlinedStyle = false;
             // 
             // label6
@@ -227,7 +227,7 @@
             this.btnCancel.Location = new System.Drawing.Point(609, 493);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(350, 38);
-            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.TextColor = System.Drawing.Color.White;
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -249,7 +249,7 @@
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAccept.Size = new System.Drawing.Size(350, 38);
-            this.btnAccept.TabIndex = 18;
+            this.btnAccept.TabIndex = 8;
             this.btnAccept.Text = "Aceptar";
             this.btnAccept.TextColor = System.Drawing.Color.Transparent;
             this.btnAccept.UseVisualStyleBackColor = false;
@@ -270,7 +270,7 @@
             this.btnUploadAvatar.Location = new System.Drawing.Point(362, 293);
             this.btnUploadAvatar.Name = "btnUploadAvatar";
             this.btnUploadAvatar.Size = new System.Drawing.Size(208, 40);
-            this.btnUploadAvatar.TabIndex = 7;
+            this.btnUploadAvatar.TabIndex = 1;
             this.btnUploadAvatar.Text = "Subir nuevo avatar";
             this.btnUploadAvatar.TextColor = System.Drawing.Color.White;
             this.btnUploadAvatar.UseVisualStyleBackColor = false;
@@ -286,14 +286,14 @@
             this.DniTxtBox.BorderSize = 3;
             this.DniTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.DniTxtBox.Location = new System.Drawing.Point(609, 200);
-            this.DniTxtBox.Multiline = true;
+            this.DniTxtBox.Multiline = false;
             this.DniTxtBox.Name = "DniTxtBox";
             this.DniTxtBox.Padding = new System.Windows.Forms.Padding(11);
             this.DniTxtBox.PasswordChar = false;
             this.DniTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.DniTxtBox.PlaceholderText = "";
-            this.DniTxtBox.Size = new System.Drawing.Size(350, 39);
-            this.DniTxtBox.TabIndex = 3;
+            this.DniTxtBox.Size = new System.Drawing.Size(350, 41);
+            this.DniTxtBox.TabIndex = 4;
             this.DniTxtBox.UnderlinedStyle = false;
             this.DniTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxtBox_KeyPress);
             // 
@@ -318,14 +318,14 @@
             this.LastNameTxtBox.BorderSize = 3;
             this.LastNameTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.LastNameTxtBox.Location = new System.Drawing.Point(610, 136);
-            this.LastNameTxtBox.Multiline = true;
+            this.LastNameTxtBox.Multiline = false;
             this.LastNameTxtBox.Name = "LastNameTxtBox";
             this.LastNameTxtBox.Padding = new System.Windows.Forms.Padding(11);
             this.LastNameTxtBox.PasswordChar = false;
             this.LastNameTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.LastNameTxtBox.PlaceholderText = "";
-            this.LastNameTxtBox.Size = new System.Drawing.Size(350, 39);
-            this.LastNameTxtBox.TabIndex = 2;
+            this.LastNameTxtBox.Size = new System.Drawing.Size(350, 41);
+            this.LastNameTxtBox.TabIndex = 3;
             this.LastNameTxtBox.UnderlinedStyle = false;
             this.LastNameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
@@ -339,14 +339,14 @@
             this.EmailTxtBox.BorderSize = 3;
             this.EmailTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.EmailTxtBox.Location = new System.Drawing.Point(610, 264);
-            this.EmailTxtBox.Multiline = true;
+            this.EmailTxtBox.Multiline = false;
             this.EmailTxtBox.Name = "EmailTxtBox";
             this.EmailTxtBox.Padding = new System.Windows.Forms.Padding(11);
             this.EmailTxtBox.PasswordChar = false;
             this.EmailTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.EmailTxtBox.PlaceholderText = "";
-            this.EmailTxtBox.Size = new System.Drawing.Size(350, 39);
-            this.EmailTxtBox.TabIndex = 4;
+            this.EmailTxtBox.Size = new System.Drawing.Size(350, 41);
+            this.EmailTxtBox.TabIndex = 5;
             this.EmailTxtBox.UnderlinedStyle = false;
             // 
             // NameTxtBox
@@ -359,14 +359,14 @@
             this.NameTxtBox.BorderSize = 3;
             this.NameTxtBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTxtBox.Location = new System.Drawing.Point(610, 73);
-            this.NameTxtBox.Multiline = true;
+            this.NameTxtBox.Multiline = false;
             this.NameTxtBox.Name = "NameTxtBox";
             this.NameTxtBox.Padding = new System.Windows.Forms.Padding(11);
             this.NameTxtBox.PasswordChar = false;
             this.NameTxtBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.NameTxtBox.PlaceholderText = "";
-            this.NameTxtBox.Size = new System.Drawing.Size(350, 39);
-            this.NameTxtBox.TabIndex = 1;
+            this.NameTxtBox.Size = new System.Drawing.Size(350, 41);
+            this.NameTxtBox.TabIndex = 2;
             this.NameTxtBox.UnderlinedStyle = false;
             this.NameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 

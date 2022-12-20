@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -58,10 +59,14 @@ namespace TP_Final.UI
                     MessageBox.Show($"Usuario creado con éxito, bienvenido: {vUserDTO.Name}");                    
                 }
             }
+            catch (AutoMapper.AutoMapperMappingException)
+            {
+                MessageBox.Show("El formato del email ingresado no es válido");
+            }
             catch (Exception ex)
             {
-                Log.Error(ex, ex.Message);
-                MessageBox.Show(ex.Message);         
+                Log.Error(ex, ex.Message);                
+                MessageBox.Show(ex.ToString());         
             }
             
         }
@@ -105,7 +110,7 @@ namespace TP_Final.UI
 
         private void btnUploadAvatar_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = "C:\\";
+            openFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
             openFileDialog1.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos png(*.png)|*.png";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;

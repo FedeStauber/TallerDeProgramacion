@@ -41,27 +41,27 @@
             this.backTLP = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelLoanReturnData = new System.Windows.Forms.Panel();
-            this.btnCancel = new TP_Final.UI.ButtonPerso();
-            this.btnSaveChanges = new TP_Final.UI.ButtonPerso();
-            this.comboBoxPerso1 = new TP_Final.UI.ComboBoxPerso();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.userLabel = new TP_Final.UI.TextBoxPerso();
-            this.ExpiresLabel = new TP_Final.UI.TextBoxPerso();
-            this.dniLabel = new TP_Final.UI.TextBoxPerso();
-            this.bookLabel = new TP_Final.UI.TextBoxPerso();
             this.tlpFilter = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelFilters = new System.Windows.Forms.TableLayoutPanel();
             this.searchBtn = new FontAwesome.Sharp.IconPictureBox();
-            this.textBoxFilter = new TP_Final.UI.TextBoxPerso();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new TP_Final.UI.ButtonPerso();
+            this.btnSaveChanges = new TP_Final.UI.ButtonPerso();
+            this.comboBoxPerso1 = new TP_Final.UI.ComboBoxPerso();
+            this.userLabel = new TP_Final.UI.TextBoxPerso();
+            this.ExpiresLabel = new TP_Final.UI.TextBoxPerso();
+            this.dniLabel = new TP_Final.UI.TextBoxPerso();
+            this.bookLabel = new TP_Final.UI.TextBoxPerso();
+            this.textBoxFilter = new TP_Final.UI.TextBoxPerso();
             this.userEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userDNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,72 +136,6 @@
             this.panelLoanReturnData.TabIndex = 0;
             this.panelLoanReturnData.Visible = false;
             // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Silver;
-            this.btnCancel.BackgroundColor = System.Drawing.Color.Silver;
-            this.btnCancel.BorderColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BorderRadius = 5;
-            this.btnCancel.BorderSize = 0;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(290, 521);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(128, 40);
-            this.btnCancel.TabIndex = 54;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.TextColor = System.Drawing.Color.Black;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSaveChanges
-            // 
-            this.btnSaveChanges.BackColor = System.Drawing.Color.Silver;
-            this.btnSaveChanges.BackgroundColor = System.Drawing.Color.Silver;
-            this.btnSaveChanges.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSaveChanges.BorderRadius = 5;
-            this.btnSaveChanges.BorderSize = 0;
-            this.btnSaveChanges.FlatAppearance.BorderSize = 0;
-            this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveChanges.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveChanges.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveChanges.Location = new System.Drawing.Point(158, 521);
-            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(128, 40);
-            this.btnSaveChanges.TabIndex = 53;
-            this.btnSaveChanges.Text = "Guardar";
-            this.btnSaveChanges.TextColor = System.Drawing.Color.Black;
-            this.btnSaveChanges.UseVisualStyleBackColor = false;
-            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
-            // 
-            // comboBoxPerso1
-            // 
-            this.comboBoxPerso1.BackColor = System.Drawing.Color.DarkGray;
-            this.comboBoxPerso1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.comboBoxPerso1.BorderSize = 0;
-            this.comboBoxPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxPerso1.Font = new System.Drawing.Font("Roboto Cn", 9.25F);
-            this.comboBoxPerso1.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxPerso1.IconColor = System.Drawing.Color.Black;
-            this.comboBoxPerso1.Items.AddRange(new object[] {
-            "Disponible",
-            "Roto"});
-            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.DarkGray;
-            this.comboBoxPerso1.ListTextColor = System.Drawing.Color.Black;
-            this.comboBoxPerso1.Location = new System.Drawing.Point(32, 360);
-            this.comboBoxPerso1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxPerso1.MinimumSize = new System.Drawing.Size(150, 24);
-            this.comboBoxPerso1.Name = "comboBoxPerso1";
-            this.comboBoxPerso1.SelectedIndex = -1;
-            this.comboBoxPerso1.SelectedItem = null;
-            this.comboBoxPerso1.Size = new System.Drawing.Size(348, 34);
-            this.comboBoxPerso1.TabIndex = 52;
-            this.comboBoxPerso1.Texts = "Seleccione el estado de la copia";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -268,90 +202,6 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Estado copia";
             // 
-            // userLabel
-            // 
-            this.userLabel.BackColor = System.Drawing.Color.DarkGray;
-            this.userLabel.BorderColor = System.Drawing.Color.Gray;
-            this.userLabel.BorderFocusColor = System.Drawing.Color.Gray;
-            this.userLabel.BorderRadius = 5;
-            this.userLabel.BorderSize = 3;
-            this.userLabel.Enabled = false;
-            this.userLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.userLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.userLabel.Location = new System.Drawing.Point(30, 223);
-            this.userLabel.Multiline = false;
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Padding = new System.Windows.Forms.Padding(11);
-            this.userLabel.PasswordChar = false;
-            this.userLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.userLabel.PlaceholderText = "";
-            this.userLabel.Size = new System.Drawing.Size(350, 41);
-            this.userLabel.TabIndex = 44;
-            this.userLabel.UnderlinedStyle = false;
-            // 
-            // ExpiresLabel
-            // 
-            this.ExpiresLabel.BackColor = System.Drawing.Color.DarkGray;
-            this.ExpiresLabel.BorderColor = System.Drawing.Color.Gray;
-            this.ExpiresLabel.BorderFocusColor = System.Drawing.Color.Gray;
-            this.ExpiresLabel.BorderRadius = 5;
-            this.ExpiresLabel.BorderSize = 3;
-            this.ExpiresLabel.Enabled = false;
-            this.ExpiresLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.ExpiresLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ExpiresLabel.Location = new System.Drawing.Point(32, 158);
-            this.ExpiresLabel.Multiline = false;
-            this.ExpiresLabel.Name = "ExpiresLabel";
-            this.ExpiresLabel.Padding = new System.Windows.Forms.Padding(11);
-            this.ExpiresLabel.PasswordChar = false;
-            this.ExpiresLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.ExpiresLabel.PlaceholderText = "";
-            this.ExpiresLabel.Size = new System.Drawing.Size(350, 41);
-            this.ExpiresLabel.TabIndex = 43;
-            this.ExpiresLabel.UnderlinedStyle = false;
-            // 
-            // dniLabel
-            // 
-            this.dniLabel.BackColor = System.Drawing.Color.DarkGray;
-            this.dniLabel.BorderColor = System.Drawing.Color.Gray;
-            this.dniLabel.BorderFocusColor = System.Drawing.Color.Gray;
-            this.dniLabel.BorderRadius = 5;
-            this.dniLabel.BorderSize = 3;
-            this.dniLabel.Enabled = false;
-            this.dniLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
-            this.dniLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dniLabel.Location = new System.Drawing.Point(32, 289);
-            this.dniLabel.Multiline = false;
-            this.dniLabel.Name = "dniLabel";
-            this.dniLabel.Padding = new System.Windows.Forms.Padding(11);
-            this.dniLabel.PasswordChar = false;
-            this.dniLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.dniLabel.PlaceholderText = "";
-            this.dniLabel.Size = new System.Drawing.Size(350, 41);
-            this.dniLabel.TabIndex = 45;
-            this.dniLabel.UnderlinedStyle = false;
-            // 
-            // bookLabel
-            // 
-            this.bookLabel.BackColor = System.Drawing.Color.DarkGray;
-            this.bookLabel.BorderColor = System.Drawing.Color.Gray;
-            this.bookLabel.BorderFocusColor = System.Drawing.Color.Gray;
-            this.bookLabel.BorderRadius = 5;
-            this.bookLabel.BorderSize = 3;
-            this.bookLabel.Enabled = false;
-            this.bookLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bookLabel.Location = new System.Drawing.Point(32, 92);
-            this.bookLabel.Multiline = false;
-            this.bookLabel.Name = "bookLabel";
-            this.bookLabel.Padding = new System.Windows.Forms.Padding(11);
-            this.bookLabel.PasswordChar = false;
-            this.bookLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.bookLabel.PlaceholderText = "";
-            this.bookLabel.Size = new System.Drawing.Size(350, 41);
-            this.bookLabel.TabIndex = 42;
-            this.bookLabel.UnderlinedStyle = false;
-            // 
             // tlpFilter
             // 
             this.tlpFilter.ColumnCount = 1;
@@ -402,28 +252,6 @@
             this.searchBtn.TabIndex = 12;
             this.searchBtn.TabStop = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
-            // textBoxFilter
-            // 
-            this.textBoxFilter.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.textBoxFilter.BorderFocusColor = System.Drawing.Color.RosyBrown;
-            this.textBoxFilter.BorderRadius = 0;
-            this.textBoxFilter.BorderSize = 2;
-            this.textBoxFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxFilter.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFilter.Location = new System.Drawing.Point(3, 0);
-            this.textBoxFilter.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.textBoxFilter.Multiline = false;
-            this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxFilter.PasswordChar = false;
-            this.textBoxFilter.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBoxFilter.PlaceholderText = "Ingrese el DNI o Email del usuario a filtrar";
-            this.textBoxFilter.Size = new System.Drawing.Size(378, 29);
-            this.textBoxFilter.TabIndex = 11;
-            this.textBoxFilter.UnderlinedStyle = true;
-            this.textBoxFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFilter_KeyPress);
             // 
             // pictureBox1
             // 
@@ -522,6 +350,178 @@
             this.Id.ReadOnly = true;
             this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Id.Width = 50;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Silver;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.Silver;
+            this.btnCancel.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 5;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(290, 521);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(128, 40);
+            this.btnCancel.TabIndex = 54;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextColor = System.Drawing.Color.Black;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSaveChanges
+            // 
+            this.btnSaveChanges.BackColor = System.Drawing.Color.Silver;
+            this.btnSaveChanges.BackgroundColor = System.Drawing.Color.Silver;
+            this.btnSaveChanges.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSaveChanges.BorderRadius = 5;
+            this.btnSaveChanges.BorderSize = 0;
+            this.btnSaveChanges.FlatAppearance.BorderSize = 0;
+            this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveChanges.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveChanges.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveChanges.Location = new System.Drawing.Point(158, 521);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(128, 40);
+            this.btnSaveChanges.TabIndex = 53;
+            this.btnSaveChanges.Text = "Guardar";
+            this.btnSaveChanges.TextColor = System.Drawing.Color.Black;
+            this.btnSaveChanges.UseVisualStyleBackColor = false;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
+            // 
+            // comboBoxPerso1
+            // 
+            this.comboBoxPerso1.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBoxPerso1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.comboBoxPerso1.BorderSize = 0;
+            this.comboBoxPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxPerso1.Font = new System.Drawing.Font("Roboto Cn", 9.25F);
+            this.comboBoxPerso1.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxPerso1.IconColor = System.Drawing.Color.Black;
+            this.comboBoxPerso1.Items.AddRange(new object[] {
+            "Disponible",
+            "Roto"});
+            this.comboBoxPerso1.ListBackColor = System.Drawing.Color.DarkGray;
+            this.comboBoxPerso1.ListTextColor = System.Drawing.Color.Black;
+            this.comboBoxPerso1.Location = new System.Drawing.Point(32, 360);
+            this.comboBoxPerso1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxPerso1.MinimumSize = new System.Drawing.Size(150, 24);
+            this.comboBoxPerso1.Name = "comboBoxPerso1";
+            this.comboBoxPerso1.SelectedIndex = -1;
+            this.comboBoxPerso1.SelectedItem = null;
+            this.comboBoxPerso1.Size = new System.Drawing.Size(348, 34);
+            this.comboBoxPerso1.TabIndex = 52;
+            this.comboBoxPerso1.Texts = "Seleccione el estado de la copia";
+            // 
+            // userLabel
+            // 
+            this.userLabel.BackColor = System.Drawing.Color.DarkGray;
+            this.userLabel.BorderColor = System.Drawing.Color.Gray;
+            this.userLabel.BorderFocusColor = System.Drawing.Color.Gray;
+            this.userLabel.BorderRadius = 5;
+            this.userLabel.BorderSize = 3;
+            this.userLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.userLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.userLabel.Location = new System.Drawing.Point(30, 223);
+            this.userLabel.Multiline = true;
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Padding = new System.Windows.Forms.Padding(11);
+            this.userLabel.PasswordChar = false;
+            this.userLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.userLabel.PlaceholderText = "";
+            this.userLabel.Size = new System.Drawing.Size(350, 39);
+            this.userLabel.TabIndex = 44;
+            this.userLabel.UnderlinedStyle = false;
+            this.userLabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // ExpiresLabel
+            // 
+            this.ExpiresLabel.BackColor = System.Drawing.Color.DarkGray;
+            this.ExpiresLabel.BorderColor = System.Drawing.Color.Gray;
+            this.ExpiresLabel.BorderFocusColor = System.Drawing.Color.Gray;
+            this.ExpiresLabel.BorderRadius = 5;
+            this.ExpiresLabel.BorderSize = 3;
+            this.ExpiresLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.ExpiresLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ExpiresLabel.Location = new System.Drawing.Point(32, 158);
+            this.ExpiresLabel.Multiline = true;
+            this.ExpiresLabel.Name = "ExpiresLabel";
+            this.ExpiresLabel.Padding = new System.Windows.Forms.Padding(11);
+            this.ExpiresLabel.PasswordChar = false;
+            this.ExpiresLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ExpiresLabel.PlaceholderText = "";
+            this.ExpiresLabel.Size = new System.Drawing.Size(350, 39);
+            this.ExpiresLabel.TabIndex = 43;
+            this.ExpiresLabel.UnderlinedStyle = false;
+            this.ExpiresLabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // dniLabel
+            // 
+            this.dniLabel.BackColor = System.Drawing.Color.DarkGray;
+            this.dniLabel.BorderColor = System.Drawing.Color.Gray;
+            this.dniLabel.BorderFocusColor = System.Drawing.Color.Gray;
+            this.dniLabel.BorderRadius = 5;
+            this.dniLabel.BorderSize = 3;
+            this.dniLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.dniLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dniLabel.Location = new System.Drawing.Point(32, 289);
+            this.dniLabel.Multiline = true;
+            this.dniLabel.Name = "dniLabel";
+            this.dniLabel.Padding = new System.Windows.Forms.Padding(11);
+            this.dniLabel.PasswordChar = false;
+            this.dniLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.dniLabel.PlaceholderText = "";
+            this.dniLabel.Size = new System.Drawing.Size(350, 39);
+            this.dniLabel.TabIndex = 45;
+            this.dniLabel.UnderlinedStyle = false;
+            this.dniLabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // bookLabel
+            // 
+            this.bookLabel.BackColor = System.Drawing.Color.DarkGray;
+            this.bookLabel.BorderColor = System.Drawing.Color.Gray;
+            this.bookLabel.BorderFocusColor = System.Drawing.Color.Gray;
+            this.bookLabel.BorderRadius = 5;
+            this.bookLabel.BorderSize = 3;
+            this.bookLabel.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.bookLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bookLabel.Location = new System.Drawing.Point(32, 92);
+            this.bookLabel.Multiline = true;
+            this.bookLabel.Name = "bookLabel";
+            this.bookLabel.Padding = new System.Windows.Forms.Padding(11);
+            this.bookLabel.PasswordChar = false;
+            this.bookLabel.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.bookLabel.PlaceholderText = "";
+            this.bookLabel.Size = new System.Drawing.Size(350, 39);
+            this.bookLabel.TabIndex = 42;
+            this.bookLabel.UnderlinedStyle = false;
+            this.bookLabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // textBoxFilter
+            // 
+            this.textBoxFilter.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.textBoxFilter.BorderFocusColor = System.Drawing.Color.RosyBrown;
+            this.textBoxFilter.BorderRadius = 0;
+            this.textBoxFilter.BorderSize = 2;
+            this.textBoxFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBoxFilter.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFilter.Location = new System.Drawing.Point(3, 0);
+            this.textBoxFilter.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.textBoxFilter.Multiline = false;
+            this.textBoxFilter.Name = "textBoxFilter";
+            this.textBoxFilter.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxFilter.PasswordChar = false;
+            this.textBoxFilter.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxFilter.PlaceholderText = "Ingrese el DNI o Email del usuario a filtrar";
+            this.textBoxFilter.Size = new System.Drawing.Size(378, 29);
+            this.textBoxFilter.TabIndex = 11;
+            this.textBoxFilter.UnderlinedStyle = true;
+            this.textBoxFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFilter_KeyPress);
             // 
             // userEmailDataGridViewTextBoxColumn
             // 

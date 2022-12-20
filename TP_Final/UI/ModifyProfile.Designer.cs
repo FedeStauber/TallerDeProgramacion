@@ -117,7 +117,7 @@
             this.txtBoxNewPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxNewPass.PlaceholderText = "";
             this.txtBoxNewPass.Size = new System.Drawing.Size(350, 41);
-            this.txtBoxNewPass.TabIndex = 32;
+            this.txtBoxNewPass.TabIndex = 6;
             this.txtBoxNewPass.UnderlinedStyle = false;
             // 
             // label7
@@ -149,7 +149,7 @@
             this.txtBoxConfirmPass.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxConfirmPass.PlaceholderText = "";
             this.txtBoxConfirmPass.Size = new System.Drawing.Size(350, 41);
-            this.txtBoxConfirmPass.TabIndex = 6;
+            this.txtBoxConfirmPass.TabIndex = 7;
             this.txtBoxConfirmPass.UnderlinedStyle = false;
             // 
             // label6
@@ -270,7 +270,7 @@
             this.btnUploadAvatar.Location = new System.Drawing.Point(243, 264);
             this.btnUploadAvatar.Name = "btnUploadAvatar";
             this.btnUploadAvatar.Size = new System.Drawing.Size(208, 40);
-            this.btnUploadAvatar.TabIndex = 7;
+            this.btnUploadAvatar.TabIndex = 1;
             this.btnUploadAvatar.Text = "Subir nuevo avatar";
             this.btnUploadAvatar.TextColor = System.Drawing.Color.White;
             this.btnUploadAvatar.UseVisualStyleBackColor = false;
@@ -286,14 +286,14 @@
             this.txtBoxDni.BorderSize = 3;
             this.txtBoxDni.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.txtBoxDni.Location = new System.Drawing.Point(490, 171);
-            this.txtBoxDni.Multiline = true;
+            this.txtBoxDni.Multiline = false;
             this.txtBoxDni.Name = "txtBoxDni";
             this.txtBoxDni.Padding = new System.Windows.Forms.Padding(11);
             this.txtBoxDni.PasswordChar = false;
             this.txtBoxDni.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxDni.PlaceholderText = "";
-            this.txtBoxDni.Size = new System.Drawing.Size(350, 39);
-            this.txtBoxDni.TabIndex = 3;
+            this.txtBoxDni.Size = new System.Drawing.Size(350, 41);
+            this.txtBoxDni.TabIndex = 4;
             this.txtBoxDni.UnderlinedStyle = false;
             this.txtBoxDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxtBox_KeyPress);
             // 
@@ -319,14 +319,14 @@
             this.txtBoxLastName.BorderSize = 3;
             this.txtBoxLastName.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.txtBoxLastName.Location = new System.Drawing.Point(491, 107);
-            this.txtBoxLastName.Multiline = true;
+            this.txtBoxLastName.Multiline = false;
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.Padding = new System.Windows.Forms.Padding(11);
             this.txtBoxLastName.PasswordChar = false;
             this.txtBoxLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxLastName.PlaceholderText = "";
-            this.txtBoxLastName.Size = new System.Drawing.Size(350, 39);
-            this.txtBoxLastName.TabIndex = 2;
+            this.txtBoxLastName.Size = new System.Drawing.Size(350, 41);
+            this.txtBoxLastName.TabIndex = 3;
             this.txtBoxLastName.UnderlinedStyle = false;
             this.txtBoxLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
@@ -340,14 +340,14 @@
             this.txtBoxEmail.BorderSize = 3;
             this.txtBoxEmail.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.txtBoxEmail.Location = new System.Drawing.Point(491, 235);
-            this.txtBoxEmail.Multiline = true;
+            this.txtBoxEmail.Multiline = false;
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Padding = new System.Windows.Forms.Padding(11);
             this.txtBoxEmail.PasswordChar = false;
             this.txtBoxEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxEmail.PlaceholderText = "";
-            this.txtBoxEmail.Size = new System.Drawing.Size(350, 39);
-            this.txtBoxEmail.TabIndex = 4;
+            this.txtBoxEmail.Size = new System.Drawing.Size(350, 41);
+            this.txtBoxEmail.TabIndex = 5;
             this.txtBoxEmail.UnderlinedStyle = false;
             // 
             // txtBoxName
@@ -360,14 +360,14 @@
             this.txtBoxName.BorderSize = 3;
             this.txtBoxName.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxName.Location = new System.Drawing.Point(491, 44);
-            this.txtBoxName.Multiline = true;
+            this.txtBoxName.Multiline = false;
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Padding = new System.Windows.Forms.Padding(11);
             this.txtBoxName.PasswordChar = false;
             this.txtBoxName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBoxName.PlaceholderText = "";
-            this.txtBoxName.Size = new System.Drawing.Size(350, 39);
-            this.txtBoxName.TabIndex = 1;
+            this.txtBoxName.Size = new System.Drawing.Size(350, 41);
+            this.txtBoxName.TabIndex = 2;
             this.txtBoxName.UnderlinedStyle = false;
             this.txtBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 

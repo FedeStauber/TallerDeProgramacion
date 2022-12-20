@@ -115,6 +115,9 @@ namespace TP_Final.UI
 
         }
 
-        
+        private void tbName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }
