@@ -29,7 +29,7 @@ namespace TP_Final.UI
         public AddBook()
         {
             InitializeComponent();
-            comboBoxPerso1.Visible = false;
+            resultPagComboBox.Visible = false;
         }
 
         /// <summary> Crea la pantalla, adapta el tamaño a donde tiene que ir y la muestra al usuario </summary>
@@ -118,17 +118,23 @@ namespace TP_Final.UI
             }
         }
 
-        /// <summary> Evento que se encuentra esperando al cambio del valor e </summary>
-        /// <param name="sender"> Formulario a mostrar </param>
-        /// /// <param name="e"> Formulario a mostrar </param>
-        private void comboBoxPerso1_OnSelectedIndexChanged(object sender, EventArgs e)
+        /// <summary> Evento que se encuentra esperando al cambio del valor del combo box para cambiar la distribucion 
+        /// de la pagina</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
+        private void resultPagComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             iPageIndex = 0;
-            this.iResultsPerPage = Convert.ToInt32(comboBoxPerso1.SelectedItem.ToString());
+            this.iResultsPerPage = Convert.ToInt32(resultPagComboBox.SelectedItem.ToString());
             this.ResetLayout();
             this.OpenChildForm(this.SelectLayout());
             this.PageCounterUpdate();
         }
+
+        /// <summary> Evento que espera un click sobre el botón para realizar una búsqueda, controla si tiene filtro puesto, 
+        /// sino notifica al usuario de esto</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private async void searchBtn_Click_1(object sender, EventArgs e)
         {
             try
@@ -155,7 +161,7 @@ namespace TP_Final.UI
                     this.iCanDownload = true;
                     this.DownloadCovers();
                     this.PageCounterUpdate();
-                    comboBoxPerso1.Visible = true;
+                    resultPagComboBox.Visible = true;
                 }
             }
             catch (Exception ex)
@@ -165,6 +171,11 @@ namespace TP_Final.UI
                 //Abrir ventana logo
             }
         }
+
+        /// <summary> Evento que espera un click sobre el botón para realizar un cambio de los libros a mostrar en la pantalla,
+        /// </summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void LeftBtn_Click_1(object sender, EventArgs e)
         {
             if (!(iPageIndex - this.iResultsPerPage < 0))
@@ -238,5 +249,6 @@ namespace TP_Final.UI
                 this.searchBtn_Click_1(sender, e);
             }
         }
+
     }
 }
