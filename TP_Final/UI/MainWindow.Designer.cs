@@ -398,6 +398,7 @@ namespace TP_Final.UI
             this.btnHelp.TabIndex = 0;
             this.btnHelp.Text = "Ayuda";
             this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // panelCurrentUser
             // 

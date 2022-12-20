@@ -58,9 +58,8 @@ namespace TP_Final.UI
             this.topPanel.Controls.Add(this.cbFiltro);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1685, 111);
+            this.topPanel.Size = new System.Drawing.Size(1264, 90);
             this.topPanel.TabIndex = 0;
             // 
             // searchBtn
@@ -72,7 +71,6 @@ namespace TP_Final.UI
             this.searchBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.searchBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.searchBtn.Location = new System.Drawing.Point(898, 58);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(4);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(32, 32);
             this.searchBtn.TabIndex = 5;
@@ -83,21 +81,20 @@ namespace TP_Final.UI
             // 
             this.searchTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.searchTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.searchTextBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
+            this.searchTextBox.BorderFocusColor = System.Drawing.Color.RosyBrown;
             this.searchTextBox.BorderRadius = 0;
             this.searchTextBox.BorderSize = 2;
-            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextBox.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.searchTextBox.Location = new System.Drawing.Point(526, 54);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.searchTextBox.Multiline = false;
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Padding = new System.Windows.Forms.Padding(9);
+            this.searchTextBox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.searchTextBox.PasswordChar = false;
             this.searchTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.searchTextBox.PlaceholderText = "Ingrese el texto a buscar";
-            this.searchTextBox.Size = new System.Drawing.Size(463, 37);
+            this.searchTextBox.Size = new System.Drawing.Size(366, 33);
             this.searchTextBox.TabIndex = 4;
-            this.searchTextBox.UnderlinedStyle = false;
+            this.searchTextBox.UnderlinedStyle = true;
             this.searchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchTextBox_KeyPress);
             // 
             // cbFiltro
@@ -117,10 +114,9 @@ namespace TP_Final.UI
             this.cbFiltro.ListBackColor = System.Drawing.Color.White;
             this.cbFiltro.ListTextColor = System.Drawing.Color.Black;
             this.cbFiltro.Location = new System.Drawing.Point(320, 54);
-            this.cbFiltro.Margin = new System.Windows.Forms.Padding(4);
-            this.cbFiltro.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbFiltro.MinimumSize = new System.Drawing.Size(150, 33);
             this.cbFiltro.Name = "cbFiltro";
-            this.cbFiltro.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbFiltro.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbFiltro.SelectedIndex = -1;
             this.cbFiltro.SelectedItem = null;
             this.cbFiltro.Size = new System.Drawing.Size(200, 33);
@@ -132,10 +128,9 @@ namespace TP_Final.UI
             this.leftPanel.BackColor = System.Drawing.Color.White;
             this.leftPanel.Controls.Add(this.leftBtn);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanel.Location = new System.Drawing.Point(0, 111);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.leftPanel.Location = new System.Drawing.Point(0, 90);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(133, 765);
+            this.leftPanel.Size = new System.Drawing.Size(100, 622);
             this.leftPanel.TabIndex = 1;
             // 
             // leftBtn
@@ -145,11 +140,10 @@ namespace TP_Final.UI
             this.leftBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.leftBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.leftBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.leftBtn.IconSize = 49;
-            this.leftBtn.Location = new System.Drawing.Point(73, 265);
-            this.leftBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.leftBtn.IconSize = 40;
+            this.leftBtn.Location = new System.Drawing.Point(55, 215);
             this.leftBtn.Name = "leftBtn";
-            this.leftBtn.Size = new System.Drawing.Size(53, 49);
+            this.leftBtn.Size = new System.Drawing.Size(40, 40);
             this.leftBtn.TabIndex = 12;
             this.leftBtn.TabStop = false;
             this.leftBtn.Click += new System.EventHandler(this.leftBtn_Click_1);
@@ -159,10 +153,9 @@ namespace TP_Final.UI
             this.rightPanel.BackColor = System.Drawing.Color.White;
             this.rightPanel.Controls.Add(this.rightBtn);
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1552, 111);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.rightPanel.Location = new System.Drawing.Point(1164, 90);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(133, 765);
+            this.rightPanel.Size = new System.Drawing.Size(100, 622);
             this.rightPanel.TabIndex = 2;
             // 
             // rightBtn
@@ -172,11 +165,10 @@ namespace TP_Final.UI
             this.rightBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.rightBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.rightBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.rightBtn.IconSize = 49;
-            this.rightBtn.Location = new System.Drawing.Point(7, 265);
-            this.rightBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.rightBtn.IconSize = 40;
+            this.rightBtn.Location = new System.Drawing.Point(5, 215);
             this.rightBtn.Name = "rightBtn";
-            this.rightBtn.Size = new System.Drawing.Size(53, 49);
+            this.rightBtn.Size = new System.Drawing.Size(40, 40);
             this.rightBtn.TabIndex = 13;
             this.rightBtn.TabStop = false;
             this.rightBtn.Click += new System.EventHandler(this.rightBtn_Click_1);
@@ -187,10 +179,9 @@ namespace TP_Final.UI
             this.botPanel.Controls.Add(this.resultPagComboBox);
             this.botPanel.Controls.Add(this.pagesLabel);
             this.botPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.botPanel.Location = new System.Drawing.Point(133, 778);
-            this.botPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.botPanel.Location = new System.Drawing.Point(100, 632);
             this.botPanel.Name = "botPanel";
-            this.botPanel.Size = new System.Drawing.Size(1419, 98);
+            this.botPanel.Size = new System.Drawing.Size(1064, 80);
             this.botPanel.TabIndex = 3;
             // 
             // resultPagComboBox
@@ -207,8 +198,9 @@ namespace TP_Final.UI
             "16"});
             this.resultPagComboBox.ListBackColor = System.Drawing.Color.White;
             this.resultPagComboBox.ListTextColor = System.Drawing.Color.Black;
-            this.resultPagComboBox.Location = new System.Drawing.Point(858, 24);
-            this.resultPagComboBox.MinimumSize = new System.Drawing.Size(200, 30);
+            this.resultPagComboBox.Location = new System.Drawing.Point(857, 26);
+            this.resultPagComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resultPagComboBox.MinimumSize = new System.Drawing.Size(150, 24);
             this.resultPagComboBox.Name = "resultPagComboBox";
             this.resultPagComboBox.Padding = new System.Windows.Forms.Padding(2);
             this.resultPagComboBox.SelectedIndex = -1;
@@ -221,11 +213,10 @@ namespace TP_Final.UI
             // pagesLabel
             // 
             this.pagesLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.pagesLabel.Font = new System.Drawing.Font("Roboto Cn", 10F);
             this.pagesLabel.Location = new System.Drawing.Point(0, 0);
-            this.pagesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pagesLabel.Name = "pagesLabel";
-            this.pagesLabel.Size = new System.Drawing.Size(1419, 98);
+            this.pagesLabel.Size = new System.Drawing.Size(1064, 80);
             this.pagesLabel.TabIndex = 0;
             this.pagesLabel.Text = "label1";
             this.pagesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,24 +225,22 @@ namespace TP_Final.UI
             // 
             this.centerPanel.BackColor = System.Drawing.Color.White;
             this.centerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centerPanel.Location = new System.Drawing.Point(133, 111);
-            this.centerPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.centerPanel.Location = new System.Drawing.Point(100, 90);
             this.centerPanel.Name = "centerPanel";
-            this.centerPanel.Size = new System.Drawing.Size(1419, 667);
+            this.centerPanel.Size = new System.Drawing.Size(1064, 542);
             this.centerPanel.TabIndex = 4;
             // 
             // Catalogue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 876);
+            this.ClientSize = new System.Drawing.Size(1264, 712);
             this.Controls.Add(this.centerPanel);
             this.Controls.Add(this.botPanel);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Catalogue";
             this.Text = "Catálogo";
             this.topPanel.ResumeLayout(false);
