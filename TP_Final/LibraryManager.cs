@@ -51,8 +51,8 @@ namespace TP_Final
         }
 
         /// <summary> Busca el usuario por el DNI y le cambia los valores</summary>
-        /// <param int="pDni"> DNI del usuario a modificar </param>
-        /// <param UserDTO="pUserDTO"> Nuevo usuario </param>
+        /// <param name="pDni"> DNI del usuario a modificar </param>
+        /// <param name="pUserDTO"> Nuevo usuario </param>
         public static void ModifyUser(int pDni, UserDTO pUserDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -76,8 +76,8 @@ namespace TP_Final
         }
 
         /// <summary> Busca el libro por ISBN y le agrega la cantidad de copias ingresadas </summary>
-        /// <param long="pISBN"> ISBN del libro que se quiere agregar las copias </param>
-        /// <param int="amount"> Cantidad de copias que se quiere agregar de ese libro </param>
+        /// <param name="pISBN"> ISBN del libro que se quiere agregar las copias </param>
+        /// <param name="amount"> Cantidad de copias que se quiere agregar de ese libro </param>
         public static void AddCopy(long pISBN, int amount)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -101,7 +101,7 @@ namespace TP_Final
         }
 
         /// <summary> Cambia la condición de la copia </summary>
-        /// <param CopyDTO="pCopyDTO"> Copia a modificar </param>
+        /// <param name="pCopyDTO"> Copia a modificar </param>
         public static void ModifyCopy(CopyDTO pCopyDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -128,7 +128,7 @@ namespace TP_Final
 
         /// <summary> Busca el usuario por el mail, busca una copia disponible, cambia la condicion de la copia y la ultima fecha de
         /// modificacion, crea el préstamo y lo agrega al repositorio, si no encuentra una copia disponible lo notifica al usuario</summary>
-        /// <param LoanDTO="pLoanDTO"> Préstamo a crear  </param>
+        /// <param name="pLoanDTO"> Préstamo a crear  </param>
         public static void CreateLoan(LoanDTO pLoanDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -150,8 +150,8 @@ namespace TP_Final
         }
         /// <summary> Busca el préstamo por el id ingresado y cambia la condicion por la ingresada, si no encuentra el préstamo notifica al 
         /// usuario </summary>
-        /// <param int="pLoanId"> Id del préstamo </param>
-        /// <param int="pCondition"> Entero que representa la posición en la lista de condiciones </param>
+        /// <param name="pLoanId"> Id del préstamo </param>
+        /// <param name="pCondition"> Entero que representa la posición en la lista de condiciones </param>
         public static void LoanReturnRegister(int pLoanId, int pCondition)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -175,8 +175,8 @@ namespace TP_Final
         }
         /// <summary> Busca el mail ingresado en el repositorio de usuario, compara las contraseñas de ese usuario con la ingresada y
         /// verifica que el usuario esté activo, si la contraseña no coincide o el usuario no está activo, se notifica al usuario</summary>
-        /// <param string="pUserEmail"> Email ingresada</param>
-        /// <param string="pPassword"> Contraseña ingresada </param>
+        /// <param name="pUserEmail"> Email ingresada</param>
+        /// <param name="pPassword"> Contraseña ingresada </param>
         public static LoginDTO LogIn(string pUserEmail, string pPassword)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -223,7 +223,7 @@ namespace TP_Final
 
         /// <summary> Busca si el libro ya existe en el catálogo, si existe lo notifica al usuario de esto, sino mapea y agrega
         /// el libro al repositorio</summary>
-        /// <param BookDTO="pBookDTO"> Libro a agregar </param>
+        /// <param name="pBookDTO"> Libro a agregar </param>
         public static void AddBook(BookDTO pBookDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
@@ -244,7 +244,7 @@ namespace TP_Final
 
 
         /// <summary> Realiza una consulta al repositorio para obtener todos los prestamos asociados a el usuario indicado </summary>
-        /// <param UserDTO="pUserDTO"> Usuario a utilizar </param>
+        /// <param name="pUserDTO"> Usuario a utilizar </param>
         /// <returns>Una lista de objetos LoanDTO que contiene todos los prestamos del usuario</returns>
         public static List<LoanDTO> UserLoansHistory(UserDTO pUserDTO)
         {
