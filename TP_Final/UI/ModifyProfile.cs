@@ -38,7 +38,7 @@ namespace TP_Final.UI
         {
             try
             {
-                if (ComprobarCampos())
+                if (CheckFields())
                 {
                     modifyAttributes();
                     LibraryManager.ModifyUser(iOriginalDni, iUser);                    
@@ -70,7 +70,7 @@ namespace TP_Final.UI
                 this.iUser.Avatar = iAvatar;
             }           
         }
-        private bool ComprobarCampos()
+        private bool CheckFields()
         {
             if (txtBoxName.Text == null)
             {
@@ -140,8 +140,18 @@ namespace TP_Final.UI
 
         private void DniTxtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                      (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((txtBoxDni.Text.Length >= 9) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void tbName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }

@@ -35,11 +35,10 @@ namespace TP_Final.UI
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
-        {
-            bool vCheck = this.CheckFields();
+        {            
             try
             {
-                if (vCheck)
+                if (this.CheckFields())
                 {
                     UserDTO vUserDTO = new UserDTO()
                     {
@@ -128,14 +127,25 @@ namespace TP_Final.UI
             }
         }
 
-        private void DniTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        
+        private void tbName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                      (e.KeyChar != '.'))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
 
+        private void DniTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((DniTxtBox.Text.Length >= 9) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

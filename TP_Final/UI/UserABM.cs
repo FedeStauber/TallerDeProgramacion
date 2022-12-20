@@ -64,6 +64,8 @@ namespace TP_Final.UI
         {
             try
             {
+                if (this.CheckFields()) 
+                { 
                 int vDni = Convert.ToInt32(dataGridUsers.SelectedRows[0].Cells[3].Value.ToString());
                 iUserToEdit.Active = cbActive.Checked;
                 iUserToEdit.Admin = cbAdmin.Checked;
@@ -83,6 +85,11 @@ namespace TP_Final.UI
                 this.AssignElements();
                 panelModifyBook.Visible = false;
                 MessageBox.Show("Usuario modificado con exito!!");
+                }
+                else
+                {
+                    MessageBox.Show("No puede dejar campos vacíos");
+                }
             }
             catch (Exception ex)
             {
@@ -134,12 +141,59 @@ namespace TP_Final.UI
                 dataGridUsers.DataSource = iFilteredList;
         }
 
+        private void tbName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+              e.Handled = true;                              
+            }
+            if ((tbDNI.Text.Length >= 9) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbScore_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((tbScore.Text.Length >= 9) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void OPenDataPanel()
         {
             tlpFilter.Visible = false;
             tableLayoutPanel3.SetCellPosition(tlpFilter, new TableLayoutPanelCellPosition(0, 0));
             tableLayoutPanel3.SetCellPosition(panelModifyBook, new TableLayoutPanelCellPosition(0, 1));
             panelModifyBook.Visible = true;
+        }
+
+        private bool CheckFields()
+        {
+            if (tbName.Text.Trim() == "")
+                return false;
+            if (tbLastName.Text.Trim() == "")
+                return false;
+            if (tbEmail.Text.Trim() == "")
+                return false;
+            if (tbDNI.Text.Trim() == "")
+                return false;
+            if (tbScore.Text.Trim() == "")
+                return false;
+            return true;            
         }
     }
 }

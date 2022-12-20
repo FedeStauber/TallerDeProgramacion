@@ -30,9 +30,9 @@ namespace TP_Final.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
@@ -118,24 +118,24 @@ namespace TP_Final.UI
             this.dataGridUsers.AllowUserToAddRows = false;
             this.dataGridUsers.AllowUserToDeleteRows = false;
             this.dataGridUsers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.NullValue = "-";
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.NullValue = "-";
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridUsers.AutoGenerateColumns = false;
             this.dataGridUsers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridUsers.ColumnHeadersHeight = 30;
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -147,15 +147,15 @@ namespace TP_Final.UI
             this.activeDataGridViewCheckBoxColumn,
             this.adminDataGridViewCheckBoxColumn});
             this.dataGridUsers.DataSource = this.userDTOBindingSource;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.NullValue = "-";
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.NullValue = "-";
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridUsers.EnableHeadersVisualStyles = false;
             this.dataGridUsers.GridColor = System.Drawing.Color.White;
@@ -553,6 +553,7 @@ namespace TP_Final.UI
             this.tbScore.Size = new System.Drawing.Size(350, 41);
             this.tbScore.TabIndex = 42;
             this.tbScore.UnderlinedStyle = false;
+            this.tbScore.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbScore_KeyPress);
             // 
             // tbDNI
             // 
@@ -563,7 +564,7 @@ namespace TP_Final.UI
             this.tbDNI.BorderSize = 3;
             this.tbDNI.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.tbDNI.Location = new System.Drawing.Point(33, 199);
-            this.tbDNI.Multiline = true;
+            this.tbDNI.Multiline = false;
             this.tbDNI.Name = "tbDNI";
             this.tbDNI.Padding = new System.Windows.Forms.Padding(11);
             this.tbDNI.PasswordChar = false;
@@ -572,6 +573,7 @@ namespace TP_Final.UI
             this.tbDNI.Size = new System.Drawing.Size(350, 39);
             this.tbDNI.TabIndex = 35;
             this.tbDNI.UnderlinedStyle = false;
+            this.tbDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDNI_KeyPress);
             // 
             // tbLastName
             // 
@@ -582,7 +584,7 @@ namespace TP_Final.UI
             this.tbLastName.BorderSize = 3;
             this.tbLastName.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.tbLastName.Location = new System.Drawing.Point(34, 135);
-            this.tbLastName.Multiline = true;
+            this.tbLastName.Multiline = false;
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Padding = new System.Windows.Forms.Padding(11);
             this.tbLastName.PasswordChar = false;
@@ -591,6 +593,7 @@ namespace TP_Final.UI
             this.tbLastName.Size = new System.Drawing.Size(350, 39);
             this.tbLastName.TabIndex = 34;
             this.tbLastName.UnderlinedStyle = false;
+            this.tbLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
             // tbEmail
             // 
@@ -601,7 +604,7 @@ namespace TP_Final.UI
             this.tbEmail.BorderSize = 3;
             this.tbEmail.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.tbEmail.Location = new System.Drawing.Point(34, 264);
-            this.tbEmail.Multiline = true;
+            this.tbEmail.Multiline = false;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Padding = new System.Windows.Forms.Padding(11);
             this.tbEmail.PasswordChar = false;
@@ -620,7 +623,7 @@ namespace TP_Final.UI
             this.tbName.BorderSize = 3;
             this.tbName.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.Location = new System.Drawing.Point(34, 73);
-            this.tbName.Multiline = true;
+            this.tbName.Multiline = false;
             this.tbName.Name = "tbName";
             this.tbName.Padding = new System.Windows.Forms.Padding(11);
             this.tbName.PasswordChar = false;
@@ -629,6 +632,7 @@ namespace TP_Final.UI
             this.tbName.Size = new System.Drawing.Size(350, 39);
             this.tbName.TabIndex = 33;
             this.tbName.UnderlinedStyle = false;
+            this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
             // 
             // UserABM
             // 
