@@ -39,7 +39,7 @@ namespace TP_Final
         public static void AddUser(UserDTO pUserDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
-            {                
+            {
                 var vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
                 vUser.Active = true;
                 unit.UserRepository.Add(vUser);  

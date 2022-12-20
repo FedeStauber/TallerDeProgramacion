@@ -1,37 +1,34 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 namespace TP_Final.Domain
 {
     
     public class User
     {
-        private string iPassword;
+        private string iPassword;        
         public User() {}       
         public int Id { get; set; }
-        [Required]
-        //[Index(IsUnique =true)]
-        public int DNI { get; set; }
-        //[Index(nameof(Email), IsUnique = true)]
-        [StringLength(150)]
+        [Required]       
+        public int DNI { get; set; }       
+        [StringLength(150)]       
         public string Email { get; set; }
         public int Score { get; set; }
         public string Password { get { return iPassword; } set {this.iPassword = Encrypter.Encrypt(value); } }
         public string Name { get; set; }
-        public string LastName  { get; set; }
-       
+        public string LastName  { get; set; }       
         public byte[] Avatar { get; set; }
 
         [Column("Admin")]
         public int _Admin { get; set; }
         [Column("Active")]
         public int _Active { get; set; }
-
-
 
 
         [NotMapped]       
@@ -83,5 +80,12 @@ namespace TP_Final.Domain
             }
             return false;
        }
+
+
+        public bool VerifyEmail(string pEmail)
+        {
+            return Regex.IsMatch(pEmail, @"/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/");
+        }
+
     }
 }
