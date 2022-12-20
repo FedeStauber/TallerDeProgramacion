@@ -341,6 +341,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\calendario.ico" />
+    <None Include="Resources\viejo8I.png" />
+    <None Include="Resources\viejo8D.png" />
+    <None Include="Resources\viejo7I.png" />
+    <None Include="Resources\viejo7D.png" />
+    <None Include="Resources\viejo6I.png" />
+    <None Include="Resources\viejo6d.png" />
+    <None Include="Resources\viejo5I.png" />
+    <None Include="Resources\viejo5D.png" />
+    <None Include="Resources\viejo4I.png" />
+    <None Include="Resources\viejo4D.png" />
+    <None Include="Resources\viejo3I.png" />
+    <None Include="Resources\viejo3D.png" />
+    <None Include="Resources\viejo2I.png" />
+    <None Include="Resources\viejo2D.png" />
+    <None Include="Resources\viejo1I.png" />
+    <None Include="Resources\viejo1D.png" />
     <None Include="Resources\calendario32x32.ico" />
     <Content Include="Resources\FileNotFound.jpg" />
     <Content Include="Resources\leyendo a derecha.png" />

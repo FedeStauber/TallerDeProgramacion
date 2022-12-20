@@ -36,6 +36,7 @@ namespace TP_Final.UI
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(iUser.Active.ToString());
             try
             {
                 if (ComprobarCampos())

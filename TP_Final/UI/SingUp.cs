@@ -48,7 +48,8 @@ namespace TP_Final.UI
                         DNI = Convert.ToInt32(DniTxtBox.Text),
                         Email = EmailTxtBox.Text,
                         Password = PassTxtBox.Text,
-                        Avatar = iAvatar
+                        Avatar = iAvatar,
+                        Active = true 
                     };
                     LibraryManager.AddUser(vUserDTO);
                     MainWindow vMainMenu = Owner as MainWindow;

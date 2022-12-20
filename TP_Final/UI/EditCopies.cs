@@ -25,6 +25,11 @@ namespace TP_Final.UI
             
             this.iBook = pBook;
             this.AssignElements();
+            ImageFactory imgFact = new ImageFactory();
+            imgFact.Load(Properties.Resources.viejo3I);
+            imgFact.Resize(new ImageProcessor.Imaging.ResizeLayer(new Size(336, 473), ImageProcessor.Imaging.ResizeMode.Stretch));
+            pictureBox1.Image = imgFact.Image;
+           
         }
 
         private void AssignElements()

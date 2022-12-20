@@ -142,4 +142,52 @@
   <data name="Roboto_Condensed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roboto-Condensed.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="viejo1D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo1D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo1I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo1I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo2D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo2D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo2I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo2I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo3D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo3D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo3I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo3I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo4D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo4D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo4I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo4I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo5D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo5D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo5I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo5I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo6d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo6d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo6I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo6I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo7D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo7D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo7I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo7I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo8D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo8D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo8I" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo8I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
