@@ -32,7 +32,7 @@ namespace TP_Final
                     loan.Notificated = true;                    
                 }
                 unit.Complete();
-                Log.Information("Se notificó correctamente a los usuarios que poseen préstamos atrasados");
+                Log.Information("Se notificó correctamente a los usuarios que poseen préstamos atrasados.");
             }  
         }
 
@@ -45,7 +45,8 @@ namespace TP_Final
                 var vUser = UsefulMapper.Mapper.Map<UserDTO, User>(pUserDTO);
                 vUser.Active = true;
                 unit.UserRepository.Add(vUser);  
-                unit.Complete();  
+                unit.Complete();
+                Log.Information("Se agregó el usuario correctamente.");
             }           
         }
 
@@ -70,6 +71,7 @@ namespace TP_Final
                     vUser.Password = pUserDTO.Password;
                 }                               
                 unit.Complete();
+                Log.Information("Se modificó el usuario con éxito");
             }
         }
 
@@ -93,7 +95,8 @@ namespace TP_Final
                 {
                     throw new Exception("El ISBN ingresado no es correcto");
                 }
-                unit.Complete();                
+                unit.Complete();
+                Log.Information("Se agregó una copia con éxito.");
             }
         }
 
@@ -119,6 +122,7 @@ namespace TP_Final
                 Copy copy = unit.CopyRepository.Get(pCopyDTO.Id);
                 copy.ChangeCondition(conditionEnum);
                 unit.Complete();
+                Log.Information("Se modificó una copia con éxito.");
             }
         }
 
@@ -133,13 +137,14 @@ namespace TP_Final
                 Copy vCopy = unit.CopyRepository.GetAvailableCopy(pLoanDTO.BookISBN);
                 if (vCopy == null)
                 {
-                    throw new NoAvailableCopyException("No existen copias disponibles para el libro seleccionado");
+                    throw new NoAvailableCopyException("No existen copias disponibles para el libro seleccionado.");
                 }
                 vCopy.Condition = Copy.ConditionEnum.Borrowed;
                 vCopy.LastModify = DateTime.Now;
                 Loan vLoan = new Loan() { Copy = vCopy, StartDate = DateTime.Now, Notificated = false, User = vUser, EndDate = DateTime.Now.AddDays(Convert.ToDouble(ConfigurationManager.AppSettings.Get("DIAS_PRESTAMO")))};               
                 unit.LoanRepository.Add(vLoan);
                 unit.Complete();
+                Log.Information("Se creó un préstamo con éxito.");
             }
         }
         /// <summary> Busca el préstamo por el id ingresado y cambia la condicion por la ingresada, si no encuentra el préstamo notifica al 
@@ -153,7 +158,7 @@ namespace TP_Final
                 Loan vLoan = unit.LoanRepository.Get(pLoanId);
                 if(vLoan == null)
                 {
-                    throw new Exception("No se pudo encontrar el prestamo solicitado");
+                    throw new Exception("No se pudo encontrar el prestamo solicitado.");
                 }
                 if (pCondition == 0)
                 {
@@ -164,6 +169,7 @@ namespace TP_Final
                     vLoan.ReturnRegister(Copy.ConditionEnum.Broken);
                 }                
                 unit.Complete();
+                Log.Information("Se creó una devolución de un préstamo con éxito.");
             }
         }
         /// <summary> Busca el mail ingresado en el repositorio de usuario, compara las contraseñas de ese usuario con la ingresada y
@@ -181,6 +187,7 @@ namespace TP_Final
                     vUserDTO.Avatar = vUser.Avatar;                      
                     LoginDTO loginDTO = new LoginDTO() { IsValid = true, User = vUserDTO };
                     return loginDTO;
+                    Log.Information("Se inició sesión con éxito.");
                 }
                 else if (!vUser.Active)
                 {
@@ -206,6 +213,7 @@ namespace TP_Final
                     List<Book> vBooks = unit.BookRepository.GetAll().ToList();                   
                     var vBooksDTO = UsefulMapper.Mapper.Map<List<Book>, List<BookDTO>>(vBooks);
                     return vBooksDTO;
+                    Log.Information("Se devuelve el catálogo actual de la biblioteca con éxito.");
                 }
             });
         }
@@ -222,6 +230,7 @@ namespace TP_Final
                     var vBook = UsefulMapper.Mapper.Map<BookDTO, Book>(pBookDTO);                 
                     unit.BookRepository.Add(vBook);
                     unit.Complete();
+                    Log.Information("Se agregó un nuevo libro con éxito.");
                 }
                 else
                 {
@@ -249,6 +258,7 @@ namespace TP_Final
                   vLoanDTOs.Add(vLoanDTO);
                 }
                 return vLoanDTOs;
+                Log.Information("Se devuelve el historial de préstamos con éxito.");
             }
         }
 
@@ -256,13 +266,13 @@ namespace TP_Final
         /// Realiza una consulta al repositorio para obtener los prestamos activos asociados a el usuario indicado
         /// </summary>
         /// <param name="pUserId">Id del usuario para el que se desea realizar la consulta</param>
-        /// <returns>Una numero entero qeu representa la cantidad de prestamos activos del usuario</returns>
+        /// <returns>Una numero entero que representa la cantidad de prestamos activos del usuario</returns>
         public static int CountUserActiveLoans(int pUserId)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
                 return unit.LoanRepository.GetUserActiveLoans(pUserId);
-               
+                Log.Information("Se devolvió la cantidad de préstamos activos de un usuario con éxito.");
             }
         }
 
@@ -275,6 +285,7 @@ namespace TP_Final
                 User vUser = unit.UserRepository.SearchByDNI(pDni);                
                 UserDTO vUserDTO = UsefulMapper.Mapper.Map<User, UserDTO>(vUser);                
                 return vUserDTO;
+                Log.Information("Búsqueda por DNI realizada con éxito.");
             }
         }
 
@@ -286,6 +297,7 @@ namespace TP_Final
             {
                 var vListUserDTO = UsefulMapper.Mapper.Map<List<User>, List<UserDTO>>(unit.UserRepository.GetAll().ToList());   
                 return vListUserDTO;
+                Log.Information("Se devolvió la lista de usuarios con éxito.");
             }
         }
         /// <summary> Crea una lista de copias DTO </summary>
@@ -305,6 +317,7 @@ namespace TP_Final
                     }                   
                 }
                 return vListCopyDTO;
+                Log.Information("Se devolvió la lista de copias de un libro con éxito");
             }
         }
 
@@ -327,7 +340,8 @@ namespace TP_Final
                     vBook.Gender = pBookDTO.Gender;
                     vBook.Language = pBookDTO.Language;
                     vBook.Title = pBookDTO.Title;
-                    unit.Complete();              
+                    unit.Complete();
+                    Log.Information("Se modificó un libro con éxito.");
                 }
             }
         }
@@ -349,6 +363,7 @@ namespace TP_Final
                     vLoanDTOs.Add(vLoanDTO);
                 }
                 return vLoanDTOs;
+                Log.Information("Se devolvió la lista de préstamos activos con éxito");
             }            
         }
 
@@ -362,7 +377,7 @@ namespace TP_Final
                 var vLoan = unit.LoanRepository.Get(pLoan.Id);
                 vLoan.Extend(pDaysToExtend);
                 unit.Complete();
-                          
+                Log.Information("Se extendió un préstamo con éxito");
             }
         }
     }
