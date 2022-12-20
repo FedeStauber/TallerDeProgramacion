@@ -32,6 +32,7 @@ namespace TP_Final.UI
             this.lateralPanel = new System.Windows.Forms.Panel();
             this.panelUsers = new System.Windows.Forms.Panel();
             this.submenuUsers = new System.Windows.Forms.Panel();
+            this.btnAddUser = new FontAwesome.Sharp.IconButton();
             this.btnUserList = new FontAwesome.Sharp.IconButton();
             this.btnUsers = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,7 +64,6 @@ namespace TP_Final.UI
             this.pbClose = new FontAwesome.Sharp.IconPictureBox();
             this.labelChildTitle = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnAddUser = new FontAwesome.Sharp.IconButton();
             this.lateralPanel.SuspendLayout();
             this.panelUsers.SuspendLayout();
             this.submenuUsers.SuspendLayout();
@@ -124,6 +124,25 @@ namespace TP_Final.UI
             this.submenuUsers.Size = new System.Drawing.Size(220, 80);
             this.submenuUsers.TabIndex = 5;
             this.submenuUsers.Visible = false;
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
+            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddUser.FlatAppearance.BorderSize = 0;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddUser.IconColor = System.Drawing.Color.Black;
+            this.btnAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddUser.Location = new System.Drawing.Point(0, 40);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(220, 40);
+            this.btnAddUser.TabIndex = 14;
+            this.btnAddUser.Text = "Agregar un usuario";
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnUserList
             // 
@@ -619,25 +638,6 @@ namespace TP_Final.UI
             this.panelChildForm.Size = new System.Drawing.Size(1280, 721);
             this.panelChildForm.TabIndex = 2;
             // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
-            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddUser.FlatAppearance.BorderSize = 0;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAddUser.IconColor = System.Drawing.Color.Black;
-            this.btnAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddUser.Location = new System.Drawing.Point(0, 40);
-            this.btnAddUser.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(220, 40);
-            this.btnAddUser.TabIndex = 14;
-            this.btnAddUser.Text = "Agregar un usuario";
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,6 +651,7 @@ namespace TP_Final.UI
             this.MinimumSize = new System.Drawing.Size(1500, 771);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindow_KeyPress);
             this.lateralPanel.ResumeLayout(false);
             this.lateralPanel.PerformLayout();
             this.panelUsers.ResumeLayout(false);

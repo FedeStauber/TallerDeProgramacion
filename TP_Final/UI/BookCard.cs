@@ -85,8 +85,7 @@ namespace TP_Final.UI
                         }
                         else
                         {
-                            pictureBox1.Image = Resources.CoverNotFoundImage;
-                            //Imagen que diga "Error al obtener cover en alta resolución"
+                            pictureBox1.Image = Resources.CoverNotFoundImage;                            
                         }
                     }
                 }

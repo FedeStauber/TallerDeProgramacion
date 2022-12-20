@@ -1,4 +1,5 @@
-﻿using ImageProcessor;
+﻿using FontAwesome.Sharp;
+using ImageProcessor;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -256,6 +257,15 @@ namespace TP_Final.UI
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             this.OpenChildForm(new SingUp(SingUp.ComeFrom.MainWindow));
+        }
+
+        private void MainWindow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                this.OpenChildForm(new Home());
+            }
+            
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
