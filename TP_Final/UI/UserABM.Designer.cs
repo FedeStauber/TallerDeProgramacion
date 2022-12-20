@@ -602,7 +602,7 @@ namespace TP_Final.UI
             this.dNIDataGridViewTextBoxColumn.ReadOnly = true;
             this.dNIDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dNIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dNIDataGridViewTextBoxColumn.Width = 120;
+            this.dNIDataGridViewTextBoxColumn.Width = 110;
             // 
             // scoreDataGridViewTextBoxColumn
             // 
@@ -610,12 +610,12 @@ namespace TP_Final.UI
             this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
             this.scoreDataGridViewTextBoxColumn.FillWeight = 39.67851F;
             this.scoreDataGridViewTextBoxColumn.HeaderText = "Puntaje";
-            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 60;
+            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 65;
             this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
             this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
             this.scoreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.scoreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.scoreDataGridViewTextBoxColumn.Width = 60;
+            this.scoreDataGridViewTextBoxColumn.Width = 65;
             // 
             // activeDataGridViewCheckBoxColumn
             // 

@@ -57,7 +57,7 @@ namespace TP_Final
         private void btnRegister_Click(object sender, EventArgs e)
         {
             MainWindow vMainMenu = Owner as MainWindow;
-            vMainMenu.OpenChildForm(new SingUp());    
+            vMainMenu.OpenChildForm(new SingUp(SingUp.ComeFrom.LogIn));    
         }
 
         private void txtBoxPass_KeyPress(object sender, KeyPressEventArgs e)

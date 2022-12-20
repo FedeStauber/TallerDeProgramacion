@@ -18,9 +18,13 @@ namespace TP_Final.UI
     public partial class SingUp : Form
     {
         private byte[] iAvatar;
-        public SingUp()
+        private ComeFrom iComefrom;
+        public enum ComeFrom { LogIn, MainWindow }
+
+        public SingUp(ComeFrom pComeFrom)
         {
             InitializeComponent();
+            iComefrom = pComeFrom;  
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -53,10 +57,19 @@ namespace TP_Final.UI
                     };
                     LibraryManager.AddUser(vUserDTO);
                     MainWindow vMainMenu = Owner as MainWindow;
-                    vMainMenu.User = vUserDTO;
-                    vMainMenu.UpdateUserData();
-                    this.Close();
-                    MessageBox.Show($"Usuario creado con éxito, bienvenido: {vUserDTO.Name}");                    
+                    if (iComefrom == ComeFrom.LogIn)
+                    {
+                        
+                        vMainMenu.User = vUserDTO;
+                        vMainMenu.UpdateUserData();
+                        this.Close();
+                        MessageBox.Show($"Usuario creado con éxito, bienvenido: {vUserDTO.Name}");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario creado con éxito!");
+                        vMainMenu.OpenChildForm(new Home());
+                    }                                       
                 }
             }
             catch (AutoMapper.AutoMapperMappingException)

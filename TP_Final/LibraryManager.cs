@@ -35,7 +35,7 @@ namespace TP_Final
         }
 
         /// <summary> Guarda un usuario en el repositorio </summary>
-        /// <param UserDTO="pUserDTO"> Nuevo usuario </param>
+        /// <param name="pUserDTO"> Nuevo usuario </param>
         public static void AddUser(UserDTO pUserDTO)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))

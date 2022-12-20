@@ -253,6 +253,11 @@ namespace TP_Final.UI
             this.OpenChildForm(new Home());
         }
 
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(new SingUp(SingUp.ComeFrom.MainWindow));
+        }
+
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             this.OpenChildForm(new AddBook());

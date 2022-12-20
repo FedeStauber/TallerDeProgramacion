@@ -57,12 +57,13 @@ namespace TP_Final.UI
             this.userNameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.pbHome = new FontAwesome.Sharp.IconPictureBox();
             this.pbMinimize = new FontAwesome.Sharp.IconPictureBox();
             this.pbMaximize = new FontAwesome.Sharp.IconPictureBox();
             this.pbClose = new FontAwesome.Sharp.IconPictureBox();
             this.labelChildTitle = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.pbHome = new FontAwesome.Sharp.IconPictureBox();
+            this.btnAddUser = new FontAwesome.Sharp.IconButton();
             this.lateralPanel.SuspendLayout();
             this.panelUsers.SuspendLayout();
             this.submenuUsers.SuspendLayout();
@@ -76,10 +77,10 @@ namespace TP_Final.UI
             this.panelUserOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.SuspendLayout();
             // 
             // lateralPanel
@@ -108,18 +109,19 @@ namespace TP_Final.UI
             this.panelUsers.Location = new System.Drawing.Point(0, 494);
             this.panelUsers.Margin = new System.Windows.Forms.Padding(0);
             this.panelUsers.Name = "panelUsers";
-            this.panelUsers.Size = new System.Drawing.Size(220, 80);
+            this.panelUsers.Size = new System.Drawing.Size(220, 120);
             this.panelUsers.TabIndex = 3;
             // 
             // submenuUsers
             // 
             this.submenuUsers.AutoSize = true;
+            this.submenuUsers.Controls.Add(this.btnAddUser);
             this.submenuUsers.Controls.Add(this.btnUserList);
             this.submenuUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenuUsers.Location = new System.Drawing.Point(0, 40);
             this.submenuUsers.Margin = new System.Windows.Forms.Padding(0);
             this.submenuUsers.Name = "submenuUsers";
-            this.submenuUsers.Size = new System.Drawing.Size(220, 40);
+            this.submenuUsers.Size = new System.Drawing.Size(220, 80);
             this.submenuUsers.TabIndex = 5;
             this.submenuUsers.Visible = false;
             // 
@@ -526,6 +528,21 @@ namespace TP_Final.UI
             this.panelTop.Size = new System.Drawing.Size(1280, 50);
             this.panelTop.TabIndex = 1;
             // 
+            // pbHome
+            // 
+            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.pbHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.pbHome.IconColor = System.Drawing.Color.White;
+            this.pbHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pbHome.IconSize = 34;
+            this.pbHome.Location = new System.Drawing.Point(4, 18);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(32, 32);
+            this.pbHome.TabIndex = 4;
+            this.pbHome.TabStop = false;
+            this.pbHome.Visible = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
+            // 
             // pbMinimize
             // 
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -588,7 +605,7 @@ namespace TP_Final.UI
             this.labelChildTitle.Size = new System.Drawing.Size(1280, 50);
             this.labelChildTitle.TabIndex = 3;
             this.labelChildTitle.Text = "label1";
-            this.labelChildTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;        
+            this.labelChildTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelChildTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelChildTitle_MouseDown);
             // 
             // panelChildForm
@@ -602,20 +619,24 @@ namespace TP_Final.UI
             this.panelChildForm.Size = new System.Drawing.Size(1280, 721);
             this.panelChildForm.TabIndex = 2;
             // 
-            // pbHome
+            // btnAddUser
             // 
-            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.pbHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.pbHome.IconColor = System.Drawing.Color.White;
-            this.pbHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pbHome.IconSize = 34;
-            this.pbHome.Location = new System.Drawing.Point(4, 18);
-            this.pbHome.Name = "pbHome";
-            this.pbHome.Size = new System.Drawing.Size(32, 32);
-            this.pbHome.TabIndex = 4;
-            this.pbHome.TabStop = false;
-            this.pbHome.Visible = false;
-            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
+            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(14)))), ((int)(((byte)(19)))));
+            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddUser.FlatAppearance.BorderSize = 0;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddUser.IconColor = System.Drawing.Color.Black;
+            this.btnAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddUser.Location = new System.Drawing.Point(0, 40);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(220, 40);
+            this.btnAddUser.TabIndex = 14;
+            this.btnAddUser.Text = "Agregar un usuario";
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // MainWindow
             // 
@@ -648,10 +669,10 @@ namespace TP_Final.UI
             this.panelUserOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -692,5 +713,6 @@ namespace TP_Final.UI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox pbHome;
+        private FontAwesome.Sharp.IconButton btnAddUser;
     }
 }
