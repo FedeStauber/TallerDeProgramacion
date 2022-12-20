@@ -24,7 +24,7 @@ namespace TP_Final.UI
             iFilteredList = iLoanList;
             InitializeComponent();
             dataGridUsers.DataSource = iFilteredList;
-            pictureBox1.Image = Properties.Resources.leyendo_a_izquierda; 
+            pictureBox1.Image = UIResources.GetAmancio(UIResources.AmancioOrientarion.ToLeft); 
             OpenTlpFilter();               
         }
 

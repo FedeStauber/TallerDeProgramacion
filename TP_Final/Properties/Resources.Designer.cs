@@ -61,6 +61,16 @@ namespace TP_Final.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20221220_150315_0000 {
+            get {
+                object obj = ResourceManager.GetObject("_20221220_150315_0000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon calendario {
@@ -96,26 +106,6 @@ namespace TP_Final.Properties {
         internal static System.Drawing.Bitmap defAvatar {
             get {
                 object obj = ResourceManager.GetObject("defAvatar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap leyendo_a_derecha {
-            get {
-                object obj = ResourceManager.GetObject("leyendo_a_derecha", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap leyendo_a_izquierda {
-            get {
-                object obj = ResourceManager.GetObject("leyendo_a_izquierda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +233,9 @@ namespace TP_Final.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap viejo6d {
+        internal static System.Drawing.Bitmap viejo6D {
             get {
-                object obj = ResourceManager.GetObject("viejo6d", resourceCulture);
+                object obj = ResourceManager.GetObject("viejo6D", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -30,12 +30,19 @@ namespace TP_Final.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.userDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpFilter = new System.Windows.Forms.TableLayoutPanel();
@@ -61,13 +68,6 @@ namespace TP_Final.UI
             this.tbLastName = new TP_Final.UI.TextBoxPerso();
             this.tbEmail = new TP_Final.UI.TextBoxPerso();
             this.tbName = new TP_Final.UI.TextBoxPerso();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
@@ -118,24 +118,24 @@ namespace TP_Final.UI
             this.dataGridUsers.AllowUserToAddRows = false;
             this.dataGridUsers.AllowUserToDeleteRows = false;
             this.dataGridUsers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.NullValue = "-";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.NullValue = "-";
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridUsers.AutoGenerateColumns = false;
             this.dataGridUsers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridUsers.ColumnHeadersHeight = 30;
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -147,15 +147,15 @@ namespace TP_Final.UI
             this.activeDataGridViewCheckBoxColumn,
             this.adminDataGridViewCheckBoxColumn});
             this.dataGridUsers.DataSource = this.userDTOBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.NullValue = "-";
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.NullValue = "-";
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUsers.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridUsers.EnableHeadersVisualStyles = false;
             this.dataGridUsers.GridColor = System.Drawing.Color.White;
@@ -170,6 +170,94 @@ namespace TP_Final.UI
             this.dataGridUsers.Size = new System.Drawing.Size(812, 561);
             this.dataGridUsers.TabIndex = 1;
             this.dataGridUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsers_CellClick);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 461.9289F;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 140;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nameDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 140;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.lastNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.lastNameDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.emailDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dNIDataGridViewTextBoxColumn
+            // 
+            this.dNIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dNIDataGridViewTextBoxColumn.DataPropertyName = "DNI";
+            this.dNIDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.dNIDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dNIDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.dNIDataGridViewTextBoxColumn.Name = "dNIDataGridViewTextBoxColumn";
+            this.dNIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dNIDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dNIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dNIDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // scoreDataGridViewTextBoxColumn
+            // 
+            this.scoreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
+            this.scoreDataGridViewTextBoxColumn.FillWeight = 39.67851F;
+            this.scoreDataGridViewTextBoxColumn.HeaderText = "Puntaje";
+            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 65;
+            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
+            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.scoreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.scoreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.scoreDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // activeDataGridViewCheckBoxColumn
+            // 
+            this.activeDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.activeDataGridViewCheckBoxColumn.DataPropertyName = "Active";
+            this.activeDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
+            this.activeDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activeDataGridViewCheckBoxColumn.MinimumWidth = 60;
+            this.activeDataGridViewCheckBoxColumn.Name = "activeDataGridViewCheckBoxColumn";
+            this.activeDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.activeDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.activeDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // adminDataGridViewCheckBoxColumn
+            // 
+            this.adminDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
+            this.adminDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
+            this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
+            this.adminDataGridViewCheckBoxColumn.MinimumWidth = 60;
+            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
+            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.adminDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.adminDataGridViewCheckBoxColumn.Width = 60;
             // 
             // userDTOBindingSource
             // 
@@ -186,7 +274,7 @@ namespace TP_Final.UI
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(448, 721);
@@ -203,7 +291,7 @@ namespace TP_Final.UI
             this.tlpFilter.Margin = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.tlpFilter.Name = "tlpFilter";
             this.tlpFilter.RowCount = 2;
-            this.tlpFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tlpFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tlpFilter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpFilter.Size = new System.Drawing.Size(418, 80);
             this.tlpFilter.TabIndex = 4;
@@ -222,7 +310,7 @@ namespace TP_Final.UI
             this.tableLayoutPanelFilters.Name = "tableLayoutPanelFilters";
             this.tableLayoutPanelFilters.RowCount = 1;
             this.tableLayoutPanelFilters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanelFilters.Size = new System.Drawing.Size(418, 32);
+            this.tableLayoutPanelFilters.Size = new System.Drawing.Size(418, 37);
             this.tableLayoutPanelFilters.TabIndex = 0;
             // 
             // searchBtn
@@ -233,10 +321,11 @@ namespace TP_Final.UI
             this.searchBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.searchBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.searchBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchBtn.IconSize = 37;
             this.searchBtn.Location = new System.Drawing.Point(381, 0);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(37, 32);
+            this.searchBtn.Size = new System.Drawing.Size(37, 37);
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchBtn.TabIndex = 12;
             this.searchBtn.TabStop = false;
@@ -250,7 +339,7 @@ namespace TP_Final.UI
             this.textBoxFilter.BorderRadius = 0;
             this.textBoxFilter.BorderSize = 2;
             this.textBoxFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxFilter.Font = new System.Drawing.Font("Roboto Cn", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFilter.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
             this.textBoxFilter.Location = new System.Drawing.Point(3, 0);
             this.textBoxFilter.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.textBoxFilter.Multiline = false;
@@ -259,7 +348,7 @@ namespace TP_Final.UI
             this.textBoxFilter.PasswordChar = false;
             this.textBoxFilter.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxFilter.PlaceholderText = "Ingrese el DNI o Email del usuario a filtrar";
-            this.textBoxFilter.Size = new System.Drawing.Size(378, 29);
+            this.textBoxFilter.Size = new System.Drawing.Size(378, 33);
             this.textBoxFilter.TabIndex = 11;
             this.textBoxFilter.UnderlinedStyle = true;
             this.textBoxFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFilter_KeyPress);
@@ -267,11 +356,11 @@ namespace TP_Final.UI
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(10);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 57);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(10, 20, 10, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(398, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(398, 18);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -295,10 +384,10 @@ namespace TP_Final.UI
             this.panelModifyBook.Controls.Add(this.tbEmail);
             this.panelModifyBook.Controls.Add(this.tbName);
             this.panelModifyBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelModifyBook.Location = new System.Drawing.Point(10, 80);
+            this.panelModifyBook.Location = new System.Drawing.Point(10, 77);
             this.panelModifyBook.Margin = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.panelModifyBook.Name = "panelModifyBook";
-            this.panelModifyBook.Size = new System.Drawing.Size(418, 561);
+            this.panelModifyBook.Size = new System.Drawing.Size(418, 564);
             this.panelModifyBook.TabIndex = 0;
             this.panelModifyBook.Visible = false;
             // 
@@ -552,94 +641,6 @@ namespace TP_Final.UI
             this.tbName.TabIndex = 33;
             this.tbName.UnderlinedStyle = false;
             this.tbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbName_KeyPress);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 461.9289F;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 140;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nameDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 140;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.lastNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.lastNameDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.emailDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dNIDataGridViewTextBoxColumn
-            // 
-            this.dNIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dNIDataGridViewTextBoxColumn.DataPropertyName = "DNI";
-            this.dNIDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.dNIDataGridViewTextBoxColumn.HeaderText = "DNI";
-            this.dNIDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.dNIDataGridViewTextBoxColumn.Name = "dNIDataGridViewTextBoxColumn";
-            this.dNIDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dNIDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dNIDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dNIDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // scoreDataGridViewTextBoxColumn
-            // 
-            this.scoreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
-            this.scoreDataGridViewTextBoxColumn.FillWeight = 39.67851F;
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "Puntaje";
-            this.scoreDataGridViewTextBoxColumn.MinimumWidth = 65;
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
-            this.scoreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.scoreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.scoreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.scoreDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // activeDataGridViewCheckBoxColumn
-            // 
-            this.activeDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.activeDataGridViewCheckBoxColumn.DataPropertyName = "Active";
-            this.activeDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
-            this.activeDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activeDataGridViewCheckBoxColumn.MinimumWidth = 60;
-            this.activeDataGridViewCheckBoxColumn.Name = "activeDataGridViewCheckBoxColumn";
-            this.activeDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.activeDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.activeDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // adminDataGridViewCheckBoxColumn
-            // 
-            this.adminDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
-            this.adminDataGridViewCheckBoxColumn.FillWeight = 39.67851F;
-            this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
-            this.adminDataGridViewCheckBoxColumn.MinimumWidth = 60;
-            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
-            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.adminDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.adminDataGridViewCheckBoxColumn.Width = 60;
             // 
             // UserABM
             // 

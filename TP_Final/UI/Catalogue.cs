@@ -22,7 +22,8 @@ namespace TP_Final.UI
        
         public Catalogue()
         {
-            InitializeComponent();                     
+            InitializeComponent();
+            this.OpenChildForm(new Home());
             LoadMainList();
             iCurrentList = iBookList;
             resultPagComboBox.SelectedIndex = 0;
@@ -268,5 +269,14 @@ namespace TP_Final.UI
             currentPage--;
             this.PageCounterUpdate();
         }
+<<<<<<< HEAD
+=======
+
+        private void textBoxPerso1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+>>>>>>> ad888b97b90c6209ce552092c3c37fe60a8d33a0
     }
 }

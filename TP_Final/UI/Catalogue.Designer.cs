@@ -65,6 +65,7 @@ namespace TP_Final.UI
             // 
             // searchBtn
             // 
+<<<<<<< HEAD
             this.searchBtn.BackColor = System.Drawing.Color.White;
             this.searchBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.searchBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
@@ -78,9 +79,24 @@ namespace TP_Final.UI
             this.searchBtn.TabIndex = 5;
             this.searchBtn.TabStop = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+=======
+            this.iconPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(898, 58);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 5;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
+>>>>>>> ad888b97b90c6209ce552092c3c37fe60a8d33a0
             // 
             // searchTextBox
             // 
+<<<<<<< HEAD
             this.searchTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.searchTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.searchTextBox.BorderFocusColor = System.Drawing.Color.BlueViolet;
@@ -99,9 +115,31 @@ namespace TP_Final.UI
             this.searchTextBox.TabIndex = 4;
             this.searchTextBox.UnderlinedStyle = false;
             this.searchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchTextBox_KeyPress);
+=======
+            this.textBoxPerso1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxPerso1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxPerso1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.textBoxPerso1.BorderFocusColor = System.Drawing.Color.RosyBrown;
+            this.textBoxPerso1.BorderRadius = 0;
+            this.textBoxPerso1.BorderSize = 2;
+            this.textBoxPerso1.Font = new System.Drawing.Font("Roboto Cn", 11.25F);
+            this.textBoxPerso1.Location = new System.Drawing.Point(526, 54);
+            this.textBoxPerso1.Multiline = false;
+            this.textBoxPerso1.Name = "textBoxPerso1";
+            this.textBoxPerso1.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxPerso1.PasswordChar = false;
+            this.textBoxPerso1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxPerso1.PlaceholderText = "Ingrese el texto a buscar";
+            this.textBoxPerso1.Size = new System.Drawing.Size(366, 33);
+            this.textBoxPerso1.TabIndex = 4;
+            this.textBoxPerso1.UnderlinedStyle = true;
+            this.textBoxPerso1._TextChanged += new System.EventHandler(this.textBoxPerso1__TextChanged);
+            this.textBoxPerso1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPerso1_KeyPress);
+>>>>>>> ad888b97b90c6209ce552092c3c37fe60a8d33a0
             // 
             // cbFiltro
             // 
+            this.cbFiltro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbFiltro.BackColor = System.Drawing.Color.White;
             this.cbFiltro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.cbFiltro.BorderSize = 2;
@@ -113,16 +151,27 @@ namespace TP_Final.UI
             "Título",
             "ISBN",
             "Género"});
+<<<<<<< HEAD
             this.cbFiltro.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.cbFiltro.ListTextColor = System.Drawing.Color.White;
             this.cbFiltro.Location = new System.Drawing.Point(227, 38);
             this.cbFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.cbFiltro.MinimumSize = new System.Drawing.Size(267, 37);
+=======
+            this.cbFiltro.ListBackColor = System.Drawing.Color.White;
+            this.cbFiltro.ListTextColor = System.Drawing.Color.Black;
+            this.cbFiltro.Location = new System.Drawing.Point(320, 54);
+            this.cbFiltro.MinimumSize = new System.Drawing.Size(200, 30);
+>>>>>>> ad888b97b90c6209ce552092c3c37fe60a8d33a0
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFiltro.SelectedIndex = -1;
             this.cbFiltro.SelectedItem = null;
+<<<<<<< HEAD
             this.cbFiltro.Size = new System.Drawing.Size(267, 37);
+=======
+            this.cbFiltro.Size = new System.Drawing.Size(200, 33);
+>>>>>>> ad888b97b90c6209ce552092c3c37fe60a8d33a0
             this.cbFiltro.TabIndex = 3;
             this.cbFiltro.Texts = "Buscar Por";
             // 
@@ -194,6 +243,7 @@ namespace TP_Final.UI
             // 
             // resultPagComboBox
             // 
+<<<<<<< HEAD
             this.resultPagComboBox.BackColor = System.Drawing.Color.White;
             this.resultPagComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.resultPagComboBox.BorderSize = 2;
@@ -201,6 +251,16 @@ namespace TP_Final.UI
             this.resultPagComboBox.ForeColor = System.Drawing.Color.DimGray;
             this.resultPagComboBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.resultPagComboBox.Items.AddRange(new object[] {
+=======
+            this.comboBoxPerso1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPerso1.BackColor = System.Drawing.Color.White;
+            this.comboBoxPerso1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.comboBoxPerso1.BorderSize = 2;
+            this.comboBoxPerso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPerso1.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxPerso1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.comboBoxPerso1.Items.AddRange(new object[] {
+>>>>>>> ad888b97b90c6209ce552092c3c37fe60a8d33a0
             "4",
             "16"});
             this.resultPagComboBox.ListBackColor = System.Drawing.Color.White;
@@ -220,7 +280,11 @@ namespace TP_Final.UI
             // pagesLabel
             // 
             this.pagesLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+<<<<<<< HEAD
             this.pagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+=======
+            this.pagesLabel.Font = new System.Drawing.Font("Roboto Cn", 10F);
+>>>>>>> ad888b97b90c6209ce552092c3c37fe60a8d33a0
             this.pagesLabel.Location = new System.Drawing.Point(0, 0);
             this.pagesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pagesLabel.Name = "pagesLabel";
@@ -252,7 +316,7 @@ namespace TP_Final.UI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Catalogue";
-            this.Text = "Catálogo";
+            this.Text = "Catálogo";           
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             this.leftPanel.ResumeLayout(false);

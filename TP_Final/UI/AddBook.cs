@@ -28,14 +28,15 @@ namespace TP_Final.UI
        
         public AddBook()
         {
-            InitializeComponent();
-            resultPagComboBox.Visible = false;
+            InitializeComponent();            
+            resultPagComboBox.Visible = false;            
         }
 
         /// <summary> Crea la pantalla, adapta el tamaño a donde tiene que ir y la muestra al usuario </summary>
         /// <param name="pChildForm"> Formulario a mostrar </param>
         public void OpenChildForm(Form pChildForm)
         {
+            pbLibraryLogo.Visible = false;
             if (iActiveForm != null)
             {
                 iActiveForm.Dispose();
@@ -145,7 +146,7 @@ namespace TP_Final.UI
                 {
                     MessageBox.Show("Debe seleccionar el filtro a utilizar");
                 }
-                else if (textBox1.Text.Trim() == "")
+                else if (textBoxPerso1.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe ingresar el texto a buscar");
                 }
@@ -232,16 +233,16 @@ namespace TP_Final.UI
         {
             if (iSearchFilterIndex == 0) //Autor
             {
-                this.iBookList = await BookApiManager.CurrentApi.SearchBook(textBox1.Text.Trim(), BookApiManager.SearchBy.Author);
+                this.iBookList = await BookApiManager.CurrentApi.SearchBook(textBoxPerso1.Text.Trim(), BookApiManager.SearchBy.Author);
             }
             else if (iSearchFilterIndex == 1) //Titulo
             {
-                this.iBookList = await BookApiManager.CurrentApi.SearchBook(textBox1.Text.Trim(), BookApiManager.SearchBy.Title);
+                this.iBookList = await BookApiManager.CurrentApi.SearchBook(textBoxPerso1.Text.Trim(), BookApiManager.SearchBy.Title);
 
             }
             else if (iSearchFilterIndex == 2) //Género
             {
-                this.iBookList = await BookApiManager.CurrentApi.SearchBook(textBox1.Text.Trim(), BookApiManager.SearchBy.Gender);
+                this.iBookList = await BookApiManager.CurrentApi.SearchBook(textBoxPerso1.Text.Trim(), BookApiManager.SearchBy.Gender);
             }
         }
 

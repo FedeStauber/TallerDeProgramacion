@@ -19,6 +19,8 @@ namespace TP_Final
         public Login()
         {
             InitializeComponent();
+            pictureBox2.Image = UIResources.GetAmancio(UIResources.AmancioOrientarion.ToRight);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
         }
         /// <summary> Evento que espera un click sobre el botón aceptar, que verifica que las credenciales ingresadas se encuentren
         /// en la base de datos, sino, notifica al usuario</summary>
