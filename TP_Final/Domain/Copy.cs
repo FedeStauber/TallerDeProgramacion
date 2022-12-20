@@ -22,6 +22,8 @@ namespace TP_Final.Domain
 
         public DateTime LastModify { get; set; }
 
+        public DateTime? LoanEndDate { get; set; }
+
         public enum ConditionEnum
         {
             Available, Borrowed, Broken, Unavailable
@@ -30,7 +32,7 @@ namespace TP_Final.Domain
         /// <summary>
         /// Realiza la modificación de la condición de la copia del libro. 
         /// </summary>
-        /// <param conditionEnum="pCondition">Nueva condición para la copia</param>
+        /// <param name="pCondition">Nueva condición para la copia</param>
         public void ChangeCondition(ConditionEnum pCondition)
         {
             if (this.Condition != ConditionEnum.Borrowed)
@@ -45,13 +47,14 @@ namespace TP_Final.Domain
         /// <summary>
         /// Realiza la modificación de la condición de la copia del libro solo si el libro se encuentra prestado  
         /// </summary>
-        /// <param conditionEnum="pCondition">Nueva condición para la copia</param>
+        /// <param name="pCondition">Nueva condición para la copia</param>
         public void ReturnRegister(ConditionEnum pCondition)
         {
             if (this.Condition == ConditionEnum.Borrowed)
             {
                 this.Condition = pCondition;
                 this.LastModify = DateTime.Today;
+                this.LoanEndDate = null;
             }
             else
             {

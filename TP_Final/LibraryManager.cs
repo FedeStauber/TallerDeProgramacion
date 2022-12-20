@@ -136,8 +136,9 @@ namespace TP_Final
                     throw new NoAvailableCopyException("No existen copias disponibles para el libro seleccionado");
                 }
                 vCopy.Condition = Copy.ConditionEnum.Borrowed;
-                vCopy.LastModify = DateTime.Now;
-                Loan vLoan = new Loan() { Copy = vCopy, StartDate = DateTime.Now, Notificated = false, User = vUser, EndDate = DateTime.Now.AddDays(Convert.ToDouble(ConfigurationManager.AppSettings.Get("DIAS_PRESTAMO")))};               
+                vCopy.LastModify = DateTime.Now;               
+                Loan vLoan = new Loan() { Copy = vCopy, StartDate = DateTime.Now, Notificated = false, User = vUser, EndDate = DateTime.Now.AddDays(Convert.ToDouble(ConfigurationManager.AppSettings.Get("DIAS_PRESTAMO")))};
+                vCopy.LoanEndDate=vLoan.EndDate;
                 unit.LoanRepository.Add(vLoan);
                 unit.Complete();
             }
@@ -296,14 +297,7 @@ namespace TP_Final
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {             
                 var vListCopy = unit.CopyRepository.GetBookCopies(pBookISBN).ToList();               
-                var vListCopyDTO = UsefulMapper.Mapper.Map<List<Copy>, List<CopyDTO>>(vListCopy);
-                foreach (var copyDTO in vListCopyDTO)
-                {
-                    if (copyDTO.Condition == CopyDTO.ConditionEnum.Prestado)
-                    {
-                       copyDTO.EndDate = unit.LoanRepository.GetByCopyID(copyDTO.Id).EndDate;                       
-                    }                   
-                }
+                var vListCopyDTO = UsefulMapper.Mapper.Map<List<Copy>, List<CopyDTO>>(vListCopy);               
                 return vListCopyDTO;
             }
         }
