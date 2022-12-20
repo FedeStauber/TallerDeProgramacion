@@ -38,16 +38,16 @@ namespace TP_Final.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridCopies = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conditionDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.conditionEnumBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lastModifyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.copyDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AddBottom = new FontAwesome.Sharp.IconPictureBox();
             this.ReturnBottom = new FontAwesome.Sharp.IconPictureBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conditionDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.lastModifyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCopies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conditionEnumBindingSource)).BeginInit();
@@ -132,29 +132,6 @@ namespace TP_Final.UI
             this.dataGridCopies.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridCopies_CellBeginEdit);
             this.dataGridCopies.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCopies_CellEndEdit);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conditionDataGridViewComboBoxColumn
-            // 
-            this.conditionDataGridViewComboBoxColumn.AutoComplete = false;
-            this.conditionDataGridViewComboBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.conditionDataGridViewComboBoxColumn.DataPropertyName = "Condition";
-            this.conditionDataGridViewComboBoxColumn.DataSource = this.conditionEnumBindingSource;
-            this.conditionDataGridViewComboBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.conditionDataGridViewComboBoxColumn.DisplayStyleForCurrentCellOnly = true;
-            this.conditionDataGridViewComboBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.conditionDataGridViewComboBoxColumn.HeaderText = "Condición";
-            this.conditionDataGridViewComboBoxColumn.MinimumWidth = 150;
-            this.conditionDataGridViewComboBoxColumn.Name = "conditionDataGridViewComboBoxColumn";
-            this.conditionDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.conditionDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.conditionDataGridViewComboBoxColumn.Width = 150;
-            // 
             // conditionEnumBindingSource
             // 
             this.conditionEnumBindingSource.DataSource = new TP_Final.IO.CopyDTO.ConditionEnum[] {
@@ -163,22 +140,6 @@ namespace TP_Final.UI
         TP_Final.IO.CopyDTO.ConditionEnum.Roto,
         TP_Final.IO.CopyDTO.ConditionEnum.Suspendido};
             this.conditionEnumBindingSource.Position = 0;
-            // 
-            // lastModifyDataGridViewTextBoxColumn
-            // 
-            this.lastModifyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastModifyDataGridViewTextBoxColumn.DataPropertyName = "LastModify";
-            this.lastModifyDataGridViewTextBoxColumn.HeaderText = "Ultima Modificación";
-            this.lastModifyDataGridViewTextBoxColumn.Name = "lastModifyDataGridViewTextBoxColumn";
-            this.lastModifyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "Prestado Hasta";
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // copyDTOBindingSource
             // 
@@ -246,6 +207,47 @@ namespace TP_Final.UI
             this.ReturnBottom.TabStop = false;
             this.ReturnBottom.Click += new System.EventHandler(this.IconPictureBox2_Click);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // conditionDataGridViewComboBoxColumn
+            // 
+            this.conditionDataGridViewComboBoxColumn.AutoComplete = false;
+            this.conditionDataGridViewComboBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.conditionDataGridViewComboBoxColumn.DataPropertyName = "Condition";
+            this.conditionDataGridViewComboBoxColumn.DataSource = this.conditionEnumBindingSource;
+            this.conditionDataGridViewComboBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.conditionDataGridViewComboBoxColumn.DisplayStyleForCurrentCellOnly = true;
+            this.conditionDataGridViewComboBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.conditionDataGridViewComboBoxColumn.HeaderText = "Condición";
+            this.conditionDataGridViewComboBoxColumn.MinimumWidth = 150;
+            this.conditionDataGridViewComboBoxColumn.Name = "conditionDataGridViewComboBoxColumn";
+            this.conditionDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.conditionDataGridViewComboBoxColumn.Width = 150;
+            // 
+            // lastModifyDataGridViewTextBoxColumn
+            // 
+            this.lastModifyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastModifyDataGridViewTextBoxColumn.DataPropertyName = "LastModify";
+            this.lastModifyDataGridViewTextBoxColumn.HeaderText = "Ultima Modificación";
+            this.lastModifyDataGridViewTextBoxColumn.Name = "lastModifyDataGridViewTextBoxColumn";
+            this.lastModifyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastModifyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "Prestado Hasta";
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.endDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // EditCopies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,11 +277,11 @@ namespace TP_Final.UI
         private System.Windows.Forms.BindingSource conditionEnumBindingSource;
         private FontAwesome.Sharp.IconPictureBox ReturnBottom;
         private System.Windows.Forms.DataGridView dataGridCopies;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn conditionDataGridViewComboBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastModifyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -31,7 +31,7 @@ namespace TP_Final.DAL.EntityFramework
 
         public User SearchByEmail(string pEmail)
         {
-            User vUser =  iDbContext.Set<User>().FirstOrDefault(user => user.Email == pEmail);
+            User vUser =  iDbContext.Set<User>().FirstOrDefault(user => user.Email.ToLower() == pEmail.ToLower());
             if (vUser == null)
             {
                 throw new UserNotFoundException("No se encontro ningun usuario para el Email ingresado");
@@ -39,25 +39,7 @@ namespace TP_Final.DAL.EntityFramework
             return vUser;
         }
 
-        public bool EmailExists(string pEmail)
-        {
-            User vUser = iDbContext.Set<User>().FirstOrDefault(user => user.Email == pEmail);
-            if (vUser == null)
-            {
-                return false;
-            }
-            return true;
-        }
-        public bool DNIExists(long pDNI)
-        {
-            User vUser = iDbContext.Set<User>().FirstOrDefault(user => user.DNI == pDNI);
-            if (vUser == null)
-            {
-                return false;
-            }
-            return true;
-        }
-
+     
         public new void Add(User vUser)
         {
             if (vUser == null)

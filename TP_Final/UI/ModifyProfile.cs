@@ -44,7 +44,8 @@ namespace TP_Final.UI
                     LibraryManager.ModifyUser(iOriginalDni, iUser);                    
                     MessageBox.Show("Usuario modificado con éxito!!");
                     MainWindow vMainWindow = Owner as MainWindow;
-                    vMainWindow.OpenChildForm(new Home());
+                    vMainWindow.UpdateUserData();
+                    vMainWindow.OpenChildForm(new Home());                   
                 }
             }
             catch (Exception ex)
@@ -136,6 +137,16 @@ namespace TP_Final.UI
 
             }
         }
+
+        private void DniTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void btnUploadAvatar_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = "C:\\";

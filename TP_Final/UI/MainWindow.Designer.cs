@@ -62,6 +62,7 @@ namespace TP_Final.UI
             this.pbClose = new FontAwesome.Sharp.IconPictureBox();
             this.labelChildTitle = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pbHome = new FontAwesome.Sharp.IconPictureBox();
             this.lateralPanel.SuspendLayout();
             this.panelUsers.SuspendLayout();
             this.submenuUsers.SuspendLayout();
@@ -78,6 +79,7 @@ namespace TP_Final.UI
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.SuspendLayout();
             // 
             // lateralPanel
@@ -512,6 +514,7 @@ namespace TP_Final.UI
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelTop.Controls.Add(this.pbHome);
             this.panelTop.Controls.Add(this.pbMinimize);
             this.panelTop.Controls.Add(this.pbMaximize);
             this.panelTop.Controls.Add(this.pbClose);
@@ -585,8 +588,7 @@ namespace TP_Final.UI
             this.labelChildTitle.Size = new System.Drawing.Size(1280, 50);
             this.labelChildTitle.TabIndex = 3;
             this.labelChildTitle.Text = "label1";
-            this.labelChildTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelChildTitle.Click += new System.EventHandler(this.labelChildTitle_Click);
+            this.labelChildTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;        
             this.labelChildTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelChildTitle_MouseDown);
             // 
             // panelChildForm
@@ -599,6 +601,21 @@ namespace TP_Final.UI
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1280, 721);
             this.panelChildForm.TabIndex = 2;
+            // 
+            // pbHome
+            // 
+            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.pbHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.pbHome.IconColor = System.Drawing.Color.White;
+            this.pbHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pbHome.IconSize = 34;
+            this.pbHome.Location = new System.Drawing.Point(4, 18);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(32, 32);
+            this.pbHome.TabIndex = 4;
+            this.pbHome.TabStop = false;
+            this.pbHome.Visible = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             // 
             // MainWindow
             // 
@@ -634,6 +651,7 @@ namespace TP_Final.UI
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -673,5 +691,6 @@ namespace TP_Final.UI
         private FontAwesome.Sharp.IconButton iconScore;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconPictureBox pbHome;
     }
 }

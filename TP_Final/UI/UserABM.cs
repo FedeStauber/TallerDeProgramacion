@@ -15,11 +15,13 @@ namespace TP_Final.UI
     public partial class UserABM : Form
     {
         private List<UserDTO> iUserList,iFilteredList;
-        private UserDTO iUser = new UserDTO();
-        
-        public UserABM()
-        {
+        private UserDTO iUserToEdit = new UserDTO();
+        private UserDTO iUser;
+
+        public UserABM(UserDTO pUser)
+        {            
             InitializeComponent();
+            this.iUser = pUser;
             this.AssignElements();
             pictureBox1.Image = Properties.Resources.leyendo_a_izquierda;
         }
@@ -34,13 +36,13 @@ namespace TP_Final.UI
 
         private void UpdatePanelModifiy()
         {
-            tbDNI.Text = iUser.DNI.ToString();
-            tbEmail.Text = iUser.Email;
-            tbLastName.Text = iUser.LastName;
-            tbName.Text = iUser.Name;
-            tbScore.Text = iUser.Score.ToString();
-            cbActive.Checked = iUser.Active;
-            cbAdmin.Checked = iUser.Admin;
+            tbDNI.Text = iUserToEdit.DNI.ToString();
+            tbEmail.Text = iUserToEdit.Email;
+            tbLastName.Text = iUserToEdit.LastName;
+            tbName.Text = iUserToEdit.Name;
+            tbScore.Text = iUserToEdit.Score.ToString();
+            cbActive.Checked = iUserToEdit.Active;
+            cbAdmin.Checked = iUserToEdit.Admin;
             panelModifyBook.Visible = true;
            
         }
@@ -50,7 +52,7 @@ namespace TP_Final.UI
         {
             if (e.RowIndex >= 0)
             {               
-                iUser = iUserList.Find(userDto => userDto.DNI == Convert.ToInt32(dataGridUsers.Rows[e.RowIndex].Cells[3].Value.ToString()));
+                iUserToEdit = iUserList.Find(userDto => userDto.DNI == Convert.ToInt32(dataGridUsers.Rows[e.RowIndex].Cells[3].Value.ToString()));
                 this.UpdatePanelModifiy();
                 this.OPenDataPanel();
             }
@@ -63,17 +65,23 @@ namespace TP_Final.UI
             try
             {
                 int vDni = Convert.ToInt32(dataGridUsers.SelectedRows[0].Cells[3].Value.ToString());
-                iUser.Active = cbActive.Checked;
-                iUser.Admin = cbAdmin.Checked;
-                iUser.Name = tbName.Text;
-                iUser.LastName = tbLastName.Text;
-                iUser.Email = tbEmail.Text;
-                iUser.DNI = Convert.ToInt32(tbDNI.Text);
-                iUser.Score = Convert.ToInt32(tbScore.Text);
-                iUser.Password = "";
-                LibraryManager.ModifyUser(vDni, iUser);
+                iUserToEdit.Active = cbActive.Checked;
+                iUserToEdit.Admin = cbAdmin.Checked;
+                iUserToEdit.Name = tbName.Text;
+                iUserToEdit.LastName = tbLastName.Text;
+                iUserToEdit.Email = tbEmail.Text;
+                iUserToEdit.DNI = Convert.ToInt32(tbDNI.Text);
+                iUserToEdit.Score = Convert.ToInt32(tbScore.Text);
+                iUserToEdit.Password = "";
+                LibraryManager.ModifyUser(vDni, iUserToEdit);
+                if (iUser.DNI == vDni)
+                {
+                    MainWindow vMainWindow = Owner as MainWindow;
+                    vMainWindow.User = iUserToEdit;
+                    vMainWindow.UpdateUserData();
+                }
                 this.AssignElements();
-                panelModifyBook.Visible = false;
+                panelModifyBook.Visible = false;                
             }
             catch (Exception ex)
             {

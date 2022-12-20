@@ -11,9 +11,6 @@ namespace TP_Final.DAL
     {
         User SearchByEmail(string pEmail);
         User SearchByDNI(long pDni);
-        bool EmailExists(string pEmail);
-        bool DNIExists(long pDNI);
-
-     
+        
     }
 }

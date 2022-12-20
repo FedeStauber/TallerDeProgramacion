@@ -28,11 +28,14 @@ namespace TP_Final.UI
             this.ResetLayout();
             this.OpenChildForm(new Login());
         }
+       
 
         private void ResetLayout()
         {
+            
             this.HideSubMenu();
             lateralPanel.Visible = false;
+            pbHome.Visible = false;
             panelCurrentUser.Visible = false; 
         }
 
@@ -132,6 +135,7 @@ namespace TP_Final.UI
             this.btnAddBook.Visible = false;            
             this.btnLoanReturn.Visible = false;
             this.lateralPanel.Visible = true;
+            this.pbHome.Visible = true;
             this.panelCurrentUser.Visible = true;
         }
         private void AdminLayout()
@@ -140,6 +144,7 @@ namespace TP_Final.UI
             this.btnAddBook.Visible = true;           
             this.btnLoanReturn.Visible = true;
             this.lateralPanel.Visible = true;
+            this.pbHome.Visible = true;
             this.panelCurrentUser.Visible = true;
         }
 
@@ -233,7 +238,7 @@ namespace TP_Final.UI
 
         private void btnUserList_Click(object sender, EventArgs e)
         {
-            this.OpenChildForm(new UserABM());
+            this.OpenChildForm(new UserABM(this.User));
         }
 
         private void btnModifyProfile_Click(object sender, EventArgs e)
@@ -241,9 +246,10 @@ namespace TP_Final.UI
             this.OpenChildForm(new ModifyProfile(this.User));
         }
 
-        private void labelChildTitle_Click(object sender, EventArgs e)
+       
+        private void pbHome_Click(object sender, EventArgs e)
         {
-
+            this.OpenChildForm(new Home());
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)

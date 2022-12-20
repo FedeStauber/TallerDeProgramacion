@@ -29,10 +29,6 @@ namespace TP_Final.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEditTitle = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.labelDescription = new TP_Final.UI.TextBoxPerso();
@@ -60,9 +56,10 @@ namespace TP_Final.UI
             this.btnSelectNewCover = new TP_Final.UI.ButtonPerso();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditTitle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnEditTitle = new FontAwesome.Sharp.IconPictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -72,64 +69,10 @@ namespace TP_Final.UI
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditTitle)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnEditTitle);
-            this.panel1.Controls.Add(this.iconPictureBox2);
-            this.panel1.Controls.Add(this.labelTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 100);
-            this.panel1.TabIndex = 0;
-            // 
-            // btnEditTitle
-            // 
-            this.btnEditTitle.BackColor = System.Drawing.Color.White;
-            this.btnEditTitle.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnEditTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditTitle.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditTitle.IconColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditTitle.IconSize = 43;
-            this.btnEditTitle.Location = new System.Drawing.Point(32, 31);
-            this.btnEditTitle.Name = "btnEditTitle";
-            this.btnEditTitle.Size = new System.Drawing.Size(43, 43);
-            this.btnEditTitle.TabIndex = 2;
-            this.btnEditTitle.TabStop = false;
-            this.btnEditTitle.Visible = false;
-            this.btnEditTitle.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 50;
-            this.iconPictureBox2.Location = new System.Drawing.Point(1202, 31);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBox2.TabIndex = 1;
-            this.iconPictureBox2.TabStop = false;
-            this.iconPictureBox2.Click += new System.EventHandler(this.ReturnButton_Click);
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTitle.Font = new System.Drawing.Font("Roboto Cn", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(0, 0);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(1280, 100);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "label1";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -139,21 +82,21 @@ namespace TP_Final.UI
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 100);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1280, 621);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1280, 641);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.AutoSize = true;
             this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.00972F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.99028F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel3.Controls.Add(this.labelDescription, 2, 12);
             this.tableLayoutPanel3.Controls.Add(this.label6, 2, 11);
             this.tableLayoutPanel3.Controls.Add(this.labelISBN, 2, 10);
@@ -173,7 +116,7 @@ namespace TP_Final.UI
             this.tableLayoutPanel3.Location = new System.Drawing.Point(391, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 15;
+            this.tableLayoutPanel3.RowCount = 16;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -188,8 +131,9 @@ namespace TP_Final.UI
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 179F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(889, 621);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(889, 641);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // labelDescription
@@ -202,7 +146,7 @@ namespace TP_Final.UI
             this.labelDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDescription.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescription.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelDescription.Location = new System.Drawing.Point(58, 359);
+            this.labelDescription.Location = new System.Drawing.Point(41, 359);
             this.labelDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.labelDescription.Multiline = true;
             this.labelDescription.Name = "labelDescription";
@@ -210,7 +154,7 @@ namespace TP_Final.UI
             this.labelDescription.PasswordChar = false;
             this.labelDescription.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.labelDescription.PlaceholderText = "";
-            this.labelDescription.Size = new System.Drawing.Size(759, 80);
+            this.labelDescription.Size = new System.Drawing.Size(772, 80);
             this.labelDescription.TabIndex = 59;
             this.labelDescription.TabStop = false;
             this.labelDescription.UnderlinedStyle = false;
@@ -221,7 +165,7 @@ namespace TP_Final.UI
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(58, 335);
+            this.label6.Location = new System.Drawing.Point(41, 335);
             this.label6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 19);
@@ -239,7 +183,7 @@ namespace TP_Final.UI
             this.labelISBN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelISBN.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelISBN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelISBN.Location = new System.Drawing.Point(58, 292);
+            this.labelISBN.Location = new System.Drawing.Point(41, 292);
             this.labelISBN.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.labelISBN.Multiline = true;
             this.labelISBN.Name = "labelISBN";
@@ -247,7 +191,7 @@ namespace TP_Final.UI
             this.labelISBN.PasswordChar = false;
             this.labelISBN.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.labelISBN.PlaceholderText = "";
-            this.labelISBN.Size = new System.Drawing.Size(759, 39);
+            this.labelISBN.Size = new System.Drawing.Size(772, 39);
             this.labelISBN.TabIndex = 56;
             this.labelISBN.TabStop = false;
             this.labelISBN.UnderlinedStyle = false;
@@ -259,7 +203,7 @@ namespace TP_Final.UI
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
             this.label5.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(58, 268);
+            this.label5.Location = new System.Drawing.Point(41, 268);
             this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 19);
@@ -277,7 +221,7 @@ namespace TP_Final.UI
             this.labelPages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelPages.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPages.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelPages.Location = new System.Drawing.Point(58, 225);
+            this.labelPages.Location = new System.Drawing.Point(41, 225);
             this.labelPages.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.labelPages.Multiline = true;
             this.labelPages.Name = "labelPages";
@@ -285,7 +229,7 @@ namespace TP_Final.UI
             this.labelPages.PasswordChar = false;
             this.labelPages.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.labelPages.PlaceholderText = "";
-            this.labelPages.Size = new System.Drawing.Size(759, 39);
+            this.labelPages.Size = new System.Drawing.Size(772, 39);
             this.labelPages.TabIndex = 52;
             this.labelPages.TabStop = false;
             this.labelPages.UnderlinedStyle = false;
@@ -297,7 +241,7 @@ namespace TP_Final.UI
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(58, 201);
+            this.label4.Location = new System.Drawing.Point(41, 201);
             this.label4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 19);
@@ -315,7 +259,7 @@ namespace TP_Final.UI
             this.labelGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGender.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelGender.Location = new System.Drawing.Point(58, 158);
+            this.labelGender.Location = new System.Drawing.Point(41, 158);
             this.labelGender.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.labelGender.Multiline = true;
             this.labelGender.Name = "labelGender";
@@ -323,7 +267,7 @@ namespace TP_Final.UI
             this.labelGender.PasswordChar = false;
             this.labelGender.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.labelGender.PlaceholderText = "";
-            this.labelGender.Size = new System.Drawing.Size(759, 39);
+            this.labelGender.Size = new System.Drawing.Size(772, 39);
             this.labelGender.TabIndex = 49;
             this.labelGender.TabStop = false;
             this.labelGender.UnderlinedStyle = false;
@@ -334,7 +278,7 @@ namespace TP_Final.UI
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(58, 134);
+            this.label3.Location = new System.Drawing.Point(41, 134);
             this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 19);
@@ -352,7 +296,7 @@ namespace TP_Final.UI
             this.labelLanguage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelLanguage.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelLanguage.Location = new System.Drawing.Point(58, 91);
+            this.labelLanguage.Location = new System.Drawing.Point(41, 91);
             this.labelLanguage.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.labelLanguage.Multiline = true;
             this.labelLanguage.Name = "labelLanguage";
@@ -360,7 +304,7 @@ namespace TP_Final.UI
             this.labelLanguage.PasswordChar = false;
             this.labelLanguage.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.labelLanguage.PlaceholderText = "";
-            this.labelLanguage.Size = new System.Drawing.Size(759, 39);
+            this.labelLanguage.Size = new System.Drawing.Size(772, 39);
             this.labelLanguage.TabIndex = 46;
             this.labelLanguage.TabStop = false;
             this.labelLanguage.UnderlinedStyle = false;
@@ -371,7 +315,7 @@ namespace TP_Final.UI
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(58, 67);
+            this.label2.Location = new System.Drawing.Point(41, 67);
             this.label2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 19);
@@ -386,12 +330,12 @@ namespace TP_Final.UI
             this.tableLayoutPanel4.Controls.Add(this.btnAcceptEdit, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDiscardEdit, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(820, 445);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(816, 445);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.65116F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.34884F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(66, 173);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.78761F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.21239F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(70, 133);
             this.tableLayoutPanel4.TabIndex = 20;
             // 
             // btnAcceptEdit
@@ -419,7 +363,7 @@ namespace TP_Final.UI
             this.btnDiscardEdit.IconColor = System.Drawing.Color.Red;
             this.btnDiscardEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDiscardEdit.IconSize = 25;
-            this.btnDiscardEdit.Location = new System.Drawing.Point(3, 56);
+            this.btnDiscardEdit.Location = new System.Drawing.Point(3, 68);
             this.btnDiscardEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnDiscardEdit.Name = "btnDiscardEdit";
             this.btnDiscardEdit.Size = new System.Drawing.Size(25, 25);
@@ -434,10 +378,10 @@ namespace TP_Final.UI
             this.panelEditBox.Controls.Add(this.btnSaveChanges);
             this.panelEditBox.Controls.Add(this.tableLayoutPanel5);
             this.panelEditBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEditBox.Location = new System.Drawing.Point(58, 442);
+            this.panelEditBox.Location = new System.Drawing.Point(41, 442);
             this.panelEditBox.Margin = new System.Windows.Forms.Padding(0);
             this.panelEditBox.Name = "panelEditBox";
-            this.panelEditBox.Size = new System.Drawing.Size(759, 179);
+            this.panelEditBox.Size = new System.Drawing.Size(772, 139);
             this.panelEditBox.TabIndex = 24;
             // 
             // btnAddLoan
@@ -451,7 +395,7 @@ namespace TP_Final.UI
             this.btnAddLoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddLoan.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLoan.ForeColor = System.Drawing.Color.Black;
-            this.btnAddLoan.Location = new System.Drawing.Point(373, 125);
+            this.btnAddLoan.Location = new System.Drawing.Point(380, 97);
             this.btnAddLoan.Name = "btnAddLoan";
             this.btnAddLoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAddLoan.Size = new System.Drawing.Size(190, 38);
@@ -473,7 +417,7 @@ namespace TP_Final.UI
             this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveChanges.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveChanges.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveChanges.Location = new System.Drawing.Point(569, 125);
+            this.btnSaveChanges.Location = new System.Drawing.Point(581, 97);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveChanges.Size = new System.Drawing.Size(190, 38);
@@ -490,11 +434,12 @@ namespace TP_Final.UI
             this.tableLayoutPanel5.Controls.Add(this.richTextBox1, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 179F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(759, 179);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(772, 139);
             this.tableLayoutPanel5.TabIndex = 28;
             // 
             // richTextBox1
@@ -508,14 +453,14 @@ namespace TP_Final.UI
             this.richTextBox1.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.richTextBox1.Location = new System.Drawing.Point(0, 25);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0, 25, 0, 10);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0, 25, 0, 3);
             this.richTextBox1.Multiline = true;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Padding = new System.Windows.Forms.Padding(11);
             this.richTextBox1.PasswordChar = false;
             this.richTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.richTextBox1.PlaceholderText = "";
-            this.richTextBox1.Size = new System.Drawing.Size(759, 144);
+            this.richTextBox1.Size = new System.Drawing.Size(772, 111);
             this.richTextBox1.TabIndex = 60;
             this.richTextBox1.UnderlinedStyle = false;
             this.richTextBox1.Visible = false;
@@ -527,7 +472,7 @@ namespace TP_Final.UI
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Roboto Cn", 12F);
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(58, 0);
+            this.label1.Location = new System.Drawing.Point(41, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 19);
@@ -545,7 +490,7 @@ namespace TP_Final.UI
             this.labelAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAuthor.Font = new System.Drawing.Font("Roboto Cn", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAuthor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelAuthor.Location = new System.Drawing.Point(58, 24);
+            this.labelAuthor.Location = new System.Drawing.Point(41, 24);
             this.labelAuthor.Margin = new System.Windows.Forms.Padding(0, 0, 0, 4);
             this.labelAuthor.Multiline = true;
             this.labelAuthor.Name = "labelAuthor";
@@ -553,7 +498,7 @@ namespace TP_Final.UI
             this.labelAuthor.PasswordChar = false;
             this.labelAuthor.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.labelAuthor.PlaceholderText = "";
-            this.labelAuthor.Size = new System.Drawing.Size(759, 39);
+            this.labelAuthor.Size = new System.Drawing.Size(772, 39);
             this.labelAuthor.TabIndex = 43;
             this.labelAuthor.TabStop = false;
             this.labelAuthor.UnderlinedStyle = false;
@@ -573,8 +518,8 @@ namespace TP_Final.UI
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(391, 621);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(391, 641);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // btnManageCopies
@@ -589,7 +534,7 @@ namespace TP_Final.UI
             this.btnManageCopies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageCopies.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCopies.ForeColor = System.Drawing.Color.Black;
-            this.btnManageCopies.Location = new System.Drawing.Point(25, 571);
+            this.btnManageCopies.Location = new System.Drawing.Point(25, 541);
             this.btnManageCopies.Margin = new System.Windows.Forms.Padding(25, 0, 0, 3);
             this.btnManageCopies.Name = "btnManageCopies";
             this.btnManageCopies.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -612,7 +557,7 @@ namespace TP_Final.UI
             this.btnSelectNewCover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectNewCover.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectNewCover.ForeColor = System.Drawing.Color.Black;
-            this.btnSelectNewCover.Location = new System.Drawing.Point(25, 531);
+            this.btnSelectNewCover.Location = new System.Drawing.Point(25, 501);
             this.btnSelectNewCover.Margin = new System.Windows.Forms.Padding(25, 0, 0, 3);
             this.btnSelectNewCover.Name = "btnSelectNewCover";
             this.btnSelectNewCover.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -630,7 +575,7 @@ namespace TP_Final.UI
             this.pictureBox1.Location = new System.Drawing.Point(25, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(25, 0, 0, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(366, 526);
+            this.pictureBox1.Size = new System.Drawing.Size(366, 496);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -638,6 +583,63 @@ namespace TP_Final.UI
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTitle.Font = new System.Drawing.Font("Roboto Cn", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(0, 1);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(1280, 80);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "label1";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 50;
+            this.iconPictureBox2.Location = new System.Drawing.Point(1210, 31);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBox2.TabIndex = 1;
+            this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.ReturnButton_Click);
+            // 
+            // btnEditTitle
+            // 
+            this.btnEditTitle.BackColor = System.Drawing.Color.White;
+            this.btnEditTitle.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnEditTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEditTitle.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEditTitle.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btnEditTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditTitle.IconSize = 43;
+            this.btnEditTitle.Location = new System.Drawing.Point(12, 31);
+            this.btnEditTitle.Name = "btnEditTitle";
+            this.btnEditTitle.Size = new System.Drawing.Size(43, 43);
+            this.btnEditTitle.TabIndex = 2;
+            this.btnEditTitle.TabStop = false;
+            this.btnEditTitle.Visible = false;
+            this.btnEditTitle.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnEditTitle);
+            this.panel1.Controls.Add(this.iconPictureBox2);
+            this.panel1.Controls.Add(this.labelTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1280, 80);
+            this.panel1.TabIndex = 0;
             // 
             // BookCard
             // 
@@ -649,9 +651,6 @@ namespace TP_Final.UI
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BookCard";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditTitle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -663,16 +662,14 @@ namespace TP_Final.UI
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditTitle)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelTitle;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private FontAwesome.Sharp.IconPictureBox btnEditTitle;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -700,5 +697,9 @@ namespace TP_Final.UI
         private ButtonPerso btnSelectNewCover;
         private ButtonPerso btnManageCopies;
         private TextBoxPerso richTextBox1;
+        private System.Windows.Forms.Label labelTitle;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox btnEditTitle;
+        private System.Windows.Forms.Panel panel1;
     }
 }
