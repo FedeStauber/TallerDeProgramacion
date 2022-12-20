@@ -24,6 +24,8 @@ namespace TP_Final
         }
         /// <summary> Evento que espera un click sobre el botón aceptar, que verifica que las credenciales ingresadas se encuentren
         /// en la base de datos, sino, notifica al usuario</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void btnAccept_Click(object sender, EventArgs e)
         {         
             try
@@ -49,6 +51,10 @@ namespace TP_Final
             }
         }
 
+        /// <summary> Evento que espera una tecla en el campo de mail, si es un enter actua como si fuese un click sobre
+        /// el boton aceptar</summary>
+        /// <param name="sender"> Objeto que inicia el evento </param>
+        /// <param name="e"> Dato de evento </param>
         private void txtBoxEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
@@ -56,6 +62,7 @@ namespace TP_Final
                 this.btnAccept_Click(sender, e);
             }
         }
+
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
