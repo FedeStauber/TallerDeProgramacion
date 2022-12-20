@@ -28,7 +28,7 @@ namespace TP_Final
         {
            
             // Se crea y configura el Scheduler.          
-           /*  IScheduler sched = StdSchedulerFactory.GetDefaultScheduler().Result;
+             IScheduler sched = StdSchedulerFactory.GetDefaultScheduler().Result;
              sched.Start();
              IJobDetail job = JobBuilder.Create<Notificate>()
                      .WithIdentity("job1", "group1")
@@ -37,7 +37,7 @@ namespace TP_Final
                  .WithIdentity("trigger1", "group1")
                  .WithSimpleSchedule(x => x.WithIntervalInSeconds(30).RepeatForever())
                  .Build();
-             sched.ScheduleJob(job, trigger);*/
+             sched.ScheduleJob(job, trigger);
 
            
             // Se configura la clase estatica Log.           
@@ -62,7 +62,7 @@ namespace TP_Final
           
 
 
-        Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow()); ;
             
