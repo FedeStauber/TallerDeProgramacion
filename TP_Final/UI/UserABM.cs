@@ -81,7 +81,8 @@ namespace TP_Final.UI
                     vMainWindow.UpdateUserData();
                 }
                 this.AssignElements();
-                panelModifyBook.Visible = false;                
+                panelModifyBook.Visible = false;
+                MessageBox.Show("Usuario modificado con exito!!");
             }
             catch (Exception ex)
             {
