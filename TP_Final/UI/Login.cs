@@ -19,6 +19,8 @@ namespace TP_Final
         public Login()
         {
             InitializeComponent();
+            pictureBox2.Image = UIResources.GetAmancio(UIResources.AmancioOrientarion.ToRight);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void btnAccept_Click(object sender, EventArgs e)

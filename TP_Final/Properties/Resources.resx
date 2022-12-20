@@ -130,12 +130,6 @@
   <data name="defAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defAvatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="leyendo_a_derecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\leyendo a derecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="leyendo_a_izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\leyendo a izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_processing20210903-11241-1netgf1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +166,8 @@
   <data name="viejo5I" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\viejo5I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="viejo6d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\viejo6d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="viejo6D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo6D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="viejo6I" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\viejo6I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -189,5 +183,8 @@
   </data>
   <data name="viejo8I" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\viejo8I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_20221220_150315_0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20221220_150315_0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

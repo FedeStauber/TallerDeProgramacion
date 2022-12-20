@@ -200,6 +200,7 @@
     <Compile Include="UI\CustomForms\TextBoxPerso.Designer.cs">
       <DependentUpon>TextBoxPerso.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIResources.cs" />
     <Compile Include="UI\UserABM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,13 +341,12 @@
     <None Include="Resources\image_processing20210903-11241-1netgf1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\calendario.ico" />
     <None Include="Resources\viejo8I.png" />
     <None Include="Resources\viejo8D.png" />
     <None Include="Resources\viejo7I.png" />
     <None Include="Resources\viejo7D.png" />
     <None Include="Resources\viejo6I.png" />
-    <None Include="Resources\viejo6d.png" />
+    <None Include="Resources\viejo6D.png" />
     <None Include="Resources\viejo5I.png" />
     <None Include="Resources\viejo5D.png" />
     <None Include="Resources\viejo4I.png" />
@@ -357,10 +357,10 @@
     <None Include="Resources\viejo2D.png" />
     <None Include="Resources\viejo1I.png" />
     <None Include="Resources\viejo1D.png" />
+    <None Include="Resources\20221220_150315_0000.png" />
+    <Content Include="Resources\calendario.ico" />
     <None Include="Resources\calendario32x32.ico" />
     <Content Include="Resources\FileNotFound.jpg" />
-    <Content Include="Resources\leyendo a derecha.png" />
-    <Content Include="Resources\leyendo a izquierda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

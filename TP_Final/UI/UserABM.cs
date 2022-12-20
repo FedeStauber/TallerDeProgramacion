@@ -23,7 +23,7 @@ namespace TP_Final.UI
             InitializeComponent();
             this.iUser = pUser;
             this.AssignElements();
-            pictureBox1.Image = Properties.Resources.leyendo_a_izquierda;
+            pictureBox1.Image = UIResources.GetAmancio(UIResources.AmancioOrientarion.ToLeft);
         }
 
         private void AssignElements()

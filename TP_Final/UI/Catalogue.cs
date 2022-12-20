@@ -22,7 +22,8 @@ namespace TP_Final.UI
        
         public Catalogue()
         {
-            InitializeComponent();                     
+            InitializeComponent();
+            this.OpenChildForm(new Home());
             LoadMainList();
             iCurrentList = iBookList;
             comboBoxPerso1.SelectedIndex = 0;
@@ -239,5 +240,6 @@ namespace TP_Final.UI
         {
 
         }
+
     }
 }
