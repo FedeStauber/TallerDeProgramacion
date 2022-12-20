@@ -16,7 +16,7 @@ namespace TP_Final.IO
         public int Id { get; set; }
         public long BookISBN{ get; set; }
         public DateTime LastModify { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime? LoanEndDate { get; set; }
         public ConditionEnum Condition { get; set; }
        
 

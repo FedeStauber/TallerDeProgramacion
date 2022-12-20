@@ -20,7 +20,7 @@ namespace TP_Final.Domain
 
         public Loan() 
         {
-            this.DaysExtended = 0;
+            this.DaysExtended = 0;            
         }
 
 
@@ -36,7 +36,7 @@ namespace TP_Final.Domain
         }
 
         /// <summary> Realiza la devolución de una copia, modifica la condición y registra el score del usuario y del préstamo </summary>
-        /// <param Copy.ConditionEnum="pCondition">Nueva condición para la copia</param>
+        /// <param name="pCondition">Nueva condición para la copia</param>
         public void ReturnRegister(Copy.ConditionEnum pCondition)
         {
             if (pCondition == Copy.ConditionEnum.Available && this.Late())
@@ -68,7 +68,7 @@ namespace TP_Final.Domain
         }
 
         /// <summary> Determina si un préstamo se puede extender, si se puede lo extiende, cambia la cantidad de dias a extender y resta el puntaje al usuario </summary>
-        /// <param int="pDaysToExtend"> La cantidad de días que desea extender</param>
+        /// <param name="pDaysToExtend"> La cantidad de días que desea extender</param>
         public void Extend(int pDaysToExtend)
         {
             if (ReturnDate != null)
@@ -98,6 +98,7 @@ namespace TP_Final.Domain
                             this.EndDate = this.EndDate.AddDays(pDaysToExtend);
                             this.DaysExtended += pDaysToExtend;
                             User.Score -= pDaysToExtend * 5;
+                            Copy.LoanEndDate = this.EndDate;
                         }
                     }
                 }
