@@ -20,12 +20,21 @@ namespace TP_Final.UI
         private LoanDTO iLoan;
         public LoanReturn()
         {
-            iLoanList = LibraryManager.ActiveLoans();
-            iFilteredList = iLoanList;
-            InitializeComponent();
-            dataGridUsers.DataSource = iFilteredList;
-            pictureBox1.Image = UIResources.GetAmancio(UIResources.AmancioOrientarion.ToLeft); 
-            OpenTlpFilter();               
+            try
+            {
+                iLoanList = LibraryManager.ActiveLoans();
+                iFilteredList = iLoanList;
+                InitializeComponent();
+                dataGridUsers.DataSource = iFilteredList;
+                pictureBox1.Image = UIResources.GetAmancio(UIResources.AmancioOrientarion.ToLeft);
+                OpenTlpFilter();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar obtener los préstamos: " + ex.Message);
+                Log.Error(ex, "Error al intentar obtener los préstamos");
+            }
+                          
         }
 
         private void OpenDataPanel()
@@ -95,18 +104,25 @@ namespace TP_Final.UI
                 }
                 else
                 {
-                    LibraryManager.LoanReturnRegister(iLoan.Id, comboBoxPerso1.SelectedIndex);
+                    int vResult = LibraryManager.LoanReturnRegister(iLoan.Id, comboBoxPerso1.SelectedIndex);
                     List<LoanDTO> auxListToRemove = new List<LoanDTO>();
                     auxListToRemove.Add(iLoan);
                     iFilteredList = iLoanList.Except(auxListToRemove).ToList();
+                    iLoanList = iFilteredList;
                     dataGridUsers.DataSource = iFilteredList;
+                    MainWindow vMainWindow = Owner as MainWindow;
+                    if (iLoan.UserDNI == vMainWindow.User.DNI)
+                    {
+                        vMainWindow.User.Score += vResult;
+                        vMainWindow.UpdateUserData();                     
+                    }
                 }
                 OpenTlpFilter();
             }
             catch (Exception ex)
             {
-                Log.Error(ex, ex.Message);
-                MessageBox.Show(ex.Message);
+                Log.Error("Error al intentar registrar una devolución:"+ex);
+                MessageBox.Show("Error al intentar registrar una devolución: "+ ex.Message);
             }          
           
         }

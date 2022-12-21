@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,10 +36,18 @@ namespace TP_Final.UI
         /// <summary> Carga la lista de los libros que se encuentran en el catálogo de la biblioteca </summary>
         private void LoadMainList()
         {
-            this.OpenChildForm(new ObteniendoDatosApi());
-            var task =  LibraryManager.BookCatalogue();
-            task.Start();
-            iBookList =  task.Result;
+            try
+            {
+                this.OpenChildForm(new ObteniendoDatosApi());
+                var task = LibraryManager.BookCatalogue();
+                task.Start();
+                iBookList = task.Result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar acceder al catálogo: " + ex.Message);
+                Log.Error("Error al intentar acceder al catálogo:" + ex);
+            }          
         }
 
         /// <summary> Crea la pantalla, adapta el tamaño a donde tiene que ir y la muestra al usuario </summary>

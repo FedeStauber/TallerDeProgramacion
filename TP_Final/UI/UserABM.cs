@@ -28,9 +28,18 @@ namespace TP_Final.UI
 
         private void AssignElements()
         {
-            this.iUserList = LibraryManager.UsersList();
-            dataGridUsers.DataSource = iUserList;
-            this.OpenTlpFilter();
+            try
+            {
+                this.iUserList = LibraryManager.UsersList();
+                dataGridUsers.DataSource = iUserList;
+                this.OpenTlpFilter();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar obtener la lista de usuarios: " + ex.Message);
+                Log.Error(ex, "Error al intentar obtener la lista de usuarios");
+            }
+       
         }
 
 
@@ -81,6 +90,7 @@ namespace TP_Final.UI
                     MainWindow vMainWindow = Owner as MainWindow;
                     vMainWindow.User = iUserToEdit;
                     vMainWindow.UpdateUserData();
+                    vMainWindow.OpenChildForm(new Home());
                 }
                 this.AssignElements();
                 panelModifyBook.Visible = false;
@@ -93,8 +103,8 @@ namespace TP_Final.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                Log.Error(ex, ex.Message);
+                MessageBox.Show("Error al intentar realizar el alta del usuario: "+ex);
+                Log.Error("Error al intentar realizar el alta del usuario");
                 panelModifyBook.Visible = false;
                 this.AssignElements();
             }

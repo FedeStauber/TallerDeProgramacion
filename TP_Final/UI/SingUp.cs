@@ -27,16 +27,21 @@ namespace TP_Final.UI
             iComefrom = pComeFrom;  
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            MainWindow vMainWindow = this.Owner as MainWindow;
-            vMainWindow.labelChildTitle.Text = "Pantalla De Inicio";
-            vMainWindow.OpenChildForm(new Login());
+            if (iComefrom == ComeFrom.LogIn)
+            {
+                MainWindow vMainWindow = this.Owner as MainWindow;
+                vMainWindow.labelChildTitle.Text = "Pantalla De Inicio";
+                vMainWindow.OpenChildForm(new Login());
+            }
+            else
+            {
+                MainWindow vMainWindow = this.Owner as MainWindow;
+                vMainWindow.labelChildTitle.Text = "Pantalla De Inicio";
+                vMainWindow.OpenChildForm(new Home());
+            }            
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -78,8 +83,8 @@ namespace TP_Final.UI
             }
             catch (Exception ex)
             {
-                Log.Error(ex, ex.Message);                
-                MessageBox.Show(ex.ToString());         
+                Log.Error("Error al intentar crear un usuario :", ex);                
+                MessageBox.Show("Ha ocurrido un error al intentar crear el usuario: " + ex.Message);         
             }
             
         }

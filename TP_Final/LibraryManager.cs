@@ -152,25 +152,27 @@ namespace TP_Final
         /// usuario </summary>
         /// <param name="pLoanId"> Id del préstamo </param>
         /// <param name="pCondition"> Entero que representa la posición en la lista de condiciones </param>
-        public static void LoanReturnRegister(int pLoanId, int pCondition)
+        public static int LoanReturnRegister(int pLoanId, int pCondition)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {           
                 Loan vLoan = unit.LoanRepository.Get(pLoanId);
+                int vResult;
                 if(vLoan == null)
                 {
                     throw new Exception("No se pudo encontrar el prestamo solicitado.");
                 }
                 if (pCondition == 0)
                 {
-                    vLoan.ReturnRegister(Copy.ConditionEnum.Available);
+                    vResult = vLoan.ReturnRegister(Copy.ConditionEnum.Available);
                 }
                 else
                 {
-                    vLoan.ReturnRegister(Copy.ConditionEnum.Broken);
-                }                
+                    vResult = vLoan.ReturnRegister(Copy.ConditionEnum.Broken);
+                }                   
                 unit.Complete();
                 Log.Information("Se creó una devolución de un préstamo con éxito.");
+                return vResult;
             }
         }
         /// <summary> Busca el mail ingresado en el repositorio de usuario, compara las contraseñas de ese usuario con la ingresada y

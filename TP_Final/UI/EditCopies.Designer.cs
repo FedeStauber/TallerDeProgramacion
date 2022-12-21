@@ -251,6 +251,7 @@ namespace TP_Final.UI
             this.LoanEndDate.HeaderText = "Prestado Hasta";
             this.LoanEndDate.MinimumWidth = 267;
             this.LoanEndDate.Name = "LoanEndDate";
+            this.LoanEndDate.ReadOnly = true;
             this.LoanEndDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.LoanEndDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.LoanEndDate.Width = 267;
@@ -285,7 +286,7 @@ namespace TP_Final.UI
         private FontAwesome.Sharp.IconPictureBox returnBottom;
         private System.Windows.Forms.DataGridView dataGridCopies;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;    
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn conditionDataGridViewComboBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastModifyDataGridViewTextBoxColumn;

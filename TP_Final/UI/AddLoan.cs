@@ -69,8 +69,8 @@ namespace TP_Final.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                Log.Error(ex, ex.Message);
+                MessageBox.Show("Error al intentar recuperar el usuario: "+ex.Message);
+                Log.Error(ex,"Error al intentar recuperar el usuario");           
             }
 
         }
@@ -123,8 +123,8 @@ namespace TP_Final.UI
             }
             catch (Exception ex)
             {
-                Log.Error(ex, ex.Message);
-                MessageBox.Show(ex.Message);
+                Log.Error("Error al intentar crear un préstamo:"+ex);
+                MessageBox.Show("Error al intentar crear un préstamo");
             }
 
         }

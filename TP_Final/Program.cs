@@ -26,19 +26,20 @@ namespace TP_Final
         [STAThread]
         static void Main()
         {
-           
-            // Se crea y configura el Scheduler.          
-             IScheduler sched = StdSchedulerFactory.GetDefaultScheduler().Result;
-             sched.Start();
-             IJobDetail job = JobBuilder.Create<Notificate>()
-                     .WithIdentity("job1", "group1")
-                     .Build();
-             ITrigger trigger = TriggerBuilder.Create()
-                 .WithIdentity("trigger1", "group1")
-                 .WithSimpleSchedule(x => x.WithIntervalInSeconds(30).RepeatForever())
-                 .Build();
-             sched.ScheduleJob(job, trigger);
 
+            // Se crea y configura el Scheduler.
+            IScheduler sched = StdSchedulerFactory.GetDefaultScheduler().Result;
+            sched.Start();
+            IJobDetail job = JobBuilder.Create<Notificate>()
+                    .WithIdentity("job1", "group1")
+                    .Build();
+            ITrigger trigger = TriggerBuilder.Create()
+                .WithIdentity("trigger1", "group1")
+                .WithSimpleSchedule(x => x.WithIntervalInSeconds(30).RepeatForever())
+                .Build();
+            sched.ScheduleJob(job, trigger);
+           
+             
            
             // Se configura la clase estatica Log.           
             Log.Logger = new LoggerConfiguration().WriteTo.RollingFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Logs\Log-{Date}.txt"))

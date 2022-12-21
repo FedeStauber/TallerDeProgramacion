@@ -51,8 +51,8 @@ namespace TP_Final.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                Log.Error(ex, ex.Message);
+                MessageBox.Show("Error al intentar modificar el perfil :" +ex);
+                Log.Error("Error al intentar modificar el perfil");
             }
         }
 

@@ -271,7 +271,8 @@ namespace TP_Final.UI
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show("Error al intentar agregar un libro: " + ex.Message);
+                            Log.Error(ex,"Error al intentar agregar un libro");
                         }
                     }
                 }
@@ -299,14 +300,12 @@ namespace TP_Final.UI
                         MessageBox.Show("Cambios guardados con éxito!");
                         this.ReturnButton_Click(sender, e);
                     }
-                  
                 }
-               
             }
             catch (Exception ex)
             {
-                Log.Error("Error al agregar un libro: " + ex.Message);
-                MessageBox.Show(ex.Message);
+                Log.Error(ex,"Error al agregar un libro" );
+                MessageBox.Show("Error al agregar un libro: "+ex.Message);
             }
             
         }

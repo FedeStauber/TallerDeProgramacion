@@ -45,8 +45,8 @@ namespace TP_Final
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                Log.Error(ex, ex.Message);
+                MessageBox.Show("Error al intentar iniciar sesión: "+ex.Message);
+                Log.Error(ex,"Error al intentar iniciar sesión:");
             }
         }
 

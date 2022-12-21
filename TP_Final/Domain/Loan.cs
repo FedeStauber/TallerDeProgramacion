@@ -37,12 +37,13 @@ namespace TP_Final.Domain
 
         /// <summary> Realiza la devolución de una copia, modifica la condición y registra el score del usuario y del préstamo </summary>
         /// <param name="pCondition">Nueva condición para la copia</param>
-        public void ReturnRegister(Copy.ConditionEnum pCondition)
+        /// <returns>Devuelve el puntaje que se sumara al usuario </returns>
+        public int ReturnRegister(Copy.ConditionEnum pCondition)
         {
             if (pCondition == Copy.ConditionEnum.Available && this.Late())
             {              
                 User.Score -= 2 * ((DateTime.Now - EndDate).Days + 1);
-                LoanScore = 2 * ((DateTime.Now - EndDate).Days + 1);
+                LoanScore = -2 * ((DateTime.Now - EndDate).Days + 1);
             }
             else if (pCondition == Copy.ConditionEnum.Available)
             {                
@@ -57,14 +58,15 @@ namespace TP_Final.Domain
             else if (pCondition == Copy.ConditionEnum.Broken)
             {
                 User.Score -= 10 + 2 * ((DateTime.Now - EndDate).Days + 1);
-                LoanScore -= 10 + 2 * ((DateTime.Now - EndDate).Days + 1);
+                LoanScore += -10 - 2 * ((DateTime.Now - EndDate).Days + 1);
             }
             else
             {
                 throw new Exception("Error al contabilizar el puntaje correspondiente");
             }
-            ReturnDate = DateTime.Now;
+            ReturnDate = DateTime.Now;            
             Copy.ReturnRegister(pCondition);
+            return LoanScore;
         }
 
         /// <summary> Determina si un préstamo se puede extender, si se puede lo extiende, cambia la cantidad de dias a extender y resta el puntaje al usuario </summary>

@@ -35,8 +35,17 @@ namespace TP_Final.UI
         /// <summary> Asigna las copias de ese libro que se busca por ISBN a la lista para mostrarle al usuario </summary>
         private void AssignElements()
         {
-            this.iCopyList = LibraryManager.BookCopyList(iBook.ISBN);
-            dataGridCopies.DataSource = iCopyList;
+            try
+            {
+                this.iCopyList = LibraryManager.BookCopyList(iBook.ISBN);
+                dataGridCopies.DataSource = iCopyList;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar obtener las copias del libro: " + ex.Message);
+                Log.Error(ex, "Error al intentar obtener las copias del libro");
+                this.Close();
+            }           
         }
 
         /// <summary> Permite cambiar la celda de condicion de la copia, controlando que se pueda pasar de un estado a otro
@@ -61,8 +70,8 @@ namespace TP_Final.UI
             catch (Exception ex)
             {
                 dataGridCopies.Rows[e.RowIndex].Cells[1].Value = iPreviousState;
-                MessageBox.Show(ex.Message);
-                Log.Error(ex, ex.Message);                     
+                MessageBox.Show("Error al intentar editar una copia");
+                Log.Error("Error al intentar editar una copia: "+ex);                     
             }  
         }
 
@@ -82,15 +91,14 @@ namespace TP_Final.UI
                 string amount = Microsoft.VisualBasic.Interaction.InputBox("Ingrese cantidad de copias: ", "Cantidad de copias");
                 if (amount != "")
                 {
-                    int amount2 = Int32.Parse(amount);
-                    LibraryManager.AddCopy(iBook.ISBN, amount2);
+                    LibraryManager.AddCopy(iBook.ISBN, Int32.Parse(amount));
                     this.AssignElements();
                 }
             }
             catch (Exception ex)
             {
-                Log.Error("Error al intentar agregar una copia: ", ex.Message);
-                MessageBox.Show(ex.Message);
+                Log.Error("Error al intentar agregar una copia: ", ex);
+                MessageBox.Show("Error al intentar agregar una copia");
             }
               
         }

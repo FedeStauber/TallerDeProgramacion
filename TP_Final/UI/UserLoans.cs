@@ -21,9 +21,18 @@ namespace TP_Final.UI
         private List<LoanDTO> iLoanList; 
         public UserLoans(UserDTO pUser)
         {
-            InitializeComponent();        
-            this.iLoanList = LibraryManager.UserLoansHistory(pUser);
-            this.AssignElements();
+            try
+            {
+                InitializeComponent();
+                this.iLoanList = LibraryManager.UserLoansHistory(pUser);
+                this.AssignElements();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar obtener los préstamos del usuario: " + ex.Message);
+                Log.Error("Error al intentar obtener los préstamos del usuario: " + ex);
+            }
+           
         }
 
         private void AssignElements()
@@ -73,8 +82,8 @@ namespace TP_Final.UI
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error al intentar extender un préstamo" + ex.Message);
+                Log.Error(ex, "Error al intentar extender un préstamo");
             }          
         }
 
