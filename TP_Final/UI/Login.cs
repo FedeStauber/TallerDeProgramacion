@@ -30,11 +30,10 @@ namespace TP_Final
         {         
             try
             {
-                LoginDTO vLoginDTO = LibraryManager.LogIn(txtBoxEmail.Text, txtBoxPass.Text);
-                if (vLoginDTO.IsValid)
+                if (LibraryManager.LogIn(txtBoxEmail.Text, txtBoxPass.Text))
                 {
                     MainWindow vMainWindow = Owner as MainWindow;
-                    vMainWindow.User = vLoginDTO.User;
+                    vMainWindow.User = LibraryManager.SearchUserByEmail(txtBoxEmail.Text);
                     vMainWindow.UpdateUserData();
                     vMainWindow.OpenChildForm(new Home());
                     this.Close();

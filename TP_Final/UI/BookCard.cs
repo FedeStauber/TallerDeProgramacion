@@ -1,4 +1,5 @@
 ﻿using ImageProcessor;
+using Newtonsoft.Json.Serialization;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -111,9 +112,22 @@ namespace TP_Final.UI
                     btnSaveChanges.Text = "Guardar Cambios";
                     btnAddLoan.Visible = true;
                     btnManageCopies.Visible = true;
-                }                  
+                }
                 btnEditTitle.Visible = true;
 
+            }
+            else
+            {
+                labelAuthor.Size = new Size(769, 39);
+                labelAuthor.Multiline = true;
+                labelGender.Size = new Size(769, 39);
+                labelGender.Multiline = true;
+                labelISBN.Size = new Size(769, 39);
+                labelISBN.Multiline = true;
+                labelLanguage.Size = new Size(769, 39);
+                labelLanguage.Multiline = true;
+                labelPages.Size = new Size(769, 39);
+                labelPages.Multiline = true;
             }
             this.Text = "Ficha del libro: " +iBook.Title;
             labelTitle.Text = iBook.Title;            
@@ -189,12 +203,15 @@ namespace TP_Final.UI
         }
       
         private void labelISBN_KeyPress(object sender, KeyPressEventArgs e)
-        {           
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+        {
+            if (!iAdmin)
             {
                 e.Handled = true;
-            }            
+            }
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }    
         }
         private void btnSelectNewCover_Click_1(object sender, EventArgs e)
         {
@@ -248,6 +265,8 @@ namespace TP_Final.UI
                         {
                             LibraryManager.AddBook(iBook);
                             MessageBox.Show("Libro agregado con éxito");
+                            MainWindow vMainWindow = Owner as MainWindow;
+                            vMainWindow.labelChildTitle.Text = "Agregar Libro";                            
                             this.Close();
                         }
                         catch (Exception ex)
@@ -305,9 +324,19 @@ namespace TP_Final.UI
             vMainWindow.OpenTempChild(new EditCopies(iBook));
         }
 
+        private void labelAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!iAdmin)
+            {
+                e.Handled = true;
+            }
+        }
+
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             labelTitle.Text = richTextBox1.Text;
+            MainWindow vMainWindow = Owner as MainWindow;
+            vMainWindow.labelChildTitle.Text = labelTitle.Text;
         }
     }
 }

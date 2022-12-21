@@ -177,19 +177,15 @@ namespace TP_Final
         /// verifica que el usuario esté activo, si la contraseña no coincide o el usuario no está activo, se notifica al usuario</summary>
         /// <param name="pUserEmail"> Email ingresada</param>
         /// <param name="pPassword"> Contraseña ingresada </param>
-        public static LoginDTO LogIn(string pUserEmail, string pPassword)
+        public static bool LogIn(string pUserEmail, string pPassword)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {                              
                 var vUser =  unit.UserRepository.SearchByEmail(pUserEmail);                
                 if (vUser.PasswordMatch(pPassword) && vUser.Active)
-                {                   
-                    var vUserDTO = UsefulMapper.Mapper.Map<User,UserDTO>(vUser);
-                    vUserDTO.Avatar = vUser.Avatar;                      
-                    LoginDTO loginDTO = new LoginDTO() { IsValid = true, User = vUserDTO };
+                {                                     
                     Log.Information("Se inició sesión con éxito.");
-                    return loginDTO;
-                    
+                    return true;                    
                 }
                 else if (!vUser.Active)
                 {
@@ -197,7 +193,7 @@ namespace TP_Final
                 }
                 else
                 {
-                    throw new Exception("Usuario y contraseña no coinciden");
+                    return false;
                 }
             }
         }
@@ -279,19 +275,37 @@ namespace TP_Final
             }
         }
 
-        /// <summary> Realiza una búsqueda de un Usuario en el repositorio mediante el DNI </summary>
-        /// <param name="pDni">Dni ingresado</param>
-        public static UserDTO SearchUserByDNI(long pDni)
+        /// <summary> Realiza una búsqueda de un Usuario en el repositorio mediante el Email </summary>
+        /// <param name="pEmail">Email ingresado para la búsqueda</param>
+        public static UserDTO SearchUserByEmail(string pEmail)
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
-                User vUser = unit.UserRepository.SearchByDNI(pDni);                
+                User vUser = unit.UserRepository.SearchByEmail(pEmail);                
                 UserDTO vUserDTO = UsefulMapper.Mapper.Map<User, UserDTO>(vUser);
                 Log.Information("Búsqueda por DNI realizada con éxito.");
                 return vUserDTO;
                
             }
         }
+
+
+        /// <summary> Realiza una búsqueda de un Usuario en el repositorio mediante el DNI </summary>
+        /// <param name="pDNI">Email ingresado para la búsqueda</param>
+        public static UserDTO SearchUserByDNI(long pDNI)
+        {
+            using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
+            {
+                User vUser = unit.UserRepository.SearchByDNI(pDNI);
+                UserDTO vUserDTO = UsefulMapper.Mapper.Map<User, UserDTO>(vUser);
+                Log.Information("Búsqueda por DNI realizada con éxito.");
+                return vUserDTO;
+
+            }
+        }
+
+
+
 
         /// <summary> Mapea una lista de todos los usuarios </summary>
         /// <returns> Una lista de objetos UserDTO que contiene todos los usuarios</returns>
@@ -378,5 +392,12 @@ namespace TP_Final
                 Log.Information("Se extendió un préstamo con éxito");
             }
         }
+
+
+        
+
+
+
+
     }
 }

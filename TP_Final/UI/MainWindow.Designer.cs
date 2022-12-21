@@ -29,6 +29,7 @@ namespace TP_Final.UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.lateralPanel = new System.Windows.Forms.Panel();
             this.panelUsers = new System.Windows.Forms.Panel();
             this.submenuUsers = new System.Windows.Forms.Panel();
@@ -649,6 +650,7 @@ namespace TP_Final.UI
             this.Controls.Add(this.lateralPanel);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1500, 771);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
