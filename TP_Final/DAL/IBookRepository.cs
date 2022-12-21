@@ -9,6 +9,6 @@ namespace TP_Final.DAL
 {
     interface IBookRepository: IRepository<Book>
     {
-        Book SearchByISBN(long pISBN);
+        Book SearchByISBN(double pISBN);
     }
 }

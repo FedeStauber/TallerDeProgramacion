@@ -8,7 +8,7 @@ namespace TP_Final.API
 {
     public static class BookApiManager 
     {
-        public enum CoverImgSize { S, M, L }
+        public enum CoverImgSize { Small, Medium, Large }
 
         public enum SearchBy
         {

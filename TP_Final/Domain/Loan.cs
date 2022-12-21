@@ -99,6 +99,7 @@ namespace TP_Final.Domain
                             this.DaysExtended += pDaysToExtend;
                             User.Score -= pDaysToExtend * 5;
                             Copy.LoanEndDate = this.EndDate;
+                            this.Notificated = false;
                         }
                     }
                 }

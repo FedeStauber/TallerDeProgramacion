@@ -12,6 +12,6 @@ namespace TP_Final.DAL
         void Remove(TEntity pEntity);
         TEntity Get(int pId);
         IEnumerable<TEntity> GetAll();
-       // Task<IEnumerable<TEntity>> GetAllAsync();
+       
     }
 }

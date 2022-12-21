@@ -50,7 +50,7 @@ namespace TP_Final.UI
         {
             try
             {
-                await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.L);
+                await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.Large);
                 if (iBook.Cover.Length > 900)
                 {
                     MemoryStream ms = new MemoryStream(iBook.Cover);
@@ -62,7 +62,7 @@ namespace TP_Final.UI
                 }
                 else
                 {
-                    await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.M);
+                    await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.Medium);
                     if (iBook.Cover.Length > 900)
                     {
                         MemoryStream ms = new MemoryStream(iBook.Cover);
@@ -74,7 +74,7 @@ namespace TP_Final.UI
                     }
                     else
                     {
-                        await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.S);
+                        await BookApiManager.CurrentApi.DownloadCover(iBook, BookApiManager.CoverImgSize.Small);
                         if (iBook.Cover.Length > 900)
                         {
                             MemoryStream ms = new MemoryStream(iBook.Cover);

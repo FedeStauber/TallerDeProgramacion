@@ -11,11 +11,10 @@ namespace TP_Final.DAL
     {
        
         List<Loan> GetUserLoansHistory(int pUserId);
-        int GetUserActiveLoans(int pUserId);
+        int GetUserActiveLoansCount(int pUserId);
         List<Loan> GetActiveLoans();
         List<Loan> GetNextToExpire();
-        Loan GetByCopyID(int pCopyID);
-       
+      
 
     }
 }

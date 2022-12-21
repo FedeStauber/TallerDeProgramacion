@@ -82,6 +82,7 @@ namespace TP_Final.UI
             // 
             // searchTextBox
             // 
+            this.searchTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.searchTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.searchTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.searchTextBox.BorderFocusColor = System.Drawing.Color.RosyBrown;
@@ -236,7 +237,7 @@ namespace TP_Final.UI
             // 
             // pbLibraryLogo
             // 
-            this.pbLibraryLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLibraryLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLibraryLogo.Image = global::TP_Final.Properties.Resources._20221220_150315_0000;
             this.pbLibraryLogo.Location = new System.Drawing.Point(0, 0);
             this.pbLibraryLogo.Name = "pbLibraryLogo";

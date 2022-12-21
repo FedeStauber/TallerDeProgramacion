@@ -22,7 +22,7 @@ namespace TP_Final.Domain
         {
             TimeSpan pTiempoRestante = (pLoan.EndDate - DateTime.Now);
             MailMessage correo = new MailMessage();
-            correo.From = new MailAddress("unabiblioprueba1@gmail.com", "BiblioSan", System.Text.Encoding.UTF8);//Correo de salida
+            correo.From = new MailAddress("unabiblioprueba1@gmail.com", "Biblioteca Don Amancio", System.Text.Encoding.UTF8);//Correo de salida
             correo.To.Add(pLoan.User.Email); //Correo destino?
             correo.Subject = "Correo de prueba"; //Asunto
             correo.Body = $"" +
@@ -36,14 +36,16 @@ namespace TP_Final.Domain
                 $"</head>" +
                 $"<body>" +
                 $"<h1 style =\"text-align: center;\"><span style=\"color: #ff0000;\">Biblioteca MILF</span></h1>" +
-                $"<p> Hola <strong> {pLoan.User.Name} {pLoan.User.LastName}</strong>:</p>" +
-                $"<p> Te queríamos informar sobre el estado de tu pedido, al cual le quedan<strong> {pTiempoRestante.Days}</strong> días y <strong> {pTiempoRestante.Hours}</strong> horas para vencerse.</p>" +
-                $"<p> Te recordamos si no ha pasado el plazo de 15 días hábiles, usted puede renovar el préstamo del libro, esto le consumirá 5 puntos del puntaje por día de renovación.</p>" +
-                $"<p> Te agradecemos por utilizar nuestro servicio, saludos, el equipo de MILF.</p>" +
-                $"<p><img style =\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://media.istockphoto.com/vectors/open-book-drawing-vector-id1175681997\" alt=\"\" width=\"253\" height=\"221\"/></p>" +
+                $"<p> Hola<strong> {pLoan.User.Name} {pLoan.User.LastName}</strong>: !</p>" +
+                $"<p> El motivo de este mensaje es para informar el estado de su préstamo realizado del libro <strong> {pLoan.Copy.Book.Title}</strong>: , al cual le quedan<strong> {pTiempoRestante.Days}</strong> días y <strong> {pTiempoRestante.Hours}</strong> horas para vencerse.</p>" +
+                $"<p> Te recordamos que si no ha pasado el plazo de 15 días hábiles, usted puede renovar el préstamo del libro, lo cual le consumirá 5 puntos del puntaje por día de renovación.</p>" +
+                $"<p> Te agradecemos por utilizar nuestro servicio.</p>" +
+                $"<p> Saludos, Atte:</p>" +
+                $"<p> Don Amancio</p>" +
+                $"<p><img style =\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://drive.google.com/file/d/1fxAsNeMfjuJGGpVvk1TFZS7PapC_wqGM/view?usp=sharing\" alt=\"\" width=\"253\" height=\"221\"/></p>" +
                 $"<p> &nbsp;</p>  " +
                 $"</body>" +
-                $"</html>";
+                $"</html>"; ;
             correo.IsBodyHtml = true;
             correo.Priority = MailPriority.Normal;
             SmtpClient smtp = new SmtpClient();

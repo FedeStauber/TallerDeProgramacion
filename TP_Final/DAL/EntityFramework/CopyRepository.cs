@@ -23,7 +23,7 @@ namespace TP_Final.DAL.EntityFramework
             return vCopy;
         }
 
-        public IEnumerable<Copy> GetBookCopies(long pISBN)
+        public IEnumerable<Copy> GetBookCopies(double pISBN)
         {
             return this.iDbContext.Set<Copy>().Include(copy => copy.Book).Where(copy => copy.Book.ISBN == pISBN);
         }

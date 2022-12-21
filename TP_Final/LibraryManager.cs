@@ -271,7 +271,7 @@ namespace TP_Final
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
                 Log.Information("Se devolvió la cantidad de préstamos activos de un usuario con éxito.");
-                return unit.LoanRepository.GetUserActiveLoans(pUserId);              
+                return unit.LoanRepository.GetUserActiveLoansCount(pUserId);              
             }
         }
 

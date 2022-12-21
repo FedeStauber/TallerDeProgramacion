@@ -69,7 +69,7 @@ namespace TP_Final.UI
                 }
                 else
                 {
-                    await BookApiManager.CurrentApi.DownloadCover(iBookList[iDownloadedTo], BookApiManager.CoverImgSize.M);
+                    await BookApiManager.CurrentApi.DownloadCover(iBookList[iDownloadedTo], BookApiManager.CoverImgSize.Medium);
                 }
                 iDownloadedTo++;
                 if (iCurrentPage * iResultsPerPage >= iDownloadedTo && ((iCurrentPage - 1) * iResultsPerPage) <= iDownloadedTo && iCanDownload)

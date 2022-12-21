@@ -17,7 +17,7 @@ namespace TP_Final.DAL.EntityFramework
             this.iDbContext = pDbContext;
         }
 
-        public Book SearchByISBN(long pISBN)
+        public Book SearchByISBN(double pISBN)
         {
             Book vBook = this.iDbContext.Set<Book>().FirstOrDefault(book => book.ISBN == pISBN);           
             return vBook;

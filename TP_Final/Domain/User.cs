@@ -133,10 +133,5 @@ namespace TP_Final.Domain
        }
 
 
-        public bool VerifyMail(string pEmail)
-        {
-            return Regex.IsMatch(pEmail, @"^.+[@].+[.com]{ 4}$");
-        }
-
     }
 }

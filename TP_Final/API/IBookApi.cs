@@ -11,7 +11,7 @@ namespace TP_Final.API
 {
     public interface IBookApi
     {
-        Task<List<BookDTO>> SearchBook(string pBookTitle, SearchBy pSearchBy);
+        Task<List<BookDTO>> SearchBook(string pAskString, SearchBy pSearchBy);
 
         Task DownloadCover(BookDTO pBook, CoverImgSize imgSize);
     }

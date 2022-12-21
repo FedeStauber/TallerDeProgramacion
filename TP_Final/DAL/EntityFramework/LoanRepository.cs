@@ -18,15 +18,9 @@ namespace TP_Final.DAL.EntityFramework
         }
         public List<Loan> GetNextToExpire()
         {
-            List<Loan> nextToExpire = new List<Loan>();
-            foreach (var loan in this.GetAll())
-            {
-                if ((loan.EndDate <= (DateTime.Now.Add(new TimeSpan(2, 0, 0, 0)))) && (loan.Notificated == false))
-                {
-                    nextToExpire.Add(loan);
-                }
-            }
-            return nextToExpire;
+            return this.iDbContext.Set<Loan>().Include(loan => loan.User)
+                .Include(loan => loan.Copy).ThenInclude(copy => copy.Book)
+                .Where(loan => ((loan.EndDate <= DateTime.Now.AddDays(2)) && !loan.Notificated)).ToList();            
         }
 
         public List<Loan> GetUserLoansHistory(int pUserId)
@@ -34,12 +28,8 @@ namespace TP_Final.DAL.EntityFramework
             return this.iDbContext.Set<Loan>().Include(loan => loan.Copy).ThenInclude(copy => copy.Book).Where(loan => loan.User.Id == pUserId).ToList();       
         }
 
-        public Loan GetByCopyID(int pCopyID)
-        {
-            return this.iDbContext.Set<Loan>().Include(loan => loan.Copy).ThenInclude(copy => copy.Book).FirstOrDefault(loan => loan.Copy.Id == pCopyID);
-        }
-
-        public int GetUserActiveLoans(int pUserId)
+       
+        public int GetUserActiveLoansCount(int pUserId)
         {
             return this.iDbContext.Set<Loan>().Where(loan => loan.User.Id == pUserId && loan.ReturnDate == null).Count();
         }

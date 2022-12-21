@@ -11,6 +11,6 @@ namespace TP_Final.DAL
     {
         Copy GetAvailableCopy(double pISBN);
 
-        IEnumerable<Copy> GetBookCopies(long pISBN);
+        IEnumerable<Copy> GetBookCopies(double pISBN);
     }
 }

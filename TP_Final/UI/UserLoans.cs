@@ -56,16 +56,20 @@ namespace TP_Final.UI
                     if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Extender")
                     {
                         string amount = Microsoft.VisualBasic.Interaction.InputBox("Ingrese cantidad días: ", "Cantidad días");
-                        if (amount != "")
+                    if (amount != "")
+                    {
+                        if (Int32.Parse(amount) > 0)
                         {
-                            LibraryManager.LoanExtend(iLoanList[e.RowIndex], Int32.Parse(amount));                            
-                            dataGridView1[e.ColumnIndex-3,e.RowIndex].Value = iLoanList[e.RowIndex].EndDate.AddDays(Int32.Parse(amount));                            
+                            LibraryManager.LoanExtend(iLoanList[e.RowIndex], Int32.Parse(amount));
+                            dataGridView1[e.ColumnIndex - 3, e.RowIndex].Value = iLoanList[e.RowIndex].EndDate.AddDays(Int32.Parse(amount));
                             MessageBox.Show("Préstamo extendido con éxito!!");
                         }
-
+                        else
+                        {
+                            MessageBox.Show("El valor ingresado no es válido");
+                        }
                     }
-                
-              
+                    }    
             }
             catch (Exception ex)
             {
