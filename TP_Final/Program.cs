@@ -35,7 +35,7 @@ namespace TP_Final
                     .Build();
             ITrigger trigger = TriggerBuilder.Create()
                 .WithIdentity("trigger1", "group1")
-                .WithSimpleSchedule(x => x.WithIntervalInSeconds(30).RepeatForever())
+                .WithSimpleSchedule(x => x.WithIntervalInSeconds(300).RepeatForever())
                 .Build();
             sched.ScheduleJob(job, trigger);
            
@@ -60,8 +60,6 @@ namespace TP_Final
                   LibraryManager.AddUser(new UserDTO() { Admin = true, Email = "admin@admin.com", Password = "123", Name = "Amancio", LastName = "Hernández", DNI = 156, Active = true });
                 }                
             }
-          
-
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

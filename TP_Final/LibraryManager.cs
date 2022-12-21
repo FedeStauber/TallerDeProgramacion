@@ -24,15 +24,22 @@ namespace TP_Final
         {
             using (UnitOfWork unit = new UnitOfWork(new LibraryManagerDbContext()))
             {
-                Notificator notifier = new Notificator();
-                List<Loan> loans = unit.LoanRepository.GetNextToExpire();                
-                foreach (var loan in loans)
+                try
                 {
-                    notifier.Notify(loan);
-                    loan.Notificated = true;                    
+                    Notificator notifier = new Notificator();
+                    List<Loan> loans = unit.LoanRepository.GetNextToExpire();
+                    foreach (var loan in loans)
+                    {
+                        notifier.Notify(loan);
+                        loan.Notificated = true;
+                    }
+                    unit.Complete();
+                    Log.Information("Se notificó correctamente a los usuarios que poseen préstamos atrasados.");
                 }
-                unit.Complete();
-                Log.Information("Se notificó correctamente a los usuarios que poseen préstamos atrasados.");
+                catch (Exception ex)
+                {
+                    Log.Error(ex,"Error al intentar notificar los préstamos atrasados");
+                }               
             }  
         }
 

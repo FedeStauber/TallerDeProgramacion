@@ -102,10 +102,10 @@ namespace TP_Final.UI
                 vCheck = false;
                 MessageBox.Show("Debe Ingresar su Apellido");
             }
-            else if (DniTxtBox.Text.Trim() == "")
+            else if (DniTxtBox.Text.Trim().Length < 8)
             {
                 vCheck = false;
-                MessageBox.Show("Debe Ingresar su DNI");
+                MessageBox.Show("El DNI debe tener entre 8 y 9 caracteres.");
             }
             else if (EmailTxtBox.Text.Trim() == "")
             {
@@ -115,7 +115,7 @@ namespace TP_Final.UI
             else if (PassTxtBox.Text.Trim() == "")
             {
                 vCheck = false;
-                MessageBox.Show("Debe Ingresar su Contraseña");
+                MessageBox.Show("Debe ingresar una contraseña.");
             }
             else if (PassRepeatTxtBox.Text != PassTxtBox.Text)
             {

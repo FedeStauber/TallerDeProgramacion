@@ -87,9 +87,9 @@ namespace TP_Final.UI
                 }
                 else
                 {
-                    if (txtBoxDni.Text == null)
+                    if (txtBoxDni.Text.Length < 8)
                     {
-                        MessageBox.Show("No ha ingresado el DNI.");
+                        MessageBox.Show("El DNI debe tener entre 8 y 9 caracteres.");
                         return false;
                     }
                     else
